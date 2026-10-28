@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "causalbridge"
+version = "0.1.0"
+description = "Vaishak's LLM orchestration and causal evidence verification workstream"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = ["pydantic>=2.10,<3", "networkx>=3.4,<4", "httpx>=0.28,<1"]
+
+[project.scripts]
+causalbridge = "causalbridge.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3,<10", "pytest-cov>=6,<8", "ruff>=0.11,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/*.pdf"]

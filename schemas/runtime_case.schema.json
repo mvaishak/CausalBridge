@@ -1,0 +1,197 @@
+{
+  "$defs": {
+    "Assumptions": {
+      "additionalProperties": false,
+      "properties": {
+        "correct_dag": {
+          "title": "Correct Dag",
+          "type": "boolean"
+        },
+        "fully_observed": {
+          "title": "Fully Observed",
+          "type": "boolean"
+        },
+        "independent_noise": {
+          "title": "Independent Noise",
+          "type": "boolean"
+        },
+        "positivity": {
+          "title": "Positivity",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "correct_dag",
+        "fully_observed",
+        "independent_noise",
+        "positivity"
+      ],
+      "title": "Assumptions",
+      "type": "object"
+    },
+    "CPT": {
+      "additionalProperties": false,
+      "properties": {
+        "node": {
+          "title": "Node",
+          "type": "string"
+        },
+        "parents": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Parents",
+          "type": "array"
+        },
+        "p_one": {
+          "additionalProperties": {
+            "exclusiveMaximum": 1,
+            "exclusiveMinimum": 0,
+            "type": "number"
+          },
+          "title": "P One",
+          "type": "object"
+        }
+      },
+      "required": [
+        "node",
+        "p_one"
+      ],
+      "title": "CPT",
+      "type": "object"
+    },
+    "JointDistribution": {
+      "additionalProperties": false,
+      "properties": {
+        "variables": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Variables",
+          "type": "array"
+        },
+        "probabilities": {
+          "additionalProperties": {
+            "exclusiveMaximum": 1,
+            "exclusiveMinimum": 0,
+            "type": "number"
+          },
+          "title": "Probabilities",
+          "type": "object"
+        }
+      },
+      "required": [
+        "variables",
+        "probabilities"
+      ],
+      "title": "JointDistribution",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "case_id": {
+      "minLength": 1,
+      "title": "Case Id",
+      "type": "string"
+    },
+    "graph_group_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Graph Group Id"
+    },
+    "graph_nodes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Graph Nodes",
+      "type": "array"
+    },
+    "graph_edges": {
+      "items": {
+        "maxItems": 2,
+        "minItems": 2,
+        "prefixItems": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "type": "array"
+      },
+      "title": "Graph Edges",
+      "type": "array"
+    },
+    "question": {
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "evidence_level": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Evidence Level"
+    },
+    "visible_cpts": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/CPT"
+      },
+      "title": "Visible Cpts",
+      "type": "array"
+    },
+    "visible_joint": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/JointDistribution"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "assumptions": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Assumptions"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "case_id",
+    "graph_nodes",
+    "graph_edges",
+    "question"
+  ],
+  "title": "RuntimeCase",
+  "type": "object"
+}

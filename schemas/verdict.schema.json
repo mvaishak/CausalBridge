@@ -1,0 +1,70 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "verified",
+        "unsupported",
+        "wrong_operation",
+        "execution_error"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "response_action": {
+      "enum": [
+        "answer",
+        "abstain"
+      ],
+      "title": "Response Action",
+      "type": "string"
+    },
+    "reason_code": {
+      "title": "Reason Code",
+      "type": "string"
+    },
+    "explanation": {
+      "title": "Explanation",
+      "type": "string"
+    },
+    "answer": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "enum": [
+            "positive",
+            "negative",
+            "zero"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Answer"
+    },
+    "missing_evidence": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Evidence",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "response_action",
+    "reason_code",
+    "explanation"
+  ],
+  "title": "Verdict",
+  "type": "object"
+}

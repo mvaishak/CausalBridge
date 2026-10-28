@@ -1,0 +1,66 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "cause": {
+      "title": "Cause",
+      "type": "string"
+    },
+    "outcome": {
+      "title": "Outcome",
+      "type": "string"
+    },
+    "question_type": {
+      "enum": [
+        "reachability",
+        "effect_direction",
+        "effect_magnitude",
+        "intervention_probability",
+        "adjustment_validity"
+      ],
+      "title": "Question Type",
+      "type": "string"
+    },
+    "from_value": {
+      "default": 0,
+      "enum": [
+        0,
+        1
+      ],
+      "title": "From Value",
+      "type": "integer"
+    },
+    "to_value": {
+      "default": 1,
+      "enum": [
+        0,
+        1
+      ],
+      "title": "To Value",
+      "type": "integer"
+    },
+    "intervention_value": {
+      "default": 1,
+      "enum": [
+        0,
+        1
+      ],
+      "title": "Intervention Value",
+      "type": "integer"
+    },
+    "adjustment_set": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Adjustment Set",
+      "type": "array"
+    }
+  },
+  "required": [
+    "cause",
+    "outcome",
+    "question_type"
+  ],
+  "title": "Query",
+  "type": "object"
+}

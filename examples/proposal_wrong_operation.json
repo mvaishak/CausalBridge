@@ -1,0 +1,15 @@
+{
+  "query": {
+    "cause": "X",
+    "outcome": "Y",
+    "question_type": "effect_direction",
+    "from_value": 0,
+    "to_value": 1,
+    "intervention_value": 1,
+    "adjustment_set": []
+  },
+  "requested_operation": "compute_effect",
+  "proposed_tool": "has_directed_path",
+  "proposed_answer": "positive",
+  "response_action": "answer"
+}

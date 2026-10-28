@@ -1,0 +1,47 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "model": {
+      "default": "qwen2.5:3b",
+      "title": "Model",
+      "type": "string"
+    },
+    "base_url": {
+      "default": "http://127.0.0.1:11434",
+      "title": "Base Url",
+      "type": "string"
+    },
+    "timeout_seconds": {
+      "default": 120,
+      "exclusiveMinimum": 0,
+      "title": "Timeout Seconds",
+      "type": "number"
+    },
+    "temperature": {
+      "default": 0,
+      "maximum": 2,
+      "minimum": 0,
+      "title": "Temperature",
+      "type": "number"
+    },
+    "seed": {
+      "default": 261,
+      "title": "Seed",
+      "type": "integer"
+    },
+    "max_tokens": {
+      "default": 1024,
+      "exclusiveMinimum": 0,
+      "title": "Max Tokens",
+      "type": "integer"
+    },
+    "context_tokens": {
+      "default": 8192,
+      "minimum": 1024,
+      "title": "Context Tokens",
+      "type": "integer"
+    }
+  },
+  "title": "ModelConfig",
+  "type": "object"
+}

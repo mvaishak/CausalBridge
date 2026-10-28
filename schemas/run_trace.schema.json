@@ -1,0 +1,795 @@
+{
+  "$defs": {
+    "Assumptions": {
+      "additionalProperties": false,
+      "properties": {
+        "correct_dag": {
+          "title": "Correct Dag",
+          "type": "boolean"
+        },
+        "fully_observed": {
+          "title": "Fully Observed",
+          "type": "boolean"
+        },
+        "independent_noise": {
+          "title": "Independent Noise",
+          "type": "boolean"
+        },
+        "positivity": {
+          "title": "Positivity",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "correct_dag",
+        "fully_observed",
+        "independent_noise",
+        "positivity"
+      ],
+      "title": "Assumptions",
+      "type": "object"
+    },
+    "CPT": {
+      "additionalProperties": false,
+      "properties": {
+        "node": {
+          "title": "Node",
+          "type": "string"
+        },
+        "parents": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Parents",
+          "type": "array"
+        },
+        "p_one": {
+          "additionalProperties": {
+            "exclusiveMaximum": 1,
+            "exclusiveMinimum": 0,
+            "type": "number"
+          },
+          "title": "P One",
+          "type": "object"
+        }
+      },
+      "required": [
+        "node",
+        "p_one"
+      ],
+      "title": "CPT",
+      "type": "object"
+    },
+    "Generation": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "input_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Tokens"
+        },
+        "output_tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Output Tokens"
+        },
+        "latency_seconds": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Latency Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "text",
+        "model"
+      ],
+      "title": "Generation",
+      "type": "object"
+    },
+    "JointDistribution": {
+      "additionalProperties": false,
+      "properties": {
+        "variables": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Variables",
+          "type": "array"
+        },
+        "probabilities": {
+          "additionalProperties": {
+            "exclusiveMaximum": 1,
+            "exclusiveMinimum": 0,
+            "type": "number"
+          },
+          "title": "Probabilities",
+          "type": "object"
+        }
+      },
+      "required": [
+        "variables",
+        "probabilities"
+      ],
+      "title": "JointDistribution",
+      "type": "object"
+    },
+    "LLMCall": {
+      "additionalProperties": false,
+      "properties": {
+        "stage": {
+          "title": "Stage",
+          "type": "string"
+        },
+        "messages": {
+          "items": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "output_schema": {
+          "additionalProperties": true,
+          "title": "Output Schema",
+          "type": "object"
+        },
+        "generation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Generation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        }
+      },
+      "required": [
+        "stage",
+        "messages",
+        "output_schema"
+      ],
+      "title": "LLMCall",
+      "type": "object"
+    },
+    "ModelConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "default": "qwen2.5:3b",
+          "title": "Model",
+          "type": "string"
+        },
+        "base_url": {
+          "default": "http://127.0.0.1:11434",
+          "title": "Base Url",
+          "type": "string"
+        },
+        "timeout_seconds": {
+          "default": 120,
+          "exclusiveMinimum": 0,
+          "title": "Timeout Seconds",
+          "type": "number"
+        },
+        "temperature": {
+          "default": 0,
+          "maximum": 2,
+          "minimum": 0,
+          "title": "Temperature",
+          "type": "number"
+        },
+        "seed": {
+          "default": 261,
+          "title": "Seed",
+          "type": "integer"
+        },
+        "max_tokens": {
+          "default": 1024,
+          "exclusiveMinimum": 0,
+          "title": "Max Tokens",
+          "type": "integer"
+        },
+        "context_tokens": {
+          "default": 8192,
+          "minimum": 1024,
+          "title": "Context Tokens",
+          "type": "integer"
+        }
+      },
+      "title": "ModelConfig",
+      "type": "object"
+    },
+    "Proposal": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "$ref": "#/$defs/Query"
+        },
+        "requested_operation": {
+          "enum": [
+            "has_directed_path",
+            "compute_effect",
+            "compute_intervention",
+            "is_valid_adjustment_set",
+            "backdoor_adjustment"
+          ],
+          "title": "Requested Operation",
+          "type": "string"
+        },
+        "proposed_tool": {
+          "enum": [
+            "has_directed_path",
+            "compute_effect",
+            "compute_intervention",
+            "is_valid_adjustment_set",
+            "backdoor_adjustment"
+          ],
+          "title": "Proposed Tool",
+          "type": "string"
+        },
+        "proposed_answer": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "positive",
+                "negative",
+                "zero"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Proposed Answer"
+        },
+        "response_action": {
+          "default": "answer",
+          "enum": [
+            "answer",
+            "abstain"
+          ],
+          "title": "Response Action",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query",
+        "requested_operation",
+        "proposed_tool"
+      ],
+      "title": "Proposal",
+      "type": "object"
+    },
+    "Query": {
+      "additionalProperties": false,
+      "properties": {
+        "cause": {
+          "title": "Cause",
+          "type": "string"
+        },
+        "outcome": {
+          "title": "Outcome",
+          "type": "string"
+        },
+        "question_type": {
+          "enum": [
+            "reachability",
+            "effect_direction",
+            "effect_magnitude",
+            "intervention_probability",
+            "adjustment_validity"
+          ],
+          "title": "Question Type",
+          "type": "string"
+        },
+        "from_value": {
+          "default": 0,
+          "enum": [
+            0,
+            1
+          ],
+          "title": "From Value",
+          "type": "integer"
+        },
+        "to_value": {
+          "default": 1,
+          "enum": [
+            0,
+            1
+          ],
+          "title": "To Value",
+          "type": "integer"
+        },
+        "intervention_value": {
+          "default": 1,
+          "enum": [
+            0,
+            1
+          ],
+          "title": "Intervention Value",
+          "type": "integer"
+        },
+        "adjustment_set": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Adjustment Set",
+          "type": "array"
+        }
+      },
+      "required": [
+        "cause",
+        "outcome",
+        "question_type"
+      ],
+      "title": "Query",
+      "type": "object"
+    },
+    "RuntimeCase": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "case_id": {
+          "minLength": 1,
+          "title": "Case Id",
+          "type": "string"
+        },
+        "graph_group_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Graph Group Id"
+        },
+        "graph_nodes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Graph Nodes",
+          "type": "array"
+        },
+        "graph_edges": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Graph Edges",
+          "type": "array"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "evidence_level": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence Level"
+        },
+        "visible_cpts": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/CPT"
+          },
+          "title": "Visible Cpts",
+          "type": "array"
+        },
+        "visible_joint": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/JointDistribution"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "assumptions": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Assumptions"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "case_id",
+        "graph_nodes",
+        "graph_edges",
+        "question"
+      ],
+      "title": "RuntimeCase",
+      "type": "object"
+    },
+    "ToolRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "operation": {
+          "enum": [
+            "has_directed_path",
+            "compute_effect",
+            "compute_intervention",
+            "is_valid_adjustment_set",
+            "backdoor_adjustment"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "query": {
+          "$ref": "#/$defs/Query"
+        },
+        "evidence_digest": {
+          "title": "Evidence Digest",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation",
+        "query",
+        "evidence_digest"
+      ],
+      "title": "ToolRequest",
+      "type": "object"
+    },
+    "ToolResult": {
+      "additionalProperties": false,
+      "properties": {
+        "request": {
+          "$ref": "#/$defs/ToolRequest"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        }
+      },
+      "required": [
+        "request"
+      ],
+      "title": "ToolResult",
+      "type": "object"
+    },
+    "Verdict": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "verified",
+            "unsupported",
+            "wrong_operation",
+            "execution_error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "response_action": {
+          "enum": [
+            "answer",
+            "abstain"
+          ],
+          "title": "Response Action",
+          "type": "string"
+        },
+        "reason_code": {
+          "title": "Reason Code",
+          "type": "string"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "answer": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "enum": [
+                "positive",
+                "negative",
+                "zero"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Answer"
+        },
+        "missing_evidence": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "response_action",
+        "reason_code",
+        "explanation"
+      ],
+      "title": "Verdict",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "prompt_version": {
+      "default": "1.0",
+      "title": "Prompt Version",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "runtime_case": {
+      "$ref": "#/$defs/RuntimeCase"
+    },
+    "query_source": {
+      "title": "Query Source",
+      "type": "string"
+    },
+    "model_mode": {
+      "title": "Model Mode",
+      "type": "string"
+    },
+    "generation_config": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ModelConfig"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "numeric_tolerance": {
+      "title": "Numeric Tolerance",
+      "type": "number"
+    },
+    "sign_tolerance": {
+      "title": "Sign Tolerance",
+      "type": "number"
+    },
+    "query": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Query"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "plan": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Proposal"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "final_proposal": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Proposal"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "tool_request": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ToolRequest"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "tool_result": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ToolResult"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "tool_executed": {
+      "default": false,
+      "title": "Tool Executed",
+      "type": "boolean"
+    },
+    "calls": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/LLMCall"
+      },
+      "title": "Calls",
+      "type": "array"
+    },
+    "verdict": {
+      "$ref": "#/$defs/Verdict"
+    },
+    "failure_stage": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Failure Stage"
+    },
+    "latency_seconds": {
+      "title": "Latency Seconds",
+      "type": "number"
+    },
+    "input_tokens": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Input Tokens"
+    },
+    "output_tokens": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Output Tokens"
+    }
+  },
+  "required": [
+    "runtime_case",
+    "query_source",
+    "model_mode",
+    "numeric_tolerance",
+    "sign_tolerance",
+    "verdict",
+    "latency_seconds"
+  ],
+  "title": "RunTrace",
+  "type": "object"
+}

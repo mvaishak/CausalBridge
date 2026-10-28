@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "case_id": "toy_complete",
+  "graph_group_id": "demo_toy",
+  "graph_nodes": [
+    "X",
+    "Y"
+  ],
+  "graph_edges": [
+    [
+      "X",
+      "Y"
+    ]
+  ],
+  "question": "Does increasing X increase Y?",
+  "evidence_level": null,
+  "visible_cpts": [
+    {
+      "node": "X",
+      "parents": [],
+      "p_one": {
+        "": 0.5
+      }
+    },
+    {
+      "node": "Y",
+      "parents": [
+        "X"
+      ],
+      "p_one": {
+        "0": 0.3,
+        "1": 0.7
+      }
+    }
+  ],
+  "visible_joint": null,
+  "assumptions": {
+    "correct_dag": true,
+    "fully_observed": true,
+    "independent_noise": true,
+    "positivity": true
+  }
+}
