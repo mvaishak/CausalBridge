@@ -13,3 +13,6 @@ htmlcov/
 .superpowers/
 runs/
 .DS_Store
+
+# Keep the stakeholder document and its diagrams local.
+docs/technical-brief/
