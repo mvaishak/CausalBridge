@@ -14,5 +14,9 @@ htmlcov/
 runs/
 .DS_Store
 
+# Oracle models and labels stay outside runtime data.
+data/oracle/*
+!data/oracle/README.md
+
 # Keep the stakeholder document and its diagrams local.
 docs/technical-brief/

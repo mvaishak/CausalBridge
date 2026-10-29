@@ -15,7 +15,7 @@ from causalbridge.verifier.contracts import abstention
 
 
 def parser() -> argparse.ArgumentParser:
-    root = argparse.ArgumentParser(description="CausalBridge: Vaishak's Workstream C")
+    root = argparse.ArgumentParser(description="CausalBridge")
     commands = root.add_subparsers(dest="command", required=True)
     for command in ("demo", "run"):
         cmd = commands.add_parser(command)

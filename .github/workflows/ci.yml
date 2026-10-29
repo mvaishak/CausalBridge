@@ -1,4 +1,4 @@
-name: Workstream C checks
+name: Project checks
 on: [push, pull_request]
 permissions:
   contents: read
