@@ -250,3 +250,22 @@ def test_primary_usability_cannot_be_contradictory(exported, field, value):
     row[field] = value
     with pytest.raises(ValueError):
         AnalysisHandoff.model_validate(row)
+
+
+def test_method_generation_not_applicable_is_accepted(exported):
+    from causalbridge.evaluation.handoff import AnalysisHandoff
+
+    rows, _ = exported
+    row = deepcopy(next(r for r in rows if r["condition"] == "ANM_ONLY"))
+    row["generation_status"] = "not_applicable"
+    assert AnalysisHandoff.model_validate(row).generation_status == "not_applicable"
+
+
+def test_model_generation_not_applicable_is_rejected(exported):
+    from causalbridge.evaluation.handoff import AnalysisHandoff
+
+    rows, _ = exported
+    row = deepcopy(rows[0])
+    row["generation_status"] = "not_applicable"
+    with pytest.raises(ValueError, match="Only ANM-only"):
+        AnalysisHandoff.model_validate(row)
