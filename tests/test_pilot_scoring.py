@@ -1,5 +1,7 @@
 import pytest
 
+from causalbridge.discovery.schemas import canonical_digest
+
 
 def fixtures():
     evaluator = [
@@ -21,13 +23,15 @@ def fixtures():
     mappings = [
         dict(
             case_id="D1001",
-            ab_mapping_id="m1",
+            ab_mapping_id=canonical_digest({"case_id": "D1001", "order": [1, 0], "seed": 0}),
+            mapping_seed=0,
             source_digest="x",
             original_to_runtime_column_order=[1, 0],
         ),
         dict(
             case_id="D1002",
-            ab_mapping_id="m2",
+            ab_mapping_id=canonical_digest({"case_id": "D1002", "order": [0, 1], "seed": 3}),
+            mapping_seed=3,
             source_digest="y",
             original_to_runtime_column_order=[0, 1],
         ),
@@ -35,7 +39,9 @@ def fixtures():
     rows = [
         dict(
             case_id=c,
-            ab_mapping_id=m,
+            ab_mapping_id=next(
+                record["ab_mapping_id"] for record in mappings if record["case_id"] == c
+            ),
             package="E4",
             condition="S1",
             predicted_direction=d,
@@ -90,3 +96,66 @@ def test_scorer_rejects_incomplete_or_misbound_results(fault):
         rows[0]["predicted_direction"] = "invalid"
     with pytest.raises(ValueError):
         score_pilot(rows, evaluator, mappings, expected_conditions=[("E4", "S1")])
+
+
+@pytest.mark.parametrize(
+    "fault",
+    [
+        "flipped_order",
+        "rewritten_id",
+        "boolean_order",
+        "float_order",
+        "duplicate_order",
+        "missing_seed",
+        "boolean_seed",
+        "float_seed",
+        "negative_seed",
+        "changed_seed",
+        "wrong_id",
+        "wrong_case",
+    ],
+)
+def test_scorer_rejects_inconsistent_mapping_identity(fault):
+    from causalbridge.evaluation.scoring import score_pilot
+
+    rows, evaluator, mappings = fixtures()
+    m = mappings[0]
+    if fault in {"flipped_order", "rewritten_id"}:
+        m["original_to_runtime_column_order"] = [0, 1]
+        if fault == "rewritten_id":
+            m["ab_mapping_id"] = canonical_digest(
+                {"case_id": m["case_id"], "order": [0, 1], "seed": m["mapping_seed"]}
+            )
+            rows[0]["ab_mapping_id"] = m["ab_mapping_id"]
+    elif fault == "boolean_order":
+        m["original_to_runtime_column_order"] = [True, False]
+    elif fault == "float_order":
+        m["original_to_runtime_column_order"] = [1.0, 0.0]
+    elif fault == "duplicate_order":
+        m["original_to_runtime_column_order"] = [1, 1]
+    elif fault == "missing_seed":
+        m.pop("mapping_seed")
+    elif fault == "boolean_seed":
+        m["mapping_seed"] = False
+    elif fault == "float_seed":
+        m["mapping_seed"] = 0.0
+    elif fault == "negative_seed":
+        m["mapping_seed"] = -1
+    elif fault == "changed_seed":
+        m["mapping_seed"] = 99
+    elif fault == "wrong_id":
+        m["ab_mapping_id"] = "sha256:" + "f" * 64
+        rows[0]["ab_mapping_id"] = m["ab_mapping_id"]
+    else:
+        m["case_id"] = "D9999"
+    with pytest.raises(ValueError):
+        score_pilot(rows, evaluator, mappings, expected_conditions=[("E4", "S1")])
+
+
+def test_mapping_integrity_fix_preserves_original_weighted_results():
+    from causalbridge.evaluation.scoring import score_pilot
+
+    rows, evaluator, mappings = fixtures()
+    original = score_pilot(rows, evaluator, mappings, expected_conditions=[("E4", "S1")])[0]
+    assert original["selective_accuracy"] == 1.0
+    assert original["coverage"] == 0.25

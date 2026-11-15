@@ -2,6 +2,9 @@
 
 import math
 
+from causalbridge.discovery.evidence import rng
+from causalbridge.discovery.schemas import canonical_digest
+
 PILOT_CONDITIONS = tuple(
     (p, c) for p in ("E1", "E2", "E3", "E4") for c in ("S0", "S1", "S2", "SIMPLE_GATE")
 ) + (("E4", "ANM_ONLY"),)
@@ -12,6 +15,9 @@ def score_pilot(rows, evaluator, mappings, *, expected_conditions=PILOT_CONDITIO
 
     Reference direction is expressed in original file order. Map it to A/B only
     using the private saved selection receipt, never guessed from pair IDs.
+    Validate selection-v1 mapping identity and seeded orientation before scoring.
+    This detects inconsistent metadata, not jointly rewritten/forged receipts;
+    authentic source and journal correspondence remain independent audit duties.
     """
     gold = {e["case_id"]: e for e in evaluator}
     mapping = {m["case_id"]: m for m in mappings}
@@ -29,7 +35,23 @@ def score_pilot(rows, evaluator, mappings, *, expected_conditions=PILOT_CONDITIO
     for case, e in gold.items():
         m = mapping[case]
         order = m["original_to_runtime_column_order"]
-        if order not in ([0, 1], [1, 0]) or m["source_digest"] != e["source_digest"]:
+        seed = m.get("mapping_seed")
+        if (
+            type(seed) is not int
+            or seed < 0
+            or not isinstance(order, (list, tuple))
+            or len(order) != 2
+            or any(type(column) is not int for column in order)
+            or sorted(order) != [0, 1]
+        ):
+            raise ValueError("Mapping requires an exact column permutation and integer seed")
+        expected_id = canonical_digest({"case_id": case, "order": order, "seed": seed})
+        if m["ab_mapping_id"] != expected_id:
+            raise ValueError("Mapping ID does not bind case, column order and seed")
+        expected_order = (1, 0) if rng(seed, case, "mapping").getrandbits(1) else (0, 1)
+        if tuple(order) != expected_order:
+            raise ValueError("Column order differs from deterministic selection")
+        if m["source_digest"] != e["source_digest"]:
             raise ValueError("Evaluator source/mapping mismatch")
         if e["reference_direction"] not in {"first_to_second", "second_to_first"}:
             raise ValueError("Invalid reference direction")
