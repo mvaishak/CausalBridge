@@ -3,6 +3,14 @@
 Checked 2026-11-15. Main is `7085d2f` (merged PR #9). The pilot API under review
 is open PR #10, `a8ba5badeb74d8a143cc46ee3239bf4e7a58c6e4`.
 
+## Broader audit follow-up
+
+The subsequent [project audit](project-audit-2026-11-15.md) confirmed a separate
+PR #10 scorer integrity gap: a flipped external column order with an unchanged
+mapping ID is accepted and changes metrics. The positive-path acceptance results
+below remain valid, but **malformed-mapping acceptance is not closed**. No evidence
+that the original pilot mapping is wrong follows from this synthetic reproduction.
+
 ## Verdict
 
 **Fixture-backed code integration passes after one small compatibility fix.**

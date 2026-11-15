@@ -28,49 +28,49 @@ explicitly. Do not infer a teammate's status from assigned responsibility.
 
 ## Overall project inventory
 
-Last fetched remote main: `1dd84b4`, including PR #7
-([Track A pilot](../track_a_pilot.md)) and PR #8 smoke/checker fixes.
-Integration-readiness work is committed in open [PR #9](https://github.com/mvaishak/CausalBridge/pull/9)
-at `bcad4a3`: **818 tests passed**, with green Python 3.12/3.13 CI.
-See current-status.md for the current acceptance gates; PR #8 fixes are merged.
+Current merged main is **`7085d2f` (PR #9 merged)**. Pilot/data/scorer work is
+in open PR #10; our ANM-only compatibility and actual-consumer checks are in open
+PR #11. The implementation head of PR #11 passes 830 tests (one explicit API
+module skip on main), and its Python 3.12/3.13 CI is green. Combined acceptance
+with PR #10 passes 870 tests. These are distinct source snapshots.
 
-| Workstream | Owner | Evidence-backed status | Evidence / next dependency |
-| --- | --- | --- | --- |
-| Known-DAG parsing, pipeline, contracts | Vaishak | Tested on audited main | Original Track A suite retained; see current verification record below |
-| Exact graph/numeric backend | Anish | Production engine merged and tested | `tools/inference.py`, `tools/engine.py`; reference adapter retained separately |
-| Benchmark generation / exact witnesses | Arunima + Anish | Ten-group synthetic pilot implemented and checked; live run pending | `benchmark/generator.py`, `witness.py`, `pilot.py`; 50 runtime cases in `data/pilot/track_a_10_groups.jsonl`, exact witness joint and rational/engine confirmation tests |
-| Tübingen ingestion and split audit | Faizah | Planned / handoff pending | No real-data loader in audited main |
-| ANM | Anish | Merged and exercised through our native runner | Real KRR/HSIC and durable pre-execution requests; synthetic observations only |
-| Track B predictor / process checker | Vaishak | Implemented/tested merged | `llm/predictor.py`, `verifier/checks.py`, `verifier/bindings.py`; native runner integration tested |
-| Evidence, prompts and execution | Kris | Phases 1–3 tested; native component integration tested, real-data/scorer handoff pending | See phase tracker below |
-| Scoring / intervals | Faizah | Planned / handoff pending | No scorer in audited main |
-| Live model / pilot / held-out | Team | Two live Qwen3 8B smokes on synthetic observations; real-data pilot/held-out not complete | PR #8 fixes merged; saved checker-0.3 replays verified; no real-pair performance claims |
+**Read the [project audit](../reviews/project-audit-2026-11-15.md).** It confirms
+one downstream scorer mapping-integrity gap, distinguishes numerical ANM fidelity
+from its failed statistical gate, and records why real-pilot artifact acceptance
+is still pending. Passing arithmetic fixtures did not establish malformed-mapping
+rejection. The new finding does not show the original pilot scores are incorrect.
 
-## Original roadmap: plan versus actual work
+## Current workstream summary
 
-These numbers are the original roadmap phases. The recent readiness phases
-1–7 have a separate tracker in [current status](current-status.md).
+| Workstream | Current evidence | Remaining |
+| --- | --- | --- |
+| Track A | Merged exact graph/numeric tools, independent witnesses and ten-group/50-question pilot | Human review and final live benchmark |
+| ANM | Numerically validated in uploaded independent reports; statistical progression gate failed | Development validation or explicit revised premise; no established one-step repair |
+| Our E1–E4 / runner / checker / joins | Merged through PR #9; adversarial fixtures and zero-call replay | Final actual-source integration and frozen execution |
+| Data and scoring | Actual APIs on PR #10; positive-path arithmetic accepted | Scorer mapping fix, authentic artifact reconciliation and bootstrap |
+| Compatibility acceptance | PR #11 open; narrow ANM-only generation-state fix and tests | Review/merge with PR #10 |
+| Experiments and report | Real pilot reported; raw artifacts unavailable here | Independent rescoring, development/freeze, held-out results and final outputs |
 
-| Phase | Current status | Actual deliverables | Remaining exit work |
-| --- | --- | --- | --- |
-| 0 Scope/design | Defined | Scope, architecture, research contrasts, phases and audit procedure; simplified shared questions | Maintain decisions as external handoffs arrive |
-| 1 Contracts/evidence | Merged/tested; native adapter exercised | `discovery/contracts.py`, `evidence.py`, `prompts.py`, `example.py`; tests and contract example | Real loader/scorer boundary remains pending |
-| 2 Runner/persistence | Merged/tested; live synthetic smoke exercised | `evaluation/runner.py`, `store.py`, `demo.py`, tests and `docs/kris-phase2.md` | Failed-generation metadata follow-up merged in PR #8 |
-| 3 Independent artifact audit | Merged/tested; corruption review fix included | `evaluation/audit.py`, frozen `audit_policy.py`, 31 cases and `phase3-audit.json` | Real adapter and live research audit remain later gates |
-| 4 Integration | Partially complete: available components integrated/tested | `integration.py`, native audit, baseline/export projection and demo | Real loader and Faizah scorer-consumer acceptance still pending |
-| 5 Pilot/freeze | Infrastructure smoke started; real-data pilot not complete | Eight live Qwen3 calls on one synthetic case; see current-status.md | Two infrastructure smokes and replay complete; audited real groups and protocol freeze remain |
-| 6 Held-out/handoff | Planned | None | Frozen runs, independent audit and scoring reconciliation |
+## Roadmap versus readiness numbering
+
+The original roadmap phases cover contracts, runner, audit, native integration,
+real pilot/freeze and held-out handoff. The recent readiness phases 1–7 are a
+separate implementation/acceptance sequence. Their completed fixtures do not mean
+the original pilot/held-out research phases are complete.
+
+Current next actions, ownership and evidence limits are in
+[current status](current-status.md) and [roadmap status](roadmap-status.md).
 
 ## Recent readiness handoffs
 
-- [Current status and next actions](current-status.md)
 - [Saved live-smoke replay](../kris-phase2-replay.md)
 - [Loader/export boundaries](../kris-phase3-handoff.md)
 - [A/B orientation and evaluator joins](../kris-phase4-evaluator-joins.md)
 - [Scorer acceptance fixtures](../kris-phase5-scoring-fixtures.md)
 - [Offline pipeline acceptance](../kris-phase6-offline-acceptance.md)
+- [Actual loader/scorer acceptance and artifact gate](../reviews/pilot-integration-acceptance.md)
 
-The detailed implementation sections below preserve historical milestone evidence.
+The detailed sections below preserve historical milestone evidence and counts.
 
 ## Phase 1 behavior and files
 
