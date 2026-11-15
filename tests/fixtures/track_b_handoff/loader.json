@@ -1,0 +1,10 @@
+{
+  "runtime": [
+    {"case_id": "D0101", "variables": [{"name": "Measurement one", "unit": "m"}, {"name": "Measurement two", "unit": "s"}], "rows": [[1.0, 2.0], [2.0, 5.0], [3.0, 9.0]]},
+    {"case_id": "D0102", "variables": [{"name": "Measurement three"}, {"name": "Measurement four"}], "rows": [[4.0, 2.0], [8.0, 3.0], [15.0, 4.0]]}
+  ],
+  "evaluator": [
+    {"case_id": "D0101", "source_group": "private-family-sentinel-one", "weight": 2.0, "split": "pilot", "cause_column": 0},
+    {"case_id": "D0102", "source_group": "private-family-sentinel-two", "weight": 1.0, "split": "development", "cause_column": 1}
+  ]
+}

@@ -664,3 +664,39 @@ frozen model. Make 8 model calls (S0/S1 × four packages), persist every trace,
 then check the 4 cached S1 outputs with zero further model/method calls. Require
 all bindings to round-trip before Faizah joins labels. This tests the handshake;
 it doesn't establish accuracy. Freeze the protocol before a held-out study.
+
+## Local external-handoff acceptance utilities
+
+`evaluation.handoff.validate_loader_handoff` validates existing RuntimePair
+records alongside separate evaluator-only metadata. Evaluator field names are
+a provisional local adapter target pending Faizah's acceptance, not a finalized
+source-loader API. `validate_analysis_handoff` checks native-analysis-v2 against
+an independently supplied schedule, retaining failure and abstention slots.
+Both are opt-in; no runtime protocol or historical artifact is changed.
+See [Phase 3 handoff](kris-phase3-handoff.md) for fields, fixture examples,
+source-group scope, invariants and limitations. Reference orientation conversion,
+label joins and statistical scoring are separate phases.
+
+`evaluation.joins.join_evaluator_records` supplies the Phase 4 opt-in evaluator-only
+join: retained original RuntimePairs, exact mapping/source identities, seeded
+orientation replay and exact S1-parent joins. It returns private reference
+agreement records without mutating runtime exports. The reference truth table
+and trust boundaries are in [Phase 4 evaluator joins](kris-phase4-evaluator-joins.md).
+Weighted metrics and bootstrap remain outside this utility.
+
+## Scorer acceptance examples (Phase 5)
+
+[Scoring fixtures](../tests/fixtures/track_b_scoring/README.md) provide a reduced
+private-joined input projection and exact rational targets for weighted metrics,
+failure accounting, S2 suppression, H1/H2/H3 paired contrasts and fixed group
+resamples. These are synthetic mechanism examples, not real results or a production
+scorer implementation. Missing-trust abstention, checker error and original
+abstention are separate in an additional tiny fixture. Null selective accuracy
+is required when no direction is released. Faizah's actual consumer acceptance
+and confidence-interval freeze choices remain pending.
+
+Phase 6's [offline acceptance demo](kris-phase6-offline-acceptance.md) exercises the
+merged PR #8 native runner/export/auditor through these handoff and join utilities
+and matches all 136 scorer-input projection rows. It uses scripted synthetic
+responses and intentional insufficient-row ANM errors; actual scorer consumption
+and real-pair acceptance remain external gates.

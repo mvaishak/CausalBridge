@@ -1,0 +1,132 @@
+{
+  "rows": [
+    {
+      "case_id": "D0301",
+      "source_group": "edge-family-1",
+      "weight": 2,
+      "split": "development",
+      "reference_direction": "A_to_B",
+      "package": "E4",
+      "failure_stage": null,
+      "attempt_id": "fixture-D0301-E4-S1",
+      "condition": "S1",
+      "predicted_direction": "A_to_B",
+      "reference_agreement": true,
+      "outcome": "answer",
+      "reason_codes": [],
+      "parent_attempt_id": null
+    },
+    {
+      "case_id": "D0301",
+      "source_group": "edge-family-1",
+      "weight": 2,
+      "split": "development",
+      "reference_direction": "A_to_B",
+      "package": "E4",
+      "failure_stage": null,
+      "attempt_id": "fixture-D0301-E4-S1",
+      "condition": "S2",
+      "predicted_direction": null,
+      "reference_agreement": null,
+      "outcome": "abstain",
+      "reason_codes": [
+        "claim_binding_unverified"
+      ],
+      "parent_attempt_id": "fixture-D0301-E4-S1"
+    },
+    {
+      "case_id": "D0302",
+      "source_group": "edge-family-1",
+      "weight": 1,
+      "split": "development",
+      "reference_direction": "A_to_B",
+      "package": "E4",
+      "failure_stage": null,
+      "attempt_id": "fixture-D0302-E4-S1",
+      "condition": "S1",
+      "predicted_direction": "B_to_A",
+      "reference_agreement": false,
+      "outcome": "answer",
+      "reason_codes": [],
+      "parent_attempt_id": null
+    },
+    {
+      "case_id": "D0302",
+      "source_group": "edge-family-1",
+      "weight": 1,
+      "split": "development",
+      "reference_direction": "A_to_B",
+      "package": "E4",
+      "failure_stage": null,
+      "attempt_id": "fixture-D0302-E4-S1",
+      "condition": "S2",
+      "predicted_direction": null,
+      "reference_agreement": null,
+      "outcome": "checker_error",
+      "reason_codes": [],
+      "parent_attempt_id": "fixture-D0302-E4-S1"
+    },
+    {
+      "case_id": "D0303",
+      "source_group": "edge-family-2",
+      "weight": 1,
+      "split": "development",
+      "reference_direction": "A_to_B",
+      "package": "E4",
+      "failure_stage": null,
+      "attempt_id": "fixture-D0303-E4-S1",
+      "condition": "S1",
+      "predicted_direction": null,
+      "reference_agreement": null,
+      "outcome": "model_abstention",
+      "reason_codes": [],
+      "parent_attempt_id": null
+    },
+    {
+      "case_id": "D0303",
+      "source_group": "edge-family-2",
+      "weight": 1,
+      "split": "development",
+      "reference_direction": "A_to_B",
+      "package": "E4",
+      "failure_stage": null,
+      "attempt_id": "fixture-D0303-E4-S1",
+      "condition": "S2",
+      "predicted_direction": null,
+      "reference_agreement": null,
+      "outcome": "pass",
+      "reason_codes": [
+        "prediction_abstained"
+      ],
+      "parent_attempt_id": "fixture-D0303-E4-S1"
+    }
+  ],
+  "expected": {
+    "S1": {
+      "eligible_weight": 4,
+      "answer_weight": 3,
+      "correct_weight": 2,
+      "wrong_weight": 1,
+      "coverage": "3/4",
+      "correct_yield": "2/4",
+      "wrong_yield": "1/4",
+      "selective_accuracy": "2/3"
+    },
+    "S2": {
+      "eligible_weight": 4,
+      "answer_weight": 0,
+      "correct_weight": 0,
+      "wrong_weight": 0,
+      "coverage": "0/4",
+      "correct_yield": "0/4",
+      "wrong_yield": "0/4",
+      "selective_accuracy": null
+    }
+  },
+  "expected_outcome_weights": {
+    "abstain": 2,
+    "checker_error": 1,
+    "pass_without_answer": 1
+  },
+  "notice": "Separate tiny consumer fixture; not part of the 136-slot main schedule"
+}
