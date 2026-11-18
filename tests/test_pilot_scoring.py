@@ -39,6 +39,10 @@ def fixtures():
     rows = [
         dict(
             case_id=c,
+            manifest_id="scoring-fixture",
+            package_digest=canonical_digest({"case": c, "package": "E4"}),
+            attempt_id=f"{c}-E4-S1",
+            run_id=f"{c}-E4-S1-run",
             ab_mapping_id=next(
                 record["ab_mapping_id"] for record in mappings if record["case_id"] == c
             ),
@@ -47,6 +51,7 @@ def fixtures():
             predicted_direction=d,
             outcome=o,
             prediction_scorable=valid,
+            failure_stage=None if valid else "generate",
         )
         for c, d, o, valid in [
             ("D1001", "B_to_A", "answer", True),

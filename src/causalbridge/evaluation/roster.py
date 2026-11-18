@@ -9,7 +9,13 @@ import json
 import math
 from pathlib import Path
 
-from causalbridge.discovery.loader import read_pair_metadata, verify_snapshot_hashes
+from causalbridge.discovery.data_audit import data_exclusion, file_stats
+from causalbridge.discovery.loader import (
+    PairReview,
+    read_pair_metadata,
+    validate_source_groups,
+    verify_snapshot_hashes,
+)
 
 SCALAR_RANGES = {(1, 1, 2, 2), (2, 2, 1, 1)}
 ROLES = ("frozen_pilot", "development", "validation", "not_scorable")
@@ -23,7 +29,24 @@ def evaluation_roster(manifest: dict, snapshot: Path) -> dict:
     reviews = {pair["pair_id"]: pair for pair in manifest["pairs"]}
     if set(metadata) != set(reviews) or len(reviews) != len(manifest["pairs"]):
         raise ValueError("Metadata pair ids differ from the manifest")
+    validate_source_groups(tuple(PairReview.model_validate(r) for r in manifest["pairs"]))
+    minimum_rows = manifest.get("minimum_rows", 100)
+    if type(minimum_rows) is not int or minimum_rows < 8:
+        raise ValueError("Minimum row count must be an integer of at least eight")
     pairs = [_row(reviews[pair_id], metadata[pair_id]) for pair_id in sorted(reviews)]
+    for row in pairs:
+        if not row["scorable"]:
+            continue
+        pair_id = row["pair_id"]
+        filename = f"pair{pair_id:04d}.txt"
+        if filename not in manifest["files"]:
+            raise ValueError("Scorable numeric file is not pinned: " + filename)
+        *columns, weight = metadata[pair_id]
+        reason = data_exclusion(
+            pair_id, tuple(columns), weight, file_stats(snapshot / filename), minimum_rows
+        )
+        if reason is not None:
+            raise ValueError(f"Scorable pair {pair_id} fails audited eligibility: {reason}")
     counts = {role: sum(row["anm_use"] == role for row in pairs) for role in ROLES}
     return {
         "version": "evaluation-handoff-v1",

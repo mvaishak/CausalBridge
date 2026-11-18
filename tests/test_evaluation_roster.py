@@ -34,6 +34,7 @@ def test_roster_separates_truth_and_scorability(tmp_path):
     manifest = {
         "version": "tuebingen-pilot-v1",
         "mapping_seed": 261,
+        "minimum_rows": 8,
         "files": hashes,
         "pairs": [
             {"pair_id": 1, "source_group": "dev", "split": "development"},
@@ -77,3 +78,43 @@ def test_committed_roster_matches_the_local_snapshot_when_present():
     assert by_role["development"].isdisjoint(by_role["frozen_pilot"])
     assert all(row["scorable"] for row in roster["pairs"] if row["anm_use"] != "not_scorable")
     assert all(not row["scorable"] for row in roster["pairs"] if row["anm_use"] == "not_scorable")
+
+
+@pytest.mark.parametrize("fault", ["group_overlap", "constant", "short", "nan", "blank", "unbound"])
+def test_roster_rejects_invalid_scorable_data_and_cross_role_groups(tmp_path, fault):
+    root = tmp_path / "raw"
+    root.mkdir()
+    rows = "\n".join(f"{i} {i + 1}" for i in range(8)) + "\n"
+    bad = {
+        "constant": "1 2\n" * 8,
+        "short": "1 2\n3 4\n",
+        "nan": "1 nan\n" + rows,
+        "blank": "\n" + rows,
+    }.get(fault, rows)
+    hashes = _files(
+        root,
+        {
+            "README": "readme\n",
+            "pairmeta.txt": "1 1 1 2 2 1\n2 1 1 2 2 1\n",
+            "pair0001.txt": bad,
+            "pair0002.txt": rows,
+        },
+    )
+    if fault == "unbound":
+        hashes.pop("pair0001.txt")
+    manifest = {
+        "version": "tuebingen-pilot-v1",
+        "mapping_seed": 261,
+        "minimum_rows": 8,
+        "files": hashes,
+        "pairs": [
+            {"pair_id": 1, "source_group": "family", "split": "development"},
+            {
+                "pair_id": 2,
+                "source_group": "family" if fault == "group_overlap" else "held",
+                "split": "test",
+            },
+        ],
+    }
+    with pytest.raises(ValueError):
+        evaluation_roster(manifest, root)

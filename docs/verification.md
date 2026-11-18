@@ -1,5 +1,30 @@
 # Verification record
 
+## PR #14 review corrections — 2026-11-18
+
+On `codex/faizah-pilot-diagnosis`, restored Kris's complete `cf64934` diagnosis
+correction and added exact S1 lineage checks, shared loader/roster source-group
+validation, audited numeric eligibility, and separate checker-error accounting.
+Both diagnosis commands now require the original journal when using saved margins.
+
+- `bash scripts/check.sh`: **947 passed, no skips**, 91% statement coverage;
+  Ruff lint/format, both Track A demos, synthetic ANM handshake and builds pass.
+- Thirty corruption regressions fail before the new fixes; new lineage tests use
+  actual native acceptance exports. Valid 136-row hand-calculated scorer oracles
+  and fixed paired group-resample checks retain their metric targets/denominators.
+- Raw snapshot and roster tests run using the retained pinned snapshot through an
+  ignored local symlink. Standalone audit/roster commands pass; counts remain
+  17 pilot, four development, 38 validation and 49 excluded cases.
+- Retained 17-case scripted-pilot artifacts pass scoring/diagnosis with original
+  journal receipts; a valid alternate-sample ANM result is rejected. No new LLM
+  calls, historical prediction edits, threshold changes or held-out inference.
+- Local logs: `runs/pr14-review-fixes/repository-check.log` and
+  `runs/pr14-review-fixes/regressions-before.log` (ignored artifacts).
+
+These are integrity/integration fixes. ANM calculation, frozen manifests/roster,
+scientific recovery results and unresolved original live-pilot certification are
+not changed. Merge-route notes are in `knowledge/roadmap-status.md`.
+
 ## CI formatting follow-up — 2026-11-14
 
 The first published run for `4c58ad1` failed Ruff's format check on a Python

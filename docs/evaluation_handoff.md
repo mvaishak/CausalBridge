@@ -5,6 +5,11 @@ change the 17 pilot pairs, and does not replace the exploratory threshold 0.001.
 
 The machine-readable case list is `configs/evaluation-roster.json`.
 
+PR #14's review corrections require the roster builder to validate pinned numeric
+eligibility and the same source-group isolation rules as the loader before
+accepting or writing a roster. An inclusion annotation alone is insufficient.
+The frozen case assignments, references, weights and counts remain unchanged.
+
 ## Who holds which bundle
 
 Faizah holds the committed case list, the scorer, the diagnosis checker, and the
@@ -68,6 +73,7 @@ uv run --extra anm python -m causalbridge.evaluation.diagnosis \
   --evaluator runs/pilot-preparation/prepared/evaluator/records.json \
   --mapping runs/real-pilot-01/evaluation_mapping.json \
   --anm-root runs/real-pilot-01/anm \
+  --experiment-journal runs/real-pilot-01/experiment/events.jsonl \
   --output runs/real-pilot-01/diagnosis.json
 ```
 
@@ -123,3 +129,25 @@ A later ANM change is eligible for a validation score only when all of these hol
 5. The report states coverage, both yields, selective accuracy, and the total weight.
 
 Selective accuracy alone is not a pass. A process check is not a statement that the direction is causal.
+
+## Saved-export and diagnosis checks
+
+Score one original manifest at a time. Include S1 whenever scoring S2 or
+SIMPLE_GATE: derived rows must match the original S1 attempt, manifest, package
+and run identity. They may retain its answer or suppress it, but cannot reverse
+its arrow or answer after a failed/abstaining parent. A non-null S2 direction
+must equal its recorded release and have a passing check; a rejected simple
+gate cannot supply an answer. Missing identities and mixed exports are errors.
+The scorer keeps every eligible case in the denominator, including nonanswers.
+
+Supplying `--anm-root` for diagnosis also requires `--experiment-journal` from
+the original retained experiment. The journal's hash chain is checked and the
+exact method-result digest must match the E4 package/mapping receipt. Never build
+that receipt from a replacement result. Without original receipts, omit ANM
+results and do not report a margin curve.
+
+Agreement summaries separate deliberate abstentions, prediction failures,
+unavailable methods and completed checker suppression. The checker report counts
+`checker_error` separately (count and weight); it does not credit execution errors
+as correct/wrong answers removed. These checks do not change past predictions
+or establish causal accuracy.

@@ -144,6 +144,7 @@ uv run --extra anm python -m causalbridge.evaluation.diagnosis \
   --evaluator runs/pilot-preparation/prepared/evaluator/records.json \
   --mapping runs/real-pilot-01/evaluation_mapping.json \
   --anm-root runs/real-pilot-01/anm \
+  --experiment-journal runs/real-pilot-01/experiment/events.jsonl \
   --output runs/real-pilot-01/diagnosis.json
 ```
 
@@ -175,3 +176,25 @@ bootstrap intervals and inferential plots; full error-study/report/presentation;
 optional robustness experiments and a new minimum-citation policy. None is needed
 to execute and inspect this bounded pilot. The original preparation used scripted
 replies; the subsequent first live run is recorded above.
+
+
+Saved-margin diagnosis requires the independently retained original experiment
+journal (`--experiment-journal`), whose hash chain is checked read-only. Each
+ANM result must match the original method-result digest and the E4 package/mapping
+identity in the analysis export. A valid result from a different sample is rejected.
+Without those receipts, omit `--anm-root`: directional analysis remains available,
+but no threshold curve is reported. Do not reconstruct receipts from replacement
+results or modify historical artifacts.
+
+Agreement summaries use only completed answers or deliberate abstentions in their
+`comparable_case_count`. Failures, unavailable methods, checker suppression and
+unknown outcomes have separate counts. Those exclusion counts may overlap (both
+model and method can fail); `excluded_case_count` counts distinct excluded cases.
+
+PR #14 review follow-up: pilot scoring now rejects mixed manifests and requires
+exact saved S1 attempt/package/run bindings for S2 and SIMPLE_GATE. A derived
+release cannot invent/reverse an arrow, release after a failed/abstaining parent,
+or contradict its checker/gate outcome. Include S1 in a custom condition subset
+when scoring either derived condition. Case denominators and valid metric values
+are unchanged. Diagnosis reports checker execution errors separately from
+completed checks that suppress answers, including separate error counts/weights.

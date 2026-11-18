@@ -78,6 +78,25 @@ class PreparedPilot:
     audit: dict
 
 
+def validate_source_groups(reviews: tuple[PairReview, ...]) -> None:
+    """Keep each source family in one split, including its excluded members."""
+    grouped: dict[str, list[PairReview]] = {}
+    for review in reviews:
+        grouped.setdefault(review.source_group, []).append(review)
+    for group, members in grouped.items():
+        splits = {member.split for member in members}
+        if len(splits) != 1:
+            raise ValueError("Source group has more than one split: " + group)
+        split = next(iter(splits))
+        eligible = [member for member in members if member.exclusion_reason is None]
+        if split == "pilot" and not eligible:
+            raise ValueError("Pilot source group has no included pair: " + group)
+        if split in {"development", "test"} and not eligible:
+            raise ValueError("Held-out source group has no eligible pair: " + group)
+        if split in {"ineligible", "reserved"} and eligible:
+            raise ValueError("Excluded source group contains an eligible pair: " + group)
+
+
 def prepare_pilot(snapshot: Path, manifest: dict) -> PreparedPilot:
     """Verify exact files, source isolation and explicit reviews before projection.
 
@@ -92,21 +111,7 @@ def prepare_pilot(snapshot: Path, manifest: dict) -> PreparedPilot:
     reviews = {r.pair_id: r for r in spec.pairs}
     if len(reviews) != len(spec.pairs) or set(reviews) != set(metadata):
         raise ValueError("Review must account for every metadata pair exactly once")
-    grouped: dict[str, list[PairReview]] = {}
-    for review in spec.pairs:
-        grouped.setdefault(review.source_group, []).append(review)
-    for group, members in grouped.items():
-        splits = {member.split for member in members}
-        if len(splits) != 1:
-            raise ValueError("Source group has more than one split: " + group)
-        split = next(iter(splits))
-        eligible = [member for member in members if member.exclusion_reason is None]
-        if split == "pilot" and not eligible:
-            raise ValueError("Pilot source group has no included pair: " + group)
-        if split in {"development", "test"} and not eligible:
-            raise ValueError("Held-out source group has no eligible pair: " + group)
-        if split in {"ineligible", "reserved"} and eligible:
-            raise ValueError("Excluded source group contains an eligible pair: " + group)
+    validate_source_groups(spec.pairs)
     # Opaque IDs are randomized independently of reference labels, before reading them.
     ids = list(range(1000, 1000 + len(reviews)))
     random.Random(spec.mapping_seed).shuffle(ids)

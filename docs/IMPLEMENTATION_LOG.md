@@ -1,5 +1,26 @@
 # Implementation record
 
+## PR #14 review corrections — 2026-11-18
+
+- Restored the complete reviewed diagnosis corrections from Kris's `cf64934`,
+  including original experiment journal/result binding, status-aware agreement
+  counts and regression tests. Updated both handoff diagnosis commands.
+- Added one-manifest S1-parent validation before pilot scoring for S2/simple-gate
+  records. Native export corruption tests cover missing/wrong parents, manifest,
+  package/run/attempt substitution, reversed arrows, failed/abstaining parents and
+  contradictory release outcomes. Valid metric oracles stay unchanged.
+- Extracted loader source-group constraints for shared roster validation. Scorable
+  records must pass the existing data-audit eligibility rules on pinned numeric
+  files; overlap, constant/nonfinite/short/blank data and unpinned data are rejected.
+- Checker execution errors have separate counts/weights and are excluded from
+  completed correct/wrong suppression totals. Completed checker abstentions are
+  not model abstentions.
+- Full verification: 947 tests, no skips; lint/format, demos, ANM handshake and
+  builds pass. Snapshot/roster and retained scripted-pilot checks pass read-only.
+  No ANM tuning, LLM calls, manifest changes or historical result edits.
+- PR #14 is the proposed consolidated main integration; overlapping #10/#12 must
+  be reviewed as superseded or retargeted after it lands, not merged blindly.
+
 ## Anish: roadmap numerical inference and ANM producer — 2026-11-14
 
 - Publication follow-up: CI caught an unformatted Python snippet in the newly

@@ -51,11 +51,12 @@ weighted coverage and 40.0% weighted selective accuracy. The earlier full-cohort
 offline check used real observations/ANM with scripted replies. Transferring code
 does not independently reproduce the live results. See [pilot guide](../pilot_run.md).
 
-The imported scorer checks mapping identity and deterministic column orientation,
-closing the earlier altered-order gap on this branch. Other later fixes are not
-implicitly included: diagnosis follows `pilot-case-diagnosis`, rather than the
-newer PR #13 correction. Preserve original artifacts and review known outstanding
-scorer/diagnosis findings before trusting historical result reconciliation.
+The scorer checks mapping identity and deterministic column orientation, closing
+the earlier altered-order gap. PR #14's review follow-up also restores the full
+PR #13 correction (`cf64934`), validates exact saved S1 lineage during scoring,
+enforces roster eligibility/source-group isolation, and separates checker errors
+from completed suppression. These close the reported integration gaps; they do
+not independently certify the original live-pilot bundle or its claimed scores.
 
 Uploaded ANM reports support numerical fidelity but fail the frozen statistical
 recovery/stability gate. No statistical repair is introduced by this transfer.
@@ -73,8 +74,9 @@ the frozen pilot to improve reported scores.
 
 ## Local transfer verification
 
-All 26 source-code, configuration, schema, example and test files changed by the
-source branch match `7a886f1` byte for byte. Main's handoff, evaluator joins and
+At the initial transfer (`7aec8fd`), all 26 source-code, configuration, schema,
+example and test files changed by the source branch matched `7a886f1` byte for
+byte. The review follow-up deliberately adds corrections below. Main's handoff, evaluator joins and
 actual-consumer acceptance tests are retained. The documentation conflict was
 resolved without removing either branch's implemented capabilities.
 
@@ -90,3 +92,20 @@ five follow-up commits from `pilot-case-diagnosis` through a normal revert. The
 integration merge retains their original authorship/history; the source cleanup
 preserves the preceding pilot-readiness work. No model-server calls or PR creation
 are part of the transfer. Anish's uncommitted replay worktree stays untouched.
+
+## PR #14 review corrections — 2026-11-18
+
+Full checks now pass **947 tests with no skips**, 91% statement coverage, lint,
+formatting, demos, synthetic ANM handshake and source/wheel builds. Both snapshot
+tests ran against a local link to the retained pinned files. The roster still
+matches 17/4/38/49 exactly. Thirty newly added corruption checks failed before
+the fixes; the focused suite and valid native-export metric oracles now pass.
+The retained 17-case scripted-pilot artifacts also validate under the stricter
+scorer/diagnosis, and alternate-sample result substitution is rejected.
+
+Consolidated merge route: review PR #14 directly against main. It includes the
+pilot-readiness implementation from #10, the seeded mapping correction from #12,
+the reviewed diagnosis correction from #13, and the evaluation roster. After #14
+lands, maintainers should close overlapping #10/#12 as superseded or retarget any
+remaining unique changes; do not merge an older implementation over these fixes.
+No PR is automatically closed and main is unchanged by updating this branch.
