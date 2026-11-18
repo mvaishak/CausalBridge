@@ -113,7 +113,8 @@ def test_truncation_durable_non_scorable_usage_audit_cache(native_packages, tmp_
         assert all(x["skip_reason"] == "parent_prediction_failed" for x in releases)
         assert all(x["released_direction"] is None for x in releases)
         rows = analysis_rows(run, releases)
-        assert all(not x["prediction_scorable"] for x in rows)
+        assert all(not x["prediction_scorable"] for x in rows if x["condition"] != "ANM_ONLY")
+        assert next(x for x in rows if x["condition"] == "ANM_ONLY")["prediction_scorable"]
         assert all(x["predicted_direction"] is None for x in rows if x["condition"] != "ANM_ONLY")
         repeated = r.run(native_packages, model)
         assert repeated["new_model_calls"] == 0

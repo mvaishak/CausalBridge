@@ -3,7 +3,7 @@ import subprocess
 
 import pytest
 
-from causalbridge.llm.client import Generation
+from causalbridge.llm.client import Generation, GenerationFailure
 from causalbridge.pipeline import CausalBridge
 from causalbridge.schemas import Proposal, RuntimeCase
 from causalbridge.tools.reference import ReferenceBackend
@@ -82,6 +82,37 @@ def test_model_outage_returns_trace(toy):
     trace = CausalBridge(ScriptedModel(TimeoutError("timed out")), ReferenceBackend()).run(toy)
     assert trace.verdict.reason_code == "model_error"
     assert trace.failure_stage == "parse"
+
+
+@pytest.mark.parametrize("stage", ["parse", "plan", "interpret"])
+def test_truncated_generation_is_preserved_at_each_stage(toy, query, stage):
+    failed = Generation(
+        text="partial reply",
+        model="fixture",
+        input_tokens=123,
+        output_tokens=512,
+        status="truncated",
+        failure_reason="output_token_limit",
+        raw_response='{"done":true}',
+    )
+    replies = [query.model_dump_json(), candidate(query)]
+    index = ["parse", "plan", "interpret"].index(stage)
+    trace = CausalBridge(
+        ScriptedModel(*replies[:index], GenerationFailure(failed)), ReferenceBackend()
+    ).run(toy)
+    assert trace.verdict.response_action == "abstain"
+    assert trace.failure_stage == stage
+    assert trace.calls[-1].generation == failed
+    assert trace.input_tokens == 123 + index * 3
+    assert trace.output_tokens == 512 + index * 2
+
+
+def test_unknown_usage_from_failed_later_call_never_undercounts(toy, query):
+    trace = CausalBridge(
+        ScriptedModel(query.model_dump_json(), TimeoutError("timeout")), ReferenceBackend()
+    ).run(toy)
+    assert trace.input_tokens is None
+    assert trace.output_tokens is None
 
 
 def test_final_model_cannot_swap_query_or_tool(toy, query):

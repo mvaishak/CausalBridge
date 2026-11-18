@@ -1,5 +1,28 @@
 # Team handoff checklist
 
+## Current Anish development handoff — 2026-11-18
+
+The four-chunk ANM study workflow is implemented locally, with PR #14 `a29dc4b`
+as a dependency on `codex/anish-anm-baseline-reproduction`. Existing
+replay changes are preserved. Faizah's real-data handoff is available and verified;
+it is no longer a prerequisite blocking development.
+
+The development study ran on pairs 12/17/93/99: six fixed variants, three splits,
+72 numerical attempts and 24 baseline controls. Primary answered accuracy is zero
+for every variant. No candidate was selected and all 38 validation cases remain
+unused by ANM. Code supports explicit criteria, candidate freeze and one validation
+run per freeze; that path is tested on synthetic fixtures only. See
+[anm_development.md](anm_development.md) for commands, limitations and next work.
+
+A targeted permutation-adequacy follow-up is also complete. It still has zero
+correct development answers across all three split seeds, despite abstaining
+more. It is not a production replacement. The user has authorized committing
+this work; no real candidate is frozen and no real validation case was fitted.
+
+The missing original 48-dataset synthetic validation bundle is needed only to
+reproduce that earlier report exactly. No model server/live-pilot artifacts are
+required for ANM-only development. Do not retune using the 17 frozen pilot pairs.
+
 ## Anish: numerical engine and ANM request producer
 
 Implemented locally from merged main `48d6cda` on `codex/anish-anm-provenance`
@@ -71,3 +94,19 @@ can also accept useful answers.
 The numerical engine and independent pilot/witness checks are implemented. The
 team still needs full benchmark validation, real-data/live-model runs, matched
 baselines, group-level uncertainty estimates, scoring audits and the report.
+
+## ANM baseline follow-up — 2026-11-17
+
+Anish's local feature branch `codex/anish-anm-baseline-reproduction` adds saved
+attempt verification and optional production replay. Commands and exact scope:
+[anm_producer.md](anm_producer.md#saved-baseline-verification-and-production-replay--2026-11-17).
+Seventeen retained scripted-pilot ANM attempts replay consistently; this does not
+reproduce the independent study's 48-dataset scientific gate or improve the method.
+
+Required handoff from the validation-bundle holder (coordinate with Faizah): the
+exact frozen validation source/configuration, seed manifest, original datasets,
+truth/scorability records, saved attempts, and reproduction commands described by
+the three external validation reports. These files are not present on any fetched
+remote branch. Agree development/untouched validation cases and pass criteria
+before tuning. No full production scorer or live-model run is needed to begin
+that numerical work. Preserve historical artifacts and use fresh output paths.

@@ -4,7 +4,7 @@ from time import perf_counter
 from typing import Literal, Protocol
 
 import httpx
-from pydantic import Field
+from pydantic import Field, StrictBool
 
 from causalbridge.schemas import Record
 
@@ -17,6 +17,7 @@ class ModelConfig(Record):
     seed: int = 261
     max_tokens: int = Field(default=1024, gt=0)
     context_tokens: int = Field(default=8192, ge=1024)
+    think: StrictBool | None = None
 
 
 class Generation(Record):
@@ -62,6 +63,8 @@ class OllamaModel:
                 num_ctx=config.context_tokens,
             ),
         )
+        if config.think is not None:
+            payload["think"] = config.think
         url = config.base_url.rstrip("/") + "/api/chat"
         if self.client is None:
             with httpx.Client(timeout=config.timeout_seconds) as client:

@@ -33,6 +33,33 @@ def test_ollama_structured_output_and_generation_settings():
     assert seen[0]["options"]["temperature"] == 0
 
 
+@pytest.mark.parametrize("think", [None, False, True])
+def test_ollama_thinking_is_sent_only_when_explicit(think):
+    seen = []
+
+    def respond(request):
+        seen.append(json.loads(request.content))
+        return httpx.Response(
+            200,
+            json={"model": "qwen3:8b", "done": True, "message": {"content": "{}"}},
+        )
+
+    with httpx.Client(transport=httpx.MockTransport(respond)) as client:
+        model = OllamaModel(ModelConfig(model="qwen3:8b", think=think), client=client)
+        model.generate([], {})
+
+    if think is None:
+        assert "think" not in seen[0]
+    else:
+        assert seen[0]["think"] is think
+
+
+@pytest.mark.parametrize("think", ["false", 0, 1])
+def test_ollama_thinking_setting_requires_a_boolean(think):
+    with pytest.raises(ValueError):
+        ModelConfig(think=think)
+
+
 @pytest.mark.parametrize(
     "response",
     [
