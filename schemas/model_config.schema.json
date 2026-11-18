@@ -40,6 +40,18 @@
       "minimum": 1024,
       "title": "Context Tokens",
       "type": "integer"
+    },
+    "think": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Think"
     }
   },
   "title": "ModelConfig",

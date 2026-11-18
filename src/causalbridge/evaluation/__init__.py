@@ -1,1 +1,1 @@
-"""Baselines, experiment execution and scoring. Implementation pending."""
+"""Durable experiment execution, baseline exports and exploratory pilot scoring."""

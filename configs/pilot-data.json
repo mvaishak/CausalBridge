@@ -1,0 +1,1101 @@
+{
+  "version": "tuebingen-pilot-v1",
+  "source_url": "https://webdav.tuebingen.mpg.de/cause-effect/pairs.zip",
+  "mapping_seed": 261,
+  "minimum_rows": 100,
+  "files": {
+    "README": "9f2cb57c40dbcd66cce3675614c2a396e01489bdef31d6a0666f76e7357f41ba",
+    "pair0001.txt": "98f2c6117515788f5c23bf03aeddb496bcee748b3bfd701909a9051e3dbbd9c9",
+    "pair0001_des.txt": "a16d384aa9d1126fe18f26f8d369ebdce012adb7e854d765da2308bdded3e735",
+    "pair0002.txt": "19c65fd45f969015e5f2d8f6a860536a27b9cc9759f5e6d55edc92947f106c17",
+    "pair0002_des.txt": "8561686a2849c03e9ef502c1317c0fbf073d37090556eef852f40b443b9712b0",
+    "pair0003.txt": "e52b72e97fe8db1b5465a7e5903f0a74b4cdd65103c1522c81d22eadee9d8319",
+    "pair0003_des.txt": "ecbd2dd9181e09f8501f3c8ac95bc184ad7621fd301b2c4ae518856af8580626",
+    "pair0004.txt": "3932e6e3ebf35c0397a79ef905fdb6ed39a4521c96aa59ba99a6667f69ae038d",
+    "pair0004_des.txt": "f145a19e3a8ab140ca19b98abad761c155b607f320d5a151217c34113673cf0c",
+    "pair0005.txt": "5bea2c4298fd2e0356f8217d966e6d3cd5a8b70e56da082f3fb7b4ad6aaa7f65",
+    "pair0005_des.txt": "35e43424ec316eccba84a092290167e70993e55c09587521b76575122fe989b8",
+    "pair0006.txt": "960f6ee25ca403ca11c5e9f1018818b34adbcbcf13bbe4b86a39d0c7e48edd6b",
+    "pair0006_des.txt": "31de20e8f47a2e0c9ff702bf3f41cb60cd2e3786a13aba85e1d3c3144ef54190",
+    "pair0007.txt": "83f384ed9ee3e56f76d99118103b76bbd86a0c0e0214353815171757bb8fc55e",
+    "pair0007_des.txt": "97c169d564aea213f4e2307ee90dda566d27a306d552a8d968b308c6014099b4",
+    "pair0008.txt": "dacd621e6ccf04a12de75320ac62e13204b7b75ffea0d6db5e7b67a6e553a141",
+    "pair0008_des.txt": "e82c17948ab90d9e4bd45acc7aaf07b79fc31fefc798e002d7ad926398c5276e",
+    "pair0009.txt": "484d31c117bdbe42f51d753fb367b4feb686630514f5bb3be404c7d51fca0510",
+    "pair0009_des.txt": "b48d751655132f74789621bb75828e05e7d13838492aa2721b55d3843514ac3f",
+    "pair0010.txt": "ca6f83fac2ceff26f3f13887fdfdc37170ad7e4b52870a10cfe2f02e251fa692",
+    "pair0010_des.txt": "58344a64c71a2eb9e9a2d991808869fac8665fff57448b3109ceb212169a10d8",
+    "pair0011.txt": "4a6ef1bc964ee4822ffb24a97c353db2e4280ab187d669d1f7abd77d67fcbdc2",
+    "pair0011_des.txt": "3d03cac981d956ccb3ff9520447f8c7ca1dac174505e67b25b7dd79f19b23116",
+    "pair0012.txt": "52394a0af321bc41c935f6f7398c0b24b0dd1fc7c63f06369520ce2912f75553",
+    "pair0012_des.txt": "4f05ef7b5cab0a74326fd9b47c3842c664acf452f816f177842c621571d338e5",
+    "pair0013.txt": "35ed9818fea9e757b7de09bffbf97dab02c43da8bf3cc54f842bc3963fb0aefc",
+    "pair0013_des.txt": "84180efa62250f48999f770fc36ce2eea807e002d908f56d01ad1674d450df68",
+    "pair0014.txt": "5dc157d7e5c7c77e80137c93f694abfb70897539668825ead38b38f262e2938d",
+    "pair0014_des.txt": "ae7f175a08244d4b5d4bfa7213f491b515d971ed240362881e84055e667950b3",
+    "pair0015.txt": "541a2a9b08e9ee967acf42ddd3e81438757939a1db226fd81352597d539d8a33",
+    "pair0015_des.txt": "acbcac59c721fa79b0958691e8ad9c482f9293d06ec7b7ccbd0733a7d00a9d50",
+    "pair0016.txt": "ffd0a2db9432dbe176b358b375c45adced20dbff082bcc9eeb5df039cbda2ca1",
+    "pair0016_des.txt": "3e151ce5a8094e4e5bf73f32144c1242c819a395409f57a929d7e670c5b44374",
+    "pair0017.txt": "e514f90c42d07af27df2518ccce71bd1ed04cc06213342b3b7ccda06792dc1dc",
+    "pair0017_des.txt": "58e547789fafeb65934385dc5452563215e2c6fdd375d43ccb87e6a8f02ab4e4",
+    "pair0018.txt": "be8e3a0c36086cdc63501dee9a4c33c19eadb231d7be2fc5a64ac2352bcdfe19",
+    "pair0018_des.txt": "88bcf1b3cf5ea98df82f7be0cca053a1505ab73268537d46fc66f26d716cf9a0",
+    "pair0019.txt": "a90f987a195b780c30cea508589af9e4905480f2c6b187a05b6d98bcc17c145c",
+    "pair0019_des.txt": "900cc855bdf0da0d53639b855bac64c0a315b12b46e062c2348616afb89bdb2f",
+    "pair0020.txt": "4e9da6e9a6f7483fb51d979dff67a7199d203252b2faec240ef4101b5b1c370f",
+    "pair0020_des.txt": "fe5908d2e38fda18811232e05b8db0f1bd4598c5fff0a4095e8fa09f20c6384b",
+    "pair0021.txt": "a03d0c03a57c743024d2a79aec339507e4b3ac6722dc193dc8c6752a3bdc9900",
+    "pair0021_des.txt": "aa9efb251e1051c9428d7622994b0572a1210ca718d3ec49cbb7a9564ebec150",
+    "pair0022.txt": "fdf621ab2a38b9f07e7651c223291b4a38dac452d7f4a0557189506d4f7a1bc9",
+    "pair0022_des.txt": "0d9ac25b7631a92c4d8274f6566d0cead347e4b99ddf6c20408f01e117bd5a41",
+    "pair0023.txt": "8aed60da3eb756abee07a4df39d5855fcd62ebf37f48be470c580993b22f160e",
+    "pair0023_des.txt": "82b644bf81f7a44db58fb35c7f49b7625669341449112d93c29d0d3aa62f8002",
+    "pair0024.txt": "81dce26bbb7d590c1b07c1aea9e79859de6e383b2c29541dfd0c651caee17b40",
+    "pair0024_des.txt": "a0005a66fdccbd775f14f6a420c573c1eaea668bbb479cad4f34ff4a5bf349e8",
+    "pair0025.txt": "370514c5af2c4ca1ab071f4a797c507d1c9ab2ffbeea73cea506b6f5aa5e0abe",
+    "pair0025_des.txt": "9f5b1bc1b71474cc665f7726eede5abc0c8c47088d39fe99fe2ecadd4dccc22a",
+    "pair0026.txt": "1c9aeefbcbb6c9c9ba194b07297b81d4cb8110e2d1b4bc6c2aa93c234ccde57a",
+    "pair0026_des.txt": "1a84e6553790c121950cc128aebd50f31c601cfc55058d35e9ca231e219ac6a9",
+    "pair0027.txt": "d0b1c99dfcfa8769edd129e6ad5055fa324156502958c1d4efb509aa0c7a78bf",
+    "pair0027_des.txt": "9fe5a5655b859bf0d1166e901a0a87aa49c9bff47fcd4c7a72a9d72554f68a9e",
+    "pair0028.txt": "792a618fb4786f69fb6a68ee7d5d015482145c7fe63b0635e80cb10232cfd660",
+    "pair0028_des.txt": "b5238ae56f8d7ee1fe3f3459a7d4af3df6d1f950ac9692c39002d0d51c28b032",
+    "pair0029.txt": "35cc0409a045dbe7d5392caca93c19b1abe4183ea1a09e891acf97956da98a48",
+    "pair0029_des.txt": "d29d9584a98ff55f4857db952019d2b32f3734c96d2b555db9e5d3cabba593a4",
+    "pair0030.txt": "3f1b77581caecabf7fc2761b9ce1ade909e197ebe05c5dad9545e7bc7e732c5d",
+    "pair0030_des.txt": "081cf85d9835ee130b868373866c48501bdb337110488a6f52be1eb955fe0427",
+    "pair0031.txt": "0304a806a6cc121837caf6652ad1aa141fefa558b3054c3e520bdb60ec0c0459",
+    "pair0031_des.txt": "0b135eb57a3f63c874e82c883ab808ce43f688608ef9bcc5bf9c70620daea603",
+    "pair0032.txt": "e5c1f50e1f09f037e3291a4b013780de26178acc68df90ad68da5f97643ce41f",
+    "pair0032_des.txt": "31dfb45ce9bb834d14a7ae08ded02c3b76b7ea0be50735dd6e17a32f5dccd8e2",
+    "pair0033.txt": "c3e14b39a15856af88a8a27b96b714ce021f2b10de85a1050119c2f6a7af44c0",
+    "pair0033_des.txt": "a4864f81df6c21a232e0692e30499b47a50c17f2f4c34d351c4f7fc760884dd2",
+    "pair0034.txt": "e986b85838c582e8fbe7f5d505345a87af150d59b901695bd3831efcb30a15f6",
+    "pair0034_des.txt": "18c57dbe59665b8a22f0d87340442e6728278a3e4a26c7e35570b17ffd37c38f",
+    "pair0035.txt": "6a571d2eac9fb9076eca0117dc4ce15080f669d414165083dae79faaf07d9a2a",
+    "pair0035_des.txt": "4f1af815f5b83fe10313762f3e0d02e9cfe63cedf474b7d0ef6ce14f2a60834a",
+    "pair0036.txt": "e53c05dd9caf7d79055e5b729ed0ca4db948f7c957e32f818ce86d3ccf0fd0e0",
+    "pair0036_des.txt": "33cd87b12e1d6f826618b5d423c0a5bcf3ead22039f9628466739f3777db9a27",
+    "pair0037.txt": "7519f02d1920251b498ebafeaf47ddcded0cb295b0decd077dd6825b945859c5",
+    "pair0037_des.txt": "784d15de75f767964efe6ef08a81b81c0bb2696a9e6673158c3d369710110ccc",
+    "pair0038.txt": "14ac69332f02f7c37729373d19be837b7063f7968b69c67d69058dc76ddd54c5",
+    "pair0038_des.txt": "7268ebced508694c4596785025e4045455c8e91cf443c57613b98f836066cf85",
+    "pair0039.txt": "91e0e676cab42281d42f4dd5540ce30cb9883d5fc55072b1be12a7342ad9c2a9",
+    "pair0039_des.txt": "6396e769d9a737c86793b6748b4d676d320829f33c14e8707e2e9910f0836f9a",
+    "pair0040.txt": "020e06e17839d455658262b5745129d37a91117c2566cb14ac6bf24e4a12b460",
+    "pair0040_des.txt": "9e78cd5545a151abf036bc2defdba6e6ea335e9e3c152c104bce9866c5708dfe",
+    "pair0041.txt": "96111c7855f846d47f92db73971ecf190d8bc7cb714f1d9e25eb8ac6e14c9c63",
+    "pair0041_des.txt": "077e2ccfd8c5796d281cf7305064bd56cf3206242106d1c98f8b64fc0affef2f",
+    "pair0042.txt": "0f1c69869149742ed4cb1ce34a4e6261b18d04aa982d6adf4fe12d3b74e5b795",
+    "pair0042_des.txt": "177ff970db23e058c623750a8a6236b0023bde835f97693d2bc1957eaed160b7",
+    "pair0043.txt": "576246a79b8cf204b21ecdbcba4e9e421a3bf737fa08b406afb5b83d61853501",
+    "pair0043_des.txt": "5d90498c9228da2bbe52e613145f077eb2fc7d10fa21e02471d1ff80ce989dff",
+    "pair0044.txt": "1bc8156530e3ba20ea816ac1284af0cf909fdfec3eb6eeeec587a9247690a7cd",
+    "pair0044_des.txt": "752fb822040cfb9a86602a200879d5c9fe91ba69a567346877c9f8b84ea138f7",
+    "pair0045.txt": "d5de1d7971f1d08f2d030f5dda64d065eb365bfc53696c7271f3e1a2268811d5",
+    "pair0045_des.txt": "0d882a201fff21dd8bc0d5feb76cb75b5382e65ad3dc9a0084c683a3cbab32a4",
+    "pair0046.txt": "dc0bdc3b8bf06cece6967a436117e0c1935021ce98ce53ae9e803d3a54743aaa",
+    "pair0046_des.txt": "08156a8ac4f828bd473ddf7312297f54c081f0685e83113e35b492303fc34f12",
+    "pair0047.txt": "426b8c803fb19a11f5e98479f64468e3e3c67013ef1dfb48651a47c025b868f3",
+    "pair0047_des.txt": "161a72cdb4136126b631411c597154149f8df2984eb40e497fead95474987dbe",
+    "pair0048.txt": "213b815fc452da1526a015ef6b00cb12480aac2f8a15cb6d9452a5179df9d8eb",
+    "pair0048_des.txt": "971e550f736d8efd76225c24ece05b9a03e23ad2c3d9df6d01fd8734068d20e2",
+    "pair0049.txt": "511fa4a5632bfb1ed55dac3f5e0ac4418ded6073829009bbdf205c04bc01435d",
+    "pair0049_des.txt": "8903f58d9986e516229bd68edf47d392a51370196b5968eff1a8b9718b04abf6",
+    "pair0050.txt": "03a5d18697ae6d84993f033e35a70c556b233c44b18bc3623f9aa720833afdb4",
+    "pair0050_des.txt": "5efe435d764d752b25b5ca8ee60cdd2bd113e4ace5715026fa8130924e85f4bf",
+    "pair0051.txt": "99dffad83a635a75d547a9df9b766b7bd02ed2fb45c93de113dd5816422f4979",
+    "pair0051_des.txt": "68e98f1c4f463108d5aae3a3261a27751fdf1ca9522f814dc1052b8b220fba7e",
+    "pair0052.txt": "f5288bd51b90b46ddad2d070bc61e80c8db132f29f03c42afead2bad97c7befd",
+    "pair0052_des.txt": "35cbc3b6ce6b2c12c7ea23cf0db6e03aa6b4f55464558cfcbf6bc06e46acff2a",
+    "pair0053.txt": "1daa00681a35fedc30161985f2d26ae4b12012157f28584449d96ba7eae414e1",
+    "pair0053_des.txt": "59434fd51c2d3822a323fcf67d099bc80898f32305889c98997727b2ecdfe5a1",
+    "pair0054.txt": "cdd8ac1a1ecbf3b6967d1a935c86f57e50cc2831f5f383e9f9a3b1684c0f14d9",
+    "pair0054_des.txt": "8fdeba8c930e571149fee0f864cbf3147c5b56a8cfef5583fa2d50314c0e4d75",
+    "pair0055.txt": "ee9d104c3cdd166624b2c4f50ef22d233b71b782621fc021dcfa66282b9619bf",
+    "pair0055_des.txt": "e0f4750c0364cd697fb8b7ffa449601eb8ff5294a1667df83bb7bc484a6fbbc5",
+    "pair0056.txt": "5034f1428bf13df2914fe4e55df22839105b724c2af0dd9a13399dba1e85dfc9",
+    "pair0056_des.txt": "ca4b7ac4eea8cf1cf5d10644a90bf6e664269eeeac25bffce5383511847b5e8e",
+    "pair0057.txt": "e2706ff1da875cf676399b77123dc87b9c4074e91751e6e253a776f78f2822eb",
+    "pair0057_des.txt": "f169234e04fbe6f246951d2d29c58cb4bf14d7ab315745170532648e41e6667b",
+    "pair0058.txt": "7976b7190c3a36eecf51cbe7c0763c48cb4405bbd8efc249d6a92ba2b4acf7fb",
+    "pair0058_des.txt": "ae002969133b0bda5d5ff6e33334307632b2729d6d33a898e411c730403c9197",
+    "pair0059.txt": "8c15dd37bcd788b74ad9b9bf082d5237bcf73dd263b81240a1e4c0e226bda2e9",
+    "pair0059_des.txt": "f412b181698e9fdcd4d763d54a73f4fbaf7c368f376d723600804583abee0574",
+    "pair0060.txt": "391aca1d8cd6257bd1b553b221f42694fca8656932bb246dc34e1f1543545530",
+    "pair0060_des.txt": "41664a5de809bd3a686df231827c153ee13d8792a25061b943076c17c0337fa7",
+    "pair0061.txt": "dd5b9da559582d03c2b70a0260730ba2f7024bbad72017d78dda4263e70f8f85",
+    "pair0061_des.txt": "c547b5c2a25682cecf78d154cb8df43e3e2d31d670342390e8166b9f86345e6e",
+    "pair0062.txt": "e8da46324bacb43056006b4caed67660a4d9944b4b107c30a968d99465e524a1",
+    "pair0062_des.txt": "427ee8a5b81150d74a6ec90c61ec06b9fb18dce9803d4ba574ebf16e8703ee00",
+    "pair0063.txt": "d320beeb65095d4baba8edd4a72b6e9d75c597511f93691f19959b46faaf0521",
+    "pair0063_des.txt": "ca2d6c3e3e28f46deba688b606f51c58498328d5d4cfe916a8a0327ac7654732",
+    "pair0064.txt": "b347562c35f6bad95035ae3dbd360e159c61f6c392c555750cd7b6fe43cdd07c",
+    "pair0064_des.txt": "85ae991eda83261c09fecc7f7e553ba5ddda47da575ff36b21aacef16fd40725",
+    "pair0065.txt": "9039e324bb7fdec38e6f89803f11d56779fd9d37121d0b3fee84acd824a0ff00",
+    "pair0065_des.txt": "f3b9471fe81ee34be7096b405914ece3e1f7ee11972c37fe0c5bf38673594ffc",
+    "pair0066.txt": "5d0454556505072751769050fbd426548dee5c732e63b30beb1cb1b15b635f44",
+    "pair0066_des.txt": "65988905363965a31a1bff90e798e30f693e722da616845a0593f88337f6dc31",
+    "pair0067.txt": "2ebea7432360a4b40999b4bf5d3d86a9cecf27b3d0aae5ea61b669a25bb5f3c9",
+    "pair0067_des.txt": "718b7e55fc1569b5a694e61c4a9440203bfaf44f9a85398914cb624afa10d872",
+    "pair0068.txt": "755890d15199f78b6380aef30d38e7f5c52ae5c7e7e632291e3cfd7e0d2e2aa9",
+    "pair0068_des.txt": "650fc32d8e19a3b805d8808430ea04ce2caca7c9a40daa758e59f6f21ec75a0d",
+    "pair0069.txt": "20e6ce353dc16a6c32ea6ac2abbff57a577aa18929c8bfd721d8ff27458e4f9d",
+    "pair0069_des.txt": "17e6e4341382442846b4d68ae6952ec9532fe5284de24dc367ac029506c08aae",
+    "pair0070.txt": "1ffb01e2cae9a1c45e17c8c21cb4c667b4fc9de9ea45fd6a0b3caf32d0bde8c6",
+    "pair0070_des.txt": "31afcca712d6c96447232c56a8def5cc08e2ba9b51f88b172b83344a09c1fcd5",
+    "pair0071.txt": "45d6f2ddc977ed7f9932f4f5ef4a2c3f21a89af9f2d3b275feee4492db1e1b99",
+    "pair0071_des.txt": "b81d6d286f827a5d66a28923543497b54f121187cde29c393e43e97584a80381",
+    "pair0072.txt": "aeda54f50c84f55dd37c035f654a3150ba5157f32108a352d029dd3b1ca464c7",
+    "pair0072_des.txt": "47f2c0e71f542402d72e160b91d9d4412dafeb7bf2df7cc95513ecb5d33befa6",
+    "pair0073.txt": "0d8587a14003881382326c0d4d8e02a29069e962da9f9609c651a950ca91c986",
+    "pair0073_des.txt": "40ff236c68dbf29d9e535216585ccb9711382cc26f4510591d85870fe00806ce",
+    "pair0074.txt": "914accef0eeb20d66fd6608f70be92f56c5d69067c8b48cbb58aa077e2da662f",
+    "pair0074_des.txt": "334549407cc53948c5eeffadddc550294e594cade6d9328fc465de8e8d2047ad",
+    "pair0075.txt": "54d675b4d9e55b66af5505768170d08f9cfefc312854c55f0a6f6c0ef69bcaef",
+    "pair0075_des.txt": "781a1ff189b39480dde7aa473b0af6dcde4e772e3a0bc783b2516758555c4d06",
+    "pair0076.txt": "b5eec5416d2ce23a30049f3fa1182feecb15fa5d412c3d898403ad428dd0cafb",
+    "pair0076_des.txt": "33fa5bab74ee997067b86ae122d9c6d4d68629edc82ae79c87f3fb231bee27ce",
+    "pair0077.txt": "5ffa56cba7640423bf3e0396642310f07de729bdcb8147e8ac688e65521040b3",
+    "pair0077_des.txt": "23cae649c012323264b4bdb6ad58ef887f99c13f9e9810338585602ad93abdf7",
+    "pair0078.txt": "e7aa998712efa08f53a7a0b4cb4b344af532d427b6823073975b38670d9942f0",
+    "pair0078_des.txt": "42cc13f67ce73ce096ebd7a1615d5e0ba713c855d9af813c09ce8b3e1023a50d",
+    "pair0079.txt": "1273cf3ab126add41c4a01350777e217bf4b2ed3d63eaa4dfff013af0cee5e4c",
+    "pair0079_des.txt": "bd8bfc4a38a7127310d1ed37854d59a7b5a1365d4bb0c5212429aa23158fa22e",
+    "pair0080.txt": "732b04f8572b23c65be78998ff1d05bd34ddf0890bb1ebbe554e9a8e5448351e",
+    "pair0080_des.txt": "07c568510515f40bf6b1282a10b7cb77b99f9cab2ab3cc6f30c459e7d3c00150",
+    "pair0081.txt": "7802206f9bb2800d90523b4ec406294ef7b00fb08597736e78cf4d71136496d4",
+    "pair0081_des.txt": "64ae246293efccc9e95ee1fbb21c1c6bb25c135f0bca0f916c7c99f4e4e83fbf",
+    "pair0082.txt": "65f6df7fb8754cfbec6d88c5da3a613918a5fb798e0dfc470094380c1ea2ae7b",
+    "pair0082_des.txt": "c9e2f080be6fb139870279ba0b3285667e12a090b639e687e08d2f7e194738e6",
+    "pair0083.txt": "a81345edbd155d12443fc63bedd8a8a2a0899ba253609d29e4eb74cc9a35d543",
+    "pair0083_des.txt": "375e0191768343ad65a1d251c02477abaf43f288df02ddbab3446b199abd78de",
+    "pair0084.txt": "993667547782c3c71ee3c07751035e335c95099434934023ee27b811a7c8174a",
+    "pair0084_des.txt": "c06d8ce10527284322f9223f9297e17ee7e6ed98db5cd5e3886b1a47f7f1c296",
+    "pair0085.txt": "7910596a002d3b3d1195935ae5d4b0ff7e4e95bdc608fad0692e1dc0202f445a",
+    "pair0085_des.txt": "ae1639c07c7febffd9f60e5f771203b0bd9b3900544595809f83054b9ed80641",
+    "pair0086.txt": "0b6f8f9a0bb8771e55ec8f6f165b4e905cbd2eef3b0dbcca3ffd3f23e0e6b4d7",
+    "pair0086_des.txt": "2b87a29e3bc7c81a295d9537331e68d3de0c216325208549b7a57518e9224338",
+    "pair0087.txt": "9414072c3f1aac027673457d1946385f27ffe25bb95bf24ec36d8059a6005dd4",
+    "pair0087_des.txt": "268d01a03ccdd5bcdbbc5b1648001e2f1065f9b14fd899d2462d41d964d1034d",
+    "pair0088.txt": "7cfadff8a7b6991bebd510e2944c701ce83e4d9d58de156d6d7d8182c813066e",
+    "pair0088_des.txt": "a32660873592b0833c889c73927627c3cbea3bb854d5ebe879b74234f0aac7a6",
+    "pair0089.txt": "a50898ec615f738aed544683bddfa51f33705b52ddd8a99d8bf04ef75bc069e1",
+    "pair0089_des.txt": "5a8a4e6c8f96c28ef05eb5e7fa2d4bdb466822772f871fa4e579bcf7937ea4aa",
+    "pair0090.txt": "857ed320b49ebdf7d03be973b305d48fa07ba1d7d61f518db863cad6e83b07fa",
+    "pair0090_des.txt": "907561b6d1b991f2d10c3becaccdd21c6cbf41f50acab67a98f61aa961e06bd6",
+    "pair0091.txt": "17389cef7bc88c1e01dd6225ee1a0df9e94bac055ef4a8ad3a5a7d273237ed32",
+    "pair0091_des.txt": "f6660f5f83636f787be9a53dcfea2d6e1769865162cc2c4ec1c40eca0b984ec8",
+    "pair0092.txt": "38623585bc6dea4f75c02170a4a57ce22b36c047619c32145e7c56e9fd7f761e",
+    "pair0092_des.txt": "7a01d78009275af0c1540a25371f78d5414d7d5f7ba80963f7682ab35a8c3ba3",
+    "pair0093.txt": "c1f18ac5364f0056ed8fe8733afb35a054919b279792d460346f7e88fdf6a67f",
+    "pair0093_des.txt": "dddf891b2f9dec7acdfd7347d4aa7f02d85769ba56ba7b77b7fa370a2a6a99c0",
+    "pair0094.txt": "2f7ee3e730844a8aadd4c74857e0e49d5653f97ff79a78dc0b652b63fe2579af",
+    "pair0094_des.txt": "fa287d343dd8b46efd9dffe2fec56480e8c9d4ef139265f7a80d3826835d454e",
+    "pair0095.txt": "e84def0bbeb91818a33125432b32f248daa3a04a17cb224ea927e905d1a8e8cd",
+    "pair0095_des.txt": "d4a59c376d039566a73b18bb83e951029cabb7279edb72bbcc6ac58132e86477",
+    "pair0096.txt": "66943e9803dbaa09e2ec3935c83b291cb8637034ce20808c9d96378adde4c96e",
+    "pair0096_des.txt": "9d6536d83ae71fd939d39c286512d5b31a94285d27d17a84f23cdc7c536dc11e",
+    "pair0097.txt": "f38922894552c90a88c0c3d045b09b035ed2f57e39989cc7f0fcbfe5b77fc990",
+    "pair0097_des.txt": "10ec71afe3093912e869f829efc25e0463a9e23619d86ebf412c0ccbab1ba880",
+    "pair0098.txt": "8671b795070675d86cf0c239e454718e9e0915119c59c5d1a5f0d28e34aba094",
+    "pair0098_des.txt": "6181656252a9222fb7e63b61d7fb5a9d16f88504185404cff20f593adba70167",
+    "pair0099.txt": "03cad814aa2751173e466c966fc032b874f2955f1d9c5f4fe2bcf11f5901af72",
+    "pair0099_des.txt": "c41190709352d14b4197223cd0c58a50c7bea3e4e7f96bc2093b872465f8dafe",
+    "pair0100.txt": "acbb7acd2c7279022eecdd2f6f3d1012fd8d11ff91877df0b2ae203d90127099",
+    "pair0100_des.txt": "7c0fef6d40a38b16bc1728a0cb2e414a4478c594cc7d63275586d6c8dc2214a0",
+    "pair0101.txt": "2bcb14ebc2345a25948b3c067e8000a46b8698990a9386e6c04c65ab7f7b931c",
+    "pair0101_des.txt": "6cb992545d8d98e3d5b0934e494f90463397e78603b18e19fa3f8a6f280c0c2b",
+    "pair0102.txt": "c3fa1d2447b386c3e79c69fb4845b9332e1eb77a9ac7f468e12a8273d1c84c60",
+    "pair0102_des.txt": "109131d1450a850d6edf60337c872b34a2fde1271b683b5bf1f411810f19652a",
+    "pair0103.txt": "c8511ae35d899fab69e01056f3fe29a67a7e5901b7af056ccc28099113fed82b",
+    "pair0103_des.txt": "242dc57597de23326c52abce2dfe6556dc96fde117754355a0151141ef6c1ab3",
+    "pair0104.txt": "329985792b3bf074ba3e8fe3c86adeff2a45080ec5a58d79b280525f756d958f",
+    "pair0104_des.txt": "76e03074785806cc4ae4e84571d4fc670cc8b1d953dce5e5426cb58e4e990713",
+    "pair0105.txt": "213cbbbd8344f1e4b24e4830e3eff440c8f830ccfe96c6edf20d3f957e681176",
+    "pair0105_des.txt": "bc715f81c0f28c01594f58d04f0e775e4e798be3a245c62915290d89e91e78af",
+    "pair0106.txt": "4de29b9292d26ad78f83b7ae50811895b1ef872d523f2c53ec398665af397652",
+    "pair0106_des.txt": "9dc92f79e82ad503fd34c7697b93d7535871fa810621ae1357afd5d2de892023",
+    "pair0107.txt": "da7b661ad7e7a4d1f27522c68ec90d7c104e46c96975fa5bbabb1cdcaacf27e4",
+    "pair0107_des.txt": "28c4d2c05e7bc33961703a5d9d6f03402a06ab19cae4fe6f62f96413cf793749",
+    "pair0108.txt": "9859642040b5c8a523ca89d8f2c91a866524f056f42987f7cc94df52b647bce3",
+    "pair0108_des.txt": "187f8044cc0996310a1f6e88faa3eb96f7d4e3967d48a6482bbe207fbc9dcb25",
+    "pairmeta.txt": "e630e7ea56b2ba6ec551d6a88183a8fde2154bd24e59ecdc9fc98365efe8e4a9"
+  },
+  "pairs": [
+    {
+      "pair_id": 1,
+      "source_group": "dwd_stations",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Altitude",
+          "unit": null
+        },
+        {
+          "name": "Temperature",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Spatial station observations may not be independent.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 2,
+      "source_group": "dwd_stations",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Altitude",
+          "unit": null
+        },
+        {
+          "name": "Precipitation",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Spatial station observations may not be independent.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 3,
+      "source_group": "dwd_stations",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Longitude",
+          "unit": null
+        },
+        {
+          "name": "Temperature",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Spatial station observations may not be independent.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 4,
+      "source_group": "dwd_stations",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Altitude",
+          "unit": null
+        },
+        {
+          "name": "Sunshine duration",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Spatial station observations may not be independent.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 5,
+      "source_group": "abalone",
+      "split": "test"
+    },
+    {
+      "pair_id": 6,
+      "source_group": "abalone",
+      "split": "test"
+    },
+    {
+      "pair_id": 7,
+      "source_group": "abalone",
+      "split": "test"
+    },
+    {
+      "pair_id": 8,
+      "source_group": "abalone",
+      "split": "test"
+    },
+    {
+      "pair_id": 9,
+      "source_group": "abalone",
+      "split": "test"
+    },
+    {
+      "pair_id": 10,
+      "source_group": "abalone",
+      "split": "test"
+    },
+    {
+      "pair_id": 11,
+      "source_group": "abalone",
+      "split": "test"
+    },
+    {
+      "pair_id": 12,
+      "source_group": "census_income",
+      "split": "development"
+    },
+    {
+      "pair_id": 13,
+      "source_group": "auto_mpg",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Engine displacement",
+          "unit": null
+        },
+        {
+          "name": "Fuel economy",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 14,
+      "source_group": "auto_mpg",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Horsepower",
+          "unit": null
+        },
+        {
+          "name": "Fuel economy",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 15,
+      "source_group": "auto_mpg",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Vehicle weight",
+          "unit": null
+        },
+        {
+          "name": "Fuel economy",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 16,
+      "source_group": "auto_mpg",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Horsepower",
+          "unit": null
+        },
+        {
+          "name": "Acceleration",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 17,
+      "source_group": "census_income",
+      "split": "development"
+    },
+    {
+      "pair_id": 18,
+      "source_group": "gag_urine",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Age",
+          "unit": null
+        },
+        {
+          "name": "Urinary GAG concentration",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 19,
+      "source_group": "geyser",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 20,
+      "source_group": "dwd_stations",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Latitude",
+          "unit": null
+        },
+        {
+          "name": "Temperature",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Spatial station observations may not be independent.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 21,
+      "source_group": "dwd_stations",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Longitude",
+          "unit": null
+        },
+        {
+          "name": "Precipitation",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Spatial station observations may not be independent.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 22,
+      "source_group": "arrhythmia",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Age",
+          "unit": null
+        },
+        {
+          "name": "Height",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Age is recorded in years; treat this rounded variable as exploratory for ANM.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 23,
+      "source_group": "arrhythmia",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Age",
+          "unit": null
+        },
+        {
+          "name": "Weight",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Age is recorded in years; treat this rounded variable as exploratory for ANM.",
+        "Description incorrectly repeats height units for weight; units deliberately omitted.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 24,
+      "source_group": "arrhythmia",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Age",
+          "unit": null
+        },
+        {
+          "name": "Heart rate",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Age is recorded in years; treat this rounded variable as exploratory for ANM.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 25,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 26,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 27,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 28,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 29,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 30,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 31,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 32,
+      "source_group": "concrete",
+      "split": "test"
+    },
+    {
+      "pair_id": 33,
+      "source_group": "liver_disorders",
+      "split": "test"
+    },
+    {
+      "pair_id": 34,
+      "source_group": "liver_disorders",
+      "split": "test"
+    },
+    {
+      "pair_id": 35,
+      "source_group": "liver_disorders",
+      "split": "test"
+    },
+    {
+      "pair_id": 36,
+      "source_group": "liver_disorders",
+      "split": "test"
+    },
+    {
+      "pair_id": 37,
+      "source_group": "liver_disorders",
+      "split": "test"
+    },
+    {
+      "pair_id": 38,
+      "source_group": "pima_diabetes",
+      "split": "test"
+    },
+    {
+      "pair_id": 39,
+      "source_group": "pima_diabetes",
+      "split": "test"
+    },
+    {
+      "pair_id": 40,
+      "source_group": "pima_diabetes",
+      "split": "test"
+    },
+    {
+      "pair_id": 41,
+      "source_group": "pima_diabetes",
+      "split": "test"
+    },
+    {
+      "pair_id": 42,
+      "source_group": "janzing_weather",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 43,
+      "source_group": "ncep_ncar",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 44,
+      "source_group": "ncep_ncar",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 45,
+      "source_group": "ncep_ncar",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 46,
+      "source_group": "ncep_ncar",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 47,
+      "source_group": "traffic",
+      "split": "ineligible",
+      "exclusion_reason": "insufficient_variation"
+    },
+    {
+      "pair_id": 48,
+      "source_group": "hipel_mcleod",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 49,
+      "source_group": "bafu",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 50,
+      "source_group": "bafu",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 51,
+      "source_group": "bafu",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 52,
+      "source_group": "ncep_ncar",
+      "split": "ineligible",
+      "exclusion_reason": "zero_weight"
+    },
+    {
+      "pair_id": 53,
+      "source_group": "environmental",
+      "split": "ineligible",
+      "exclusion_reason": "zero_weight"
+    },
+    {
+      "pair_id": 54,
+      "source_group": "auto_mpg",
+      "split": "pilot",
+      "exclusion_reason": "zero_weight"
+    },
+    {
+      "pair_id": 55,
+      "source_group": "bafu",
+      "split": "ineligible",
+      "exclusion_reason": "zero_weight"
+    },
+    {
+      "pair_id": 56,
+      "source_group": "undata",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Female life expectancy",
+          "unit": null
+        },
+        {
+          "name": "Latitude",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Cross-country aggregate observations; reversed benchmark reference is not a causal proof.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 57,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 58,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 59,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 60,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 61,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 62,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 63,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 64,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "invalid_rows"
+    },
+    {
+      "pair_id": 65,
+      "source_group": "yahoo_finance",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 66,
+      "source_group": "yahoo_finance",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 67,
+      "source_group": "yahoo_finance",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 68,
+      "source_group": "network_stark_janzing",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 69,
+      "source_group": "mooij_indoor_outdoor",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 70,
+      "source_group": "armann_buelthoff",
+      "split": "ineligible",
+      "exclusion_reason": "insufficient_variation"
+    },
+    {
+      "pair_id": 71,
+      "source_group": "acute_inflammations",
+      "split": "ineligible",
+      "exclusion_reason": "zero_weight"
+    },
+    {
+      "pair_id": 72,
+      "source_group": "sunspots",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 73,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 74,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 75,
+      "source_group": "undata",
+      "split": "pilot",
+      "exclusion_reason": "not_selected_within_pilot_source_group"
+    },
+    {
+      "pair_id": 76,
+      "source_group": "fao",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 77,
+      "source_group": "janzing_weather",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 78,
+      "source_group": "moffat_ecosystem",
+      "split": "test"
+    },
+    {
+      "pair_id": 79,
+      "source_group": "moffat_ecosystem",
+      "split": "test"
+    },
+    {
+      "pair_id": 80,
+      "source_group": "moffat_ecosystem",
+      "split": "test"
+    },
+    {
+      "pair_id": 81,
+      "source_group": "mahecha_ecosystem",
+      "split": "ineligible",
+      "exclusion_reason": "invalid_rows"
+    },
+    {
+      "pair_id": 82,
+      "source_group": "mahecha_ecosystem",
+      "split": "ineligible",
+      "exclusion_reason": "invalid_rows"
+    },
+    {
+      "pair_id": 83,
+      "source_group": "mahecha_ecosystem",
+      "split": "ineligible",
+      "exclusion_reason": "invalid_rows"
+    },
+    {
+      "pair_id": 84,
+      "source_group": "spatial_econometrics",
+      "split": "test"
+    },
+    {
+      "pair_id": 85,
+      "source_group": "oswald_milk",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 86,
+      "source_group": "kamernet_rent",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Apartment size",
+          "unit": null
+        },
+        {
+          "name": "Monthly rent",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 87,
+      "source_group": "whistler_snow",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 88,
+      "source_group": "bone_children",
+      "split": "pilot",
+      "variables": [
+        {
+          "name": "Age",
+          "unit": null
+        },
+        {
+          "name": "Relative change in spinal bone mineral density",
+          "unit": null
+        }
+      ],
+      "notes": [
+        "Agent reviewed source description and original column order before any pilot model outputs.",
+        "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+        "Units omitted unless independently established; no row deletion or imputation.",
+        "Upstream retained first measurement per child; no additional preprocessing here.",
+        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+      ]
+    },
+    {
+      "pair_id": 89,
+      "source_group": "solly_soil",
+      "split": "test",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 90,
+      "source_group": "solly_soil",
+      "split": "test",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 91,
+      "source_group": "solly_soil",
+      "split": "test"
+    },
+    {
+      "pair_id": 92,
+      "source_group": "solly_soil",
+      "split": "test"
+    },
+    {
+      "pair_id": 93,
+      "source_group": "mopex",
+      "split": "development"
+    },
+    {
+      "pair_id": 94,
+      "source_group": "tarim_electricity",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 95,
+      "source_group": "tarim_electricity",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 96,
+      "source_group": "tarim_electricity",
+      "split": "ineligible",
+      "exclusion_reason": "time_dependence"
+    },
+    {
+      "pair_id": 97,
+      "source_group": "janzing_mechanics",
+      "split": "test"
+    },
+    {
+      "pair_id": 98,
+      "source_group": "janzing_mechanics",
+      "split": "test",
+      "exclusion_reason": "insufficient_rows"
+    },
+    {
+      "pair_id": 99,
+      "source_group": "nlschools",
+      "split": "development"
+    },
+    {
+      "pair_id": 100,
+      "source_group": "cpus",
+      "split": "test"
+    },
+    {
+      "pair_id": 101,
+      "source_group": "janzing_brightness",
+      "split": "test"
+    },
+    {
+      "pair_id": 102,
+      "source_group": "janzing_mechanics",
+      "split": "test"
+    },
+    {
+      "pair_id": 103,
+      "source_group": "janzing_mechanics",
+      "split": "test"
+    },
+    {
+      "pair_id": 104,
+      "source_group": "janzing_mechanics",
+      "split": "test"
+    },
+    {
+      "pair_id": 105,
+      "source_group": "janzing_brightness",
+      "split": "test",
+      "exclusion_reason": "multicolumn"
+    },
+    {
+      "pair_id": 106,
+      "source_group": "janzing_voltage",
+      "split": "test"
+    },
+    {
+      "pair_id": 107,
+      "source_group": "schuett_contrast",
+      "split": "ineligible",
+      "exclusion_reason": "invalid_rows"
+    },
+    {
+      "pair_id": 108,
+      "source_group": "janzing_temperature",
+      "split": "test"
+    }
+  ]
+}

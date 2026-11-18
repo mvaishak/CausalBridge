@@ -103,6 +103,40 @@
           "minimum": 0,
           "title": "Latency Seconds",
           "type": "number"
+        },
+        "status": {
+          "default": "complete",
+          "enum": [
+            "complete",
+            "truncated",
+            "incomplete"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "failure_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Reason"
+        },
+        "raw_response": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Response"
         }
       },
       "required": [
@@ -235,6 +269,18 @@
           "minimum": 1024,
           "title": "Context Tokens",
           "type": "integer"
+        },
+        "think": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Think"
         }
       },
       "title": "ModelConfig",

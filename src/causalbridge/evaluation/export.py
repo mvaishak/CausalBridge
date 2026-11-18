@@ -131,6 +131,12 @@ def analysis_rows(run: dict, releases: list[dict]) -> list[dict]:
                 base
                 | dict(
                     condition="ANM_ONLY",
+                    prediction_scorable=method["status"] == "ok"
+                    and method["threshold"] is not None,
+                    prediction_binding="valid",
+                    generation_status="not_applicable",
+                    generation_failure_reason=None,
+                    supplied_claim_count=None,
                     model_identity=None,
                     attempt_id=None,
                     run_id=None,

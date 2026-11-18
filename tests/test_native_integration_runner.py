@@ -355,3 +355,56 @@ def test_evaluator_mapping_is_private_and_matches_runtime_columns(packages, tmp_
     for trial in out["trials"]:
         assert "original_to_runtime_column_order" not in trial["start"]["messages"][1]["content"]
         assert "column_order" not in trial["start"]["messages"][1]["content"]
+
+
+def test_runner_rejects_context_changed_between_e3_and_e4_before_generation(packages, tmp_path):
+    raw = packages[3].model_dump(mode="json")
+    raw["selected"]["variables"][0]["name"] = "Wrong variable"
+    raw["evidence"]["variable_labels"][0] = "Wrong variable"
+    changed = (*packages[:3], NativePackage.model_validate(raw))
+    with pytest.raises(ValueError, match="Matched package"):
+        runner(tmp_path / "run").run(changed, NativeModel())
+    assert not (tmp_path / "run" / "events.jsonl").exists()
+
+
+def test_anm_export_stays_scorable_when_model_times_out(packages, tmp_path):
+    from causalbridge.evaluation.export import analysis_rows
+
+    r = runner(tmp_path / "run")
+    out = r.run(packages, NativeModel("timeout"))
+    row = next(
+        x
+        for x in analysis_rows(out, r.replay_s2(out["manifest_id"]))
+        if x["condition"] == "ANM_ONLY"
+    )
+    assert row["prediction_scorable"] is True
+    assert row["prediction_binding"] == "valid"
+    assert row["generation_status"] == "not_applicable"
+    assert row["supplied_claim_count"] is None
+
+
+def test_native_audit_independently_checks_matched_context(packages, tmp_path, monkeypatch):
+    from causalbridge.evaluation.audit_native import audit_native
+    from causalbridge.evaluation.integration import NativePackage
+
+    raw = packages[3].model_dump(mode="json")
+    raw["selected"]["variables"][0]["name"] = "Wrong variable"
+    raw["evidence"]["variable_labels"][0] = "Wrong variable"
+    changed = (*packages[:3], NativePackage.model_validate(raw))
+    # Bypass only scheduling's newly added group guard: reconstruct an old-format
+    # coherent bundle, retaining actual predictor, journal, checker and exports.
+    original = NativePackage.model_validate_json
+
+    def old_handoff(data):
+        package = original(data)
+        if package.evidence.package == "E4":
+            selected = packages[0].selected
+            return package.model_copy(update={"selected": selected})
+        return package
+
+    monkeypatch.setattr(NativePackage, "model_validate_json", old_handoff)
+    r = runner(tmp_path / "run")
+    out = r.run(changed, NativeModel())
+    r.replay_s2(out["manifest_id"])
+    report = audit_native(tmp_path / "run")
+    assert "matched_context" in {f["code"] for f in report["findings"]}

@@ -1,0 +1,10 @@
+{
+  "model": "qwen3:8b",
+  "base_url": "http://127.0.0.1:11435",
+  "timeout_seconds": 300,
+  "temperature": 0,
+  "seed": 261,
+  "max_tokens": 512,
+  "context_tokens": 4096,
+  "think": false
+}

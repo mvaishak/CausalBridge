@@ -389,6 +389,32 @@ def audit_native(root):
                         case,
                     )
                 numeric = [group[(p, "S0")]["package"]["evidence"] for p in ("E2", "E3", "E4")]
+                named = [group[(p, "S0")]["package"]["evidence"] for p in ("E1", "E3", "E4")]
+                check(
+                    all(
+                        e["variable_labels"] == named[0]["variable_labels"]
+                        and e["units"] == named[0]["units"]
+                        for e in named
+                    ),
+                    "matched_context",
+                    case,
+                )
+                selections = [
+                    group[(p, "S0")]["package"]["selected"] for p in ("E1", "E2", "E3", "E4")
+                ]
+                check(all(s == selections[0] for s in selections), "matched_selection", case)
+                evidence = [
+                    group[(p, "S0")]["package"]["evidence"] for p in ("E1", "E2", "E3", "E4")
+                ]
+                check(
+                    all(
+                        e["ab_mapping_id"] == evidence[0]["ab_mapping_id"]
+                        and e["mapping_seed"] == evidence[0]["mapping_seed"]
+                        for e in evidence
+                    ),
+                    "matched_mapping",
+                    case,
+                )
                 check(
                     all(
                         e["display_rows"] == numeric[0]["display_rows"]
