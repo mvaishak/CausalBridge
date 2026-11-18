@@ -24,9 +24,10 @@ predictions remain unchanged; these are exploratory pilot findings.
   `configs/pilot-data.json`. Download location and verified format: [source notes](api/tuebingen.md).
 - 17 selected scalar pairs from seven reviewed source families: DWD weather,
   Auto MPG, Arrhythmia, GAG urine, UNdata, apartment rentals and bone measurements.
-- 91 other entries explicitly excluded/reserved. All UNdata and Auto MPG entries
-  belong to the pilot partition, including unselected related pairs. Reserved
-  pairs have not had eligibility audited; this is not a final train/test split.
+- The other 91 entries stay out of this pilot. Twelve are locked to the pilot
+  families, including every unused UNdata and Auto MPG pair. Eligible remaining
+  source groups are assigned to development or test in
+  [the data audit](data_audit.md). Ineligible groups have a recorded reason.
 - Separate runtime/evaluator files, deterministic A/B orientation and samples,
   native runner/auditor, method-only/simple-gate baselines and weighted pilot scores.
 - Pilot-affecting context isolation, ANM export, Track A truncation/usage and schema
@@ -130,6 +131,22 @@ S2 and the simple gate reuse the saved S1 proposals. Review the accompanying
 claim findings/reason codes and original versus suppressed releases; aggregate
 accuracy alone is not evidence that checking helps.
 
+## Diagnose the saved run
+
+Do this before another live run. It joins the same files, adds the unweighted
+rates, the E1–E4 contrasts, checker removals, source groups and a margin curve.
+A saved ANM result is used only when its scores, margin, direction, mapping and
+original request agree. It does not call the model or choose a new threshold.
+
+```bash
+uv run --extra anm python -m causalbridge.evaluation.diagnosis \
+  --analysis runs/real-pilot-01/analysis.jsonl \
+  --evaluator runs/pilot-preparation/prepared/evaluator/records.json \
+  --mapping runs/real-pilot-01/evaluation_mapping.json \
+  --anm-root runs/real-pilot-01/anm \
+  --output runs/real-pilot-01/diagnosis.json
+```
+
 ## Pilot limitations and deferred work
 
 Threshold 0.001 is an exploratory pilot setting, not a calibrated causal cutoff.
@@ -146,7 +163,7 @@ Checker 0.3 permits zero claims and qualified disagreement with ANM; a passing
 process check is not a correctness certificate. Inspect all pilot outputs for
 missing support and unsupported causal language, including free text in reason codes.
 
-Deferred: final held-out eligibility/splits and protocol freeze; paired source-group
+Deferred: protocol freeze and the held-out run itself; paired source-group
 bootstrap intervals and inferential plots; full error-study/report/presentation;
 optional robustness experiments and a new minimum-citation policy. None is needed
 to execute and inspect this bounded pilot. The original preparation used scripted
