@@ -17,46 +17,10 @@ from causalbridge.discovery.evidence import digest
 from causalbridge.schemas import Record
 
 
-def verify_snapshot_hashes(snapshot: Path, files: dict[str, str]) -> None:
-    """Reject a missing or rewritten file before any pair value is interpreted."""
-    if not isinstance(files, dict) or not files:
-        raise ValueError("Manifest has no snapshot hashes")
-    if not {"README", "pairmeta.txt"} <= files.keys():
-        raise ValueError("Snapshot must pin README and metadata")
-    snapshot = Path(snapshot)
-    for name, expected in files.items():
-        if Path(name).name != name or name in {".", ".."}:
-            raise ValueError("Snapshot file names must be local basenames")
-        path = snapshot / name
-        if not path.is_file():
-            raise ValueError("Snapshot file missing: " + name)
-        if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
-            raise ValueError("Snapshot hash mismatch: " + name)
-
-
-def read_pair_metadata(path: Path) -> dict[int, tuple[int, int, int, int, float]]:
-    """Read pairmeta.txt. Duplicate ids and nonfinite or negative weights fail."""
-    metadata: dict[int, tuple[int, int, int, int, float]] = {}
-    for line in Path(path).read_text().splitlines():
-        if not line.strip():
-            continue
-        fields = line.split()
-        if len(fields) != 6:
-            raise ValueError("Metadata requires six fields")
-        pair_id, first_start, first_end, second_start, second_end = map(int, fields[:5])
-        weight = float(fields[5])
-        if pair_id in metadata or not math.isfinite(weight) or weight < 0:
-            raise ValueError("Duplicate pair or invalid metadata weight")
-        metadata[pair_id] = (first_start, first_end, second_start, second_end, weight)
-    if not metadata:
-        raise ValueError("Metadata is empty")
-    return metadata
-
-
 class PairReview(Record):
     pair_id: int = Field(strict=True, ge=1)
     source_group: str = Field(min_length=1)
-    split: Literal["pilot", "development", "test", "ineligible", "reserved"]
+    split: Literal["pilot", "reserved"]
     variables: tuple[Variable, Variable] | None = None
     exclusion_reason: str | None = Field(default=None, min_length=1)
     notes: tuple[str, ...] = ()
@@ -87,26 +51,33 @@ def prepare_pilot(snapshot: Path, manifest: dict) -> PreparedPilot:
     """
     spec = PilotManifest.model_validate(manifest)
     snapshot = Path(snapshot).resolve()
-    verify_snapshot_hashes(snapshot, spec.files)
-    metadata = read_pair_metadata(snapshot / "pairmeta.txt")
+    for name, expected in spec.files.items():
+        if Path(name).name != name or name in {".", ".."}:
+            raise ValueError("Snapshot file names must be local basenames")
+        if hashlib.sha256((snapshot / name).read_bytes()).hexdigest() != expected:
+            raise ValueError("Snapshot hash mismatch: " + name)
+    if not {"README", "pairmeta.txt"} <= spec.files.keys():
+        raise ValueError("Snapshot must pin README and metadata")
+    metadata = {}
+    for line in (snapshot / "pairmeta.txt").read_text().splitlines():
+        if not line.strip():
+            continue
+        fields = line.split()
+        if len(fields) != 6:
+            raise ValueError("Metadata requires six fields")
+        pair_id, a, b, c, d = map(int, fields[:5])
+        weight = float(fields[5])
+        if pair_id in metadata or not math.isfinite(weight) or weight < 0:
+            raise ValueError("Duplicate pair or invalid metadata weight")
+        metadata[pair_id] = (a, b, c, d, weight)
     reviews = {r.pair_id: r for r in spec.pairs}
     if len(reviews) != len(spec.pairs) or set(reviews) != set(metadata):
         raise ValueError("Review must account for every metadata pair exactly once")
-    grouped: dict[str, list[PairReview]] = {}
+    groups = {}
     for review in spec.pairs:
-        grouped.setdefault(review.source_group, []).append(review)
-    for group, members in grouped.items():
-        splits = {member.split for member in members}
-        if len(splits) != 1:
-            raise ValueError("Source group has more than one split: " + group)
-        split = next(iter(splits))
-        eligible = [member for member in members if member.exclusion_reason is None]
-        if split == "pilot" and not eligible:
-            raise ValueError("Pilot source group has no included pair: " + group)
-        if split in {"development", "test"} and not eligible:
-            raise ValueError("Held-out source group has no eligible pair: " + group)
-        if split in {"ineligible", "reserved"} and eligible:
-            raise ValueError("Excluded source group contains an eligible pair: " + group)
+        previous = groups.setdefault(review.source_group, review.split)
+        if previous != review.split:
+            raise ValueError("Source group overlaps pilot and reserved data")
     # Opaque IDs are randomized independently of reference labels, before reading them.
     ids = list(range(1000, 1000 + len(reviews)))
     random.Random(spec.mapping_seed).shuffle(ids)
@@ -114,13 +85,13 @@ def prepare_pilot(snapshot: Path, manifest: dict) -> PreparedPilot:
     pairs, evaluator, excluded = [], [], []
     for pair_id, review in sorted(reviews.items()):
         a, b, c, d, weight = metadata[pair_id]
-        if review.split != "pilot" or review.exclusion_reason:
+        if review.split == "reserved" or review.exclusion_reason:
             excluded.append(
                 dict(
                     pair_id=pair_id,
                     source_group=review.source_group,
                     split=review.split,
-                    reason=review.exclusion_reason,
+                    reason=review.exclusion_reason or "not_selected_for_pilot",
                 )
             )
             continue

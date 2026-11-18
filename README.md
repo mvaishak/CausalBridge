@@ -8,10 +8,10 @@ and the proposed conclusion before answering or abstaining.
 Track A has graph tools, a validated 50-question/ten-group synthetic pilot, a
 selectable numerical engine and independently checked witnesses. Track B has
 ANM, matched evidence packages, a durable runner, predictor/checker and baseline
-exports. The exploratory 17-pair Tübingen pilot has been run. Its case-level
-diagnosis and the remaining research steps are in [readme_new.md](readme_new.md).
+exports. Local pilot-readiness work adds frozen Tübingen ingestion and weighted
+pilot scoring. Live real-data evaluation remains to be run.
 
-For reproduction commands, use the [pilot guide](docs/pilot_run.md).
+For the current **17-pair real-data pilot**, use the [pilot guide](docs/pilot_run.md).
 Held-out evaluation, bootstrap intervals and the final report are deferred.
 
 ## Setup

@@ -242,8 +242,7 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Spatial station observations may not be independent.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Spatial station observations may not be independent."
       ]
     },
     {
@@ -264,8 +263,7 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Spatial station observations may not be independent.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Spatial station observations may not be independent."
       ]
     },
     {
@@ -286,8 +284,7 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Spatial station observations may not be independent.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Spatial station observations may not be independent."
       ]
     },
     {
@@ -308,49 +305,56 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Spatial station observations may not be independent.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Spatial station observations may not be independent."
       ]
     },
     {
       "pair_id": 5,
       "source_group": "abalone",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 6,
       "source_group": "abalone",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 7,
       "source_group": "abalone",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 8,
       "source_group": "abalone",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 9,
       "source_group": "abalone",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 10,
       "source_group": "abalone",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 11,
       "source_group": "abalone",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 12,
       "source_group": "census_income",
-      "split": "development"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 13,
@@ -369,8 +373,7 @@
       "notes": [
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
-        "Units omitted unless independently established; no row deletion or imputation.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Units omitted unless independently established; no row deletion or imputation."
       ]
     },
     {
@@ -390,8 +393,7 @@
       "notes": [
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
-        "Units omitted unless independently established; no row deletion or imputation.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Units omitted unless independently established; no row deletion or imputation."
       ]
     },
     {
@@ -411,8 +413,7 @@
       "notes": [
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
-        "Units omitted unless independently established; no row deletion or imputation.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Units omitted unless independently established; no row deletion or imputation."
       ]
     },
     {
@@ -432,14 +433,14 @@
       "notes": [
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
-        "Units omitted unless independently established; no row deletion or imputation.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Units omitted unless independently established; no row deletion or imputation."
       ]
     },
     {
       "pair_id": 17,
       "source_group": "census_income",
-      "split": "development"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 18,
@@ -458,15 +459,14 @@
       "notes": [
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
-        "Units omitted unless independently established; no row deletion or imputation.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Units omitted unless independently established; no row deletion or imputation."
       ]
     },
     {
       "pair_id": 19,
       "source_group": "geyser",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 20,
@@ -486,8 +486,7 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Spatial station observations may not be independent.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Spatial station observations may not be independent."
       ]
     },
     {
@@ -508,8 +507,7 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Spatial station observations may not be independent.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Spatial station observations may not be independent."
       ]
     },
     {
@@ -530,8 +528,7 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Age is recorded in years; treat this rounded variable as exploratory for ANM.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Age is recorded in years; treat this rounded variable as exploratory for ANM."
       ]
     },
     {
@@ -553,8 +550,7 @@
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
         "Age is recorded in years; treat this rounded variable as exploratory for ANM.",
-        "Description incorrectly repeats height units for weight; units deliberately omitted.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Description incorrectly repeats height units for weight; units deliberately omitted."
       ]
     },
     {
@@ -575,178 +571,194 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Age is recorded in years; treat this rounded variable as exploratory for ANM.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Age is recorded in years; treat this rounded variable as exploratory for ANM."
       ]
     },
     {
       "pair_id": 25,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 26,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 27,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 28,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 29,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 30,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 31,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 32,
       "source_group": "concrete",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 33,
       "source_group": "liver_disorders",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 34,
       "source_group": "liver_disorders",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 35,
       "source_group": "liver_disorders",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 36,
       "source_group": "liver_disorders",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 37,
       "source_group": "liver_disorders",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 38,
       "source_group": "pima_diabetes",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 39,
       "source_group": "pima_diabetes",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 40,
       "source_group": "pima_diabetes",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 41,
       "source_group": "pima_diabetes",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 42,
       "source_group": "janzing_weather",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 43,
       "source_group": "ncep_ncar",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 44,
       "source_group": "ncep_ncar",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 45,
       "source_group": "ncep_ncar",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 46,
       "source_group": "ncep_ncar",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 47,
       "source_group": "traffic",
-      "split": "ineligible",
-      "exclusion_reason": "insufficient_variation"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 48,
       "source_group": "hipel_mcleod",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 49,
       "source_group": "bafu",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 50,
       "source_group": "bafu",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 51,
       "source_group": "bafu",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 52,
       "source_group": "ncep_ncar",
-      "split": "ineligible",
-      "exclusion_reason": "zero_weight"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 53,
       "source_group": "environmental",
-      "split": "ineligible",
-      "exclusion_reason": "zero_weight"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 54,
       "source_group": "auto_mpg",
       "split": "pilot",
-      "exclusion_reason": "zero_weight"
+      "exclusion_reason": "not_selected_within_pilot_source_group"
     },
     {
       "pair_id": 55,
       "source_group": "bafu",
-      "split": "ineligible",
-      "exclusion_reason": "zero_weight"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 56,
@@ -766,8 +778,7 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Cross-country aggregate observations; reversed benchmark reference is not a causal proof.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Cross-country aggregate observations; reversed benchmark reference is not a causal proof."
       ]
     },
     {
@@ -816,61 +827,61 @@
       "pair_id": 64,
       "source_group": "undata",
       "split": "pilot",
-      "exclusion_reason": "invalid_rows"
+      "exclusion_reason": "not_selected_within_pilot_source_group"
     },
     {
       "pair_id": 65,
       "source_group": "yahoo_finance",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 66,
       "source_group": "yahoo_finance",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 67,
       "source_group": "yahoo_finance",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 68,
       "source_group": "network_stark_janzing",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 69,
       "source_group": "mooij_indoor_outdoor",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 70,
       "source_group": "armann_buelthoff",
-      "split": "ineligible",
-      "exclusion_reason": "insufficient_variation"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 71,
       "source_group": "acute_inflammations",
-      "split": "ineligible",
-      "exclusion_reason": "zero_weight"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 72,
       "source_group": "sunspots",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 73,
       "source_group": "undata",
       "split": "pilot",
-      "exclusion_reason": "time_dependence"
+      "exclusion_reason": "not_selected_within_pilot_source_group"
     },
     {
       "pair_id": 74,
@@ -887,58 +898,62 @@
     {
       "pair_id": 76,
       "source_group": "fao",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 77,
       "source_group": "janzing_weather",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 78,
       "source_group": "moffat_ecosystem",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 79,
       "source_group": "moffat_ecosystem",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 80,
       "source_group": "moffat_ecosystem",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 81,
       "source_group": "mahecha_ecosystem",
-      "split": "ineligible",
-      "exclusion_reason": "invalid_rows"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 82,
       "source_group": "mahecha_ecosystem",
-      "split": "ineligible",
-      "exclusion_reason": "invalid_rows"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 83,
       "source_group": "mahecha_ecosystem",
-      "split": "ineligible",
-      "exclusion_reason": "invalid_rows"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 84,
       "source_group": "spatial_econometrics",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 85,
       "source_group": "oswald_milk",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 86,
@@ -957,15 +972,14 @@
       "notes": [
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
-        "Units omitted unless independently established; no row deletion or imputation.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Units omitted unless independently established; no row deletion or imputation."
       ]
     },
     {
       "pair_id": 87,
       "source_group": "whistler_snow",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 88,
@@ -985,117 +999,128 @@
         "Agent reviewed source description and original column order before any pilot model outputs.",
         "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
         "Units omitted unless independently established; no row deletion or imputation.",
-        "Upstream retained first measurement per child; no additional preprocessing here.",
-        "Cause column and description names checked on 16 November 2026. Runtime names and units were left unchanged."
+        "Upstream retained first measurement per child; no additional preprocessing here."
       ]
     },
     {
       "pair_id": 89,
       "source_group": "solly_soil",
-      "split": "test",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 90,
       "source_group": "solly_soil",
-      "split": "test",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 91,
       "source_group": "solly_soil",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 92,
       "source_group": "solly_soil",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 93,
       "source_group": "mopex",
-      "split": "development"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 94,
       "source_group": "tarim_electricity",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 95,
       "source_group": "tarim_electricity",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 96,
       "source_group": "tarim_electricity",
-      "split": "ineligible",
-      "exclusion_reason": "time_dependence"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 97,
       "source_group": "janzing_mechanics",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 98,
       "source_group": "janzing_mechanics",
-      "split": "test",
-      "exclusion_reason": "insufficient_rows"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 99,
       "source_group": "nlschools",
-      "split": "development"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 100,
       "source_group": "cpus",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 101,
       "source_group": "janzing_brightness",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 102,
       "source_group": "janzing_mechanics",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 103,
       "source_group": "janzing_mechanics",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 104,
       "source_group": "janzing_mechanics",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 105,
       "source_group": "janzing_brightness",
-      "split": "test",
-      "exclusion_reason": "multicolumn"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 106,
       "source_group": "janzing_voltage",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 107,
       "source_group": "schuett_contrast",
-      "split": "ineligible",
-      "exclusion_reason": "invalid_rows"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     },
     {
       "pair_id": 108,
       "source_group": "janzing_temperature",
-      "split": "test"
+      "split": "reserved",
+      "exclusion_reason": "reserved_not_eligibility_audited"
     }
   ]
 }

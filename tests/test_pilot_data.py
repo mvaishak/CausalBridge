@@ -33,9 +33,8 @@ def snapshot(tmp_path):
             {
                 "pair_id": 2,
                 "source_group": "family2",
-                "split": "development",
-                "variables": [{"name": "Held out one"}, {"name": "Held out two"}],
-                "notes": ["eligible development pair"],
+                "split": "reserved",
+                "exclusion_reason": "not_selected_for_pilot",
             },
         ],
     }
@@ -51,10 +50,7 @@ def test_loader_preserves_original_order_but_reads_reversed_reference(tmp_path):
     assert prepared.evaluator[0]["weight"] == 0.5
     assert "PRIVATE_GOLD_SENTINEL" not in prepared.pairs[0].model_dump_json()
     assert prepared.audit["included_count"] == 1
-    assert [row["original_pair_id"] for row in prepared.evaluator] == [1]
-    assert prepared.audit["excluded"][0]["pair_id"] == 2
-    assert prepared.audit["excluded"][0]["split"] == "development"
-    assert prepared.audit["excluded"][0]["reason"] is None
+    assert prepared.audit["excluded"][0]["reason"] == "not_selected_for_pilot"
 
 
 @pytest.mark.parametrize(

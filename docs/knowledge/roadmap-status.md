@@ -16,7 +16,7 @@ run is now complete. No held-out run or final report has been produced.
 | --- | --- | --- |
 | G1/G2/G3 and N1 | Graph tools, independent exact witnesses, production numerical engine; 50 cases over ten groups | Live Track A execution if included in this pilot |
 | N2 | Real KRR/HSIC with durable original requests; all 17 selected real pairs compute successfully offline | Inspect diagnostic behavior; 0.001 threshold is exploratory, not calibrated |
-| D1 | Frozen official snapshot; 17 selected pairs in seven source groups; eligibility reasons and development/test group assignment recorded in the data audit | Do not retune the pilot set from the live scores |
+| D1 | Frozen official snapshot; 17 selected pairs in seven source groups; strict loader, hashes, exclusions, separate evaluator records | Review cohort caveats while interpreting pilot; reserved pairs are not eligibility-audited |
 | D2 | Matched E1–E4; runner now rejects changed context/source before calls; independent audit checks matching | Inspect actual live prompt lengths and failures |
 | V1/V2 | Native predictor/checker and compact prompts; earlier live synthetic smoke documented | Live real-data calls; inspect typed-claim and empty-claim outcomes |
 | R1 | Durable S0/S1, cached zero-call S2, resume, model pin and bounded pilot entry point | Run 136 live generations; inspect raw outputs and usage |
@@ -24,10 +24,10 @@ run is now complete. No held-out run or final report has been produced.
 | Intervals/held-out/report | Deferred by user | No pilot significance claims or final report |
 
 The official data are prepared locally under ignored `runs/pilot-preparation/`.
-All 108 metadata entries are accounted for: 17 included, 12 kept in those pilot
-families with a specific exclusion, and the remaining eligible source groups
-assigned to development or test. See [the data audit](../data_audit.md). The
-held-out pairs have not been executed.
+All 108 metadata entries are accounted for: 17 included and 91 explicitly
+reserved/excluded from this pilot. All related source-family entries remain in
+the pilot partition even when only a subset is selected. No development/test
+allocation or held-out eligibility is asserted.
 
 The full-cohort offline check uses real observations and real ANM, but scripted
 model replies. Its 136 fixture calls and 68 S2 checks establish integration only.
@@ -35,9 +35,9 @@ The subsequent live real-data pilot is recorded in the update above and pilot gu
 
 ## Deferred work
 
-- Development-calibrated ANM threshold. The case split, truth, scorability, metrics, and pass rules are frozen in [the evaluation handoff](../evaluation_handoff.md). The threshold itself is not calibrated, and the held-out pairs have not been run.
+- Development-calibrated ANM threshold and final held-out protocol freeze.
 - Source-group paired bootstrap intervals and inferential comparisons.
-- Eligibility reasons and the development/test source-group assignment are recorded. The held-out pairs have not been run.
+- Auditing eligibility of reserved data and choosing development/test splits.
 - Full research error analysis, publication figures, report and presentation.
 - Optional robustness work or a new minimum-citation checker policy.
 
