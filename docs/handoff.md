@@ -1,5 +1,16 @@
 # Team handoff checklist
 
+## Real validation outcomes opened — 2026-11-18
+
+The user explicitly authorized one fixed descriptive test on all 38 assigned real
+validation pairs. Up-to-512-row ANM at the existing gamma/alpha/threshold and fixed
+three splits made 114 attempts without execution errors. Primary results are
+13 correct, 13 wrong and 12 abstentions: 50.0% unweighted / 48.1% weighted answered
+accuracy. No parameter or split was chosen from those results. Original roster
+roles are preserved, but these pairs are no longer untouched. Future changes
+informed by their outcomes require fresh held-out assessment. See
+[anm_validation_results.md](anm_validation_results.md).
+
 ## Latest ANM evidence — 2026-11-18
 
 A fixed 88-dataset synthetic panel now demonstrates success under tested compatible

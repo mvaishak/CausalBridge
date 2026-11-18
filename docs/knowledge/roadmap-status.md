@@ -1,5 +1,11 @@
 # Roadmap: completed work versus remaining research
 
+Latest Anish experiment (18 November 2026): the user authorized a descriptive
+fixed-configuration test on all 38 real validation pairs. Primary results are
+13 correct, 13 wrong and 12 abstentions, with 48.1% weighted answered accuracy.
+These cases are now opened; the historical status below does not imply they
+remain an untouched holdout. See [test report](../anm_validation_results.md).
+
 Snapshot: main `dbbf8db` (including PR #11) plus all changes from
 `pilot-case-diagnosis` at `7a886f1`, on local branch
 `codex/faizah-pilot-diagnosis`. Committing this integration branch does not merge

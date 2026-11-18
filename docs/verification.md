@@ -1,5 +1,25 @@
 # Verification record
 
+## User-authorized descriptive real-validation test — 2026-11-18
+
+`bash scripts/check.sh`: **996 tests pass, no skips**, 91% statement coverage;
+lint/format, demos, computed handshake and builds pass. Four added regressions
+reject changes to the declared gamma, threshold, size or split schedule before
+data are opened. Settings and primary split were fixed before this test.
+
+All 38 assigned validation pairs across 12 source groups were tested with one
+configuration, up to 512 rows, gamma 1, alpha 0.1 and threshold 0.001. Three fixed
+splits produce 114 attempts, no execution errors. Primary counts are 13 correct,
+13 wrong and 12 abstentions; answered accuracy is 50.0% unweighted / 48.1% weighted.
+The cached audit verified every original request/result, exact schedule and
+independently decoded source-column labels/weighted metrics. There is no new
+performance pass/fail gate, tuning, LLM call or historical result overwrite.
+
+These outcomes are now opened. Future changes informed by them need fresh
+held-out assessment. Full metric table, sizes (109–512), commands and artifact
+paths: `anm_validation_results.md`. Log:
+`runs/anish-anm-validation-test-01/repository-check.log` (ignored).
+
 ## Fixed synthetic confirmation panel — 2026-11-18
 
 `bash scripts/check.sh`: **992 tests pass, no skips**, 91% statement coverage;

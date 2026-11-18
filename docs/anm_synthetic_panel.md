@@ -1,5 +1,9 @@
 # ANM synthetic success and real-data limits
 
+Subsequent real-data test: [38-pair validation results](anm_validation_results.md).
+The user authorized this fixed descriptive test after the work below. The pairs
+are now opened; the earlier recommendation to keep them unused is historical.
+
 ## Scope fixed before fitting
 
 `configs/anm-synthetic-panel.json` and `examples/anm_synthetic_panel.py` define a

@@ -1,5 +1,19 @@
 # Implementation record
 
+## Explicit real-validation test — 2026-11-18
+
+- User authorized testing the 38 real validation pairs descriptively, without
+  tuning. Added a fixed-config wrapper that freezes the protocol before executing
+  only `sample_512`, rejects parameter/split changes, and supplies no invented gate.
+- Executed all 38 pairs at three fixed splits (114 original requests), with no
+  execution errors. Primary result: 13 correct, 13 wrong, 12 abstain; 48.1% weighted
+  answered accuracy. Secondary results and all small-sample cases remain reported.
+- Cached reconciliation verifies schedule, original bindings and source-column
+  scoring. The original roster/pilot data are unchanged, but the validation
+  outcomes are now opened and must not guide tuning under an untouched-holdout claim.
+- Full checks pass 996 tests without skips, plus lint/format, demos, handshake and
+  builds. This test does not establish reliable real-data recovery; no LLM calls.
+
 ## Fixed synthetic success panel — 2026-11-18
 
 - Responded to the request to test broader pairs by fixing all generators/seeds,

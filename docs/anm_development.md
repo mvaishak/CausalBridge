@@ -1,5 +1,11 @@
 # ANM-only development and frozen validation
 
+Current status: the user subsequently authorized a descriptive test of all 38
+real validation pairs. Primary answered accuracy is 50.0% unweighted / 48.1%
+weighted: 13 correct, 13 wrong and 12 abstentions. These pairs are now opened;
+earlier statements below about leaving them untouched describe the prior phase.
+See [real test results](anm_validation_results.md).
+
 Latest follow-up: [synthetic panel and transfer check](anm_synthetic_panel.md)
 reports a successful predeclared synthetic demonstration at 512 rows: 26 correct,
 zero wrong, six abstentions among 32 fresh compatible confirmation datasets.
