@@ -11,18 +11,19 @@ from pathlib import Path
 
 from pydantic import ValidationError
 
-from causalbridge.discovery.schemas import ANMResult
+from causalbridge.discovery.schemas import ANMResult, canonical_digest
 from causalbridge.evaluation.scoring import PILOT_CONDITIONS, score_pilot
 
 MODEL_CONDITIONS = ("S0", "S1", "S2")
 PACKAGES = ("E1", "E2", "E3", "E4")
 
 
-def diagnose_pilot(rows, evaluator, mappings, anm_results=None):
+def diagnose_pilot(rows, evaluator, mappings, anm_results=None, *, experiment_receipts=None):
     """Join labels after inference and summarize the saved pilot.
 
     anm_results maps case_id to a saved ANM result. When omitted, directions
-    still come from the ANM_ONLY export and margins stay null.
+    still come from the ANM_ONLY export and margins stay null. Saved margins
+    require independently retained experiment_receipts bound to the E4 export.
     """
     weighted = score_pilot(rows, evaluator, mappings)
     unweighted = score_pilot(rows, [_unit_weight(row) for row in evaluator], mappings)
@@ -31,7 +32,7 @@ def diagnose_pilot(rows, evaluator, mappings, anm_results=None):
     ]
     bound = _bind(evaluator, mappings)
     indexed = _index(rows, bound)
-    anm = _anm_by_case(anm_results, bound, indexed)
+    anm = _anm_by_case(anm_results, bound, indexed, experiment_receipts)
     cases = [_case_row(case, bound, indexed, anm) for case in sorted(bound)]
     return {
         "scope": "exploratory_pilot_diagnosis_no_confidence_intervals",
@@ -96,7 +97,7 @@ def _index(rows, bound):
     return indexed
 
 
-def _anm_by_case(anm_results, bound, indexed):
+def _anm_by_case(anm_results, bound, indexed, experiment_receipts):
     if anm_results is None:
         return {
             case: {"margin": None, "score_ab": None, "score_ba": None, "threshold": None}
@@ -104,6 +105,8 @@ def _anm_by_case(anm_results, bound, indexed):
         }
     if set(anm_results) != set(bound):
         raise ValueError("ANM results must match the evaluator cases")
+    if experiment_receipts is None:
+        raise ValueError("Saved margins require original experiment receipts")
     parsed = {}
     for case, result in anm_results.items():
         saved = _validated_anm(case, result, bound[case]["ab_mapping_id"])
@@ -112,6 +115,20 @@ def _anm_by_case(anm_results, bound, indexed):
             raise ValueError("Saved ANM direction disagrees with the ANM_ONLY export")
         if saved.provenance.config_digest != exported.get("method_config_digest"):
             raise ValueError("ANM result is not bound to the saved configuration")
+        exported_package = exported.get("package_digest")
+        matching = [
+            receipt
+            for receipt in experiment_receipts
+            if receipt.get("case_id") == case
+            and exported_package is not None
+            and receipt.get("package_digest") == exported_package
+            and receipt.get("ab_mapping_id") == bound[case]["ab_mapping_id"]
+        ]
+        if not matching or any(
+            receipt.get("method_result_digest") != canonical_digest(saved.model_dump(mode="json"))
+            for receipt in matching
+        ):
+            raise ValueError("ANM result is not bound to the original experiment receipt")
         parsed[case] = {
             "margin": saved.margin,
             "score_ab": saved.score_ab,
@@ -145,6 +162,7 @@ def _case_row(case, bound, indexed, anm):
         direction = row["predicted_direction"]
         record[f"{prefix}_direction"] = direction
         record[f"{prefix}_outcome"] = row.get("outcome")
+        record[f"{prefix}_state"] = _state(row)
         record[f"{prefix}_reason_codes"] = list(row.get("reason_codes") or [])
         record[f"{prefix}_correct"] = _correct(direction, reference)
     return record
@@ -238,6 +256,32 @@ def _checker(cases):
     return effects
 
 
+def _state(row):
+    outcome = row.get("outcome")
+    if row.get("condition") == "ANM_ONLY":
+        if row.get("failure_stage") or outcome in {"error", "method_unavailable_or_unconfigured"}:
+            return "method_unavailable"
+        if row["predicted_direction"] is not None:
+            return "answer"
+        if outcome in {"ambiguous_margin", "abstain"}:
+            return "abstain"
+        return "method_unavailable"
+    if (
+        not row.get("prediction_scorable")
+        or row.get("failure_stage")
+        or outcome
+        in {"prediction_failure", "parent_prediction_failed", "parent_failure", "checker_error"}
+    ):
+        return "prediction_failure"
+    if row.get("condition") == "S2" and outcome == "fail":
+        return "checker_suppressed"
+    if row["predicted_direction"] is not None:
+        return "answer"
+    if outcome in {"model_abstention", "pass"}:
+        return "abstain"
+    return "outcome_unavailable"
+
+
 def _relation(model, method):
     if model == method:
         return "agree_abstain" if model is None else "agree_answer"
@@ -252,23 +296,35 @@ def _agreement(cases):
     rows = []
     for package in PACKAGES:
         for condition in MODEL_CONDITIONS:
-            counts = {
-                name: 0
-                for name in (
-                    "agree_answer",
-                    "agree_abstain",
-                    "model_abstain",
-                    "anm_abstain",
-                    "disagree",
-                )
-            }
+            counts = dict.fromkeys(
+                ("agree_answer", "agree_abstain", "model_abstain", "anm_abstain", "disagree"), 0
+            )
+            states = []
             for case in cases:
-                kind = _relation(
-                    case[f"{package.lower()}_{condition.lower()}_direction"],
-                    case["anm_direction"],
-                )
-                counts[kind] += 1
-            rows.append({"package": package, "condition": condition, **counts})
+                prefix = f"{package.lower()}_{condition.lower()}"
+                model_state = case[f"{prefix}_state"]
+                method_state = case["e4_anm_only_state"]
+                states.append((model_state, method_state))
+                if model_state not in {"answer", "abstain"} or method_state not in {
+                    "answer",
+                    "abstain",
+                }:
+                    continue
+                counts[_relation(case[f"{prefix}_direction"], case["anm_direction"])] += 1
+            rows.append(
+                {
+                    "package": package,
+                    "condition": condition,
+                    **counts,
+                    "total_case_count": len(cases),
+                    "comparable_case_count": sum(counts.values()),
+                    "prediction_failure_count": sum(m == "prediction_failure" for m, _ in states),
+                    "method_unavailable_count": sum(a == "method_unavailable" for _, a in states),
+                    "checker_suppressed_count": sum(m == "checker_suppressed" for m, _ in states),
+                    "outcome_unavailable_count": sum(m == "outcome_unavailable" for m, _ in states),
+                    "excluded_case_count": len(cases) - sum(counts.values()),
+                }
+            )
     return rows
 
 
@@ -284,10 +340,16 @@ def _groups(cases):
                 "weight": math.fsum(case["weight"] for case in members),
                 "e4_s1_correct": sum(case["e4_s1_correct"] is True for case in members),
                 "e4_s1_wrong": sum(case["e4_s1_correct"] is False for case in members),
-                "e4_s1_abstain": sum(case["e4_s1_direction"] is None for case in members),
+                "e4_s1_abstain": sum(case["e4_s1_state"] == "abstain" for case in members),
+                "e4_s1_failure": sum(
+                    case["e4_s1_state"] == "prediction_failure" for case in members
+                ),
+                "e4_anm_unavailable": sum(
+                    case["e4_anm_only_state"] == "method_unavailable" for case in members
+                ),
                 "e4_anm_correct": sum(case["anm_correct"] is True for case in members),
                 "e4_anm_wrong": sum(case["anm_correct"] is False for case in members),
-                "e4_anm_abstain": sum(case["anm_direction"] is None for case in members),
+                "e4_anm_abstain": sum(case["e4_anm_only_state"] == "abstain" for case in members),
             }
         )
     return groups
@@ -362,6 +424,36 @@ def load_anm_results(root: Path):
     return results
 
 
+def load_experiment_receipts(path):
+    """Read original journal receipts without rewriting or recovering historical files.
+
+    Hashes detect corruption; the caller must supply the retained experiment
+    journal, not a journal reconstructed from replacement ANM artifacts.
+    """
+    from causalbridge.discovery.evidence import digest
+    from causalbridge.llm.parser import reject_duplicate_keys
+
+    receipts = []
+    previous = None
+    for seq, line in enumerate(Path(path).read_text().splitlines()):
+        event = json.loads(line, object_pairs_hook=reject_duplicate_keys)
+        payload = {key: event[key] for key in ("seq", "previous", "kind", "data")}
+        if (
+            event["seq"] != seq
+            or event["previous"] != previous
+            or event["digest"] != digest(payload)
+        ):
+            raise ValueError("Corrupt original experiment journal")
+        previous = event["digest"]
+        if event["kind"] == "native_started":
+            receipt = event["data"]["receipt"]
+            if receipt.get("method_result_digest") is not None:
+                receipts.append(receipt)
+    if not receipts:
+        raise ValueError("Original experiment journal contains no ANM receipts")
+    return receipts
+
+
 def main():
     import argparse
 
@@ -373,6 +465,7 @@ def main():
     parser.add_argument("--evaluator", type=Path, required=True)
     parser.add_argument("--mapping", type=Path, required=True)
     parser.add_argument("--anm-root", type=Path)
+    parser.add_argument("--experiment-journal", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     rows = [
@@ -381,7 +474,16 @@ def main():
         if line.strip()
     ]
     anm = load_anm_results(args.anm_root) if args.anm_root else None
-    result = diagnose_pilot(rows, read_json(args.evaluator), read_json(args.mapping), anm)
+    receipts = (
+        load_experiment_receipts(args.experiment_journal) if args.experiment_journal else None
+    )
+    result = diagnose_pilot(
+        rows,
+        read_json(args.evaluator),
+        read_json(args.mapping),
+        anm,
+        experiment_receipts=receipts,
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     write_json_exclusive(args.output, result)
     print(

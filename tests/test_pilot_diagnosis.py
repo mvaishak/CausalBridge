@@ -3,7 +3,11 @@ import json
 import pytest
 
 from causalbridge.discovery.schemas import ANMResult, canonical_digest
-from causalbridge.evaluation.diagnosis import diagnose_pilot, load_anm_results
+from causalbridge.evaluation.diagnosis import (
+    diagnose_pilot,
+    load_anm_results,
+    load_experiment_receipts,
+)
 
 
 def _row(case, mapping, package, condition, direction, outcome=None, reasons=()):
@@ -141,12 +145,14 @@ def cohort():
     for row in rows:
         if row["condition"] == "ANM_ONLY":
             row["method_config_digest"] = anm[row["case_id"]]["provenance"]["config_digest"]
+            row["package_digest"] = canonical_digest({"case": row["case_id"]})
+            row["method_result_digest"] = canonical_digest(anm[row["case_id"]])
     return rows, evaluator, mappings, anm
 
 
 def test_weighted_and_unweighted_e4_rates_differ():
     rows, evaluator, mappings, anm = cohort()
-    report = diagnose_pilot(rows, evaluator, mappings, anm)
+    report = diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=_receipts(rows))
     e4 = next(
         row for row in report["conditions"] if row["package"] == "E4" and row["condition"] == "S1"
     )
@@ -159,7 +165,7 @@ def test_weighted_and_unweighted_e4_rates_differ():
 
 def test_checker_counts_a_removed_correct_answer_separately():
     rows, evaluator, mappings, anm = cohort()
-    report = diagnose_pilot(rows, evaluator, mappings, anm)
+    report = diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=_receipts(rows))
     e3 = next(row for row in report["checker"] if row["package"] == "E3")
     assert e3["removed_correct_count"] == 1
     assert e3["removed_correct_weight"] == 1
@@ -171,7 +177,7 @@ def test_checker_counts_a_removed_correct_answer_separately():
 
 def test_contrasts_and_anm_copying():
     rows, evaluator, mappings, anm = cohort()
-    report = diagnose_pilot(rows, evaluator, mappings, anm)
+    report = diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=_receipts(rows))
     contrasts = {row["name"]: row for row in report["contrasts"]}
     assert contrasts["H1_S1_E3_minus_E2"]["correct_yield"] == 0.25
     assert contrasts["H3_E4_S2_minus_S1"]["correct_yield"] == 0
@@ -190,7 +196,9 @@ def test_contrasts_and_anm_copying():
 
 def test_threshold_curve_uses_saved_margins_without_replacing_the_pilot_cut():
     rows, evaluator, mappings, anm = cohort()
-    curve = diagnose_pilot(rows, evaluator, mappings, anm)["threshold_curve"]
+    curve = diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=_receipts(rows))[
+        "threshold_curve"
+    ]
     assert curve["status"] == "saved_margins_only"
     by_tau = {row["threshold"]: row for row in curve["rows"]}
     assert by_tau[0.001]["pilot_threshold"] is True
@@ -214,7 +222,7 @@ def test_anm_file_direction_must_match_the_export():
     )
     exported["predicted_direction"] = "B_to_A"
     with pytest.raises(ValueError, match="disagrees"):
-        diagnose_pilot(rows, evaluator, mappings, anm)
+        diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=_receipts(rows))
 
 
 @pytest.mark.parametrize("fault", ["flipped_margin", "arrow_kept", "wrong_mapping", "wrong_config"])
@@ -231,19 +239,19 @@ def test_corrupt_anm_results_do_not_change_the_curve(fault):
     else:
         result["provenance"]["config_digest"] = "sha256:" + "cd" * 32
     with pytest.raises(ValueError):
-        diagnose_pilot(rows, evaluator, mappings, anm)
+        diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=_receipts(rows))
 
 
-def _saved_anm(tmp_path, monkeypatch, case_id="D1001"):
+def _saved_anm(tmp_path, monkeypatch, case_id="D1001", mapping_id="map-1", delta=0):
     from causalbridge.discovery import anm
     from causalbridge.discovery.anm import execute_anm_request
     from causalbridge.discovery.anm_requests import ANMConfig, save_anm_request
 
     path = tmp_path / case_id
     save_anm_request(
-        [[float(i), float(i + 1)] for i in range(8)],
+        [[float(i), float(i + 1) + (delta if i == 0 else 0)] for i in range(8)],
         case_id=case_id,
-        ab_mapping_id="map-1",
+        ab_mapping_id=mapping_id,
         directory=path,
         config=ANMConfig(threshold=0.001, minimum_rows=8),
     )
@@ -277,3 +285,106 @@ def test_anm_loader_requires_the_original_request(tmp_path):
     (case / "result.json").write_text("{}\n")
     with pytest.raises(ValueError, match="original request"):
         load_anm_results(tmp_path)
+
+
+def _receipts(rows):
+    # Stand-in for independently retained original native_started receipts.
+    return [
+        {
+            key: row[key]
+            for key in ("case_id", "ab_mapping_id", "package_digest", "method_result_digest")
+        }
+        for row in rows
+        if row["condition"] == "ANM_ONLY"
+    ]
+
+
+def test_saved_margins_require_original_experiment_receipts():
+    rows, evaluator, mappings, anm = cohort()
+    with pytest.raises(ValueError, match="original experiment receipts"):
+        diagnose_pilot(rows, evaluator, mappings, anm)
+
+
+def test_valid_alternative_sample_result_is_rejected():
+    rows, evaluator, mappings, anm = cohort()
+    original = _receipts(rows)
+    replacement = anm["D1001"]
+    replacement["provenance"]["sample_digest"] = "sha256:" + "cd" * 32
+    # Internally valid, unchanged mapping/config/direction; wrong experimental sample.
+    ANMResult.model_validate(replacement)
+    with pytest.raises(ValueError, match="original experiment receipt"):
+        diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=original)
+
+
+@pytest.mark.parametrize("both_unavailable", [False, True])
+def test_agreement_distinguishes_failure_from_abstention(both_unavailable):
+    rows, evaluator, mappings, _ = cohort()
+    for row in rows:
+        if row["case_id"] == "D1001" and row["package"] == "E2" and row["condition"] == "S1":
+            row.update(
+                prediction_scorable=False, outcome="prediction_failure", failure_stage="generate"
+            )
+        if both_unavailable and row["case_id"] == "D1001" and row["condition"] == "ANM_ONLY":
+            row.update(predicted_direction=None, outcome="error", failure_stage="method")
+    report = diagnose_pilot(rows, evaluator, mappings)
+    agreement = next(
+        r for r in report["anm_agreement"] if r["package"] == "E2" and r["condition"] == "S1"
+    )
+    assert agreement["model_abstain"] == 1
+    assert agreement["agree_abstain"] == 0
+    assert agreement["prediction_failure_count"] == 1
+    assert agreement["method_unavailable_count"] == int(both_unavailable)
+    assert agreement["total_case_count"] == 2
+    assert agreement["comparable_case_count"] == 1
+    assert agreement["excluded_case_count"] == 1
+
+
+def test_checker_suppression_is_not_model_abstention():
+    rows, evaluator, mappings, _ = cohort()
+    report = diagnose_pilot(rows, evaluator, mappings)
+    agreement = next(
+        r for r in report["anm_agreement"] if r["package"] == "E3" and r["condition"] == "S2"
+    )
+    assert agreement["checker_suppressed_count"] == 1
+    assert agreement["model_abstain"] == 1
+    assert agreement["comparable_case_count"] == 1
+
+
+def test_original_journal_receipts_are_read_without_mutation(tmp_path):
+    from causalbridge.evaluation.store import Journal
+
+    rows, _, _, _ = cohort()
+    journal = Journal(tmp_path)
+    for receipt in _receipts(rows):
+        journal.append("native_started", {"receipt": receipt})
+    before = journal.path.read_bytes()
+    assert load_experiment_receipts(journal.path) == _receipts(rows)
+    assert journal.path.read_bytes() == before
+    events = before.decode().splitlines()
+    event = json.loads(events[0])
+    event["data"]["receipt"]["method_result_digest"] = "replacement"
+    events[0] = json.dumps(event)
+    journal.path.write_text("\n".join(events) + "\n")
+    with pytest.raises(ValueError, match="Corrupt original"):
+        load_experiment_receipts(journal.path)
+
+
+def test_two_valid_saved_attempts_cannot_be_substituted(tmp_path, monkeypatch):
+    rows, evaluator, mappings, anm = cohort()
+    mapping_id = mappings[0]["ab_mapping_id"]
+    _saved_anm(tmp_path / "original", monkeypatch, mapping_id=mapping_id)
+    _saved_anm(tmp_path / "replacement", monkeypatch, mapping_id=mapping_id, delta=0.001)
+    original = load_anm_results(tmp_path / "original")["D1001"]
+    replacement = load_anm_results(tmp_path / "replacement")["D1001"]
+    assert original["provenance"]["sample_digest"] != replacement["provenance"]["sample_digest"]
+    assert original["predicted_direction"] == replacement["predicted_direction"]
+    assert original["provenance"]["config_digest"] == replacement["provenance"]["config_digest"]
+    anm["D1001"] = original
+    row = next(r for r in rows if r["case_id"] == "D1001" and r["condition"] == "ANM_ONLY")
+    row["method_config_digest"] = original["provenance"]["config_digest"]
+    row["method_result_digest"] = canonical_digest(original)
+    receipts = _receipts(rows)
+    diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=receipts)
+    anm["D1001"] = replacement
+    with pytest.raises(ValueError, match="original experiment receipt"):
+        diagnose_pilot(rows, evaluator, mappings, anm, experiment_receipts=receipts)
