@@ -1,5 +1,15 @@
 # Team handoff checklist
 
+## Latest ANM evidence — 2026-11-18
+
+A fixed 88-dataset synthetic panel now demonstrates success under tested compatible
+conditions: the primary 512-row confirmation endpoint has 26 correct, zero wrong,
+six abstentions, passing the predeclared demonstration gate. All families and
+controls remain reported. This does not establish real-data reliability: a larger
+sample on the four real development pairs gives one correct primary answer but
+zero answered accuracy on the other splits. No real validation case is used.
+See [anm_synthetic_panel.md](anm_synthetic_panel.md) for full results and limits.
+
 ## Current Anish development handoff — 2026-11-18
 
 The four-chunk ANM study workflow is implemented locally, with PR #14 `a29dc4b`

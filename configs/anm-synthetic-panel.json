@@ -1,0 +1,19 @@
+{
+  "version": "anm-synthetic-panel-v1",
+  "master_seed": 181100,
+  "replicates_per_partition": 1,
+  "sample_sizes": [128, 512],
+  "split_seeds": [261, 1261],
+  "primary_size": 512,
+  "primary_split": 261,
+  "noise_scales": [0.25, 1.0],
+  "threshold": 0.001,
+  "kernel_gamma": 1.0,
+  "ridge_alpha": 0.1,
+  "demonstration_gate": {
+    "min_coverage": 0.5,
+    "min_answer_accuracy": 0.75,
+    "min_family_coverage": 0.5,
+    "min_family_answer_accuracy": 0.5
+  }
+}

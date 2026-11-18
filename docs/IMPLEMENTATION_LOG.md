@@ -1,5 +1,24 @@
 # Implementation record
 
+## Fixed synthetic success panel — 2026-11-18
+
+- Responded to the request to test broader pairs by fixing all generators/seeds,
+  noise laws/scales, sizes, splits and demonstration criteria before new fits.
+  Added a reproducible example, two plans and schedule/metric integrity tests.
+- The unchanged producer succeeds on compatible fresh confirmation datasets at
+  n=512: 26 correct, zero wrong, six abstentions; all four families pass the
+  predeclared floors. Retained all 88 datasets, 352 evaluations and 176 swaps,
+  including controls and n=128 failures. No post-outcome case removal or tuning.
+- Cached reconciliation verifies every generated sample, truth, original request,
+  numerical record and swap. Additional post-outcome raw-sign/stability summaries
+  are marked descriptive, not retroactively added to the gate.
+- Tested the larger-sample policy on the same four real development pairs only.
+  One primary pair becomes correct but other splits remain at zero accuracy;
+  synthetic success is not claimed as real-data repair. All 38 validation pairs
+  remain unused and no candidate is frozen for production.
+- Full checks pass 992 tests without skips plus lint/format, demos, handshake and
+  builds. Detailed results/reproduction commands are in `anm_synthetic_panel.md`.
+
 ## Anish: targeted adequacy diagnosis and commit — 2026-11-18
 
 - Inspected per-case MSE versus HSIC. Reference-direction MSE is lower for pairs

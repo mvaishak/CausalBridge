@@ -1,5 +1,11 @@
 # ANM-only development and frozen validation
 
+Latest follow-up: [synthetic panel and transfer check](anm_synthetic_panel.md)
+reports a successful predeclared synthetic demonstration at 512 rows: 26 correct,
+zero wrong, six abstentions among 32 fresh compatible confirmation datasets.
+The larger real-development check has one correct primary pair but fails to
+repeat across splits. Earlier results below remain unchanged historical evidence.
+
 Implemented locally on `codex/anish-anm-baseline-reproduction`, with reviewed
 PR #14 (`a29dc4b`) as an explicit dependency. The earlier replay changes are
 preserved. The user has authorized committing this feature branch; this does not

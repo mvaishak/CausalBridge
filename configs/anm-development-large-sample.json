@@ -1,0 +1,27 @@
+{
+  "version": "anm-study-v1",
+  "threshold": 0.001,
+  "mapping_seed": 261,
+  "sampling_seed": 262,
+  "split_seeds": [
+    261,
+    1261,
+    2261
+  ],
+  "primary_split": 261,
+  "control_seed": 731,
+  "variants": [
+    {
+      "name": "baseline",
+      "sample_limit": 128,
+      "kernel_gamma": 1.0,
+      "ridge_alpha": 0.1
+    },
+    {
+      "name": "sample_512",
+      "sample_limit": 512,
+      "kernel_gamma": 1.0,
+      "ridge_alpha": 0.1
+    }
+  ]
+}

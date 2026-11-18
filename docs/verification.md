@@ -1,5 +1,32 @@
 # Verification record
 
+## Fixed synthetic confirmation panel — 2026-11-18
+
+`bash scripts/check.sh`: **992 tests pass, no skips**, 91% statement coverage;
+lint/format, demos, synthetic handshake and builds pass. Five new panel tests
+cover balanced independent seeds/roles, reproducible generators and swaps,
+failure/abstention denominators, a family-level guard against aggregate masking,
+undefined control accuracy, and overwrite refusal.
+
+The predeclared synthetic demonstration gate passes: 32 fresh compatible
+confirmation datasets at n=512/split 261 yield 26 correct, zero wrong and six
+abstentions (100% answered accuracy, 81.25% coverage/correct yield). The secondary
+split also yields 26/0/6. All four families pass their coverage/accuracy floors.
+At n=128 the primary result is 20 correct, seven wrong and five abstentions.
+
+The complete panel contains 88 independent datasets, 352 case/size/split attempts
+and 176 swaps. The cached reconciliation independently regenerated every dataset,
+checked exact schedule/sample prefixes, original requests/results, reference
+labels and all 176 swapped directions/scores, and reproduced the summary.
+It is an artifact audit, not a second numerical estimator. No execution errors.
+Post-outcome raw-sign/stability diagnostics and all control outcomes are retained.
+
+A subsequent larger-sample check on the same four allowed real development pairs
+produces one correct primary answer (25% unweighted / 33.3% weighted answered
+accuracy), but zero on the other splits. This is not robust transfer. No real
+validation, old-pilot edits or LLM calls. Full results, source/confirmation limits
+and commands are in `anm_synthetic_panel.md`. Local artifacts remain ignored.
+
 ## Targeted adequacy diagnosis and committed preparation — 2026-11-18
 
 `bash scripts/check.sh` passes **987 tests, no skips**, 91% statement coverage,
