@@ -1,105 +1,114 @@
 # Current project status
 
-Updated 2026-11-15. This is the authoritative progress entry point. Older phase
-notes retain their original evidence and test counts; they are historical snapshots.
+Updated 15 November 2026. Start here; older phase counts and publication notes are
+historical snapshots. See the [project audit](../reviews/project-audit-2026-11-15.md)
+for the assessment, confirmed finding and evidence limits.
 
-## GitHub and validation
+## GitHub snapshot
 
-- Upstream main: `1dd84b4`, including merged PR #6 (native integration),
-  PR #7 (Track A ten-group pilot) and PR #8 (smoke/checker fixes and review follow-up).
-- [PR #9](https://github.com/mvaishak/CausalBridge/pull/9) is **open, ready for review**;
-  implementation commit `bcad4a318c8715c085be64140bca4bf42bb0e4dd` is pushed on
-  `codex/track-b-integration-acceptance`. It has not been merged.
-- Implementation validation: **818 tests passed**, Ruff lint/format, both Track A
-  demos, synthetic ANM handshake and wheel/sdist builds. PR #9 GitHub CI passed
-  on Python 3.12 and 3.13. Documentation-only follow-ups do not imply new test runs.
-- Final review added rejection of contradictory primary usability, binding and
-  outcome states. No duplicate PR #8 production changes remain in PR #9.
-- Account collaborator write access works. The earlier fork-only limitation is historical.
-
-## Completed capability versus remaining research
-
-| Area | Evidence-backed status | Remaining |
+| Work | State | Revision / validation |
 | --- | --- | --- |
-| Track A tools/witnesses | Merged graph and numerical tools; independent rational/engine confirmation; 50 questions across ten graph groups | Human case review, live benchmark run and reporting |
-| ANM | Merged KRR/HSIC implementation and saved original requests; successful and failure-path synthetic tests | Development calibration, method freeze and real-pair evaluation |
-| Matched E1–E4 evidence | Merged selection, summaries, names/units visibility and A/B bindings | Accept audited real loader records and sanitized metadata |
-| S0/S1, cached S2 | Merged native runner, persistence/resume, checker and independent artifact auditor | Frozen real-data execution; interpretation of natural model errors |
-| Live transport | Two saved live Qwen3 8B smokes on synthetic observations; prompt/failure/provenance and numeric fixes merged in PR #8 | Real-pair readiness and final experimental settings |
-| External boundaries | PR #9 validates runtime/evaluator separation, IDs, weights, within-batch group splits and scheduled exports | Faizah's actual adapter/schema acceptance; dataset-wide audit |
-| Evaluator joins | PR #9 verifies both orientations, retained source digests, mapping IDs and exact S1 parents | Accept authentic reference metadata from data owner |
-| Scorer acceptance | PR #9 has hand-calculated metrics, paired contrasts and fixed group-resample examples | Faizah's weighted scorer, bootstrap implementation and consumer acceptance |
-| Pilot/held-out/report | Not completed | Real-data pilot, development decisions, freeze, held-out results and final outputs |
+| Main, including PRs #6–#9 | Merged | `7085d2f`; PR #9 implementation passed 818 tests and CI |
+| [PR #10: pilot/data/scorer](https://github.com/mvaishak/CausalBridge/pull/10) | Open | `a8ba5ba`; not merged into main |
+| [PR #11: ANM-only compatibility/acceptance](https://github.com/mvaishak/CausalBridge/pull/11) | Open, ready for review | Implementation `80c4431`; 830 tests pass, one pilot-API module skipped on main; Python 3.12/3.13 CI passed |
+| Combined main + PR #10 + compatibility fix | Tested in isolated checkout | 870 tests, lint/format, demos, ANM handshake and builds pass; not a merged GitHub revision |
 
-An artifact audit checks integrity and recorded handshake invariants. It does not
-certify dataset eligibility, original labels, ANM assumptions or causal correctness.
+The skipped actual-consumer module was exercised in the combined checkout.
+Historical 639-test ANM validation and other milestone counts refer to different
+source trees; they are not directly comparable as progress percentages.
 
-## Integration-readiness phases
+## Immediate audit finding
 
-These are the recent readiness phases, distinct from the original roadmap's
-implementation/pilot/held-out phase numbering.
+**PR #10 scorer mapping integrity remains open.** Reversing D0201's external
+column order while retaining its mapping ID, source digest and every analysis
+row changes synthetic E4/S1 accuracy from 62.5% to 37.5% without rejection.
+The actual scorer checks matching ID strings but not the order/seed bound by the
+ID or the independently retained selection receipt. Our strict evaluator join
+checks that binding, but the pilot scorer entry point does not use it.
 
-| Phase | Status | Evidence |
+This is not evidence that the reported real pilot was scored incorrectly.
+It is a confirmed acceptance gap: add strict mapping validation and a corruption
+regression before closing that handoff. PR #11's ANM status fix is separate.
+No production fix for this newly found issue was made in the project audit.
+
+## Where the project stands
+
+| Area | Completed evidence | Remaining |
 | --- | --- | --- |
-| 1 Live execution/verification fixes | Merged in PR #8, including review fixes | `docs/kris-smoke-v2.md`, `docs/kris-checker03.md` |
-| 2 Saved-run replay | Completed; originals preserved | [Replay comparison](../kris-phase2-replay.md) |
-| 3 Boundary acceptance | Implemented/tested in open PR #9 | [Handoff checks](../kris-phase3-handoff.md) |
-| 4 A/B mapping and evaluator joins | Implemented/tested in open PR #9 | [Direction truth table and joins](../kris-phase4-evaluator-joins.md) |
-| 5 Scoring acceptance fixtures | Implemented/tested in open PR #9 | [Metric/resample oracles](../kris-phase5-scoring-fixtures.md) |
-| 6 Offline end-to-end acceptance | Implemented/tested in open PR #9 | [Pipeline acceptance](../kris-phase6-offline-acceptance.md) |
-| 7 Review/publication/docs | Review complete; PR open; knowledge-bank cleanup recorded here | 818-test implementation validation and green CI; merge remains pending |
+| Track A | Merged graph/numerical tools, exact witnesses, independent rational/engine checks, 50 questions across ten groups | Human case review and live final benchmark |
+| Track B E1–E4 | Matched samples, summaries/context controls, seeded A/B mapping and private/runtime separation | Accept actual source metadata and final preprocessing choices |
+| Runner/cache/audit | Durable attempts, failed-response metadata, recovery, zero-call S2/resume and artifact checks | Saved real-pilot artifact reconciliation and frozen final execution |
+| Evidence checker | Typed claim/binding checks, finite numeric tolerance and strict nonnumeric identities | Quantify real rejection validity/cost; no general prose or causal-truth guarantee |
+| Loader/scorer | Actual APIs exist on PR #10; loader fixture and weighted metric targets pass | Mapping-integrity fix, real artifact audit, owner acceptance and group-bootstrap implementation |
+| Our compatibility work | PR #11 accepts not_applicable only for ANM_ONLY; tests and report published | Team review/merge with PR #10 |
+| ANM numerical fidelity | Uploaded independent report/code review support 192 comparisons and 96 swap checks | Original validation source/raw run not reproduced from this checkout |
+| ANM statistical reliability | Frozen n=128 progression gate **failed** | Separately specified development work or explicit revised research premise |
+| Pilot/held-out | Real pilot reported; synthetic and live infrastructure evidence exists | Independently rescore saved pilot, development decisions, freeze and untouched evaluation |
 
-Phase-specific test counts document successive snapshots (689, 719, 759, 800).
-The final reviewed implementation count is **818**; do not add those counts together.
+Overall: strong software foundation, preliminary checker evidence, weak current
+support for improved causal direction. A transparent negative result is useful;
+claims of reliable ANM assistance or causal-truth verification are unsupported.
 
-## Live-smoke evidence
+## Recent readiness work
 
-Both runs use synthetic observations, actual ANM and live pinned Qwen3 8B—not
-Tübingen data or a research pilot. The model digest is
-`500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41`.
+1. Live execution/prompt/failure/numeric fixes merged in PR #8.
+2. Saved synthetic live-smoke predictions replayed under checker 0.3 without new
+   calls or rewriting originals; second-smoke E4 rounding rejection becomes release.
+3. Runtime/evaluator and scheduled-export boundary checks merged in PR #9.
+4. Four-case A/B reference truth table and strict private joins merged in PR #9.
+5. Hand-calculated scoring and fixed paired group-resample fixtures merged in PR #9.
+6. Native synthetic pipeline reproduces all 136 fixture rows; merged in PR #9.
+7. Initial real-loader/scorer compatibility checks published in PR #11. Broader
+   audit reopens scorer mapping acceptance; raw pilot audit remains pending.
 
-| Bundle | Original observation | Checker-0.3 replay |
-| --- | --- | --- |
-| `runs/qwen3-8b-live-smoke-01` | Eight live calls; E2/S0 and E3/S0 truncated; S1 checks: three rejected, one E4 release | Outcomes unchanged |
-| `runs/qwen3-8b-live-smoke-02-v2` | Eight live calls; E1–E3 S1 abstain; E4 originally rejected for rounding | E1–E3 remain abstentions; E4 releases A_to_B |
+These readiness phases are distinct from original roadmap pilot/held-out phases.
+See [handoff checks](../kris-phase3-handoff.md), [joins](../kris-phase4-evaluator-joins.md),
+[scorer fixtures](../kris-phase5-scoring-fixtures.md),
+[offline demo](../kris-phase6-offline-acceptance.md), and
+[actual API acceptance](../reviews/pilot-integration-acceptance.md).
 
-First-smoke E4 supplied no claims, so its pass does not establish checked support.
-The second configuration uses 16 display rows, context 4096 and output cap 512;
-it differs from the original configuration and is not a prompt-only comparison.
-Historical native traces were never rewritten. Fresh-copy Phase 2 verification
-reproduced both replays, passed native audits, kept original file hashes unchanged,
-and verified zero new model/ANM calls and no events on repeated replay.
-Local evidence is under `runs/phase2-checker03-verification/`.
+## Experiment evidence and provenance
 
-## Offline scorer-input acceptance
+- Two saved Qwen3 8B live smokes on synthetic observations: eight calls each;
+  cached S2/resume add zero. Historical first-smoke truncation is preserved.
+  Replay evidence is described in [Phase 2](../kris-phase2-replay.md).
+- Synthetic scorer-input demo: eight cases, four families, 64 scripted attempts,
+  32 S2 records (20 checks/12 parent-failure skips), 136 rows and passing audit.
+  Three-row method inputs intentionally exercise insufficient_rows; other tests
+  cover successful ANM fitting. No live calls occur in acceptance tests.
+- Real pilot, reported by user and PR #10 guide: 17 pairs/seven groups, 136 live
+  generations, 68 cached S2 checks, zero execution/ANM errors, passing audit and
+  zero-call resume. E4 S1/S2/ANM arrows match, with 14 answers (six correct/eight
+  wrong) and three abstentions; weighted coverage about 89%, accuracy 40%.
+  Five non-E4 rejections and prose/arrow contradictions are reported. The raw
+  real-pilot/prepared bundles are absent from both available checkouts, so these
+  outcomes have **not** been independently reconciled here.
+- Uploaded ANM validation/decision/code-review reports were read directly. They
+  distinguish 32 compatible recovery cases from 36 construction-direction-scored
+  cases and 48 operational datasets; 12 controls are not direction-identifiable.
+  Reported numerical maximum discrepancy is about 9.68e-16. Locked recovery 65.6%,
+  stability 68.8% and minimum-family recovery 25% miss the frozen gates. The
+  original 48-dataset run and validation source are not available locally for
+  fresh execution; report review is not a rerun. No specific repair is established.
 
-`runs/phase6-offline-acceptance-final/report.json` records eight synthetic cases,
-32 packages, **64 scripted attempts**, 32 S2 records (20 checks, 12 parent-failure
-skips), and 136 private joined rows matching the scoring projection exactly.
-Independent audit passes; cached S2/resume add zero calls. The tiny method samples
-intentionally yield insufficient_rows/input_validation; this demo does not measure
-successful ANM performance. Real successful ANM computation is covered elsewhere.
+No audit pass or hash chain certifies causal truth, authentic source labels or
+statistical ANM assumptions. Split/orientation repeats are not independent cases.
 
-The 136-row scorer fixture uses four source families and eligible weight 16.
-It explicitly distinguishes correct answers suppressed, wrong answers removed,
-failures and abstentions. Fixed paired family draws include repeated groups and
-undefined accuracy when no answers remain. These are deterministic acceptance
-oracles, not estimated confidence intervals or natural error prevalence.
+## Next actions and responsibility
 
-## Next actions and ownership
+1. Pilot scorer owner closes mapping validation and regression-tests changed
+   order with unchanged ID. Kris verifies the repaired integration.
+2. Make original real-pilot journal/manifests/exports/method files and prepared
+   runtime/evaluator/mapping records available; independently audit and rescore.
+3. Review and merge PRs #10/#11 in a checked combination; neither merge is assumed.
+4. Anish/data owners specify, version and validate ANM/preprocessing development
+   changes. Preserve original results and freeze source-separated evaluation groups.
+5. Agree final prompts/model/checker/sampling/retries, process-error definitions,
+   weighted metrics and interval policy; validate the revised handoff and freeze.
+6. Run held-out evaluation and Track A live benchmark, then comparisons, figures,
+   error cases, reproducibility artifacts, report and presentation.
 
-1. Review/merge PR #9 after team acceptance; no merge is assumed here.
-2. Faizah supplies audited snapshot/hashes, eligibility/exclusions, sanitized
-   runtime records and separate reference/weight/group/split metadata. Agree the
-   concrete adapter fields; current evaluator cause_column shape is provisional.
-3. Faizah's scorer passes the metric and fixed-resample fixtures. Our integration
-   connects actual handoffs and validates one real pilot pair through scoring.
-4. In parallel, Anish prepares/calibrates ANM on designated development groups;
-   Vaishak/Kris validate final live settings; Arunima/Anish finalize Track A review
-   and live execution. Do not use held-out groups for tuning.
-5. Run the real-data pilot; inspect failures and costs; freeze eligibility, model,
-   prompts, checker/tolerance, sampling, method, retry and metric/CI policies.
-6. Execute held-out evaluation without retuning, then H1/H2/H3 comparisons, group
-   uncertainty, representative errors, reproducibility package, report and slides.
-
-No new live-model calls were made during the readiness implementation/cleanup.
+Kris's implementation is substantially finished. Remaining ownership is integration
+acceptance, final configuration and audited execution—not independently repairing
+ANM statistics or taking over the data owner's audit. No new live runs or threshold
+changes were made for this review.

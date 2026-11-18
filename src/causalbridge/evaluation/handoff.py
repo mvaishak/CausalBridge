@@ -75,7 +75,9 @@ class AnalysisHandoff(Record):
     observation_kind: Literal["unspecified", "synthetic", "real_observational"]
     prediction_binding: Literal["valid", "invalid_or_unavailable"]
     prediction_scorable: StrictBool
-    generation_status: Literal["complete", "truncated", "incomplete", "unavailable"]
+    generation_status: Literal[
+        "complete", "truncated", "incomplete", "unavailable", "not_applicable"
+    ]
     generation_failure_reason: Nonempty | None
     supplied_claim_count: Count | None
     supporting_claims_status: Literal["not_checked", "no_supporting_claims_supplied", "checked"]
@@ -95,6 +97,8 @@ class AnalysisHandoff(Record):
 
     @model_validator(mode="after")
     def release_invariants(self):
+        if self.generation_status == "not_applicable" and self.condition != "ANM_ONLY":
+            raise ValueError("Only ANM-only rows may declare generation not applicable")
         if self.condition in {"S0", "S1"}:
             usable = self.failure_stage is None
             if self.prediction_scorable != usable or self.prediction_binding != (
