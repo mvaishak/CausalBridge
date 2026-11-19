@@ -8,6 +8,8 @@ exclusive to a new directory, with durable native inference journals.
 import argparse
 import hashlib
 import json
+import time
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
@@ -16,6 +18,7 @@ from causalbridge.discovery.anm_requests import ANMConfig, read_json
 from causalbridge.discovery.contracts import RuntimePair, SelectionSpec
 from causalbridge.discovery.evidence import select_pair
 from causalbridge.discovery.loader import verify_snapshot_hashes
+from causalbridge.discovery.schemas import canonical_digest
 from causalbridge.evaluation.audit_native import audit_native
 from causalbridge.evaluation.export import analysis_rows, evaluator_mapping
 from causalbridge.evaluation.integration import (
@@ -27,11 +30,96 @@ from causalbridge.evaluation.integration_demo import ScriptedNativeModel
 from causalbridge.evaluation.roster import check_roster
 from causalbridge.evaluation.scoring import score_pilot
 from causalbridge.evaluation.store import atomic_json
-from causalbridge.llm.client import ModelConfig, OllamaModel
+from causalbridge.llm.client import Generation, GenerationFailure, ModelConfig, OllamaModel
 
 
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def request_key(messages, schema):
+    return canonical_digest({"messages": messages, "schema": schema})
+
+
+def saved_live_generations(root, config):
+    """Read only complete raw responses from the previous pinned live attempt."""
+    session = read_json(root / "session.json")
+    if session["model_config"] != config.model_dump(mode="json") or session["scripted"]:
+        raise ValueError("Replay source is not the same pinned live model configuration")
+    events = [
+        json.loads(line) for line in (root / "experiment/events.jsonl").read_text().splitlines()
+    ]
+    starts = {e["data"]["key"]: e["data"] for e in events if e["kind"] == "native_started"}
+    generated = {e["data"]["key"]: e["data"] for e in events if e["kind"] == "native_generated"}
+    finished = {e["data"]["key"]: e["data"] for e in events if e["kind"] == "native_finished"}
+    saved = {}
+    for key, start in starts.items():
+        if key not in generated or key not in finished:
+            continue
+        if not finished[key]["execution"] or finished[key]["execution"]["failure_stage"]:
+            continue
+        generation = Generation.model_validate(generated[key]["generation"])
+        if generation.status != "complete" or generation.model != config.model:
+            continue
+        fingerprint = request_key(start["messages"], start["output_schema"])
+        if fingerprint in saved:
+            raise ValueError("Duplicate saved live request fingerprint")
+        saved[fingerprint] = {"generation": generation, "source_attempt_id": start["attempt_id"]}
+    return saved
+
+
+class ResumableLiveModel:
+    """Reuse exact live responses and log bounded retries on transport disconnects."""
+
+    def __init__(self, config, client, saved, log_path):
+        self.config = config
+        self.model = OllamaModel(config, client=client)
+        self.saved = saved
+        self.log_path = log_path
+        self.replayed = 0
+        self.actual = 0
+
+    def _log(self, event):
+        with self.log_path.open("a") as handle:
+            handle.write(json.dumps(event, sort_keys=True) + "\n")
+
+    def generate(self, messages, schema):
+        fingerprint = request_key(messages, schema)
+        if fingerprint in self.saved:
+            item = self.saved.pop(fingerprint)
+            self.replayed += 1
+            self._log(
+                {
+                    "kind": "saved_live_replay",
+                    "request_key": fingerprint,
+                    "source_attempt_id": item["source_attempt_id"],
+                }
+            )
+            return item["generation"]
+        for retry in range(181):
+            try:
+                generation = self.model.generate(messages, schema)
+                self.actual += 1
+                self._log({"kind": "new_live_generation", "request_key": fingerprint})
+                return generation
+            except GenerationFailure:
+                self.actual += 1
+                self._log({"kind": "new_live_incomplete_generation", "request_key": fingerprint})
+                raise
+            except httpx.TransportError as exc:
+                self._log(
+                    {
+                        "kind": "transport_retry",
+                        "request_key": fingerprint,
+                        "retry": retry,
+                        "error": type(exc).__name__,
+                        "time_utc": datetime.now(UTC).isoformat(),
+                    }
+                )
+                if retry == 180:
+                    raise SystemExit("Model transport unavailable for 30 minutes") from exc
+                time.sleep(10)
+        raise AssertionError("Unreachable retry loop")
 
 
 def main():
@@ -48,6 +136,11 @@ def main():
     ap.add_argument("--scripted", action="store_true")
     ap.add_argument(
         "--smoke", action="store_true", help="Run one pair only; a separate output is required"
+    )
+    ap.add_argument(
+        "--reuse-live-from",
+        type=Path,
+        help="Reuse exact successful live responses from an interrupted run",
     )
     args = ap.parse_args()
     spec_path = Path("configs/final-track-b-integrated-38.json")
@@ -93,6 +186,9 @@ def main():
     selected_cases = cases[:1] if args.smoke else cases
     if not args.smoke and len(selected_cases) * 8 > spec["maximum_live_calls"]:
         ap.error("Call budget exceeded")
+    if args.reuse_live_from and (args.scripted or args.smoke):
+        ap.error("Saved-live reuse is only for the full live panel")
+    saved = saved_live_generations(args.reuse_live_from, config) if args.reuse_live_from else {}
     anm_config = ANMConfig.model_validate(spec["anm_config"])
     selection = SelectionSpec.model_validate(spec["selection"])
     session = {
@@ -108,6 +204,10 @@ def main():
         "protocol_sha256": digest(spec_path),
         "names_sha256": digest(names_path),
         "script_sha256": digest(__file__),
+        "reuse_live_events_sha256": digest(args.reuse_live_from / "experiment/events.jsonl")
+        if args.reuse_live_from
+        else None,
+        "reused_live_generation_count": len(saved),
         "source_sha256": {
             str(p): digest(p) for p in sorted(Path("src/causalbridge").rglob("*.py"))
         },
@@ -146,9 +246,15 @@ def main():
     )
     if args.scripted:
         run = runner.run(packages, ScriptedNativeModel())
+        model = None
     else:
         with httpx.Client(timeout=config.timeout_seconds, trust_env=False) as client:
-            run = runner.run(packages, OllamaModel(config, client=client))
+            model = ResumableLiveModel(config, client, saved, root / "generation-provenance.jsonl")
+            run = runner.run(packages, model)
+        if model.replayed != session["reused_live_generation_count"]:
+            raise ValueError("A saved live generation did not match the frozen request")
+        if model.actual + model.replayed != len(selected_cases) * 8:
+            raise ValueError("Not every planned trial has a real model response")
     releases = runner.replay_s2(run["manifest_id"])
     audit = audit_native(root / "experiment")
     rows = analysis_rows(run, releases)
@@ -165,7 +271,13 @@ def main():
             "manifest_id": run["manifest_id"],
             "audit_passed": audit["passed"],
             "observed_model": observed_model,
-            "model_mode": "scripted_fixture" if args.scripted else "live_ollama",
+            "model_mode": "scripted_fixture"
+            if args.scripted
+            else "saved_live_plus_new_live"
+            if args.reuse_live_from
+            else "live_ollama",
+            "saved_live_replays": model.replayed if model else 0,
+            "actual_new_ollama_calls": model.actual if model else 0,
             "new_usage": run["new_usage"],
             "historical_usage": run["historical_usage"],
         },

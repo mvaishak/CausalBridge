@@ -41,8 +41,13 @@ def main():
     args = ap.parse_args()
     run = args.run
     summary = read(run / "run-summary.json")
-    if summary["model_mode"] != "live_ollama" or summary["case_count"] != 38:
-        ap.error("Only a completed live 38-pair run may be analyzed here")
+    if (
+        summary["model_mode"] not in {"live_ollama", "saved_live_plus_new_live"}
+        or summary["case_count"] != 38
+    ):
+        ap.error("Only a completed real-model 38-pair run may be analyzed here")
+    if summary["actual_new_ollama_calls"] + summary["saved_live_replays"] != 304:
+        ap.error("Missing actual or traceable saved model generations")
     rows = [json.loads(line) for line in (run / "analysis.jsonl").read_text().splitlines()]
     evaluator = {e["case_id"]: e for e in read(run / "evaluator.json")}
     mapping = {m["case_id"]: m for m in read(run / "evaluation_mapping.json")}
@@ -74,6 +79,7 @@ def main():
             "weighted_correct": e["weight"] * int(direction is not None and direction == gold),
             "weighted_one": e["weight"],
             "outcome": row["outcome"],
+            "reason_codes": row["reason_codes"],
             "prediction_scorable": row["prediction_scorable"],
             "supplied_claim_count": row["supplied_claim_count"],
             "checked_claim_count": row["checked_claim_count"],
@@ -101,6 +107,7 @@ def main():
         )
     index = {(r["case_id"], r["package"], r["condition"]): r for r in records}
     transitions = Counter()
+    paired = []
 
     def category(record):
         return "correct" if record["correct"] else "wrong" if record["wrong"] else "abstain"
@@ -109,6 +116,14 @@ def main():
         e3 = index[(case, "E3", "S0")]
         e4 = index[(case, "E4", "S0")]
         transitions[(category(e3), category(e4))] += 1
+        paired.append(
+            {
+                "source_group": e4["source_group"],
+                "weighted_one": e4["weighted_one"],
+                "correct_yield_difference": e4["weighted_correct"] - e3["weighted_correct"],
+                "coverage_difference": e4["weighted_answered"] - e3["weighted_answered"],
+            }
+        )
     e4_agreement = sum(
         index[(case, "E4", "S0")]["predicted_direction"]
         == index[(case, "E4", "ANM_ONLY")]["predicted_direction"]
@@ -137,15 +152,31 @@ def main():
             index[(r["case_id"], r["package"], "S1")]["wrong"] for r in s2 if not r["answered"]
         ),
         "s2_outcomes": dict(Counter(r["outcome"] for r in s2)),
+        "s2_reason_codes": dict(Counter(code for r in s2 for code in r["reason_codes"])),
     }
     output = {
         "scope": "exploratory_opened_anm_validation_pairs",
         "cases": 38,
         "source_groups": len({e["source_group"] for e in evaluator.values()}),
-        "live_calls": summary["new_model_calls"],
+        "actual_new_live_calls": summary["actual_new_ollama_calls"],
+        "saved_live_replays": summary["saved_live_replays"],
+        "total_real_model_responses": summary["actual_new_ollama_calls"]
+        + summary["saved_live_replays"],
         "model": summary["observed_model"],
         "metrics": metrics,
         "e3_to_e4_s0_transitions": {"→".join(k): v for k, v in sorted(transitions.items())},
+        "e4_minus_e3_s0": {
+            "weighted_correct_yield_difference": sum(p["correct_yield_difference"] for p in paired)
+            / sum(p["weighted_one"] for p in paired),
+            "weighted_coverage_difference": sum(p["coverage_difference"] for p in paired)
+            / sum(p["weighted_one"] for p in paired),
+            "correct_yield_difference_interval": cluster_interval(
+                paired, "correct_yield_difference", "weighted_one"
+            ),
+            "coverage_difference_interval": cluster_interval(
+                paired, "coverage_difference", "weighted_one"
+            ),
+        },
         "e4_s0_agrees_with_anm_count": e4_agreement,
         "e4_s0_answered_copies_anm_count": e4_answered_copies_anm,
         "e4_s0_s1_agreement_count": e4_s0_s1_agreement,
@@ -184,7 +215,7 @@ def main():
             if width > 30:
                 svg.append(
                     f'<text x="{x + width / 2:.1f}" y="{y + 12}" text-anchor="middle" '
-                    f'fill="white" class="small">{count}</text>'
+                    f'style="fill:white" class="small">{count}</text>'
                 )
             x += width
     for i, (label, color) in enumerate(zip(("Correct", "Wrong", "Abstain"), colors, strict=True)):
@@ -197,7 +228,7 @@ def main():
         json.dumps(
             {
                 "cases": 38,
-                "live_calls": output["live_calls"],
+                "actual_new_live_calls": output["actual_new_live_calls"],
                 "e4_agreement": e4_agreement,
                 "checker": checker,
             },

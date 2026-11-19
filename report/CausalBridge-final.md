@@ -20,6 +20,8 @@ Track B evaluates 17 selected scalar Tübingen pairs in seven source groups. E1 
 
 Both live tracks used a local `qwen3:8b` model with pinned digest `500a1f06…3e4ca4b2b8b41`, temperature 0, seed 261 and thinking disabled. Track A used 8192 context/1024 output tokens; Track B used 4096/512. Model requests, raw responses, configuration, token counts, latency and tool traces are archived. No gold reference was placed in model prompts. The Track B run preceded this report; its score file was reproduced byte-for-byte from the archived analysis, mapping and evaluator records. The Track A live run was executed for this delivery on the frozen 50 cases.
 
+After the pilot, the team added a 512-row ANM validation variant and completed real-data roster and scoring checks. A request-level replay found all 136 original pilot prompts, evidence packages and ANM results unchanged under the merged production pipeline. The 17 pilot cases therefore were not regenerated. For an additional matched end-to-end test, we froze the 38 eligible validation-role pairs in 12 disjoint source groups and used the saved 512-row ANM results. Their benchmark outcomes had already been opened by the numerical study, so this larger panel is exploratory rather than an independent holdout.
+
 ## 3. Results
 
 | Panel and strategy | Correct | Wrong | Abstain | Coverage | Answered accuracy |
