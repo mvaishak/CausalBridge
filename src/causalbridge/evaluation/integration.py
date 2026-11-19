@@ -282,10 +282,14 @@ class IntegratedRunner:
     def run(self, packages, model: JSONModel, *, replicate_id="0", retry_id=None):
         if getattr(model, "config", None) != self.config:
             raise ValueError("Transport and runner configurations differ")
-        planned, seen = [], set()
+        planned, seen, matched = [], set(), {}
         for package in packages:
             package = NativePackage.model_validate_json(package.model_dump_json())
             e = package.evidence
+            source = package.selected.model_dump(mode="json")
+            if e.case_id in matched and matched[e.case_id] != source:
+                raise ValueError("Matched package selection/context differs for one case")
+            matched[e.case_id] = source
             if (e.case_id, e.package) in seen:
                 raise ValueError("Duplicate case/package")
             seen.add((e.case_id, e.package))

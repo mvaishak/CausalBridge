@@ -6,6 +6,16 @@ sets the scientific scope and ownership. The [team agreement](planning/track_b_t
 records conventions; its proposed examples aren't executable replacements for
 these contracts. Phase 1/2 implementation is preserved in commit `6e7232e`.
 
+**Current pilot-readiness addendum:** the native runner rejects mismatched
+selection/context across packages before generation; the independent native
+auditor checks context, mapping and selections as well as numeric matching.
+ANM-only export validity is derived from the method, independent of model failure.
+Track A now preserves GenerationFailure raw responses/tokens, and reports unknown
+aggregate usage when any attempted call has unknown usage. Generated run-trace
+and model-config schemas have been refreshed. The pilot loader/scorer and exact
+commands are documented in [the pilot guide](pilot_run.md). Historical status
+and test-count sections below describe their original delivery snapshots.
+
 PR #4 is now merged into main at `48d6cda`. Anish's additive numerical producer
 implements these existing schemas without changing them; see
 [ANM producer and saved originals](anm_producer.md) for exact APIs, digest scopes,
@@ -67,8 +77,9 @@ typed inputs raise to the caller without an execution trace. For valid inputs:
 **Never use a non-null prediction from a trace with non-null failure_stage.**
 The existing parser accepts one JSON object, rejects duplicate keys and replies
 over 64,000 characters, and validates against the supplied Pydantic schema.
-Ollama truncation/incomplete-response errors occur inside transport, so no
-Generation is returned for those failures. Don't invent raw text or token counts.
+Ollama truncation/incomplete-response errors carry GenerationFailure.generation;
+the native runner/predictor retain raw responses and known tokens, without parsing
+them as predictions. No-response failures retain null generation/unknown usage.
 
 `check_prediction` revalidates saved records, checks original bindings and typed
 claims, and returns an indexed finding per claim when schema validation permits.

@@ -5,7 +5,7 @@ from uuid import uuid4
 
 from pydantic import Field, ValidationError
 
-from causalbridge.llm.client import Generation, JSONModel, ModelConfig
+from causalbridge.llm.client import Generation, GenerationFailure, JSONModel, ModelConfig
 from causalbridge.llm.parser import (
     PROMPT_VERSION,
     interpretation_messages,
@@ -93,10 +93,8 @@ class CausalBridge:
         )
 
         def finish(verdict, failure_stage=None):
-            generations = [c.generation for c in calls if c.generation is not None]
-
             def total(field):
-                values = [getattr(g, field) for g in generations]
+                values = [getattr(c.generation, field) if c.generation else None for c in calls]
                 return sum(values) if values and all(v is not None for v in values) else None
 
             return RunTrace(
@@ -113,12 +111,15 @@ class CausalBridge:
             schema = shape.model_json_schema()
             try:
                 generation = self.model.generate(prompt, schema)
+                if generation.status != "complete":
+                    raise GenerationFailure(generation)
             except Exception as exc:
                 calls.append(
                     LLMCall(
                         stage=stage,
                         messages=tuple(prompt),
                         output_schema=schema,
+                        generation=exc.generation if isinstance(exc, GenerationFailure) else None,
                         error=f"{type(exc).__name__}: {exc}",
                     )
                 )

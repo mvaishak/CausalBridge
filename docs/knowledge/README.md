@@ -8,6 +8,13 @@ Start here when resuming work. This is an evidence-linked progress record, not a
 claim that roadmap assignments have been completed. Update it alongside each
 implementation milestone; fetch remote progress before marking teammates' work.
 
+**Current integration update:** local `codex/faizah-pilot-diagnosis` combines
+main `dbbf8db` with all source-branch changes through `7a886f1`.
+It includes data preparation, the pilot scorer, data audit and evaluation roster,
+while retaining main's acceptance checks. See [roadmap status](roadmap-status.md),
+[pilot guide](../pilot_run.md), and [evaluation handoff](../evaluation_handoff.md).
+Held-out execution and final reporting remain pending. The inventory below is historical.
+
 ## Research and system context
 
 Two tracks: Track A checks support for causal effects with a supplied DAG and exact

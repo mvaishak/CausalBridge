@@ -5,10 +5,14 @@ graph and evidence. A directed path from X to Y doesn't tell us whether increasi
 X increases Y. The system checks the selected operation, its evidence requirements,
 and the proposed conclusion before answering or abstaining.
 
-Track A has graph tools, a seven-case pilot, a selectable numerical engine and
-an independently checked witness. Track B has Vaishak's predictor/checker and an
-ANM producer that saves its original request before fitting. Real-data packaging,
-the experiment runner/scorer and live-model research evaluation remain pending.
+Track A has graph tools, a validated 50-question/ten-group synthetic pilot, a
+selectable numerical engine and independently checked witnesses. Track B has
+ANM, matched evidence packages, a durable runner, predictor/checker and baseline
+exports. The exploratory 17-pair Tübingen pilot has been run. Its case-level
+diagnosis and the remaining research steps are in [readme_new.md](readme_new.md).
+
+For reproduction commands, use the [pilot guide](docs/pilot_run.md).
+Held-out evaluation, bootstrap intervals and the final report are deferred.
 
 ## Setup
 
@@ -67,7 +71,10 @@ uv run causalbridge run \
   --output runs/qwen-smoke.jsonl
 ```
 
-Model settings are in `configs/model.json`. Live Qwen inference still needs validation.
+These are Track A smoke settings. The bounded Track B pilot uses
+`configs/pilot-model.json`; its guide requires an explicit model digest and a
+fresh output directory. Earlier live synthetic smoke work is documented in
+[Kris's smoke record](docs/kris-smoke-v2.md).
 
 ## Structure
 
@@ -86,7 +93,8 @@ schemas/           # Exported JSON schemas
 tests/             # Tests across components
 ```
 
-`evaluation/` remains a starting point for the runner/scorer workstream.
+`evaluation/` contains the native runner, independent audits, baseline exports
+and exploratory pilot scoring. Confidence intervals remain future work.
 `tools/reference.py` is preserved; `tools/engine.py` selects tested computations
 from `tools/inference.py`. Track B's optional ANM extra uses NumPy and never routes
 direction predictions through Track A's effect verifier.
@@ -109,6 +117,5 @@ interfaces. Runtime prompts and tools must never receive gold labels or withheld
 ## Project progress and Track B work
 
 See the [project knowledge bank](docs/knowledge/README.md) for evidence-linked
-progress, ownership, decisions and planned versus completed work. The local
-Track B Phase 1 contracts and fixtures are documented there; they do not yet
-constitute an integrated real-data experiment.
+progress, ownership, decisions and planned versus completed work. Pilot-ready
+software and offline validation are distinct from live-model research findings.
