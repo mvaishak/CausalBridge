@@ -43,3 +43,11 @@ Working branch: `codex/final-delivery-20261119`, based on `main` at `7c7198d`. T
 - `bash scripts/verify-final.sh` completed: 995 tests passed, two snapshot-dependent skips, Ruff lint and format passed, both scripted demos and ANM handshake completed, source/wheel built, all 7,125 ANM archive members verified, and the Track A/B archives, PowerPoint package and report page limit checked.
 - PowerPoint schema/package validation passed independently. A macOS Quick Look thumbnail confirmed the title slide renders. Full-deck visual rendering was unavailable because LibreOffice is absent.
 - `final-project-acceptance.md` maps each requirement to evidence and records the Canvas deadline/rubric limitation. No unapproved paid service, deployment, protected-branch merge, or historical-artifact overwrite occurred.
+# Post-merge Track B corrective run (19 November 2026)
+
+- Audited the original 17-pair live journal against a current 17-pair deterministic pipeline replay: all 136 model-visible messages, evidence packages, selected rows, method requests and receipts match. The changed ANM 512-row validation setting is a separate study configuration. A redundant 17-pair live rerun is not required.
+- Verified the final 108-pair roster: 17 pilot, four development, 38 eligible validation, 49 unscorable. The 17 and 38 panels have disjoint pair IDs and source groups, but the 38 reference outcomes were opened by the numerical ANM study.
+- Froze a 38-pair exploratory integrated protocol and reviewed variable-name mapping. Reused the archived 512-row ANM requests only after exact request binding; no ANM outcome-based filtering.
+- Completed a 38-pair scripted integration check (304 fixture calls) and one-pair live integration check (eight actual pinned `qwen3:8b` calls). The full 38-pair live run is now executing under `runs/postmerge-track-b-38-live/`. Raw journals are durable; model references are not included in prompts.
+- Independently reviewed IGCI and RECI assumptions using primary papers. Neither was added after examining the 38 labels, since no untouched source-separated holdout remains for a revised-method generalization claim.
+

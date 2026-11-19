@@ -25,6 +25,24 @@ The 512-row synthetic confirmation and 38-pair real ANM validation are in `artif
 
 ## Recompute final analyses and files
 
+### Post-merge integrated Track B panel
+
+`docs/reviews/postmerge-track-b-audit.md` records why the archived 17-pair pilot does not need a new live rerun. To reproduce the exact request comparison, use a hash-verified snapshot to regenerate the pilot runtime rows with the current loader, run `examples/real_data_pilot.py --scripted` on them in a **new** output directory, then run `scripts/audit_postmerge_track_b.py` with the original ZIP and that directory. `artifacts/final-delivery/postmerge-track-b/pilot-request-comparison.json` contains the saved result.
+
+For the additional 38-pair integrated panel, read the frozen `configs/final-track-b-integrated-38.json` and reviewed labels in `configs/final-track-b-validation-names.json`. Restore the archived `sample_512` ANM requests without editing them:
+
+```sh
+mkdir -p runs/postmerge-anm-cache
+tar -xzf artifacts/anm-experiments-2026-11-18/run-records.tar.gz \
+  -C runs/postmerge-anm-cache \
+  runs/anish-anm-validation-test-01/execution/attempts/sample_512
+uv run --extra anm python scripts/run_final_track_b_38.py \
+  --snapshot /path/to/hash-verified/tuebingen-snapshot \
+  --output runs/a-new-integrated-38-run --scripted
+```
+
+The scripted command checks all 38 ANM bindings, evidence packages, S0/S1, S2, gate, and scoring, but does not invoke the LLM. A live run omits `--scripted` and must use a **new** output directory. It verifies the exact `/api/tags` model digest before scheduling up to 304 calls. The runner journals each raw request/response before parsing and joins reference directions only after inference. The original 38 labels have already been examined, so any live score on this panel is exploratory. Analyze a completed live run with `uv run --extra anm python scripts/analyze_final_track_b_38.py --run runs/a-new-integrated-38-run --output artifacts/a-new-analysis`. This script rejects scripted output.
+
 Run `uv run --extra anm python scripts/final_analysis.py` after generating the Track A oracle and placing the original Track A live JSONL at `runs/final-track-a-live-20261119.jsonl`. This script asserts exactly 50 unique Track A cases and 38 real ANM cases, writes case-level joins and metrics to `artifacts/final-delivery/analysis/`, computes exploratory graph/source-group bootstrap intervals with 10,000 resamples and seed 261, and regenerates the SVG outcome figure. It reads saved outputs; it makes no LLM calls or ANM fits. The archived Track B bootstrap is in `artifacts/final-delivery/track-b-diagnostics/uncertainty.json` with 20,000 source-group draws.
 
 Build the concise report PDF with `bash scripts/build-final-report.sh`. Build the nine-slide PowerPoint with `npm install pptxgenjs` in a Node environment and `node scripts/build_final_presentation.js`. The Markdown report source and presentation generator are editable. The official public course page caps final analysis/results at four pages excluding references; the current PDF has three pages total. Canvas remains authoritative for exact submission instructions and deadlines. Run `bash scripts/verify-final.sh` for the combined baseline and artifact check.

@@ -1,0 +1,72 @@
+{
+  "original_live_attempts": 136,
+  "current_scripted_attempts": 136,
+  "case_count": 17,
+  "keys_identical": true,
+  "model_visible_and_method_fields_compared": [
+    "messages",
+    "output_schema",
+    "condition",
+    "prompt_version",
+    "protocol",
+    "receipt",
+    "package.evidence",
+    "package.method_request",
+    "package.selected"
+  ],
+  "excluded_nonvisible_field": "package.method_directory is an absolute artifact path",
+  "differences": {
+    "messages": [],
+    "output_schema": [],
+    "condition": [],
+    "prompt_version": [],
+    "protocol": [],
+    "receipt": [],
+    "package.evidence": [],
+    "package.method_request": [],
+    "package.selected": []
+  },
+  "original_model_config": {
+    "base_url": "http://127.0.0.1:11435",
+    "context_tokens": 4096,
+    "max_tokens": 512,
+    "model": "qwen3:8b",
+    "seed": 261,
+    "temperature": 0.0,
+    "think": false,
+    "timeout_seconds": 300.0
+  },
+  "source_comparison": {
+    "discovery/anm.py": {
+      "archived_sha256": "c755bdc8617b9486a9cfadb856390687dbeef5040afab48b73b9617bc500899b",
+      "current_sha256": "c755bdc8617b9486a9cfadb856390687dbeef5040afab48b73b9617bc500899b",
+      "same": true
+    },
+    "discovery/evidence.py": {
+      "archived_sha256": "2a35d8a1ed1cde9dff2a38136653e39a6be0bc2d1551e994f547443a40a5eaaa",
+      "current_sha256": "2a35d8a1ed1cde9dff2a38136653e39a6be0bc2d1551e994f547443a40a5eaaa",
+      "same": true
+    },
+    "discovery/loader.py": {
+      "archived_sha256": "623d78e8236d294b90ae12bef19fff1f91af6079253b5bb31d71b31de8e1106c",
+      "current_sha256": "fa3a77fc0ffb6239a570051d4c2f4d67a2b326cfce57ec38f2f68909bc0c92f1",
+      "same": false
+    },
+    "evaluation/integration.py": {
+      "archived_sha256": "cb93897c1a68e2dfbe5bf5ad48238f3dd96af2aa1c22d44354945bfe5cac94eb",
+      "current_sha256": "cb93897c1a68e2dfbe5bf5ad48238f3dd96af2aa1c22d44354945bfe5cac94eb",
+      "same": true
+    },
+    "evaluation/scoring.py": {
+      "archived_sha256": "6a116904e103d13bbb9b6f37d8135279cab60aac4b4f2201087cf0d096b1b035",
+      "current_sha256": "116af6317d4bedb68111fdd23062f4c2f9e573b02f75739f5153df64b046a815",
+      "same": false
+    },
+    "llm/predictor.py": {
+      "archived_sha256": "f6895fac92f7f23bd49b59a3c878c1d90f561340ba425ceaff41f3f2a815b097",
+      "current_sha256": "f6895fac92f7f23bd49b59a3c878c1d90f561340ba425ceaff41f3f2a815b097",
+      "same": true
+    }
+  },
+  "interpretation": "Scripted request comparison; no new live inference."
+}
