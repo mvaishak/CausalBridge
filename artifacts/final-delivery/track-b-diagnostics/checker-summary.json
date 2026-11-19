@@ -1,0 +1,48 @@
+[
+  {
+    "package": "E1",
+    "checked": 17,
+    "passed": 14,
+    "failed": 3,
+    "released": 0,
+    "passed_abstentions": 14,
+    "reason_counts": {
+      "summary_unavailable": 3,
+      "method_unavailable": 3,
+      "rows_unavailable": 3
+    },
+    "zero_claim_outputs": 14
+  },
+  {
+    "package": "E2",
+    "checked": 17,
+    "passed": 17,
+    "failed": 0,
+    "released": 0,
+    "passed_abstentions": 17,
+    "reason_counts": {},
+    "zero_claim_outputs": 17
+  },
+  {
+    "package": "E3",
+    "checked": 17,
+    "passed": 15,
+    "failed": 2,
+    "released": 1,
+    "passed_abstentions": 14,
+    "reason_counts": {
+      "row_value_mismatch": 2
+    },
+    "zero_claim_outputs": 14
+  },
+  {
+    "package": "E4",
+    "checked": 17,
+    "passed": 17,
+    "failed": 0,
+    "released": 14,
+    "passed_abstentions": 3,
+    "reason_counts": {},
+    "zero_claim_outputs": 3
+  }
+]

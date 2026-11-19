@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<rect width="900" height="360" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#20303a}.title{font-size:20px;font-weight:bold}.label{font-size:15px}.small{font-size:13px}</style>
+<text x="30" y="33" class="title">CausalBridge outcomes by evaluation panel</text>
+<text x="30" y="80" class="label">Track A, synthetic (n=50)</text>
+<rect x="255.00" y="60" width="11.80" height="30" fill="#237c69"/>
+<rect x="266.80" y="60" width="11.80" height="30" fill="#bb5145"/>
+<rect x="278.60" y="60" width="566.40" height="30" fill="#a2a8ad"/>
+<text x="561.80" y="81" text-anchor="middle" class="small" fill="white">48</text>
+<text x="30" y="165" class="label">Track B E4, real (n=17)</text>
+<rect x="255.00" y="145" width="208.24" height="30" fill="#237c69"/>
+<text x="359.12" y="166" text-anchor="middle" class="small" fill="white">6</text>
+<rect x="463.24" y="145" width="277.65" height="30" fill="#bb5145"/>
+<text x="602.06" y="166" text-anchor="middle" class="small" fill="white">8</text>
+<rect x="740.88" y="145" width="104.12" height="30" fill="#a2a8ad"/>
+<text x="792.94" y="166" text-anchor="middle" class="small" fill="white">3</text>
+<text x="30" y="250" class="label">ANM validation, real (n=38)</text>
+<rect x="255.00" y="230" width="201.84" height="30" fill="#237c69"/>
+<text x="355.92" y="251" text-anchor="middle" class="small" fill="white">13</text>
+<rect x="456.84" y="230" width="201.84" height="30" fill="#bb5145"/>
+<text x="557.76" y="251" text-anchor="middle" class="small" fill="white">13</text>
+<rect x="658.68" y="230" width="186.32" height="30" fill="#a2a8ad"/>
+<text x="751.84" y="251" text-anchor="middle" class="small" fill="white">12</text>
+<rect x="30" y="323" width="14" height="14" fill="#237c69"/>
+<text x="51" y="335" class="small">Correct answer</text>
+<rect x="210" y="323" width="14" height="14" fill="#bb5145"/>
+<text x="231" y="335" class="small">Wrong answer</text>
+<rect x="390" y="323" width="14" height="14" fill="#a2a8ad"/>
+<text x="411" y="335" class="small">Abstain</text>
+</svg>

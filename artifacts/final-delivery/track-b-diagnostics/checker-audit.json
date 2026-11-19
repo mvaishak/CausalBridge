@@ -1,0 +1,1893 @@
+[
+  {
+    "case_id": "D1084",
+    "pair_id": 1,
+    "source_group": "dwd_stations",
+    "package": "E1",
+    "attempt_id": "6e9a758af32449dfac26018dc4d1791a",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/6e9a758af32449dfac26018dc4d1791a"
+  },
+  {
+    "case_id": "D1084",
+    "pair_id": 1,
+    "source_group": "dwd_stations",
+    "package": "E2",
+    "attempt_id": "a87e481200174545afcaa842c8270ba4",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/a87e481200174545afcaa842c8270ba4"
+  },
+  {
+    "case_id": "D1084",
+    "pair_id": 1,
+    "source_group": "dwd_stations",
+    "package": "E3",
+    "attempt_id": "b4c76424609f464ea9eb707b22b30015",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/b4c76424609f464ea9eb707b22b30015"
+  },
+  {
+    "case_id": "D1084",
+    "pair_id": 1,
+    "source_group": "dwd_stations",
+    "package": "E4",
+    "attempt_id": "dea3ee46d79a42f79b3aa8f68211e2e3",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/dea3ee46d79a42f79b3aa8f68211e2e3"
+  },
+  {
+    "case_id": "D1008",
+    "pair_id": 2,
+    "source_group": "dwd_stations",
+    "package": "E1",
+    "attempt_id": "93e321783ada4dc4a4d9699c8ba6c84c",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/93e321783ada4dc4a4d9699c8ba6c84c"
+  },
+  {
+    "case_id": "D1008",
+    "pair_id": 2,
+    "source_group": "dwd_stations",
+    "package": "E2",
+    "attempt_id": "55e352bac2b04e93952459c9b0f535b8",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/55e352bac2b04e93952459c9b0f535b8"
+  },
+  {
+    "case_id": "D1008",
+    "pair_id": 2,
+    "source_group": "dwd_stations",
+    "package": "E3",
+    "attempt_id": "c483ec93a9434b1681e3a554362f9957",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/c483ec93a9434b1681e3a554362f9957"
+  },
+  {
+    "case_id": "D1008",
+    "pair_id": 2,
+    "source_group": "dwd_stations",
+    "package": "E4",
+    "attempt_id": "ed23f885e7d849b994275637e77a6b8f",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "B_to_A",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/ed23f885e7d849b994275637e77a6b8f"
+  },
+  {
+    "case_id": "D1009",
+    "pair_id": 3,
+    "source_group": "dwd_stations",
+    "package": "E1",
+    "attempt_id": "8ffa394577424f4cbc8e05a82856f221",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/8ffa394577424f4cbc8e05a82856f221"
+  },
+  {
+    "case_id": "D1009",
+    "pair_id": 3,
+    "source_group": "dwd_stations",
+    "package": "E2",
+    "attempt_id": "4ecd3434aa4e4373be6d60da9473e245",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/4ecd3434aa4e4373be6d60da9473e245"
+  },
+  {
+    "case_id": "D1009",
+    "pair_id": 3,
+    "source_group": "dwd_stations",
+    "package": "E3",
+    "attempt_id": "748eb1cdca7041e585ef8ee31aaf1d75",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/748eb1cdca7041e585ef8ee31aaf1d75"
+  },
+  {
+    "case_id": "D1009",
+    "pair_id": 3,
+    "source_group": "dwd_stations",
+    "package": "E4",
+    "attempt_id": "f325141a92b842bc8466a6ba1db7e7a3",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "B_to_A",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/f325141a92b842bc8466a6ba1db7e7a3"
+  },
+  {
+    "case_id": "D1007",
+    "pair_id": 4,
+    "source_group": "dwd_stations",
+    "package": "E1",
+    "attempt_id": "a6be42a14f6a4cafaab8fab7531ed2e0",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/a6be42a14f6a4cafaab8fab7531ed2e0"
+  },
+  {
+    "case_id": "D1007",
+    "pair_id": 4,
+    "source_group": "dwd_stations",
+    "package": "E2",
+    "attempt_id": "523cab0651f045068c91a29b3f5583d7",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/523cab0651f045068c91a29b3f5583d7"
+  },
+  {
+    "case_id": "D1007",
+    "pair_id": 4,
+    "source_group": "dwd_stations",
+    "package": "E3",
+    "attempt_id": "52f9154f5dfb45b2932531560e00a028",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/52f9154f5dfb45b2932531560e00a028"
+  },
+  {
+    "case_id": "D1007",
+    "pair_id": 4,
+    "source_group": "dwd_stations",
+    "package": "E4",
+    "attempt_id": "e20e3192dc2d4207ab2a641fe200fb80",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "B_to_A",
+    "final_prediction": "A_to_B",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/e20e3192dc2d4207ab2a641fe200fb80"
+  },
+  {
+    "case_id": "D1089",
+    "pair_id": 13,
+    "source_group": "auto_mpg",
+    "package": "E1",
+    "attempt_id": "9835889329794047a1e4b7a0ca70233d",
+    "status": "fail",
+    "release": false,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "summary_unavailable",
+      "method_unavailable",
+      "rows_unavailable"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "summary_unavailable",
+        "status": "fail"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "method_unavailable",
+        "status": "fail"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "rows_unavailable",
+        "status": "fail"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_rejection",
+    "text_mismatch": false,
+    "text_categories": [
+      "ambiguous_or_non_directional"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/9835889329794047a1e4b7a0ca70233d"
+  },
+  {
+    "case_id": "D1089",
+    "pair_id": 13,
+    "source_group": "auto_mpg",
+    "package": "E2",
+    "attempt_id": "08eaa124f2f54158bbc5540334f6d0cf",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/08eaa124f2f54158bbc5540334f6d0cf"
+  },
+  {
+    "case_id": "D1089",
+    "pair_id": 13,
+    "source_group": "auto_mpg",
+    "package": "E3",
+    "attempt_id": "39c3542e86114df0ab0d7d26ea901e67",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/39c3542e86114df0ab0d7d26ea901e67"
+  },
+  {
+    "case_id": "D1089",
+    "pair_id": 13,
+    "source_group": "auto_mpg",
+    "package": "E4",
+    "attempt_id": "7b544a2494fd413598a85ed28929e202",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "B_to_A",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/7b544a2494fd413598a85ed28929e202"
+  },
+  {
+    "case_id": "D1028",
+    "pair_id": 14,
+    "source_group": "auto_mpg",
+    "package": "E1",
+    "attempt_id": "f85dc705aff948c9b85262158fda07e2",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/f85dc705aff948c9b85262158fda07e2"
+  },
+  {
+    "case_id": "D1028",
+    "pair_id": 14,
+    "source_group": "auto_mpg",
+    "package": "E2",
+    "attempt_id": "fdaa84da61f046bcbfbb22f6bc696dc4",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/fdaa84da61f046bcbfbb22f6bc696dc4"
+  },
+  {
+    "case_id": "D1028",
+    "pair_id": 14,
+    "source_group": "auto_mpg",
+    "package": "E3",
+    "attempt_id": "d68fb86233034ab99e8316bac9d03c31",
+    "status": "fail",
+    "release": false,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "row_value_mismatch"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "row_value_mismatch",
+        "status": "fail"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_rejection",
+    "text_mismatch": false,
+    "text_categories": [
+      "explicit_directional_text",
+      "association_used_for_causal_inference"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/d68fb86233034ab99e8316bac9d03c31"
+  },
+  {
+    "case_id": "D1028",
+    "pair_id": 14,
+    "source_group": "auto_mpg",
+    "package": "E4",
+    "attempt_id": "16f6ca8176cc4537af5d52768c5e9a56",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "A_to_B",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/16f6ca8176cc4537af5d52768c5e9a56"
+  },
+  {
+    "case_id": "D1105",
+    "pair_id": 15,
+    "source_group": "auto_mpg",
+    "package": "E1",
+    "attempt_id": "0e7f99b235dc430aa038c2e91d4f0064",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/0e7f99b235dc430aa038c2e91d4f0064"
+  },
+  {
+    "case_id": "D1105",
+    "pair_id": 15,
+    "source_group": "auto_mpg",
+    "package": "E2",
+    "attempt_id": "7c96a0e0eb8f4a6fa568d2b5e972f198",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/7c96a0e0eb8f4a6fa568d2b5e972f198"
+  },
+  {
+    "case_id": "D1105",
+    "pair_id": 15,
+    "source_group": "auto_mpg",
+    "package": "E3",
+    "attempt_id": "23c8a66e064b4f24a98d1f8859940602",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "A_to_B",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": true,
+    "text_categories": [
+      "explanation_supports_opposite_direction"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/23c8a66e064b4f24a98d1f8859940602"
+  },
+  {
+    "case_id": "D1105",
+    "pair_id": 15,
+    "source_group": "auto_mpg",
+    "package": "E4",
+    "attempt_id": "982733b6ed944c0da9bb86e9a96d14b6",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "A_to_B",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/982733b6ed944c0da9bb86e9a96d14b6"
+  },
+  {
+    "case_id": "D1026",
+    "pair_id": 16,
+    "source_group": "auto_mpg",
+    "package": "E1",
+    "attempt_id": "005b9ed5f7e542e0bf985e7f5812fc07",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/005b9ed5f7e542e0bf985e7f5812fc07"
+  },
+  {
+    "case_id": "D1026",
+    "pair_id": 16,
+    "source_group": "auto_mpg",
+    "package": "E2",
+    "attempt_id": "b21a5479f3cd414eb4737153110bb40b",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/b21a5479f3cd414eb4737153110bb40b"
+  },
+  {
+    "case_id": "D1026",
+    "pair_id": 16,
+    "source_group": "auto_mpg",
+    "package": "E3",
+    "attempt_id": "9fc4907fbd8d4716bf43a033980535eb",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/9fc4907fbd8d4716bf43a033980535eb"
+  },
+  {
+    "case_id": "D1026",
+    "pair_id": 16,
+    "source_group": "auto_mpg",
+    "package": "E4",
+    "attempt_id": "5de986b3fd284ad6b92ad724f7eb6688",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "A_to_B",
+    "final_prediction": "A_to_B",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/5de986b3fd284ad6b92ad724f7eb6688"
+  },
+  {
+    "case_id": "D1078",
+    "pair_id": 18,
+    "source_group": "gag_urine",
+    "package": "E1",
+    "attempt_id": "e26cedd3d26d4c87b91e7ec146bb6d41",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/e26cedd3d26d4c87b91e7ec146bb6d41"
+  },
+  {
+    "case_id": "D1078",
+    "pair_id": 18,
+    "source_group": "gag_urine",
+    "package": "E2",
+    "attempt_id": "9c1c4a89d24b4e8eb303a243a6aecd3e",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/9c1c4a89d24b4e8eb303a243a6aecd3e"
+  },
+  {
+    "case_id": "D1078",
+    "pair_id": 18,
+    "source_group": "gag_urine",
+    "package": "E3",
+    "attempt_id": "bb7aca4aab524207af61a750344ef5a3",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/bb7aca4aab524207af61a750344ef5a3"
+  },
+  {
+    "case_id": "D1078",
+    "pair_id": 18,
+    "source_group": "gag_urine",
+    "package": "E4",
+    "attempt_id": "a47e6602f2234b6ebce4f8919b679446",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "A_to_B",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "row_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/a47e6602f2234b6ebce4f8919b679446"
+  },
+  {
+    "case_id": "D1006",
+    "pair_id": 20,
+    "source_group": "dwd_stations",
+    "package": "E1",
+    "attempt_id": "2f24630403b14827b04132a58efd1267",
+    "status": "fail",
+    "release": false,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "method_unavailable",
+      "summary_unavailable",
+      "rows_unavailable"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_unavailable",
+        "status": "fail"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_unavailable",
+        "status": "fail"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "rows_unavailable",
+        "status": "fail"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_rejection",
+    "text_mismatch": false,
+    "text_categories": [
+      "explicit_directional_text"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/2f24630403b14827b04132a58efd1267"
+  },
+  {
+    "case_id": "D1006",
+    "pair_id": 20,
+    "source_group": "dwd_stations",
+    "package": "E2",
+    "attempt_id": "4d06c665b378472b8df3499a8f999030",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/4d06c665b378472b8df3499a8f999030"
+  },
+  {
+    "case_id": "D1006",
+    "pair_id": 20,
+    "source_group": "dwd_stations",
+    "package": "E3",
+    "attempt_id": "f1502ea3d10140d9996705a15e103eca",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/f1502ea3d10140d9996705a15e103eca"
+  },
+  {
+    "case_id": "D1006",
+    "pair_id": 20,
+    "source_group": "dwd_stations",
+    "package": "E4",
+    "attempt_id": "5acf6e2f30b945a7863993fd28623acc",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "A_to_B",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/5acf6e2f30b945a7863993fd28623acc"
+  },
+  {
+    "case_id": "D1046",
+    "pair_id": 21,
+    "source_group": "dwd_stations",
+    "package": "E1",
+    "attempt_id": "9e560d2028e0445499edcd813874dc8a",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/9e560d2028e0445499edcd813874dc8a"
+  },
+  {
+    "case_id": "D1046",
+    "pair_id": 21,
+    "source_group": "dwd_stations",
+    "package": "E2",
+    "attempt_id": "d6ebd668227949c6b754e1bd366cf12b",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/d6ebd668227949c6b754e1bd366cf12b"
+  },
+  {
+    "case_id": "D1046",
+    "pair_id": 21,
+    "source_group": "dwd_stations",
+    "package": "E3",
+    "attempt_id": "582b5218d9e24cd09a8fb342484a3120",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/582b5218d9e24cd09a8fb342484a3120"
+  },
+  {
+    "case_id": "D1046",
+    "pair_id": 21,
+    "source_group": "dwd_stations",
+    "package": "E4",
+    "attempt_id": "9070530ba6944f2e8152fdeb1fff639a",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/9070530ba6944f2e8152fdeb1fff639a"
+  },
+  {
+    "case_id": "D1045",
+    "pair_id": 22,
+    "source_group": "arrhythmia",
+    "package": "E1",
+    "attempt_id": "c5bc3deabde54aaea3c205a7fe00505b",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/c5bc3deabde54aaea3c205a7fe00505b"
+  },
+  {
+    "case_id": "D1045",
+    "pair_id": 22,
+    "source_group": "arrhythmia",
+    "package": "E2",
+    "attempt_id": "3818f1e9d4ab41d1964a184f637f5bc5",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/3818f1e9d4ab41d1964a184f637f5bc5"
+  },
+  {
+    "case_id": "D1045",
+    "pair_id": 22,
+    "source_group": "arrhythmia",
+    "package": "E3",
+    "attempt_id": "17f7f055b06546adb7544cb42ec6258f",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/17f7f055b06546adb7544cb42ec6258f"
+  },
+  {
+    "case_id": "D1045",
+    "pair_id": 22,
+    "source_group": "arrhythmia",
+    "package": "E4",
+    "attempt_id": "dafeee2bb1d945c78fb6be8f66f5c047",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "A_to_B",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/dafeee2bb1d945c78fb6be8f66f5c047"
+  },
+  {
+    "case_id": "D1083",
+    "pair_id": 23,
+    "source_group": "arrhythmia",
+    "package": "E1",
+    "attempt_id": "d616ce6fcc0043f7bb7ac21758303f3f",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/d616ce6fcc0043f7bb7ac21758303f3f"
+  },
+  {
+    "case_id": "D1083",
+    "pair_id": 23,
+    "source_group": "arrhythmia",
+    "package": "E2",
+    "attempt_id": "9713b57107c146e7a441a8c298a3ea63",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/9713b57107c146e7a441a8c298a3ea63"
+  },
+  {
+    "case_id": "D1083",
+    "pair_id": 23,
+    "source_group": "arrhythmia",
+    "package": "E3",
+    "attempt_id": "900289ca78984ddbaef994c2ead07dd8",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/900289ca78984ddbaef994c2ead07dd8"
+  },
+  {
+    "case_id": "D1083",
+    "pair_id": 23,
+    "source_group": "arrhythmia",
+    "package": "E4",
+    "attempt_id": "63b965e9f6ad47298000eefeb9e5b0c0",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "A_to_B",
+    "final_prediction": "A_to_B",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/63b965e9f6ad47298000eefeb9e5b0c0"
+  },
+  {
+    "case_id": "D1052",
+    "pair_id": 24,
+    "source_group": "arrhythmia",
+    "package": "E1",
+    "attempt_id": "2c5263addbfa4559977fccd4f42d0146",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/2c5263addbfa4559977fccd4f42d0146"
+  },
+  {
+    "case_id": "D1052",
+    "pair_id": 24,
+    "source_group": "arrhythmia",
+    "package": "E2",
+    "attempt_id": "4e941a4aeda5439fa025236d8bb43db6",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/4e941a4aeda5439fa025236d8bb43db6"
+  },
+  {
+    "case_id": "D1052",
+    "pair_id": 24,
+    "source_group": "arrhythmia",
+    "package": "E3",
+    "attempt_id": "a047deb5ecc14e4a9fe10900ee4645be",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/a047deb5ecc14e4a9fe10900ee4645be"
+  },
+  {
+    "case_id": "D1052",
+    "pair_id": 24,
+    "source_group": "arrhythmia",
+    "package": "E4",
+    "attempt_id": "6a6e68e6566f4444b1500f7389500d0c",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "A_to_B",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/6a6e68e6566f4444b1500f7389500d0c"
+  },
+  {
+    "case_id": "D1014",
+    "pair_id": 56,
+    "source_group": "undata",
+    "package": "E1",
+    "attempt_id": "ce11e8cc2a094eb28a95c39dc3f44392",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/ce11e8cc2a094eb28a95c39dc3f44392"
+  },
+  {
+    "case_id": "D1014",
+    "pair_id": 56,
+    "source_group": "undata",
+    "package": "E2",
+    "attempt_id": "c85f0185401a49cea73562fd25faf881",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/c85f0185401a49cea73562fd25faf881"
+  },
+  {
+    "case_id": "D1014",
+    "pair_id": 56,
+    "source_group": "undata",
+    "package": "E3",
+    "attempt_id": "1536073166df407192b5f73b3cc9c7a1",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/1536073166df407192b5f73b3cc9c7a1"
+  },
+  {
+    "case_id": "D1014",
+    "pair_id": 56,
+    "source_group": "undata",
+    "package": "E4",
+    "attempt_id": "8501906c3d854de48ccb0f9459c2f6a9",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "B_to_A",
+    "final_prediction": "A_to_B",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/8501906c3d854de48ccb0f9459c2f6a9"
+  },
+  {
+    "case_id": "D1010",
+    "pair_id": 86,
+    "source_group": "kamernet_rent",
+    "package": "E1",
+    "attempt_id": "aba079a4d56e46e4be3a386b8f1e0bdf",
+    "status": "fail",
+    "release": false,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "method_unavailable",
+      "summary_unavailable",
+      "rows_unavailable"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_unavailable",
+        "status": "fail"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_unavailable",
+        "status": "fail"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "rows_unavailable",
+        "status": "fail"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_rejection",
+    "text_mismatch": true,
+    "text_categories": [
+      "explanation_supports_opposite_direction"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/aba079a4d56e46e4be3a386b8f1e0bdf"
+  },
+  {
+    "case_id": "D1010",
+    "pair_id": 86,
+    "source_group": "kamernet_rent",
+    "package": "E2",
+    "attempt_id": "a95b8d4bfeb640d1bc831c56e2b94a1d",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/a95b8d4bfeb640d1bc831c56e2b94a1d"
+  },
+  {
+    "case_id": "D1010",
+    "pair_id": 86,
+    "source_group": "kamernet_rent",
+    "package": "E3",
+    "attempt_id": "30e46486d5ca4b83a0841a30f5f9b1bb",
+    "status": "fail",
+    "release": false,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "row_value_mismatch"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "row_value_mismatch",
+        "status": "fail"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_rejection",
+    "text_mismatch": false,
+    "text_categories": [
+      "ambiguous_or_non_directional"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/30e46486d5ca4b83a0841a30f5f9b1bb"
+  },
+  {
+    "case_id": "D1010",
+    "pair_id": 86,
+    "source_group": "kamernet_rent",
+    "package": "E4",
+    "attempt_id": "f90880fcd66947db9872bdaf6c8e0a08",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "B_to_A",
+    "ground_truth": "B_to_A",
+    "final_prediction": "B_to_A",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/f90880fcd66947db9872bdaf6c8e0a08"
+  },
+  {
+    "case_id": "D1107",
+    "pair_id": 88,
+    "source_group": "bone_children",
+    "package": "E1",
+    "attempt_id": "81aaf8c3d7bd4d528621d54c4bb06fcb",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/81aaf8c3d7bd4d528621d54c4bb06fcb"
+  },
+  {
+    "case_id": "D1107",
+    "pair_id": 88,
+    "source_group": "bone_children",
+    "package": "E2",
+    "attempt_id": "5e2145e58967486ea0af764a349a03fc",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/5e2145e58967486ea0af764a349a03fc"
+  },
+  {
+    "case_id": "D1107",
+    "pair_id": 88,
+    "source_group": "bone_children",
+    "package": "E3",
+    "attempt_id": "e8f81fa66db04b4fa3d2c4d024418cff",
+    "status": "pass",
+    "release": false,
+    "upstream_prediction": null,
+    "ground_truth": "B_to_A",
+    "final_prediction": null,
+    "reason_codes": [
+      "prediction_abstained"
+    ],
+    "claim_findings": [],
+    "supplied_claim_count": 0,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "uncertainty_with_abstention"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/e8f81fa66db04b4fa3d2c4d024418cff"
+  },
+  {
+    "case_id": "D1107",
+    "pair_id": 88,
+    "source_group": "bone_children",
+    "package": "E4",
+    "attempt_id": "2da39b09a15246d9ad0be3d99d02a434",
+    "status": "pass",
+    "release": true,
+    "upstream_prediction": "A_to_B",
+    "ground_truth": "B_to_A",
+    "final_prediction": "A_to_B",
+    "reason_codes": [
+      "evidence_consistent"
+    ],
+    "claim_findings": [
+      {
+        "claim_index": 0,
+        "reason_code": "method_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 1,
+        "reason_code": "summary_claim_consistent",
+        "status": "pass"
+      },
+      {
+        "claim_index": 2,
+        "reason_code": "row_claim_consistent",
+        "status": "pass"
+      }
+    ],
+    "supplied_claim_count": 3,
+    "independent_audit": "confirmed_consistent",
+    "text_mismatch": false,
+    "text_categories": [
+      "method_attribution_shorthand"
+    ],
+    "context_path": "runs/real-pilot-01/experiment/exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json#trials/2da39b09a15246d9ad0be3d99d02a434"
+  }
+]

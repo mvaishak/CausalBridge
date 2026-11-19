@@ -1,0 +1,17 @@
+# Final ANM analysis
+
+The ANM implementation fits both directions with training-only standardization and RBF kernel ridge regression (gamma 1, ridge 0.1). It scores held-out residual dependence with biased HSIC and chooses the lower-dependence direction when the absolute score difference exceeds .001. The margin is a diagnostic difference, not a calibrated causal probability.
+
+| Panel | Data and independence unit | Primary result | Coverage | Answered accuracy | Valid interpretation |
+| --- | --- | --- | ---: | ---: | --- |
+| Initial 128-row panel | 48 synthetic datasets; 32 compatible cases, other controls separately reported | 20 correct, 8 wrong, 4 abstain among compatible cases | 87.5% | 71.4% | Frozen recovery/stability criteria failed. 192 fits are repeated orientations/splits, not 192 unique cases. |
+| 512-row confirmation | 32 new compatible synthetic datasets | 26 correct, 0 wrong, 6 abstain | 81.25% | 100% | Recovery under tested synthetic construction and larger samples. |
+| Real validation | 38 Tübingen pairs, 12 source groups; up to 512 rows | 13 reference-correct, 13 wrong, 12 abstain | 68.4% unweighted; 73.4% weighted | 50.0% unweighted; 48.1% weighted | Descriptive benchmark agreement; labels are fallible and outcomes are opened. |
+
+The original 128-row experiment and frozen gate are documented in `docs/reviews/anm-independent-validation.md`. Numerical fidelity passed 192 independent-reference comparisons and 96 column-swap checks, with maximum recorded discrepancy 9.68e-16. The locked compatible sign recovery (65.6%), split-sign stability (68.8%) and weakest family recovery (25%) all missed predeclared progression thresholds. The archived original run remains in the older checkout at `runs/anm-validation-01/`; it was inspected but not rewritten.
+
+The 512-row confirmation and real validation are preserved in `artifacts/anm-experiments-2026-11-18/`. The complete 7,125-file archive passed a fresh SHA-256 manifest check. The real primary split is seed 261. The other two splits are sensitivity checks: 20/7/11 and 14/9/15 correct/wrong/abstain. Their observations are dependent repeats of the same 38 pairs and do not increase the effective case count. Only 22 real pairs had 512 rows; 16 had 109–511. The synthetic panel used exactly 512 rows per dataset. The real primary raw-margin sign was stable across all three splits for 23/38 pairs (60.5%).
+
+The synthetic-to-real gap is established descriptively. Candidate explanations include additive-noise violations, nonlinear functional differences, unobserved confounding, measurement ties, small samples, kernel bandwidth effects and imperfect reference labels. The saved diagnostics support some concrete concerns: the real cohort has variable sample sizes; pair 99 has clustered observations and repeated values; pair 93 involves catchments with acknowledged confounders; the 4-pair development study gave no primary correct answers. These observations do not isolate a single cause of failure. In the adequacy follow-up, nonrejection of residual dependence never establishes independence or identification.
+
+The revealed 38-pair results were not used to tune the method in this delivery. Any post-outcome revision would require a new source-separated holdout to claim fresh confirmation. A revised method is unnecessary for the study's negative finding: the tested ANM signal did not transfer reliably enough to support a general direction-accuracy claim.

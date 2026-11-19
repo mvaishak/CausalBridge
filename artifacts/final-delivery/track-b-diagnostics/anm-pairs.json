@@ -1,0 +1,660 @@
+[
+  {
+    "case_id": "D1084",
+    "pair_id": 1,
+    "source_group": "dwd_stations",
+    "weight": 0.166,
+    "ground_truth": "B_to_A",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      1,
+      0
+    ],
+    "labels": [
+      "Temperature",
+      "Altitude"
+    ],
+    "anm_score_ab": 0.007499017691723746,
+    "anm_score_ba": 0.006821180684888346,
+    "anm_margin": -0.0006778370068354,
+    "absolute_margin": 0.0006778370068354,
+    "threshold": 0.001,
+    "anm_prediction": null,
+    "anm_correct": null,
+    "forced_sign_correct": true,
+    "original_row_count": 349,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 42,
+    "unique_b": 116,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": -0.907046125639667,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Spatial station observations may not be independent."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1084/result.json"
+  },
+  {
+    "case_id": "D1008",
+    "pair_id": 2,
+    "source_group": "dwd_stations",
+    "weight": 0.166,
+    "ground_truth": "B_to_A",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      1,
+      0
+    ],
+    "labels": [
+      "Precipitation",
+      "Altitude"
+    ],
+    "anm_score_ab": 0.010769069284476351,
+    "anm_score_ba": 0.007104857531732822,
+    "anm_margin": -0.0036642117527435295,
+    "absolute_margin": 0.0036642117527435295,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": true,
+    "forced_sign_correct": true,
+    "original_row_count": 349,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 126,
+    "unique_b": 113,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": 0.7563280818226321,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Spatial station observations may not be independent."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1008/result.json"
+  },
+  {
+    "case_id": "D1009",
+    "pair_id": 3,
+    "source_group": "dwd_stations",
+    "weight": 0.167,
+    "ground_truth": "B_to_A",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      1,
+      0
+    ],
+    "labels": [
+      "Temperature",
+      "Longitude"
+    ],
+    "anm_score_ab": 0.010272018173231898,
+    "anm_score_ba": 0.004563052080569658,
+    "anm_margin": -0.00570896609266224,
+    "absolute_margin": 0.00570896609266224,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": true,
+    "forced_sign_correct": true,
+    "original_row_count": 349,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 51,
+    "unique_b": 115,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": -0.2781501788693245,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Spatial station observations may not be independent."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1009/result.json"
+  },
+  {
+    "case_id": "D1007",
+    "pair_id": 4,
+    "source_group": "dwd_stations",
+    "weight": 0.166,
+    "ground_truth": "B_to_A",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      1,
+      0
+    ],
+    "labels": [
+      "Sunshine duration",
+      "Altitude"
+    ],
+    "anm_score_ab": 0.002704665823528519,
+    "anm_score_ba": 0.009723088932311058,
+    "anm_margin": 0.007018423108782539,
+    "absolute_margin": 0.007018423108782539,
+    "threshold": 0.001,
+    "anm_prediction": "A_to_B",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 349,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 127,
+    "unique_b": 116,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": 0.030162691048052682,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Spatial station observations may not be independent."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1007/result.json"
+  },
+  {
+    "case_id": "D1089",
+    "pair_id": 13,
+    "source_group": "auto_mpg",
+    "weight": 0.25,
+    "ground_truth": "B_to_A",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      1,
+      0
+    ],
+    "labels": [
+      "Fuel economy",
+      "Engine displacement"
+    ],
+    "anm_score_ab": 0.00799844634115929,
+    "anm_score_ba": 0.0056508747982502066,
+    "anm_margin": -0.002347571542909083,
+    "absolute_margin": 0.002347571542909083,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": true,
+    "forced_sign_correct": true,
+    "original_row_count": 392,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 64,
+    "unique_b": 53,
+    "duplicate_row_fraction": 0.046875,
+    "pearson_r": -0.8024943955466226,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1089/result.json"
+  },
+  {
+    "case_id": "D1028",
+    "pair_id": 14,
+    "source_group": "auto_mpg",
+    "weight": 0.25,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Horsepower",
+      "Fuel economy"
+    ],
+    "anm_score_ab": 0.011441937478208663,
+    "anm_score_ba": 0.0048517679113089735,
+    "anm_margin": -0.006590169566899689,
+    "absolute_margin": 0.006590169566899689,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 392,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 59,
+    "unique_b": 63,
+    "duplicate_row_fraction": 0.1015625,
+    "pearson_r": -0.7936863538324407,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1028/result.json"
+  },
+  {
+    "case_id": "D1105",
+    "pair_id": 15,
+    "source_group": "auto_mpg",
+    "weight": 0.25,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Vehicle weight",
+      "Fuel economy"
+    ],
+    "anm_score_ab": 0.009228822655644484,
+    "anm_score_ba": 0.006842861991810793,
+    "anm_margin": -0.0023859606638336915,
+    "absolute_margin": 0.0023859606638336915,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 392,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 121,
+    "unique_b": 57,
+    "duplicate_row_fraction": 0.015625,
+    "pearson_r": -0.8250978027014023,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1105/result.json"
+  },
+  {
+    "case_id": "D1026",
+    "pair_id": 16,
+    "source_group": "auto_mpg",
+    "weight": 0.25,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Horsepower",
+      "Acceleration"
+    ],
+    "anm_score_ab": 0.0061266248906614,
+    "anm_score_ba": 0.009768714631034863,
+    "anm_margin": 0.0036420897403734625,
+    "absolute_margin": 0.0036420897403734625,
+    "threshold": 0.001,
+    "anm_prediction": "A_to_B",
+    "anm_correct": true,
+    "forced_sign_correct": true,
+    "original_row_count": 392,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 61,
+    "unique_b": 65,
+    "duplicate_row_fraction": 0.03125,
+    "pearson_r": -0.6977235765334884,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1026/result.json"
+  },
+  {
+    "case_id": "D1078",
+    "pair_id": 18,
+    "source_group": "gag_urine",
+    "weight": 1.0,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Age",
+      "Urinary GAG concentration"
+    ],
+    "anm_score_ab": 0.013717325709055992,
+    "anm_score_ba": 0.011908074414765619,
+    "anm_margin": -0.0018092512942903729,
+    "absolute_margin": 0.0018092512942903729,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 314,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 115,
+    "unique_b": 102,
+    "duplicate_row_fraction": 0.0078125,
+    "pearson_r": -0.7464906242788444,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1078/result.json"
+  },
+  {
+    "case_id": "D1006",
+    "pair_id": 20,
+    "source_group": "dwd_stations",
+    "weight": 0.166,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Latitude",
+      "Temperature"
+    ],
+    "anm_score_ab": 0.00653834988203832,
+    "anm_score_ba": 0.003357814677588501,
+    "anm_margin": -0.0031805352044498186,
+    "absolute_margin": 0.0031805352044498186,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 349,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 112,
+    "unique_b": 49,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": 0.2672577823692868,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Spatial station observations may not be independent."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1006/result.json"
+  },
+  {
+    "case_id": "D1046",
+    "pair_id": 21,
+    "source_group": "dwd_stations",
+    "weight": 0.167,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Longitude",
+      "Precipitation"
+    ],
+    "anm_score_ab": 0.00645361440688289,
+    "anm_score_ba": 0.007072116606719237,
+    "anm_margin": 0.0006185021998363471,
+    "absolute_margin": 0.0006185021998363471,
+    "threshold": 0.001,
+    "anm_prediction": null,
+    "anm_correct": null,
+    "forced_sign_correct": true,
+    "original_row_count": 349,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 110,
+    "unique_b": 125,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": -0.13011984664684187,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Spatial station observations may not be independent."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1046/result.json"
+  },
+  {
+    "case_id": "D1045",
+    "pair_id": 22,
+    "source_group": "arrhythmia",
+    "weight": 0.333,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Age",
+      "Height"
+    ],
+    "anm_score_ab": 0.009981215328657343,
+    "anm_score_ba": 0.00440723509505399,
+    "anm_margin": -0.005573980233603353,
+    "absolute_margin": 0.005573980233603353,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 450,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 57,
+    "unique_b": 37,
+    "duplicate_row_fraction": 0.0234375,
+    "pearson_r": 0.2890150174718423,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Age is recorded in years; treat this rounded variable as exploratory for ANM."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1045/result.json"
+  },
+  {
+    "case_id": "D1083",
+    "pair_id": 23,
+    "source_group": "arrhythmia",
+    "weight": 0.333,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Age",
+      "Weight"
+    ],
+    "anm_score_ab": 0.002184116325790517,
+    "anm_score_ba": 0.004780641336806314,
+    "anm_margin": 0.0025965250110157974,
+    "absolute_margin": 0.0025965250110157974,
+    "threshold": 0.001,
+    "anm_prediction": "A_to_B",
+    "anm_correct": true,
+    "forced_sign_correct": true,
+    "original_row_count": 452,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 56,
+    "unique_b": 49,
+    "duplicate_row_fraction": 0.0078125,
+    "pearson_r": 0.3211677486849132,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Age is recorded in years; treat this rounded variable as exploratory for ANM.",
+      "Description incorrectly repeats height units for weight; units deliberately omitted."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1083/result.json"
+  },
+  {
+    "case_id": "D1052",
+    "pair_id": 24,
+    "source_group": "arrhythmia",
+    "weight": 0.334,
+    "ground_truth": "A_to_B",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Age",
+      "Heart rate"
+    ],
+    "anm_score_ab": 0.005734632223964284,
+    "anm_score_ba": 0.0047639856411497185,
+    "anm_margin": -0.0009706465828145652,
+    "absolute_margin": 0.0009706465828145652,
+    "threshold": 0.001,
+    "anm_prediction": null,
+    "anm_correct": null,
+    "forced_sign_correct": false,
+    "original_row_count": 451,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 57,
+    "unique_b": 44,
+    "duplicate_row_fraction": 0.0625,
+    "pearson_r": -0.25340560317024585,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Age is recorded in years; treat this rounded variable as exploratory for ANM."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1052/result.json"
+  },
+  {
+    "case_id": "D1014",
+    "pair_id": 56,
+    "source_group": "undata",
+    "weight": 0.083,
+    "ground_truth": "B_to_A",
+    "reference_direction": "second_to_first",
+    "column_order": [
+      0,
+      1
+    ],
+    "labels": [
+      "Female life expectancy",
+      "Latitude"
+    ],
+    "anm_score_ab": 0.0029381574989377733,
+    "anm_score_ba": 0.015889634624145055,
+    "anm_margin": 0.012951477125207281,
+    "absolute_margin": 0.012951477125207281,
+    "threshold": 0.001,
+    "anm_prediction": "A_to_B",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 192,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 39,
+    "unique_b": 128,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": 0.528536669495005,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Cross-country aggregate observations; reversed benchmark reference is not a causal proof."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1014/result.json"
+  },
+  {
+    "case_id": "D1010",
+    "pair_id": 86,
+    "source_group": "kamernet_rent",
+    "weight": 1.0,
+    "ground_truth": "B_to_A",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      1,
+      0
+    ],
+    "labels": [
+      "Monthly rent",
+      "Apartment size"
+    ],
+    "anm_score_ab": 0.003116970623838967,
+    "anm_score_ba": 0.0017147441300164757,
+    "anm_margin": -0.0014022264938224915,
+    "absolute_margin": 0.0014022264938224915,
+    "threshold": 0.001,
+    "anm_prediction": "B_to_A",
+    "anm_correct": true,
+    "forced_sign_correct": true,
+    "original_row_count": 666,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 48,
+    "unique_b": 28,
+    "duplicate_row_fraction": 0.2265625,
+    "pearson_r": 0.7175923216722507,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1010/result.json"
+  },
+  {
+    "case_id": "D1107",
+    "pair_id": 88,
+    "source_group": "bone_children",
+    "weight": 1.0,
+    "ground_truth": "B_to_A",
+    "reference_direction": "first_to_second",
+    "column_order": [
+      1,
+      0
+    ],
+    "labels": [
+      "Relative change in spinal bone mineral density",
+      "Age"
+    ],
+    "anm_score_ab": 0.009322178372033349,
+    "anm_score_ba": 0.013505437741056722,
+    "anm_margin": 0.0041832593690233726,
+    "absolute_margin": 0.0041832593690233726,
+    "threshold": 0.001,
+    "anm_prediction": "A_to_B",
+    "anm_correct": false,
+    "forced_sign_correct": false,
+    "original_row_count": 261,
+    "method_n": 128,
+    "train_n": 64,
+    "eval_n": 64,
+    "unique_a": 128,
+    "unique_b": 103,
+    "duplicate_row_fraction": 0.0,
+    "pearson_r": -0.5176970955322098,
+    "notes": [
+      "Agent reviewed source description and original column order before any pilot model outputs.",
+      "Unknown confounding and reference-label imperfections remain; rounded measurements are retained.",
+      "Units omitted unless independently established; no row deletion or imputation.",
+      "Upstream retained first measurement per child; no additional preprocessing here."
+    ],
+    "anm_artifact": "runs/real-pilot-01/anm/D1107/result.json"
+  }
+]

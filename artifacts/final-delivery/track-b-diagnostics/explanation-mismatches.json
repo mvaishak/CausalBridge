@@ -1,0 +1,117 @@
+[
+  {
+    "package": "E1",
+    "strategy": "S0",
+    "generations": 17,
+    "answered": 5,
+    "strict_conflicts": 2,
+    "strict_conflict_rate": 0.11764705882352941,
+    "category_counts": {
+      "uncertainty_with_abstention": 12,
+      "explanation_supports_opposite_direction": 2,
+      "explicit_directional_text": 2,
+      "ambiguous_or_internally_inconsistent": 1
+    },
+    "informative_natural_language": 5
+  },
+  {
+    "package": "E1",
+    "strategy": "S1",
+    "generations": 17,
+    "answered": 3,
+    "strict_conflicts": 1,
+    "strict_conflict_rate": 0.058823529411764705,
+    "category_counts": {
+      "uncertainty_with_abstention": 14,
+      "ambiguous_or_non_directional": 1,
+      "explicit_directional_text": 1,
+      "explanation_supports_opposite_direction": 1
+    },
+    "informative_natural_language": 2
+  },
+  {
+    "package": "E2",
+    "strategy": "S0",
+    "generations": 17,
+    "answered": 2,
+    "strict_conflicts": 0,
+    "strict_conflict_rate": 0.0,
+    "category_counts": {
+      "uncertainty_with_abstention": 15,
+      "explicit_directional_text": 1,
+      "unsupported_numerical_text": 1,
+      "ambiguous_or_non_directional": 1
+    },
+    "informative_natural_language": 1
+  },
+  {
+    "package": "E2",
+    "strategy": "S1",
+    "generations": 17,
+    "answered": 0,
+    "strict_conflicts": 0,
+    "strict_conflict_rate": 0.0,
+    "category_counts": {
+      "uncertainty_with_abstention": 17
+    },
+    "informative_natural_language": 0
+  },
+  {
+    "package": "E3",
+    "strategy": "S0",
+    "generations": 17,
+    "answered": 8,
+    "strict_conflicts": 1,
+    "strict_conflict_rate": 0.058823529411764705,
+    "category_counts": {
+      "explicit_directional_text": 3,
+      "uncertainty_with_abstention": 9,
+      "explanation_supports_opposite_direction": 1,
+      "ambiguous_or_non_directional": 4,
+      "unsupported_statistical_text": 1
+    },
+    "informative_natural_language": 4
+  },
+  {
+    "package": "E3",
+    "strategy": "S1",
+    "generations": 17,
+    "answered": 3,
+    "strict_conflicts": 1,
+    "strict_conflict_rate": 0.058823529411764705,
+    "category_counts": {
+      "uncertainty_with_abstention": 14,
+      "explicit_directional_text": 1,
+      "association_used_for_causal_inference": 1,
+      "explanation_supports_opposite_direction": 1,
+      "ambiguous_or_non_directional": 1
+    },
+    "informative_natural_language": 2
+  },
+  {
+    "package": "E4",
+    "strategy": "S0",
+    "generations": 17,
+    "answered": 14,
+    "strict_conflicts": 0,
+    "strict_conflict_rate": 0.0,
+    "category_counts": {
+      "uncertainty_with_abstention": 3,
+      "method_attribution_shorthand": 14
+    },
+    "informative_natural_language": 0
+  },
+  {
+    "package": "E4",
+    "strategy": "S1",
+    "generations": 17,
+    "answered": 14,
+    "strict_conflicts": 0,
+    "strict_conflict_rate": 0.0,
+    "category_counts": {
+      "uncertainty_with_abstention": 3,
+      "method_attribution_shorthand": 14
+    },
+    "informative_natural_language": 0
+  }
+]

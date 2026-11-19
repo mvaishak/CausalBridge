@@ -1,0 +1,35 @@
+# Final execution audit
+
+Audit basis: `main` commit `7c7198d`, the separate older checkout's preserved ignored runs, and the tracked ANM archive. This distinguishes observed artifact evidence from contributor descriptions. The dedicated delivery branch is `codex/final-delivery-20261119`.
+
+## Experiment inventory
+
+| Experiment | Track | Execution and dataset | Model/configuration | Unique cases; calls | Revision and raw evidence | Result and legitimate scope |
+| --- | --- | --- | --- | --- | --- | --- |
+| Eight-case scripted demos | A/checker | Scripted, synthetic | No LLM | 8; 0 calls | `runs/check-demo.jsonl`, `runs/check-engine-demo.jsonl`; current main | Verifies pipeline wiring only. |
+| Ten-group benchmark generation and witness checks | A | Deterministic, synthetic | No LLM | 50 questions, 10 graph groups; 0 calls | `data/pilot/track_a_10_groups.jsonl`, ignored generated oracle, `tests/test_benchmark_pilot.py`, `tests/test_pilot_numerical_confirmation.py`; main | 29 answerable, 21 unanswerable; verifies case construction and exact opposite-effect witness, not model performance. |
+| Track A one-case smoke | A | Live, synthetic | `qwen3:8b`, digest `500a1f06…3e4ca4b2b8b41`, temperature 0, seed 261, thinking off, 8192 context, 1024 output | 1; 2 observed model stages | `runs/final-track-a-smoke-20261119.jsonl`; delivery branch | Transport and trace check; not a performance estimate. |
+| Track A 50-case run | A | Live, synthetic | Same pinned model and settings | 50; actual stage count and results in final Track A report | `runs/final-track-a-live-20261119.jsonl`; delivery branch | Exploratory synthetic pilot; graph groups are dependence units. |
+| Track B 17-pair pilot | B/checker | Live, real observational | `qwen3:8b`, pinned full digest above, temperature 0, seed 261, thinking off, 4096 context, 512 output | 17 pairs in 7 groups; 136 live generations, 68 cached S2 checks | Original `runs/real-pilot-01/` archived unmodified at `artifacts/final-delivery/track-b-pilot/original-real-pilot-01.zip`; pilot branch `a8ba5ba` and source hashes in `session.json` | E4: 14 answered, 6 reference-correct, 8 wrong, 3 abstained; weighted coverage 89.0%, answered accuracy 40.0%. Exploratory cohort only. |
+| Track B post-run diagnosis | B/checker | Replay/deterministic, real | No new LLM | 17; 0 calls | `artifacts/final-delivery/track-b-diagnostics/`, original ignored `runs/real-pilot-01/diagnostics/` | Case joins, checker audit, uncertainty; dependent on saved pilot. |
+| ANM 128-row panel | ANM | Deterministic numerical, synthetic | No LLM; gamma 1, ridge 0.1, threshold .001, n=128 | 48 datasets (32 compatible); 192 orientation/split fits, 0 LLM calls | Original run archived at `artifacts/final-delivery/anm-128-panel/original-run.tar.gz`, `docs/reviews/anm-independent-validation.md`; source branch `a8ba5ba` | Compatible primary: 20 correct, 8 wrong, 4 abstained. Frozen recovery and stability gates failed. |
+| ANM 512-row confirmation | ANM | Deterministic numerical, synthetic | No LLM; fixed n=512 primary setting | 32 compatible datasets; 0 LLM calls | `artifacts/anm-experiments-2026-11-18/run-records.tar.gz` and summary; main | 26 correct, 0 wrong, 6 abstained under tested synthetic construction. |
+| ANM 4-pair development and adequacy | ANM | Deterministic numerical, real; post-outcome diagnostic | No LLM; six development variants, three dependent splits; adequacy permutations | 4 pairs in 3 groups; 0 LLM calls | Tracked ANM archive, `docs/anm_development.md`; main | No primary correct development answers; exploratory mechanism diagnosis. |
+| ANM 38-pair real validation | ANM | Deterministic numerical, real | No LLM; up to 512 rows, gamma 1, ridge 0.1, threshold .001; primary split 261 | 38 pairs in 12 groups; 114 split fits, 0 LLM calls | Tracked ANM archive and `docs/anm_validation_results.md`; main | Primary 13 correct, 13 wrong, 12 abstained; 48.1% weighted answered accuracy, 73.4% weighted coverage. Outcomes are opened. |
+| Checker injected corruption tests | checker | Mocked/deterministic, synthetic | No LLM | Fixture cases; 0 calls | `tests/test_prediction_process_injections.py`, `tests/test_numeric_claim_tolerance.py`, `tests/test_native_release_corruption.py`; main | Tests rule enforcement under constructed faults, not field prevalence. |
+
+The 17 frozen pilot pairs and 38 real validation pairs have **zero pair-ID overlap** and **zero source-group overlap** in `configs/evaluation-roster.json`. The roster has 29 `split=pilot` entries because 12 unused pairs in pilot families are also assigned there; only 17 are selected for the live cohort. The 38 validation outcomes were inspected on November 18. A revised method informed by them needs a new source-separated holdout.
+
+## Provenance checks
+
+The pilot's `session.json` declares `model_mode=live_ollama` and the exact model digest. More decisively, the archived native export contains 136 per-attempt prompts, raw Ollama response payloads, token counts, and journal generation events. `first-run-summary.json` records 136 new calls with 128,270 input and 22,896 output tokens. The scorer was rerun from the archived `analysis.jsonl`, mapping and evaluator records on this branch; its JSON is byte-for-byte identical to the saved score file. S2 and the simple gate are saved-output derivations, not new generations.
+
+The tracked ANM archive's SHA-256 matches its manifest and all 7,125 member byte lengths and SHA-256 values were independently checked. This verifies preservation, not a fresh numerical refit. The 128-row panel's original ignored run was copied into a new tracked tar archive; its report and results were inspected. A fresh full refit remains unnecessary for the final claim.
+
+## Architecture and unresolved claims
+
+Track A routes model parsing/planning through graph and numerical tools, then a verdict checker. Track B uses a separate direction predictor, evidence packages, ANM producer, native run journal, typed citation checker, and scorer. `discovery/prompts.py` is an older renderer; the live integrated prompts are in `evaluation/integration.py` and `llm/predictor.py`. These are related implementations with different tasks, not duplicate independent evaluations.
+
+Documentation before this delivery says Track A live inference, final uncertainty, and the report are deferred. Historical test counts reflect different revisions. A passing test suite establishes contracts and deterministic behavior only. The 38-pair validation result is descriptive agreement with benchmark labels, which are fallible causal references.
+
+The repository contains team planning PDFs but no Canvas rubric, deadline or presentation length. The [public Fall 2026 DSC 261 course page](https://bsalimi.github.io/dsc261-fa26/) specifies a four-page maximum for the final analysis/results report excluding references and an in-person project presentation. It says Canvas controls exact deadlines and adjustments. The user-provided `@RTK.md` and `@PROCESS.md` references do not resolve in this repository.
