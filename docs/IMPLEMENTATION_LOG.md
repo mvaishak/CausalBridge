@@ -205,3 +205,17 @@ Plan: `docs/superpowers/plans/2026-10-27-vaishak-implementation.md`.
   16 new replay tests, lint/format, both Track A demos, synthetic ANM handshake,
   and source/wheel builds pass. Details and local artifact paths are in
   `verification.md`. No GPU, live model or paid API was used.
+
+## Anish: branch commit-review corrections — 2026-11-18
+
+- Addressed Kris's review on commit `b189a8b` (commit comment 210618986).
+- Fixed the descriptive real-validation wrapper to require sampling seed 262
+  before snapshot validation, data access or fitting. Added seed-999 corruption
+  coverage and explicit guards against entering roster validation or execution
+  for any rejected configuration.
+- Updated `anm_producer.md` to reflect the pushed development branch, merged
+  producer, PR #14 dependency, available integration code and opened 38-pair
+  validation results. Historical experiment records and their original hashes
+  remain unchanged; no numerical study or LLM evaluation was rerun.
+- Full `scripts/check.sh`: 997 tests passed, no skips; lint/format, Track A demos,
+  synthetic ANM handshake and source/wheel builds passed.

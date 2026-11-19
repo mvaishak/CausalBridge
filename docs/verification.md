@@ -262,3 +262,17 @@ statement coverage. All 16 new replay tests pass. Ruff lint/format, both Track A
 demos, the computed synthetic ANM/predictor/checker handshake, and source/wheel
 builds pass. Log: `runs/anish-anm-baseline-01/repository-check.log`. Python
 3.12.16 / NumPy 2.5.4. These checks make no live-model or paid API calls.
+
+## Branch commit-review follow-up — 2026-11-18
+
+The fixed real-validation wrapper now rejects sampling seeds other than 262
+before roster validation or fitting. The regression supplies seed 999 and
+patches roster access/execution to fail if entered; the wrapper rejects the
+configuration first and creates no output directory. The other configuration
+corruption cases use the same preflight guards.
+
+`bash scripts/check.sh` passed: **997 tests, no skips**, Ruff lint/format, both
+Track A demos, the synthetic ANM handshake, and source/wheel builds. Local log:
+`/tmp/causalbridge-seed-review-check.log`. The saved experimental inputs, outcomes,
+archive and manifest were not changed. This verification exercises software
+checks and scripted demos, not a new causal-accuracy or live-model experiment.

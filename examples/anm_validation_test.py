@@ -28,6 +28,8 @@ def run(snapshot, manifest, roster, plan, output):
         raise ValueError("This test is fixed at 512 rows, gamma=1, alpha=0.1, threshold=0.001")
     if plan.split_seeds != (261, 1261, 2261) or plan.primary_split != 261:
         raise ValueError("This test uses the three predeclared splits, primary 261")
+    if plan.sampling_seed != 262:
+        raise ValueError("This test is fixed at sampling_seed=262")
     snapshot = Path(snapshot).resolve()
     check_roster(manifest, snapshot, roster)
     selected = [c for c in roster["pairs"] if c["anm_use"] == "validation" and c["scorable"]]

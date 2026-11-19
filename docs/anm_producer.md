@@ -4,10 +4,18 @@ Current development follow-up: [ANM development workflow/results](anm_developmen
 documents the four implemented chunks, the executed 72-attempt development
 comparison and controls, and the protected candidate-freeze/validation path.
 The original producer calculations and pilot threshold are unchanged. No real
-validation candidate is frozen and no real held-out outcomes have been opened.
+validation candidate passed the candidate-freeze workflow. A separate, explicitly
+authorized fixed-configuration test has opened all 38 real validation pairs; see
+[real validation results](anm_validation_results.md). These pairs are no longer
+an untouched holdout for future changes informed by their results. The
+[synthetic panel](anm_synthetic_panel.md) records a bounded recovery demonstration,
+not evidence of reliable real-data causal recovery.
 
-Status: implemented locally on `codex/anish-anm-provenance`, based on merged main
-`48d6cda` (PR #4). The detailed implementation roadmap governs scope. The exact
+Current status: code, tests, documentation and saved experiment records are pushed
+on `codex/anish-anm-baseline-reproduction`. This branch incorporates the Faizah
+integration from PR #14; that integration remains a dependency pending merge to
+main. The original producer was merged in PR #5. The detailed implementation
+roadmap governs scope. The exact
 [Track B integration contract](track_b_integration_contract.md) governs transport.
 No existing predictor, verifier, binding schema, or release rule was changed.
 
@@ -21,10 +29,10 @@ No existing predictor, verifier, binding schema, or release rule was changed.
 - A synthetic numerical handshake through Vaishak's existing predictor/checker.
   Its model reply is scripted. It is not a Tuebingen or live-LLM experiment.
 
-All remote branches were inspected. Graph/witness work and the small Track A
-pilot are merged. Track B interfaces are merged in PR #4. The current remote
-branches do not contain Faizah's real-data loader/scorer or Kris's actual
-experiment runner. Those modules are not implemented as substitutes here.
+Graph/witness work and the small Track A pilot are merged. Track B interfaces
+were merged in PR #4. This branch now includes the real-data loader, roster,
+scorer, diagnosis and experiment runner integration. Independently saved original
+ANM requests remain the binding between producer results and the verifier.
 
 ## The essential requirement: receipt before result
 
@@ -195,10 +203,15 @@ small-pilot numeric labels also agree; limited-evidence runtime calls remain gat
 Arunima's historical `local_checked_awaiting_anish` export tags are preserved;
 this verification is documented separately, without silently rewriting her labels.
 
-Kris still supplies real selected samples, matched packages, prompts and durable
-S1 receipts; Faizah supplies eligible data, evaluation-only source groups/labels
-and development scoring. A frozen tau, shared dataset mapping, real-data pilot
-and live model run remain team integration/evaluation work, not claimed results.
+Kris owns the runner and model-server integration; Faizah owns the data/evaluation
+handoff. Their integrated code supplies selected samples, packages, durable
+receipts, eligible data, evaluation-only mappings/labels and scoring. The roster
+contains 17 frozen pilot, four development, 38 validation and 49 excluded pairs.
+The branch records development experiments, synthetic controls and the now-opened
+38-pair descriptive validation. Threshold 0.001 remains exploratory. The saved
+ANM archive does not contain the original live-LLM pilot bundle, so that bundle
+and its checker/explanation audit remain separate from these numerical results.
+See [saved records](../artifacts/anm-experiments-2026-11-18/README.md).
 
 
 ## Saved baseline verification and production replay — 2026-11-17
