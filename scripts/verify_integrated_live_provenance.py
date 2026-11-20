@@ -7,6 +7,7 @@ from collections import Counter
 from pathlib import Path
 
 from causalbridge.discovery.schemas import canonical_digest
+from causalbridge.evaluation.saved_checks import journal_trials, unique_index
 
 
 def events(path):
@@ -38,33 +39,26 @@ def main():
         raise ValueError("Reused source journal changed")
     current_events = events(run / "experiment/events.jsonl")
     prior_events = events(source / "experiment/events.jsonl")
-    current_starts = {
-        e["data"]["key"]: e["data"] for e in current_events if e["kind"] == "native_started"
-    }
-    current_raw = {
-        e["data"]["key"]: e["data"]["generation"]
-        for e in current_events
-        if e["kind"] == "native_generated"
-    }
-    current_end = {
-        e["data"]["key"]: e["data"] for e in current_events if e["kind"] == "native_finished"
-    }
+    current_starts, current_raw, current_end = journal_trials(current_events, 304)
     for start in current_starts.values():
         message_text = json.dumps(start["messages"])
         if "reference_direction" in message_text or "original_pair_id" in message_text:
             raise ValueError("Evaluator reference leaked into a model request")
-    previous_starts = {
-        e["data"]["attempt_id"]: e["data"] for e in prior_events if e["kind"] == "native_started"
-    }
+    previous_starts = unique_index(
+        [e["data"] for e in prior_events if e["kind"] == "native_started"], "attempt_id"
+    )
+    unique_index(list(previous_starts.values()), "key")
     previous_raw = {
-        e["data"]["key"]: e["data"]["generation"]
-        for e in prior_events
-        if e["kind"] == "native_generated"
+        key: value["generation"]
+        for key, value in unique_index(
+            [e["data"] for e in prior_events if e["kind"] == "native_generated"], "key"
+        ).items()
     }
+    previous_end = unique_index(
+        [e["data"] for e in prior_events if e["kind"] == "native_finished"], "key"
+    )
     provenance = events(run / "generation-provenance.jsonl")
     by_fingerprint = {fingerprint(start): (key, start) for key, start in current_starts.items()}
-    if len(current_starts) != len(current_raw) != len(current_end):
-        raise ValueError("Started, generated and finished trial counts differ")
     if len(current_starts) != 304 or len(by_fingerprint) != 304 or len(provenance) < 304:
         raise ValueError("Expected 304 unique complete request bindings")
     identities = Counter()
@@ -80,8 +74,12 @@ def main():
         current_key, current_start = by_fingerprint[key]
         if kind == "saved_live_replay":
             prior = previous_starts[record["source_attempt_id"]]
+            source_execution = previous_end[prior["key"]]["execution"]
             if (
-                prior["messages"] != current_start["messages"]
+                source_execution is None
+                or source_execution["failure_stage"] is not None
+                or source_execution["generation"] != previous_raw[prior["key"]]
+                or prior["messages"] != current_start["messages"]
                 or prior["output_schema"] != current_start["output_schema"]
                 or previous_raw[prior["key"]] != current_raw[current_key]
             ):

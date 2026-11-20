@@ -1,5 +1,22 @@
 # Team handoff checklist
 
+## Engineering/accounting pass — 2026-11-20
+
+Based on final-delivery commit d773118, isolated from report/presentation work.
+Completeness checks now reject missing/duplicate trial identities and metadata;
+resumed provenance checks durable generation/request equality. Outcome accounting
+keeps upstream abstentions, binding failures and checker suppressions separate.
+E4/S1 on the opened 38-pair panel has 11 model abstentions plus one binding
+failure, not 12 genuine model abstentions; existing coverage/yield are unchanged.
+`python scripts/reproduce_saved_results.py --output /fresh/path` uses tracked
+archives only and regenerates saved analyses without inference or ANM refits.
+Report, slides, original traces, method settings and scientific scores are unchanged.
+Verification: isolated full suite 1,013 passed, two snapshot-dependent skips;
+18 new regression checks pass. Archived analyses reproduce identically, with zero
+HTTP/generation/ANM-execution/numerical-solve calls under guarded replay. Access
+was restored and the verified patch applied to codex/final-accounting-checks.
+No new held-out evaluation is claimed; report and presentation remain unchanged.
+
 ## Real validation outcomes opened — 2026-11-18
 
 The user explicitly authorized one fixed descriptive test on all 38 assigned real

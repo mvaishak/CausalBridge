@@ -3,7 +3,9 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 bash scripts/check.sh
-uv run --extra anm python scripts/final_analysis.py >/tmp/causalbridge-final-analysis-check.json
+saved_check=$(mktemp -d "${TMPDIR:-/tmp}/causalbridge-saved-verify.XXXXXX")
+trap 'rm -rf "$saved_check"' EXIT
+uv run --extra anm python scripts/reproduce_saved_results.py --output "$saved_check/results"
 
 python3 - <<'PY'
 import hashlib
@@ -35,21 +37,4 @@ unzip -tq artifacts/final-delivery/track-b-pilot/original-real-pilot-01.zip >/de
 unzip -tq presentation/CausalBridge-final.pptx >/dev/null
 test "$(pdfinfo report/CausalBridge-final.pdf | awk '/^Pages:/ {print $2}')" -le 4
 
-postmerge_check=$(mktemp -d "${TMPDIR:-/tmp}/causalbridge-postmerge-verify.XXXXXX")
-trap 'rm -rf "$postmerge_check"' EXIT
-tar -xzf artifacts/final-delivery/postmerge-track-b/integrated-38-interrupted-live.tar.gz -C "$postmerge_check"
-tar -xzf artifacts/final-delivery/postmerge-track-b/integrated-38-resumed-live.tar.gz -C "$postmerge_check"
-uv run --extra anm python scripts/verify_integrated_live_provenance.py \
-  --run "$postmerge_check/postmerge-track-b-38-resumed-live" \
-  --source "$postmerge_check/postmerge-track-b-38-live" \
-  --output "$postmerge_check/provenance.json"
-cmp "$postmerge_check/provenance.json" \
-  artifacts/final-delivery/postmerge-track-b/integrated-38-provenance-audit.json
-uv run --extra anm python scripts/analyze_final_track_b_38.py \
-  --run "$postmerge_check/postmerge-track-b-38-resumed-live" \
-  --output "$postmerge_check/analysis"
-cmp "$postmerge_check/analysis/metrics.json" \
-  artifacts/final-delivery/postmerge-track-b/integrated-38-analysis/metrics.json
-cmp "$postmerge_check/analysis/case-results.json" \
-  artifacts/final-delivery/postmerge-track-b/integrated-38-analysis/case-results.json
-echo 'Final archives, Track A traces, 304 bound real Track B responses, slides and report verified.'
+echo 'Saved analyses reproduced from tracked archives; no inference required for replay.'

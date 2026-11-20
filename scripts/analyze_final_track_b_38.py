@@ -6,6 +6,8 @@ import random
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from causalbridge.evaluation.saved_checks import validate_panel
+
 
 def read(path):
     return json.loads(path.read_text())
@@ -49,11 +51,10 @@ def main():
     if summary["actual_new_ollama_calls"] + summary["saved_live_replays"] != 304:
         ap.error("Missing actual or traceable saved model generations")
     rows = [json.loads(line) for line in (run / "analysis.jsonl").read_text().splitlines()]
-    evaluator = {e["case_id"]: e for e in read(run / "evaluator.json")}
-    mapping = {m["case_id"]: m for m in read(run / "evaluation_mapping.json")}
+    evaluator_rows = read(run / "evaluator.json")
+    mapping_rows = read(run / "evaluation_mapping.json")
     scored = read(run / "scores.json")
-    if len(rows) != 38 * 17 or len(evaluator) != len(mapping) != 38:
-        ap.error("Incomplete analysis or evaluator")
+    evaluator, mapping = validate_panel(rows, evaluator_rows, mapping_rows, scored, 38)
     records = []
     by_strategy = {}
     for row in rows:

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import argparse
+import gzip
 import json
 import random
 from collections import Counter, defaultdict
@@ -9,6 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / "artifacts/final-delivery"
+OUT = ART / "analysis"
 
 
 def read_json(path: Path):
@@ -38,9 +41,11 @@ def interval(rows: list[dict], group_key: str, numerator: str, denominator: str)
 
 
 def track_a() -> dict:
-    traces_path = ROOT / "runs/final-track-a-live-20261119.jsonl"
-    oracle_path = ROOT / "data/oracle/track_a_10_groups.jsonl"
-    traces = [json.loads(line) for line in traces_path.read_text().splitlines()]
+    traces_path = ART / "track-a-live/traces.jsonl.gz"
+    oracle_path = ART / "track-a-live/oracle.jsonl"
+    traces = [
+        json.loads(line) for line in gzip.decompress(traces_path.read_bytes()).decode().splitlines()
+    ]
     oracle = {z["case_id"]: z for z in map(json.loads, oracle_path.read_text().splitlines())}
     assert len(traces) == len(oracle) == 50
     assert len({z["runtime_case"]["case_id"] for z in traces}) == 50
@@ -126,7 +131,7 @@ def track_a() -> dict:
             "wrong_answer": sum(z["wrong_answer"] for z in subset),
             "false_abstention": sum(z["false_abstention"] for z in subset),
         }
-    (ART / "analysis/track-a-case-results.json").write_text(json.dumps(rows, indent=2) + "\n")
+    (OUT / "track-a-case-results.json").write_text(json.dumps(rows, indent=2) + "\n")
     return result
 
 
@@ -162,7 +167,7 @@ def anm_real() -> dict:
         )
     assert sum(z["correct"] for z in rows) == 13
     assert sum(z["wrong"] for z in rows) == 13
-    (ART / "analysis/anm-real-case-results.json").write_text(json.dumps(rows, indent=2) + "\n")
+    (OUT / "anm-real-case-results.json").write_text(json.dumps(rows, indent=2) + "\n")
     return {
         "cases": 38,
         "source_groups": len({z["source_group"] for z in rows}),
@@ -226,13 +231,19 @@ def figure(metrics: dict) -> None:
         svg.append(f'<rect x="{x}" y="323" width="14" height="14" fill="{colors[key]}"/>')
         svg.append(f'<text x="{x + 21}" y="335" class="small">{labels[key]}</text>')
     svg.append("</svg>")
-    (ART / "analysis/outcomes.svg").write_text("\n".join(svg) + "\n")
+    (OUT / "outcomes.svg").write_text("\n".join(svg) + "\n")
 
 
 def main() -> None:
-    (ART / "analysis").mkdir(parents=True, exist_ok=True)
+    global OUT
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--output", type=Path)
+    args = ap.parse_args()
+    if args.output is not None:
+        OUT = args.output
+    OUT.mkdir(parents=True, exist_ok=args.output is None)
     result = {"track_a": track_a(), "anm_real": anm_real()}
-    (ART / "analysis/metrics.json").write_text(json.dumps(result, indent=2) + "\n")
+    (OUT / "metrics.json").write_text(json.dumps(result, indent=2) + "\n")
     figure(result)
     print(json.dumps(result, indent=2))
 
