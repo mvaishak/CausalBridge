@@ -82,7 +82,7 @@ const aRows = [
   ['Correct answer', a.counts.correct_answer, C.teal],
   ['Wrong answer', a.counts.wrong_answer, C.red],
   ['Correct abstention', a.counts.correct_abstention, C.gray],
-  ['False abstention', a.counts.false_abstention, 'D6AA5D'],
+  ['Missed answerable', a.counts.false_abstention, 'D6AA5D'],
 ];
 aRows.forEach(([label, value, color], i) => {
   const y = 1.62 + i * 1.0;
@@ -92,7 +92,7 @@ aRows.forEach(([label, value, color], i) => {
 });
 txt(s, `${a.actual_model_calls} live model stages across 50 cases; one frozen configuration`,
   0.75, 6.2, 11.5, 0.4, 18, C.navy, true);
-note(s, 'Source: runs/final-track-a-live-20261119.jsonl and artifacts/final-delivery/analysis/track-a-case-results.json. Each graph group contributes five dependent cases.');
+note(s, 'Source: archived live traces and artifacts/final-delivery/analysis/track-a-case-results.json. Each graph group contributes five dependent cases. The 27 missed answerable cases include 24 abstentions and three planning-stage execution errors.');
 
 s = base('Track B: the E4 diagnostic dominated', 6);
 rect(s, 0.78, 1.56, 5.8, 3.7, C.pale, 0.12);
@@ -103,9 +103,11 @@ rect(s, 6.83, 1.56, 5.8, 3.7, 'F8EBE8', 0.12);
 txt(s, 'E4 / all strategies', 7.17, 1.83, 5.0, 0.45, 25, C.navy, true);
 txt(s, '6 correct  ·  8 wrong  ·  3 abstain', 7.17, 2.57, 5.0, 0.7, 22);
 txt(s, 'Weighted coverage 89.0%\nAnswered accuracy 40.0%', 7.17, 3.48, 5.0, 1.1, 19);
+txt(s, 'Adding names (E2→E3, S0): +6.8 points correct yield; +27.4 wrong yield.',
+  0.75, 5.54, 11.95, 0.52, 18, C.navy, true);
 txt(s, 'S0, S1, S2, simple gate and ANM-only made the same 17 E4 decisions.',
-  0.75, 5.78, 11.95, 0.7, 20, C.navy, true);
-note(s, 'Matched case comparison. E4 adds a diagnostic to E3; all E4 model arrows match ANM. Source: archived original pilot and rescored analysis.');
+  0.75, 6.13, 11.95, 0.52, 18, C.navy, true);
+note(s, 'Matched case comparison. E4 adds a diagnostic to E3; all E4 model arrows match ANM. E2-to-E3 yield changes are weighted percentage-point differences on the same 17 cases. Source: archived original pilot and rescored analysis.');
 
 s = base('ANM: synthetic success did not transfer', 7);
 line(s, '128-row panel', '20 correct / 8 wrong / 4 abstain on 32 compatible synthetic cases; frozen gate failed', 1.66, C.gray);
@@ -125,6 +127,7 @@ note(s, '68 cached S1 checks; 48 upstream abstentions. Two strict text/structure
 
 if (integrated) {
   const metric = (p, c) => integrated.metrics.find(x => x.package === p && x.condition === c);
+  const e2 = metric('E2', 'S0');
   const e3 = metric('E3', 'S0');
   const e4 = metric('E4', 'S0');
   const format = x => `${(100*x).toFixed(1)}%`;
@@ -137,11 +140,15 @@ if (integrated) {
   txt(s, `Coverage ${format(e3.coverage)}  ·  Answered accuracy ${answered(e3.selective_accuracy)}`, 1.10, 3.95, 5.0, 0.67, 17);
   rect(s, 6.83, 2.20, 5.8, 2.68, 'F8EBE8', 0.12);
   txt(s, 'E4 / S0', 7.15, 2.49, 5.0, 0.4, 24, C.navy, true);
-  txt(s, `${e4.correct_count} correct · ${e4.wrong_count} wrong · ${e4.abstain_count} abstain`, 7.15, 3.11, 5.0, 0.55, 19);
+  txt(s, `${e4.correct_count} correct · ${e4.wrong_count} wrong · ${e4.abstain_count} no release`, 7.15, 3.11, 5.0, 0.55, 19);
   txt(s, `Coverage ${format(e4.coverage)}  ·  Answered accuracy ${answered(e4.selective_accuracy)}`, 7.15, 3.95, 5.0, 0.67, 17);
-  txt(s, `E4 S0 matched ANM on ${integrated.e4_s0_agrees_with_anm_count}/38 cases. Checker rejected ${integrated.checker.suppressed_correct} correct and ${integrated.checker.suppressed_wrong} wrong S1 answers.`,
-    0.75, 5.45, 11.9, 0.95, 19, C.navy, true);
-  note(s, 'Source: artifacts/final-delivery/postmerge-track-b/integrated-38-analysis/metrics.json. Labels had been opened for numerical ANM validation. 51 saved live responses were reused with exact request binding; the rest were new live calls.');
+  txt(s, `E4/S0 matched ANM on ${integrated.e4_s0_agrees_with_anm_count}/38 cases.`,
+    0.75, 5.23, 11.9, 0.42, 18, C.navy, true);
+  txt(s, `Across all packages, S2 rejected ${integrated.checker.suppressed_correct} correct and ${integrated.checker.suppressed_wrong} wrong S1 proposals.`,
+    0.75, 5.70, 11.9, 0.42, 18, C.navy, true);
+  txt(s, `Adding names (E2→E3, S0): +${(100*(e3.correct_yield-e2.correct_yield)).toFixed(1)} points correct yield; +${(100*(e3.wrong_yield-e2.wrong_yield)).toFixed(1)} wrong yield.`,
+    0.75, 6.23, 11.9, 0.48, 18, C.navy, true);
+  note(s, 'Source: artifacts/final-delivery/postmerge-track-b/integrated-38-analysis/metrics.json. The 12 E4 nonreleases are 11 model abstentions and one package-binding failure. Labels had been opened for numerical ANM validation. 51 saved live responses were reused with exact request binding; the rest were new live calls. Yield changes are weighted percentage-point differences on matched cases.');
 }
 
 s = base('Conclusion and failure boundary', integrated ? 10 : 9, true);
