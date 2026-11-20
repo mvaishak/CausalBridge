@@ -45,7 +45,10 @@
       "wrong_yield": 0.17423148148148146,
       "correct_count": 9,
       "wrong_count": 8,
-      "abstain_count": 21,
+      "no_release_count": 21,
+      "nonrelease_categories": {
+        "model_abstention": 21
+      },
       "intervals": {
         "coverage": {
           "lower": 0.20249999999999999,
@@ -81,7 +84,10 @@
       "wrong_yield": 0.14608333333333332,
       "correct_count": 4,
       "wrong_count": 6,
-      "abstain_count": 28,
+      "no_release_count": 28,
+      "nonrelease_categories": {
+        "model_abstention": 28
+      },
       "intervals": {
         "coverage": {
           "lower": 0.07939166666666665,
@@ -117,7 +123,11 @@
       "wrong_yield": 0.0,
       "correct_count": 0,
       "wrong_count": 0,
-      "abstain_count": 38,
+      "no_release_count": 38,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 28,
+        "checker_rejection": 10
+      },
       "intervals": {
         "coverage": {
           "lower": 0.0,
@@ -148,7 +158,10 @@
       "wrong_yield": 0.14608333333333332,
       "correct_count": 4,
       "wrong_count": 6,
-      "abstain_count": 28,
+      "no_release_count": 28,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 28
+      },
       "intervals": {
         "coverage": {
           "lower": 0.07939166666666665,
@@ -184,7 +197,10 @@
       "wrong_yield": 0.037037037037037035,
       "correct_count": 0,
       "wrong_count": 2,
-      "abstain_count": 36,
+      "no_release_count": 36,
+      "nonrelease_categories": {
+        "model_abstention": 36
+      },
       "intervals": {
         "coverage": {
           "lower": 0.0,
@@ -220,7 +236,10 @@
       "wrong_yield": 0.0,
       "correct_count": 0,
       "wrong_count": 0,
-      "abstain_count": 38,
+      "no_release_count": 38,
+      "nonrelease_categories": {
+        "model_abstention": 38
+      },
       "intervals": {
         "coverage": {
           "lower": 0.0,
@@ -251,7 +270,10 @@
       "wrong_yield": 0.0,
       "correct_count": 0,
       "wrong_count": 0,
-      "abstain_count": 38,
+      "no_release_count": 38,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 38
+      },
       "intervals": {
         "coverage": {
           "lower": 0.0,
@@ -282,7 +304,10 @@
       "wrong_yield": 0.0,
       "correct_count": 0,
       "wrong_count": 0,
-      "abstain_count": 38,
+      "no_release_count": 38,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 38
+      },
       "intervals": {
         "coverage": {
           "lower": 0.0,
@@ -313,7 +338,10 @@
       "wrong_yield": 0.15537037037037035,
       "correct_count": 9,
       "wrong_count": 5,
-      "abstain_count": 24,
+      "no_release_count": 24,
+      "nonrelease_categories": {
+        "model_abstention": 24
+      },
       "intervals": {
         "coverage": {
           "lower": 0.1792452830188679,
@@ -349,7 +377,10 @@
       "wrong_yield": 0.08592592592592592,
       "correct_count": 2,
       "wrong_count": 4,
-      "abstain_count": 32,
+      "no_release_count": 32,
+      "nonrelease_categories": {
+        "model_abstention": 32
+      },
       "intervals": {
         "coverage": {
           "lower": 0.036036036036036036,
@@ -385,7 +416,11 @@
       "wrong_yield": 0.07268518518518517,
       "correct_count": 2,
       "wrong_count": 3,
-      "abstain_count": 33,
+      "no_release_count": 33,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 32,
+        "checker_rejection": 1
+      },
       "intervals": {
         "coverage": {
           "lower": 0.025909090909090906,
@@ -421,7 +456,10 @@
       "wrong_yield": 0.08592592592592592,
       "correct_count": 2,
       "wrong_count": 4,
-      "abstain_count": 32,
+      "no_release_count": 32,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 32
+      },
       "intervals": {
         "coverage": {
           "lower": 0.036036036036036036,
@@ -457,7 +495,11 @@
       "wrong_yield": 0.3806481481481481,
       "correct_count": 13,
       "wrong_count": 13,
-      "abstain_count": 12,
+      "no_release_count": 12,
+      "nonrelease_categories": {
+        "model_abstention": 11,
+        "execution_or_binding_failure": 1
+      },
       "intervals": {
         "coverage": {
           "lower": 0.521980198019802,
@@ -493,7 +535,11 @@
       "wrong_yield": 0.3806481481481481,
       "correct_count": 13,
       "wrong_count": 13,
-      "abstain_count": 12,
+      "no_release_count": 12,
+      "nonrelease_categories": {
+        "model_abstention": 11,
+        "execution_or_binding_failure": 1
+      },
       "intervals": {
         "coverage": {
           "lower": 0.521980198019802,
@@ -529,7 +575,12 @@
       "wrong_yield": 0.3806481481481481,
       "correct_count": 10,
       "wrong_count": 13,
-      "abstain_count": 15,
+      "no_release_count": 15,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 11,
+        "checker_rejection": 3,
+        "execution_or_binding_failure": 1
+      },
       "intervals": {
         "coverage": {
           "lower": 0.4603703703703704,
@@ -565,7 +616,11 @@
       "wrong_yield": 0.3806481481481481,
       "correct_count": 13,
       "wrong_count": 13,
-      "abstain_count": 12,
+      "no_release_count": 12,
+      "nonrelease_categories": {
+        "upstream_model_abstention": 11,
+        "execution_or_binding_failure": 1
+      },
       "intervals": {
         "coverage": {
           "lower": 0.521980198019802,
@@ -601,7 +656,10 @@
       "wrong_yield": 0.3806481481481481,
       "correct_count": 13,
       "wrong_count": 13,
-      "abstain_count": 12,
+      "no_release_count": 12,
+      "nonrelease_categories": {
+        "method_abstention": 12
+      },
       "intervals": {
         "coverage": {
           "lower": 0.521980198019802,
@@ -625,14 +683,14 @@
     }
   ],
   "e3_to_e4_s0_transitions": {
-    "abstain\u2192abstain": 9,
-    "abstain\u2192correct": 9,
-    "abstain\u2192wrong": 6,
-    "correct\u2192abstain": 2,
     "correct\u2192correct": 2,
+    "correct\u2192no_release": 2,
     "correct\u2192wrong": 5,
-    "wrong\u2192abstain": 1,
+    "no_release\u2192correct": 9,
+    "no_release\u2192no_release": 9,
+    "no_release\u2192wrong": 6,
     "wrong\u2192correct": 2,
+    "wrong\u2192no_release": 1,
     "wrong\u2192wrong": 2
   },
   "e4_minus_e3_s0": {

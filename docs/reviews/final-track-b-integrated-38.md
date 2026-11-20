@@ -18,7 +18,7 @@ The native audit and independent provenance audit passed. The complete panel has
 
 Counts are unweighted; percentages use benchmark weights. Each row has all 38 pairs in its denominator. `Answered accuracy` is conditional on a released direction; `correct yield` is correct released weight divided by all panel weight.
 
-| Strategy | Correct | Wrong | Abstain | Weighted coverage | Answered accuracy | Correct yield |
+| Strategy | Correct | Wrong | No release | Weighted coverage | Answered accuracy | Correct yield |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | E1 / S0 | 9 | 8 | 21 | 42.4% | 58.9% | 25.0% |
 | E1 / S1 | 4 | 6 | 28 | 21.1% | 30.7% | 6.5% |
@@ -31,7 +31,7 @@ Counts are unweighted; percentages use benchmark weights. Each row has all 38 pa
 | E4 / S0, S1, simple gate, ANM-only | 13 | 13 | 12 | 73.4% | 48.1% | 35.3% |
 | E4 / S2 checker | 10 | 13 | 15 | 65.3% | 41.7% | 27.3% |
 
-E4/S0, E4/S1, the simple gate, and ANM-only agreed on **all 38** decisions, including abstentions. Every answered E4/S0 direction copied the ANM result. The 13 benchmark-wrong arrows therefore propagated without a correction from the model. E4/S2 suppressed three benchmark-correct E4/S1 answers and no benchmark-wrong E4/S1 answers, reducing weighted answered accuracy from 48.1% to 41.7% and correct yield from 35.3% to 27.3%. A separate E4 S0/S1 case, D1016, failed case/package binding because the model copied one character of the package digest incorrectly; it was an abstention and contributed to the failure count, not to correct or wrong arrows.
+E4/S0, E4/S1, the simple gate, and ANM-only agreed on **all 38** released directions and nonreleases, but their nonrelease reasons differ. Every answered E4/S0 direction copied the ANM result. The 13 benchmark-wrong arrows therefore propagated without a correction from the model. E4/S2 suppressed three benchmark-correct E4/S1 answers and no benchmark-wrong E4/S1 answers, reducing weighted answered accuracy from 48.1% to 41.7% and correct yield from 35.3% to 27.3%. A separate E4 S0/S1 case, D1016, failed case/package binding because the model copied one character of the package digest incorrectly; it was a binding failure, not a model abstention, and contributed to the failure count.
 
 Compared on exactly the same cases, E4/S0 had 12 more answers than E3/S0. Nine E3 abstentions became correct E4 answers, but six became wrong answers; five E3 correct arrows became wrong E4 arrows and two wrong arrows became correct. Weighted coverage rose 35.2 percentage points; correct yield rose 12.7 points, while wrong yield rose 22.5 points and answered accuracy fell from 59.3% to 48.1%. The exploratory 12-source-group bootstrap interval for the paired correct-yield difference is **−19.9 to +46.3 points**; for coverage it is +13.7 to +59.5 points. The interval does not support a reliable positive direction-accuracy claim. Weighted E4/S0 answered accuracy has a wide exploratory source-group interval of 21.1–76.8%; the E3/S0 interval is 21.1–100%. These intervals do not model imperfect benchmark directions or broader dependence among source families.
 
@@ -45,6 +45,6 @@ D1075 (pair 102, Janzing mechanics) shows diagnostic error propagation. With E3/
 
 ## Relation to the original pilot
 
-The original 17-pair E4 comparison used 128 ANM rows and found 6 correct, 8 wrong, 3 abstentions; E4 correct yield fell 4.1 weighted points relative to E3/S0, and S2 changed no E4 releases. The new 38-pair panel uses up to 512 rows and finds 13 correct, 13 wrong, 12 abstentions; E4 correct yield rises 12.7 points relative to E3/S0, but its answered accuracy is lower and the paired interval spans zero. S2 now rejects three correct E4 arrows. The direction of the correct-yield contrast differs between panels. Both panels show complete E4 model copying of ANM and no evidence that the checker repairs wrong diagnostic directions. They differ in source groups, sample sizes, and prior exposure of labels, so neither is a replication of the other's effect estimate.
+The original 17-pair E4 comparison used 128 ANM rows and found 6 correct, 8 wrong, 3 abstentions; E4 correct yield fell 4.1 weighted points relative to E3/S0, and S2 changed no E4 releases. The new 38-pair panel uses up to 512 rows and finds 13 correct, 13 wrong, and 12 without a release (11 model abstentions and one binding failure in E4/S0); E4 correct yield rises 12.7 points relative to E3/S0, but its answered accuracy is lower and the paired interval spans zero. S2 now rejects three correct E4 arrows. The direction of the correct-yield contrast differs between panels. Both panels show complete E4 model copying of ANM and no evidence that the checker repairs wrong diagnostic directions. They differ in source groups, sample sizes, and prior exposure of labels, so neither is a replication of the other's effect estimate.
 
 Source data: `artifacts/final-delivery/postmerge-track-b/integrated-38-resumed-live.tar.gz`, `integrated-38-provenance-audit.json`, and `integrated-38-analysis/` (case results, metrics, and vector figure). The interrupted run is preserved separately and is not included in these scores.

@@ -6,6 +6,7 @@ import random
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from causalbridge.evaluation.outcome_accounting import account_panel
 from causalbridge.evaluation.saved_checks import validate_panel
 
 
@@ -55,6 +56,10 @@ def main():
     mapping_rows = read(run / "evaluation_mapping.json")
     scored = read(run / "scores.json")
     evaluator, mapping = validate_panel(rows, evaluator_rows, mapping_rows, scored, 38)
+    accounting = account_panel(rows, evaluator_rows, mapping_rows, scored)
+    categories = {
+        (r["case_id"], r["package"], r["condition"]): r["category"] for r in accounting["records"]
+    }
     records = []
     by_strategy = {}
     for row in rows:
@@ -80,6 +85,8 @@ def main():
             "weighted_correct": e["weight"] * int(direction is not None and direction == gold),
             "weighted_one": e["weight"],
             "outcome": row["outcome"],
+            "failure_stage": row.get("failure_stage"),
+            "outcome_category": categories[(case, row["package"], row["condition"])],
             "reason_codes": row["reason_codes"],
             "prediction_scorable": row["prediction_scorable"],
             "supplied_claim_count": row["supplied_claim_count"],
@@ -96,7 +103,10 @@ def main():
                 **score,
                 "correct_count": sum(c["correct"] for c in group),
                 "wrong_count": sum(c["wrong"] for c in group),
-                "abstain_count": sum(not c["answered"] for c in group),
+                "no_release_count": sum(not c["answered"] for c in group),
+                "nonrelease_categories": dict(
+                    Counter(c["outcome_category"] for c in group if not c["answered"])
+                ),
                 "intervals": {
                     "coverage": cluster_interval(group, "weighted_answered", "weighted_one"),
                     "correct_yield": cluster_interval(group, "weighted_correct", "weighted_one"),
@@ -111,7 +121,7 @@ def main():
     paired = []
 
     def category(record):
-        return "correct" if record["correct"] else "wrong" if record["wrong"] else "abstain"
+        return "correct" if record["correct"] else "wrong" if record["wrong"] else "no_release"
 
     for case in evaluator:
         e3 = index[(case, "E3", "S0")]

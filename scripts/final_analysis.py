@@ -55,6 +55,9 @@ def track_a() -> dict:
         gold = oracle[case["case_id"]]
         verdict = trace["verdict"]
         answered = verdict["response_action"] == "answer"
+        execution_error = trace["failure_stage"] is not None
+        if answered and execution_error:
+            raise ValueError("A failed Track A execution cannot release an answer")
         answer = verdict["answer"]
         target = gold["gold_answer"]
         if answered and gold["answerable"]:
@@ -74,12 +77,16 @@ def track_a() -> dict:
                 "query_type_expected": gold["query"]["question_type"],
                 "query_type_observed": trace["query"]["question_type"] if trace["query"] else None,
                 "status": verdict["status"],
+                "failure_stage": trace["failure_stage"],
                 "response_action": verdict["response_action"],
                 "answer": answer,
                 "correct_answer": correct,
-                "correct_abstention": not answered and not gold["answerable"],
+                "correct_abstention": not answered
+                and not gold["answerable"]
+                and not execution_error,
                 "wrong_answer": answered and not correct,
-                "false_abstention": not answered and gold["answerable"],
+                "false_abstention": not answered and gold["answerable"] and not execution_error,
+                "execution_error": execution_error,
                 "parse_calls": sum(c["stage"] == "parse" for c in trace["calls"]),
                 "model_calls": len(trace["calls"]),
                 "input_tokens": trace["input_tokens"],
@@ -92,7 +99,13 @@ def track_a() -> dict:
         )
     counts = Counter()
     for row in rows:
-        for key in ("correct_answer", "correct_abstention", "wrong_answer", "false_abstention"):
+        for key in (
+            "correct_answer",
+            "correct_abstention",
+            "wrong_answer",
+            "false_abstention",
+            "execution_error",
+        ):
             counts[key] += row[key]
     result = {
         "cases": 50,
@@ -130,6 +143,7 @@ def track_a() -> dict:
             "correct_abstention": sum(z["correct_abstention"] for z in subset),
             "wrong_answer": sum(z["wrong_answer"] for z in subset),
             "false_abstention": sum(z["false_abstention"] for z in subset),
+            "execution_error": sum(z["execution_error"] for z in subset),
         }
     (OUT / "track-a-case-results.json").write_text(json.dumps(rows, indent=2) + "\n")
     return result
@@ -188,14 +202,14 @@ def figure(metrics: dict) -> None:
     # An intentionally simple publication-ready vector chart: case fractions, not mixed weights.
     panels = [
         ("Track A, synthetic", metrics["track_a"]["counts"], 50),
-        ("Track B E4, real", {"correct_answer": 6, "wrong_answer": 8, "abstain": 3}, 17),
-        ("ANM validation, real", {"correct_answer": 13, "wrong_answer": 13, "abstain": 12}, 38),
+        ("Track B E4, real", {"correct_answer": 6, "wrong_answer": 8, "no_release": 3}, 17),
+        ("ANM validation, real", {"correct_answer": 13, "wrong_answer": 13, "no_release": 12}, 38),
     ]
-    colors = {"correct_answer": "#237c69", "wrong_answer": "#bb5145", "abstain": "#a2a8ad"}
+    colors = {"correct_answer": "#237c69", "wrong_answer": "#bb5145", "no_release": "#a2a8ad"}
     labels = {
         "correct_answer": "Correct answer",
         "wrong_answer": "Wrong answer",
-        "abstain": "Abstain",
+        "no_release": "No release",
     }
     svg = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">',
@@ -211,9 +225,11 @@ def figure(metrics: dict) -> None:
             counts = {
                 "correct_answer": counts.get("correct_answer", 0),
                 "wrong_answer": counts.get("wrong_answer", 0),
-                "abstain": counts.get("correct_abstention", 0) + counts.get("false_abstention", 0),
+                "no_release": counts.get("correct_abstention", 0)
+                + counts.get("false_abstention", 0)
+                + counts.get("execution_error", 0),
             }
-        for key in ("correct_answer", "wrong_answer", "abstain"):
+        for key in ("correct_answer", "wrong_answer", "no_release"):
             count = counts.get(key, 0)
             width = 590 * count / total
             svg.append(
@@ -226,7 +242,7 @@ def figure(metrics: dict) -> None:
                     f'text-anchor="middle" class="small" fill="white">{count}</text>'
                 )
             x += width
-    for i, key in enumerate(("correct_answer", "wrong_answer", "abstain")):
+    for i, key in enumerate(("correct_answer", "wrong_answer", "no_release")):
         x = 30 + i * 180
         svg.append(f'<rect x="{x}" y="323" width="14" height="14" fill="{colors[key]}"/>')
         svg.append(f'<text x="{x + 21}" y="335" class="small">{labels[key]}</text>')
