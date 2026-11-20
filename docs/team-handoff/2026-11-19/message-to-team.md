@@ -1,21 +1,15 @@
-# Message to share with Vaish and the team
+# Updated team message — 20 November 2026
 
-I've put the midterm handoff in `docs/team-handoff/2026-11-19/` on the results PR.
-Please start with its README; it links the tables, figure, reproduction commands
-and proposed rerun configuration.
+PR #16 preserves the original 17-pair resource/baseline package. Its computations
+have been independently reproduced; its README now explains retrieval and hash
+verification of the original pilot archive from the final-delivery commit.
 
-The original 17-pair pilot has been audited and rescored from saved records, and
-the resource/baseline package is complete. The checker catches five natural citation
-failures, suppressing three wrong and two correct answers. E4 still gives the same
-directions as ANM, with no demonstrated accuracy improvement. The separate primary
-ANM validation remains 13 correct, 13 wrong and 12 abstentions on 38 cases.
+The [final-delivery review](https://github.com/mvaishak/CausalBridge/blob/d773118951986a2bd25d57a98adb4c9d0881a6b9/docs/reviews/final-results-analysis.md) is the
+current results reference. Track A's 50-question live run and the integrated
+38-pair Track B panel are complete. The earlier D1006 smoke/17-pair repetition
+proposal is historical and optional; please do not schedule duplicate inference.
 
-For the midterm, I propose bounded evidence checking plus transparent negative
-ANM results, with no further parameter search. Human annotation remains deferred.
-PR #12 is closed as superseded because its fix and newer corrections are in main.
-
-Vaish: the immediate next step is confirming the inference endpoint, runtime/API
-version and exact Qwen3:8b model digest against the candidate configuration. Once
-we freeze those settings, we can run the 8-call matched-pair smoke before deciding
-whether to repeat all 17 pairs. No rerun has started; using the same pairs would
-be a repeatability check, not a new held-out result.
+The evidence supports bounded checking and concrete negative findings, not an
+improvement in causal accuracy. The larger panel's labels were already opened,
+so it remains exploratory. Next steps are final review, reproducibility/reporting
+corrections and confirmation of Canvas requirements, rather than more ANM tuning.

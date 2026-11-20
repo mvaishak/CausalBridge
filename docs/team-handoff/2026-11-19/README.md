@@ -1,9 +1,16 @@
 # Team handoff — 19 November 2026
 
-The original pilot has been independently audited and rescored from saved records.
-The resource/baseline package is complete. **No new pilot has been run, and human
-annotation remains deferred.** This is a results-code review and reproducibility
-check, not independent human adjudication or a second numerical ANM implementation.
+**Status update — 20 November 2026:** this directory preserves the original
+17-pair results package. Current delivery is on
+[`codex/postmerge-track-b-evaluation-20261119` at `d773118`](https://github.com/mvaishak/CausalBridge/blob/d773118951986a2bd25d57a98adb4c9d0881a6b9/docs/reviews/final-execution-audit.md).
+Track A's live 50-question evaluation and the larger integrated Track B panel
+(38 pairs, 304 real-model responses) are complete. The 17-pair repeatability
+plan is historical/optional; do not launch duplicate inference from these notes.
+The 38-pair panel uses already opened labels and is exploratory, not a fresh holdout.
+
+This is a team-facing historical results summary, not a personal continuity or
+knowledge-base document. Human annotation remains deferred. Saved-record review
+does not constitute independent human adjudication or a second ANM implementation.
 
 ## What we can report
 
@@ -31,26 +38,20 @@ results. Further parameter or method searches are outside the proposed midterm s
 5. [PR #12 review](../../reviews/pr12-after-main-integration.md): closed as
    superseded, because its fix and newer corrections are already in main.
 
-## Next actions to agree on
+## Current next actions
 
-These are proposed responsibilities, not claims that teammates have accepted them.
+- Review the [completed execution inventory](https://github.com/mvaishak/CausalBridge/blob/d773118951986a2bd25d57a98adb4c9d0881a6b9/docs/reviews/final-execution-audit.md)
+  and [final results analysis](https://github.com/mvaishak/CausalBridge/blob/d773118951986a2bd25d57a98adb4c9d0881a6b9/docs/reviews/final-results-analysis.md).
+- Use the [final reproduction guide](https://github.com/mvaishak/CausalBridge/blob/d773118951986a2bd25d57a98adb4c9d0881a6b9/docs/reviews/final-reproducibility.md)
+  for completed delivery, and this PR's reproduction commands for its original-pilot resources.
+- Resolve reporting/reproduction review comments and confirm Canvas requirements.
+  No additional 17-pair run or ANM tuning is required by this package.
 
-| Owner | Next action | Completion evidence |
-| --- | --- | --- |
-| Kris / results reviewer | Review this package, retain original-versus-repeat tables, seal reviewed code and configuration identities | Reviewed commit and frozen execution manifest |
-| Vaish / pilot runner | Confirm actual inference host/endpoint, runtime/API version and exact Qwen3:8b digest; review candidate settings | Callable service with matching metadata recorded |
-| Anish / ANM reviewer | Confirm original pilot ANM settings remain fixed and keep the 38-case validation separate | Configuration review; no additional tuning needed |
-| Team | Agree to the bounded midterm focus and whether repetition is worth the remaining time | Explicit choice recorded before launch |
-
-After configuration and service verification, run the deterministic D1006 smoke:
-8 matched E1–E4 S0/S1 calls and 4 cached S2 checks. Scale only after operational
-checks pass. A separate full repetition would add 136 model calls: maximum 144
-fresh calls including smoke. Keep both runs; the same 17 cases test repeatability,
-not a fresh holdout. No smoke or full run has started from this package.
-
-If time or service access is tight, the audited original pilot can already be
-presented as the midterm result. Human annotation stays deferred until after the
-midterm if feasible; Track A live evaluation is a separate remaining gap.
+The linked [repeatability plan](../../plans/midterm-repeatability-run.md) and
+[candidate configuration](../../../configs/midterm-repeatability-draft.json) are
+retained as historical, optional proposals. They are not a current execution queue.
+Track A live evaluation is complete. The 38-pair panel differs in cohort and ANM
+sample limit from the original pilot and must not be presented as its exact replication.
 
 The GitHub package contains aggregate evaluation results and reproduction code.
 Full runtime logs, local paths and case-level evaluator joins remain outside this

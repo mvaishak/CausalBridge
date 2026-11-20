@@ -1,6 +1,6 @@
 {
   "plan_id": "midterm-repeatability-v1-draft",
-  "status": "planning_only_not_frozen",
+  "status": "historical_optional_not_frozen",
   "purpose": "repeatability_of_opened_pilot_not_fresh_holdout",
   "candidate_inference_revision": "7c7198d29f4f2e224963a2e24be778db1d81e4d7",
   "source_session_sha256": "80ff5a77d287f3c69a99234dc50c65141d1f03a9e3cdad2bb1630cc458f2c608",
@@ -60,5 +60,7 @@
   "final_execution_manifest": null,
   "human_review": "deferred",
   "generation_started": false,
-  "launch_authorized": false
+  "launch_authorized": false,
+  "superseded_by_delivery_revision": "d773118951986a2bd25d57a98adb4c9d0881a6b9",
+  "status_notice": "Track A live and integrated 38-pair Track B delivery complete; no automatic 17-pair rerun required."
 }

@@ -1,5 +1,15 @@
 # Midterm repeatability run plan
 
+**Status update — 20 November 2026:** this directory preserves the original
+17-pair results package. Current delivery is on
+[`codex/postmerge-track-b-evaluation-20261119` at `d773118`](https://github.com/mvaishak/CausalBridge/blob/d773118951986a2bd25d57a98adb4c9d0881a6b9/docs/reviews/final-execution-audit.md).
+Track A's live 50-question evaluation and the larger integrated Track B panel
+(38 pairs, 304 real-model responses) are complete. The 17-pair repeatability
+plan is historical/optional; do not launch duplicate inference from these notes.
+The 38-pair panel uses already opened labels and is exploratory, not a fresh holdout.
+
+The remaining sections preserve the proposal as written before final delivery.
+
 Prepared 19 November 2026. Planning only: no smoke generation or full rerun has
 started. The saved-results package is already complete. PR #12 was closed with
 user authorization at 2026-11-19T20:37:30Z after confirming its fix is superseded
