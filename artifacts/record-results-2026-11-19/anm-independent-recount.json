@@ -1,0 +1,17 @@
+{
+  "scope": "independent_saved_artifact_integrity_and_accounting_review_not_a_second_numerical_estimator",
+  "archive_sha256": "98808df804e302da385b796dc7c576b8d3a3dec24e8c69e600123751119ff3ba",
+  "archived_files_verified": 7125,
+  "saved_validation_directions_checked": 114,
+  "primary_split": 261,
+  "primary_cases": 38,
+  "primary_counts": {
+    "correct": 13,
+    "wrong": 13,
+    "abstain": 12
+  },
+  "reported_primary_weighted_accuracy": 0.48106538752840194,
+  "note": "Counts use retained reference labels. This recount does not independently establish causal labels, re-fit ANM or reproduce the full original numerical calculation.",
+  "model_calls": 0,
+  "numerical_refits": 0
+}

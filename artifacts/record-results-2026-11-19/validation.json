@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "base_revision": "7c7198d29f4f2e224963a2e24be778db1d81e4d7",
+  "full_repository_tests": 1008,
+  "skipped": 0,
+  "focused_cost_scorer_lineage_tests": 56,
+  "unique_original_calls": 136,
+  "input_tokens": 128270,
+  "output_tokens": 22896,
+  "summed_client_generation_seconds": 1537.1738670000123,
+  "generation_predictor_method_http_guard_calls": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "original_pilot_files_unchanged": 182,
+  "unchanged_mechanism_controls": 14,
+  "artificial_process_trials_rejected": 56,
+  "archived_anm_files_verified": 7125,
+  "primary_anm_recount": {
+    "correct": 13,
+    "wrong": 13,
+    "abstain": 12
+  },
+  "human_annotation_complete": false,
+  "new_scientific_generations": 0,
+  "new_scientific_anm_fits": 0,
+  "pr12_remote_changes_made": true,
+  "pr12_action": "Closed as superseded after results verification; not merged."
+}

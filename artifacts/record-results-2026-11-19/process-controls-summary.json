@@ -1,0 +1,22 @@
+{
+  "scope": "artificial_process_mechanism_controls_not_natural_error_rate",
+  "unchanged_directional_controls_passed": 14,
+  "excluded_original_abstentions": 3,
+  "artificial_trials": 56,
+  "rejection_counts": {
+    "removed_E4_method": 14,
+    "stale_request_sample_digest": 14,
+    "reversed_method_citation": 14,
+    "unavailable_display_row": 14
+  },
+  "expected_codes": {
+    "removed_E4_method": "invalid_evidence",
+    "stale_request_sample_digest": "method_sample_mismatch",
+    "reversed_method_citation": "method_direction_mismatch",
+    "unavailable_display_row": "row_unavailable"
+  },
+  "source_journal_sha256": "572c8211f2440702e9f0f19e5d77bd422c01b25a61f2d5415e476bb2343022fc",
+  "model_calls": 0,
+  "anm_fits": 0,
+  "note": "Removed E4 method is rejected at schema validation. Only directional parents are eligible. Rebinding altered proposals is synthetic, not an edit to original cache receipts."
+}

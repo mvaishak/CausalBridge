@@ -14,6 +14,9 @@ diagnosis and the remaining research steps are in [readme_new.md](readme_new.md)
 For reproduction commands, use the [pilot guide](docs/pilot_run.md).
 Held-out evaluation, bootstrap intervals and the final report are deferred.
 
+Start with the [19 November team handoff](docs/team-handoff/2026-11-19/README.md)
+for audited pilot results, measured resources and the proposed midterm rerun.
+
 ## Setup
 
 Use Python 3.12 and [uv](https://docs.astral.sh/uv/getting-started/installation/).

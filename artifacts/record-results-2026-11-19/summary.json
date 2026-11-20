@@ -1,0 +1,25 @@
+{
+  "scope": "opened_pilot_record_results_not_a_new_or_held_out_experiment",
+  "cases": 17,
+  "source_groups": 7,
+  "scheduled_primary_generations": 136,
+  "unique_input_tokens": 128270,
+  "unique_output_tokens": 22896,
+  "token_observation_missing_count": 0,
+  "summed_client_generation_seconds": 1537.1738670000123,
+  "generation_latency_missing_count": 0,
+  "invocation_new_call_counts": [
+    136,
+    0
+  ],
+  "failures": {
+    "success": 136
+  },
+  "checker_latency_seconds": null,
+  "anm_fit_latency_seconds": null,
+  "monetary_cost": null,
+  "unmeasured_notice": "Checker and ANM wall times were not recorded; local dollar cost is unknown. Zero additional generation is not zero end-to-end compute.",
+  "new_scientific_model_calls": 0,
+  "new_scientific_anm_fits": 0,
+  "independent_human_annotation_complete": false
+}

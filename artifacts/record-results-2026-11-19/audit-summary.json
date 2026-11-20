@@ -1,0 +1,32 @@
+{
+  "audit_version": "native-handshake-audit-v2",
+  "model_modes": [
+    "live_ollama"
+  ],
+  "observation_kinds": [
+    "real_observational"
+  ],
+  "auditor_source_sha256": "ced2435c0a2f48c512e7ea3920fbb070cda9776f901ccef3fe4298c0a466fbbd",
+  "input_files_sha256": {
+    "events.jsonl": "572c8211f2440702e9f0f19e5d77bd422c01b25a61f2d5415e476bb2343022fc",
+    "exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61-s2.json": "6a9d83cd1a34ec3fccd603922f9d106817fdd8801b8e4a2da625f5334231133e",
+    "exports/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json": "115725e1263cc08f2696ba21241d286b12338e12b2c55edce0caca8de53fd495",
+    "invocations/02c02479492e4b96b24ddf34feb55e29.json": "74795d2f30378a01a1a355de50b933a01dafc53432895163604bbd4019e4df0a",
+    "invocations/d341ea4616b840169ff00b96fb9c3852.json": "115725e1263cc08f2696ba21241d286b12338e12b2c55edce0caca8de53fd495",
+    "manifests/02a8f6d8805f96f599e188dc3fd10035eb8b6e2b2f85a42b013b9459d8f10c61.json": "10b18386b44b210cf74ee7816f82bac57df01e48002758c9735a687ed83c76ac"
+  },
+  "passed": true,
+  "findings": [],
+  "counts": {
+    "native_started": 136,
+    "native_generated": 136,
+    "native_finished": 136,
+    "native_released": 68
+  },
+  "limitations": [
+    "Transport mode and observation provenance are separate; legacy undeclared provenance stays unspecified.",
+    "Checks durable method request/result binding, not statistical validity.",
+    "Real source-family eligibility and scorer consumption are pending."
+  ],
+  "read_only_method_relocation_notice": "Producer absolute paths were resolved read-only to local copies during this audit; original bytes and hashes were not rewritten. Local path map omitted from public summary."
+}

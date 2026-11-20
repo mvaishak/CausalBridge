@@ -1,0 +1,234 @@
+[
+  {
+    "package": "E1",
+    "condition": "S0",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 8392,
+      "known_total": 8392,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 2625,
+      "known_total": 2625,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 173.71637633600767,
+      "known_total": 173.71637633600767,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 10.218610372706333,
+    "median_generation_latency_seconds": 7.326970458001597,
+    "p95_generation_latency_seconds": 17.36774874199909,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  },
+  {
+    "package": "E1",
+    "condition": "S1",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 9055,
+      "known_total": 9055,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 2358,
+      "known_total": 2358,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 144.9699566650088,
+      "known_total": 144.9699566650088,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 8.5276445097064,
+    "median_generation_latency_seconds": 6.956534167002246,
+    "p95_generation_latency_seconds": 16.028278524997585,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  },
+  {
+    "package": "E2",
+    "condition": "S0",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 14750,
+      "known_total": 14750,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 2245,
+      "known_total": 2245,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 142.09206716898916,
+      "known_total": 142.09206716898916,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 8.35835689229348,
+    "median_generation_latency_seconds": 7.286286292001023,
+    "p95_generation_latency_seconds": 16.662124333599056,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  },
+  {
+    "package": "E2",
+    "condition": "S1",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 15413,
+      "known_total": 15413,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 1935,
+      "known_total": 1935,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 133.22879908001778,
+      "known_total": 133.22879908001778,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 7.836988181177516,
+    "median_generation_latency_seconds": 7.579958667003666,
+    "p95_generation_latency_seconds": 9.997911516198656,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  },
+  {
+    "package": "E3",
+    "condition": "S0",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 14912,
+      "known_total": 14912,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 3248,
+      "known_total": 3248,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 211.3873763780066,
+      "known_total": 211.3873763780066,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 12.434551551647447,
+    "median_generation_latency_seconds": 10.15321125000628,
+    "p95_generation_latency_seconds": 18.7968634335979,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  },
+  {
+    "package": "E3",
+    "condition": "S1",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 15575,
+      "known_total": 15575,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 2477,
+      "known_total": 2477,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 157.46369066499756,
+      "known_total": 157.46369066499756,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 9.262570039117504,
+    "median_generation_latency_seconds": 7.351238125003874,
+    "p95_generation_latency_seconds": 19.272197032996335,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  },
+  {
+    "package": "E4",
+    "condition": "S0",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 24755,
+      "known_total": 24755,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 3988,
+      "known_total": 3988,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 285.98223116600275,
+      "known_total": 285.98223116600275,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 16.822484186235457,
+    "median_generation_latency_seconds": 18.31186350000644,
+    "p95_generation_latency_seconds": 21.034026558397453,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  },
+  {
+    "package": "E4",
+    "condition": "S1",
+    "scheduled_attempts": 17,
+    "observed_generation_records": 17,
+    "input_tokens": {
+      "total": 25418,
+      "known_total": 25418,
+      "missing_count": 0
+    },
+    "output_tokens": {
+      "total": 4020,
+      "known_total": 4020,
+      "missing_count": 0
+    },
+    "generation_latency_seconds": {
+      "total": 288.33336954098195,
+      "known_total": 288.33336954098195,
+      "missing_count": 0
+    },
+    "mean_generation_latency_seconds": 16.960786443587175,
+    "median_generation_latency_seconds": 17.90707329200086,
+    "p95_generation_latency_seconds": 22.042531091601994,
+    "latency_quantile_observation_count": 17,
+    "failure_stage_counts": {
+      "success": 17
+    },
+    "measured_monetary_cost": null
+  }
+]
