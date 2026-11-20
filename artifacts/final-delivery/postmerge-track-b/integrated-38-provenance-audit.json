@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scheduled_trials": 304,
+  "provenance_counts": {
+    "saved_live_replay": 51,
+    "new_live_generation": 253
+  },
+  "transport_retry_events": 3,
+  "source_journal_sha256": "fa204999b6f2dad0a06c8a1f929b60aa6b479fd9cbe621cd0caf157ba1ad7dbd"
+}

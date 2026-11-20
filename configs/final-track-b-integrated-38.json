@@ -1,0 +1,40 @@
+{
+  "version": "final-track-b-integrated-38-v1",
+  "scope": "exploratory_opened_anm_validation_pairs",
+  "protocol": "integrated-track-b-v2-compact",
+  "roster_role": "validation",
+  "pair_count": 38,
+  "source_group_count": 12,
+  "selection": {
+    "method_limit": 512,
+    "display_limit": 16,
+    "mapping_seed": 261,
+    "sample_seed": 262,
+    "display_seed": 263
+  },
+  "anm_config": {
+    "configuration_version": "anm-study-v1-sample_512",
+    "hsic_bandwidth": "median_positive_euclidean_distance",
+    "hsic_estimator": "biased_centered_rbf",
+    "kernel_gamma": 1.0,
+    "maximum_rows": 512,
+    "method_version": "anm-krr-hsic-1.0",
+    "minimum_rows": 100,
+    "regression": "rbf_kernel_ridge",
+    "residual_scaling": "evaluation_mean_population_std",
+    "ridge_alpha": 0.1,
+    "sample_selection": "caller_selected_without_reordering",
+    "sampling_seed": 262,
+    "score_convention": "lower_dependence_favored; margin=score_ba-score_ab",
+    "split_seed": 261,
+    "standardization": "training_mean_population_std",
+    "threshold": 0.001,
+    "threshold_selection_version": "exploratory_fixed_not_calibrated",
+    "training_fraction": 0.5
+  },
+  "model_config": "configs/pilot-model.json",
+  "model_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "names_file": "configs/final-track-b-validation-names.json",
+  "anm_source_archive": "artifacts/anm-experiments-2026-11-18/run-records.tar.gz",
+  "maximum_live_calls": 304
+}

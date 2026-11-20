@@ -1,0 +1,36 @@
+{
+  "original_inputs_unchanged": true,
+  "frozen_raw_data_and_metadata_revalidated": true,
+  "original_preparation_reproduced_in_memory": true,
+  "source_to_runtime_selection_verified": true,
+  "original_files_hashed": 408,
+  "analysis_rows_reconstructed_exactly": true,
+  "original_weighted_scores_reproduced_exactly": true,
+  "session_source_hashes_match": true,
+  "native_audit_passed": true,
+  "checker_outputs_independently_adjudicated": 68,
+  "rejected_outputs_confirmed": 5,
+  "model_calls": 0,
+  "anm_fits": 0,
+  "n_pairs": 17,
+  "n_generations": 136,
+  "n_case_rows": 289,
+  "replicate_ids": [
+    "0"
+  ],
+  "python": "3.12.11",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 261,
+  "original_token_usage": {
+    "input_tokens": 128270,
+    "output_tokens": 22896
+  },
+  "max_input_tokens": 1608,
+  "max_output_tokens": 306,
+  "terminal_reasons": [
+    "stop"
+  ],
+  "original_generation_latency_seconds": 1537.1738670000123
+}

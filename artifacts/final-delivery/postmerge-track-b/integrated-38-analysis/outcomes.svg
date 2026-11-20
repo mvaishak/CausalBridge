@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="410" viewBox="0 0 900 410">
+<rect width="900" height="410" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#20303a}.title{font-size:20px;font-weight:bold}.label{font-size:15px}.small{font-size:13px}</style>
+<text x="25" y="34" class="title">Integrated Track B: opened 38-pair panel</text>
+<text x="25" y="87" class="label">E3 / S0</text>
+<rect x="180.0" y="67" width="142.1" height="29" fill="#237c69"/>
+<text x="251.1" y="87" text-anchor="middle" style="fill:white" class="small">9</text>
+<rect x="322.1" y="67" width="78.9" height="29" fill="#bb5145"/>
+<text x="361.6" y="87" text-anchor="middle" style="fill:white" class="small">5</text>
+<rect x="401.1" y="67" width="378.9" height="29" fill="#a2a8ad"/>
+<text x="590.5" y="87" text-anchor="middle" style="fill:white" class="small">24</text>
+<text x="25" y="145" class="label">E4 / S0</text>
+<rect x="180.0" y="125" width="205.3" height="29" fill="#237c69"/>
+<text x="282.6" y="145" text-anchor="middle" style="fill:white" class="small">13</text>
+<rect x="385.3" y="125" width="205.3" height="29" fill="#bb5145"/>
+<text x="487.9" y="145" text-anchor="middle" style="fill:white" class="small">13</text>
+<rect x="590.5" y="125" width="189.5" height="29" fill="#a2a8ad"/>
+<text x="685.3" y="145" text-anchor="middle" style="fill:white" class="small">12</text>
+<text x="25" y="203" class="label">E4 / S1</text>
+<rect x="180.0" y="183" width="205.3" height="29" fill="#237c69"/>
+<text x="282.6" y="203" text-anchor="middle" style="fill:white" class="small">13</text>
+<rect x="385.3" y="183" width="205.3" height="29" fill="#bb5145"/>
+<text x="487.9" y="203" text-anchor="middle" style="fill:white" class="small">13</text>
+<rect x="590.5" y="183" width="189.5" height="29" fill="#a2a8ad"/>
+<text x="685.3" y="203" text-anchor="middle" style="fill:white" class="small">12</text>
+<text x="25" y="261" class="label">E4 / S2</text>
+<rect x="180.0" y="241" width="157.9" height="29" fill="#237c69"/>
+<text x="258.9" y="261" text-anchor="middle" style="fill:white" class="small">10</text>
+<rect x="337.9" y="241" width="205.3" height="29" fill="#bb5145"/>
+<text x="440.5" y="261" text-anchor="middle" style="fill:white" class="small">13</text>
+<rect x="543.2" y="241" width="236.8" height="29" fill="#a2a8ad"/>
+<text x="661.6" y="261" text-anchor="middle" style="fill:white" class="small">15</text>
+<text x="25" y="319" class="label">ANM only</text>
+<rect x="180.0" y="299" width="205.3" height="29" fill="#237c69"/>
+<text x="282.6" y="319" text-anchor="middle" style="fill:white" class="small">13</text>
+<rect x="385.3" y="299" width="205.3" height="29" fill="#bb5145"/>
+<text x="487.9" y="319" text-anchor="middle" style="fill:white" class="small">13</text>
+<rect x="590.5" y="299" width="189.5" height="29" fill="#a2a8ad"/>
+<text x="685.3" y="319" text-anchor="middle" style="fill:white" class="small">12</text>
+<rect x="25" y="368" width="15" height="15" fill="#237c69"/>
+<text x="46" y="381" class="small">Correct</text>
+<rect x="200" y="368" width="15" height="15" fill="#bb5145"/>
+<text x="221" y="381" class="small">Wrong</text>
+<rect x="375" y="368" width="15" height="15" fill="#a2a8ad"/>
+<text x="396" y="381" class="small">Abstain</text>
+</svg>

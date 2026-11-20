@@ -1,0 +1,103 @@
+{
+  "track_a": {
+    "cases": 50,
+    "graph_groups": 10,
+    "answerable": 29,
+    "unanswerable": 21,
+    "counts": {
+      "correct_answer": 1,
+      "correct_abstention": 21,
+      "wrong_answer": 1,
+      "false_abstention": 27
+    },
+    "coverage": 0.04,
+    "answered_accuracy": 0.5,
+    "overall_correct_decision": 0.44,
+    "query_type_matches": 9,
+    "actual_model_calls": 102,
+    "input_tokens": 35069,
+    "output_tokens": 6432,
+    "latency_seconds_sum": 567.7579244530043,
+    "status_counts": {
+      "unsupported": 39,
+      "wrong_operation": 6,
+      "execution_error": 3,
+      "verified": 2
+    },
+    "by_evidence": {
+      "complete_cpts": {
+        "n": 10,
+        "correct_answer": 0,
+        "correct_abstention": 0,
+        "wrong_answer": 1,
+        "false_abstention": 9
+      },
+      "graph_only": {
+        "n": 29,
+        "correct_answer": 1,
+        "correct_abstention": 10,
+        "wrong_answer": 0,
+        "false_abstention": 18
+      },
+      "observational_joint": {
+        "n": 1,
+        "correct_answer": 0,
+        "correct_abstention": 1,
+        "wrong_answer": 0,
+        "false_abstention": 0
+      },
+      "partial_cpts": {
+        "n": 10,
+        "correct_answer": 0,
+        "correct_abstention": 10,
+        "wrong_answer": 0,
+        "false_abstention": 0
+      }
+    },
+    "intervals": {
+      "coverage": {
+        "lower": 0.0,
+        "upper": 0.12,
+        "draws": 10000,
+        "method": "source_or_graph_cluster_percentile_bootstrap_seed261_exploratory"
+      },
+      "correct_yield": {
+        "lower": 0.0,
+        "upper": 0.06,
+        "draws": 10000,
+        "method": "source_or_graph_cluster_percentile_bootstrap_seed261_exploratory"
+      },
+      "answered_accuracy": null,
+      "answered_accuracy_reason": "Only two answers, both in one graph group; no useful cluster interval"
+    }
+  },
+  "anm_real": {
+    "cases": 38,
+    "source_groups": 12,
+    "correct": 13,
+    "wrong": 13,
+    "abstain": 12,
+    "coverage": 0.6842105263157895,
+    "answered_accuracy": 0.5,
+    "intervals": {
+      "coverage": {
+        "lower": 0.53125,
+        "upper": 0.8823529411764706,
+        "draws": 10000,
+        "method": "source_or_graph_cluster_percentile_bootstrap_seed261_exploratory"
+      },
+      "correct_yield": {
+        "lower": 0.1935483870967742,
+        "upper": 0.5142857142857142,
+        "draws": 10000,
+        "method": "source_or_graph_cluster_percentile_bootstrap_seed261_exploratory"
+      },
+      "answered_accuracy": {
+        "lower": 0.2727272727272727,
+        "upper": 0.7272727272727273,
+        "draws": 10000,
+        "method": "source_or_graph_cluster_percentile_bootstrap_seed261_exploratory"
+      }
+    }
+  }
+}
