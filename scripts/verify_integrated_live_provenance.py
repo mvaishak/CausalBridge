@@ -25,6 +25,14 @@ def main():
     args = ap.parse_args()
     run, source = args.run, args.source
     session = json.loads((run / "session.json").read_text())
+    source_session = json.loads((source / "session.json").read_text())
+    frozen = json.loads(Path("configs/final-track-b-integrated-38.json").read_text())
+    if (
+        session["model_digest"] != frozen["model_digest"]
+        or source_session["model_digest"] != frozen["model_digest"]
+        or session["model_config"] != source_session["model_config"]
+    ):
+        raise ValueError("Live sessions do not share the frozen pinned model")
     source_bytes = (source / "experiment/events.jsonl").read_bytes()
     if hashlib.sha256(source_bytes).hexdigest() != session["reuse_live_events_sha256"]:
         raise ValueError("Reused source journal changed")
@@ -41,6 +49,10 @@ def main():
     current_end = {
         e["data"]["key"]: e["data"] for e in current_events if e["kind"] == "native_finished"
     }
+    for start in current_starts.values():
+        message_text = json.dumps(start["messages"])
+        if "reference_direction" in message_text or "original_pair_id" in message_text:
+            raise ValueError("Evaluator reference leaked into a model request")
     previous_starts = {
         e["data"]["attempt_id"]: e["data"] for e in prior_events if e["kind"] == "native_started"
     }

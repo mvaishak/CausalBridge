@@ -35,7 +35,7 @@ Working branch: `codex/final-delivery-20261119`, based on `main` at `7c7198d`. T
 
 ## Phase 5, deliverables
 
-- The public DSC 261 course page specifies a maximum four-page final report excluding references. `report/CausalBridge-final.pdf` renders to three pages including references, with Markdown source beside it. `presentation/CausalBridge-final.pptx` contains nine slides and passed the PowerPoint package/schema validator. No LibreOffice executable was available for a second visual render of the deck.
+- At initial delivery, the public DSC 261 course page specified a maximum four-page final report excluding references. The PDF rendered to three pages including references, with Markdown source beside it. The initial presentation had nine slides and passed the PowerPoint package/schema validator. No LibreOffice executable was available for a second visual render of the deck. The post-merge version is documented below.
 - Wrote `final-reproducibility.md`, `scripts/verify-final.sh`, and report/presentation build sources. The exact Canvas deadline and any private rubric adjustments remain unavailable.
 
 ## Phase 6, independent review
@@ -50,5 +50,7 @@ Working branch: `codex/final-delivery-20261119`, based on `main` at `7c7198d`. T
 - Froze a 38-pair exploratory integrated protocol and reviewed variable-name mapping. Reused the archived 512-row ANM requests only after exact request binding; no ANM outcome-based filtering.
 - Completed a 38-pair scripted integration check (304 fixture calls) and one-pair live integration check (eight actual pinned `qwen3:8b` calls). The full 38-pair live run is now executing under `runs/postmerge-track-b-38-live/`. Raw journals are durable; model references are not included in prompts.
 - The first full live attempt preserved 51 responses before a tunnel disconnect. The remaining 253 scheduled attempts were transport failures, not model abstentions. The failed journal was archived unchanged. A resumable run now binds the 51 saved responses to identical requests and invokes the model for the remaining trials, recording provenance and transport retries per generation.
+- The resumed 38-pair panel completed: 51 bound saved-live responses plus 253 new live responses, with three logged transport retries. Native and independent provenance audits passed. E4/S0, S1, gate and ANM-only agreed on all 38 decisions (13 correct, 13 wrong, 12 abstentions); checker S2 suppressed three benchmark-correct E4 answers and no wrong E4 answers. Matched tables, intervals, raw archive, figure and failure cases are in `docs/reviews/final-track-b-integrated-38.md` and `artifacts/final-delivery/postmerge-track-b/`.
+- Rebuilt the three-page academic report and ten-slide presentation from updated source; the final baseline check again passed 995 tests with two snapshot-dependent skips, lint/format, deterministic demonstrations, ANM handshake and package builds. The complete `scripts/verify-final.sh` also reproduced the archived 304-response provenance audit and integrated metrics byte for byte.
 - Independently reviewed IGCI and RECI assumptions using primary papers. Neither was added after examining the 38 labels, since no untouched source-separated holdout remains for a revised-method generalization claim.
 

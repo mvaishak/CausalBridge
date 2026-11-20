@@ -5,6 +5,8 @@ const pptxgen = require('pptxgenjs');
 
 const root = path.resolve(__dirname, '..');
 const metrics = JSON.parse(fs.readFileSync(path.join(root, 'artifacts/final-delivery/analysis/metrics.json')));
+const integratedPath = path.join(root, 'artifacts/final-delivery/postmerge-track-b/integrated-38-analysis/metrics.json');
+const integrated = fs.existsSync(integratedPath) ? JSON.parse(fs.readFileSync(integratedPath)) : null;
 const output = path.join(root, 'presentation/CausalBridge-final.pptx');
 fs.mkdirSync(path.dirname(output), { recursive: true });
 
@@ -121,13 +123,34 @@ txt(s, 'E4: 17 checks passed; 14 answers released; no directional change.',
   0.75, 5.52, 11.9, 0.75, 23, C.navy, true);
 note(s, '68 cached S1 checks; 48 upstream abstentions. Two strict text/structured mismatches illustrate free-text blind spots. Source: artifacts/final-delivery/track-b-diagnostics/checker-audit.json.');
 
-s = base('Conclusion and failure boundary', 9, true);
+if (integrated) {
+  const metric = (p, c) => integrated.metrics.find(x => x.package === p && x.condition === c);
+  const e3 = metric('E3', 'S0');
+  const e4 = metric('E4', 'S0');
+  const format = x => `${(100*x).toFixed(1)}%`;
+  const answered = x => x == null ? 'undefined' : format(x);
+  s = base('Larger matched real-data panel', 9);
+  txt(s, '38 pairs in 12 source groups · exploratory, opened ANM labels', 0.75, 1.47, 11.8, 0.52, 21, C.navy, true);
+  rect(s, 0.78, 2.20, 5.8, 2.68, C.pale, 0.12);
+  txt(s, 'E3 / S0', 1.10, 2.49, 5.0, 0.4, 24, C.navy, true);
+  txt(s, `${e3.correct_count} correct · ${e3.wrong_count} wrong · ${e3.abstain_count} abstain`, 1.10, 3.11, 5.0, 0.55, 19);
+  txt(s, `Coverage ${format(e3.coverage)}  ·  Answered accuracy ${answered(e3.selective_accuracy)}`, 1.10, 3.95, 5.0, 0.67, 17);
+  rect(s, 6.83, 2.20, 5.8, 2.68, 'F8EBE8', 0.12);
+  txt(s, 'E4 / S0', 7.15, 2.49, 5.0, 0.4, 24, C.navy, true);
+  txt(s, `${e4.correct_count} correct · ${e4.wrong_count} wrong · ${e4.abstain_count} abstain`, 7.15, 3.11, 5.0, 0.55, 19);
+  txt(s, `Coverage ${format(e4.coverage)}  ·  Answered accuracy ${answered(e4.selective_accuracy)}`, 7.15, 3.95, 5.0, 0.67, 17);
+  txt(s, `E4 S0 matched ANM on ${integrated.e4_s0_agrees_with_anm_count}/38 cases. Checker rejected ${integrated.checker.suppressed_correct} correct and ${integrated.checker.suppressed_wrong} wrong S1 answers.`,
+    0.75, 5.45, 11.9, 0.95, 19, C.navy, true);
+  note(s, 'Source: artifacts/final-delivery/postmerge-track-b/integrated-38-analysis/metrics.json. Labels had been opened for numerical ANM validation. 51 saved live responses were reused with exact request binding; the rest were new live calls.');
+}
+
+s = base('Conclusion and failure boundary', integrated ? 10 : 9, true);
 txt(s, 'Typed evidence can be audited.\nWrong diagnostic arrows still propagate.',
   0.75, 1.78, 11.7, 1.55, 32, C.white, true);
 txt(s, 'Our evidence supports process checking on this cohort. It does not support a general improvement in causal direction accuracy.',
   0.75, 3.75, 11.55, 1.06, 22, 'D9E9E6');
 txt(s, 'Next valid test: a new source-separated holdout after any method revision.',
   0.75, 5.47, 11.6, 0.7, 20, 'BFD7D1');
-note(s, 'Limits: one model, small grouped pilot, no fresh post-validation holdout, fallible benchmark arrows, checker free-text blind spot.');
+note(s, 'Limits: one model, grouped real-data cohorts, no fresh post-validation holdout, fallible benchmark arrows, checker free-text blind spot.');
 
 pptx.writeFile({ fileName: output });
