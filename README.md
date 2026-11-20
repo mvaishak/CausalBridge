@@ -5,17 +5,22 @@ graph and evidence. A directed path from X to Y doesn't tell us whether increasi
 X increases Y. The system checks the selected operation, its evidence requirements,
 and the proposed conclusion before answering or abstaining.
 
-Track A has graph tools, a validated 50-question/ten-group synthetic pilot, a
-selectable numerical engine and independently checked witnesses. Track B has
-ANM, matched evidence packages, a durable runner, predictor/checker and baseline
-exports. The exploratory 17-pair Tübingen pilot has been run. Its case-level
-diagnosis and the remaining research steps are in [readme_new.md](readme_new.md).
+Track A has graph tools, independently checked witnesses, a 50-question pilot
+across ten synthetic graph groups, and a completed live `qwen3:8b` run. Track B
+has ANM, matched evidence packages, a durable runner, predictor/checker and
+baseline exports. The original exploratory Tübingen pilot covered 17 pairs;
+the later integrated exploratory panel covered 38 pairs whose reference labels
+had already been opened. Neither panel is an independent held-out confirmation
+of a method revised after seeing those labels.
 
-For reproduction commands, use the [pilot guide](docs/pilot_run.md).
-Held-out evaluation, bootstrap intervals and the final report are deferred.
-
-Start with the [19 November team handoff](docs/team-handoff/2026-11-19/README.md)
-for audited pilot results, measured resources and the proposed midterm rerun.
+Start with the [final report](report/CausalBridge-final.pdf),
+[presentation](presentation/CausalBridge-final.pptx), and
+[execution audit](docs/reviews/final-execution-audit.md). The
+[reproducibility guide](docs/reviews/final-reproducibility.md) gives saved-result
+checks and fresh-run commands. The [original pilot handoff](docs/team-handoff/2026-11-19/README.md)
+and [pilot guide](docs/pilot_run.md) retain the 17-pair history and data setup;
+their proposed repeatability run is optional and was not needed for final
+delivery.
 
 ## Setup
 

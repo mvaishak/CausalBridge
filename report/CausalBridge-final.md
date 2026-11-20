@@ -1,10 +1,10 @@
 ---
 title: "CausalBridge: structured evidence and verification for LLM causal reasoning"
 author: "CausalBridge project team · DSC 261, Fall 2026"
-date: "19 November 2026"
+date: "20 November 2026"
 ---
 
-**Abstract.** We tested whether causal tools and deterministic evidence checks make a local language model's causal answers more reliable. In a 50-question synthetic known-graph pilot, Qwen3:8b released only two answers: one correct and one wrong; all 21 unanswerable questions were abstained on, but 27 answerable questions were also missed. In a 17-pair real-data pilot, adding an additive-noise-model (ANM) diagnostic led the model to copy all 14 answered method directions, including eight benchmark-wrong arrows. A later exploratory 38-pair integrated run likewise copied ANM on every pair: 13 correct, 13 wrong, 12 abstentions. Its checker suppressed three benchmark-correct E4 answers and no wrong E4 answers. ANM recovered 26/32 compatible synthetic directions at 512 rows with six abstentions, but did not transfer reliably to real pairs. Typed evidence became auditable; these experiments do not establish better causal direction accuracy.
+**Abstract.** We tested whether causal tools and deterministic evidence checks make a local language model's causal answers more reliable. In a 50-question synthetic known-graph pilot, Qwen3:8b released only two answers: one correct and one wrong; it missed 27 answerable questions, including three planning errors. In a 17-pair real-data pilot, adding an additive-noise-model (ANM) diagnostic led the model to copy all 14 answered method directions, including eight benchmark-wrong arrows. A later exploratory 38-pair integrated run likewise copied ANM on every pair: 13 correct, 13 wrong, and 12 without a released direction, including one binding failure. Its checker suppressed three benchmark-correct E4 answers and no wrong E4 answers. ANM recovered 26/32 compatible synthetic directions at 512 rows with six abstentions, but did not transfer reliably to real pairs. Typed evidence became auditable; these experiments do not establish better causal direction accuracy.
 
 ## 1. Question and prior work
 
@@ -24,7 +24,7 @@ After the pilot, the team added a 512-row ANM validation variant and completed r
 
 ## 3. Results
 
-| Panel and strategy | Correct | Wrong | Abstain | Coverage | Answered accuracy |
+| Panel and strategy | Correct | Wrong | No release | Coverage | Answered accuracy |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | A50 | 1 | 1 | 48 | 4.0% | 50.0% (2 answers) |
 | B17 E3/S0 | 4 | 4 | 9 | 67.1% weighted | 59.2% weighted |
@@ -36,11 +36,13 @@ After the pilot, the team added a 512-row ANM validation variant and completed r
 
 `A50` is the synthetic Track A run. `B17` is the original real pilot; `B38` is the exploratory 38-pair panel with opened ANM labels. E4 without `/S2` groups S0, S1, gate and ANM-only, which made the same decisions within each panel. Percentages for Track B and ANM use benchmark weights.
 
-Track A's 48 abstentions contain 21 correct abstentions and 27 missed answerable cases. Correct-answer yield is 1/50=2%. It made 102 live model stages, with three planning-stage structured-output errors. Only 9/50 parsed query types matched the oracle's intended type. In `G006_sign_complete`, the question asks whether a change in X *increases* Y. The model instead asked for $P(Y=1\mid do(X=1))$ and returned 0.31249. The verifier marked that answer valid for the changed query, while the oracle answer to the original sign question is *negative*. This is a concrete semantic-binding failure. The only correct release was a directed-path question.
+Track A's 48 nonreleases comprise 21 justified abstentions, 24 missed answerable questions without an execution error, and three planning-stage structured-output errors on answerable questions. The scorer's 27 false-abstention label includes those three errors; the operational accounting separates them. Correct-answer yield is 1/50=2%. The run made 102 live model stages. Only 9/50 parsed query types matched the oracle's intended type. In `G006_sign_complete`, the question asks whether a change in X *increases* Y. The model instead asked for $P(Y=1\mid do(X=1))$ and returned 0.31249. The verifier marked that answer valid for the changed query, while the oracle answer to the original sign question is *negative*. This is a concrete semantic-binding failure. The only correct release was a directed-path question.
 
 Track B's E4 conditions made identical decisions on all 17 pairs: 14 answers, six reference-correct, eight wrong and three abstentions. Its weighted correct-answer yield is 35.6%, wrong-answer yield 53.4%. Relative to matched E3/S0 cases, E4 changed 13 decisions, including four correct arrows becoming wrong and one wrong arrow becoming correct. Weighted correct yield fell 4.1 percentage points, even though unweighted correct yield rose 11.8 points as coverage increased. All 14 answered E4 arrows matched ANM. The checker changed no E4 release. E2/S0's apparent 100% answered accuracy came from only two released answers; its weighted coverage was 32.9%.
 
-On the larger 38-pair panel, E4/S0 and S1 copied ANM on all 38 decisions. Relative to matched E3/S0, E4 increased weighted correct yield by 12.7 points but wrong yield by 22.5 points; answered accuracy fell from 59.3% to 48.1% as coverage rose from 38.2% to 73.4%. The exploratory paired source-group bootstrap interval for the correct-yield difference is −19.9 to +46.3 points. The checker rejected three correct E4 answers for numeric citation errors and no wrong E4 answers. The simple gate made no E4 change. This panel used 512-row ANM artifacts and previously opened benchmark outcomes; it does not confirm a general benefit.
+Adding names to the same numerical evidence (E2→E3, S0) increased weighted correct-answer yield by 6.8 points in the 17-pair pilot and 22.6 points in the 38-pair panel. Wrong-answer yield also rose by 27.4 and 11.8 points, respectively. These are matched descriptive contrasts, not a reliable improvement claim.
+
+On the larger 38-pair panel, E4/S0 and S1 copied ANM on all 38 decisions. Relative to matched E3/S0, E4 increased weighted correct yield by 12.7 points but wrong yield by 22.5 points; answered accuracy fell from 59.3% to 48.1% as coverage rose from 38.2% to 73.4%. The exploratory paired source-group bootstrap interval for the correct-yield difference is −19.9 to +46.3 points. The checker rejected three correct E4 answers for numeric citation errors and no wrong E4 answers. The simple gate made no E4 change. Of the 12 E4/S0 nonreleases, 11 were model abstentions and one was a package-binding failure; E4/S2 adds three checker rejections to those 12. This panel used 512-row ANM artifacts and previously opened benchmark outcomes; it does not confirm a general benefit.
 
 The original checker reviewed 68 saved S1 proposals. Forty-eight abstained upstream and supplied no typed claims. Of 20 answered proposals, it accepted six benchmark-correct and nine wrong, and rejected two correct and three wrong. The five rejections caught unavailable E1 citations and two E3 displayed-row mismatches. In the larger panel it suppressed seven correct and seven wrong answers across packages; one E4 rejection came from four-decimal rounding against a strict 1e−12 numeric tolerance. These are process outcomes, not an estimate of causal truth.
 
