@@ -10,10 +10,11 @@ The raw 50-trace JSONL is preserved as `artifacts/final-delivery/track-a-live/tr
 | --- | ---: |
 | Correct answer on answerable case | 1 |
 | Wrong released answer | 1 |
-| False abstention on answerable case | 27 |
+| Missed answerable case without execution error | 24 |
+| Planning-stage execution error on answerable case | 3 |
 | Correct abstention on unanswerable case | 21 |
 
-Coverage is **2/50 = 4.0%**. Answered accuracy is **1/2 = 50%**, which is not informative at this coverage. Correct-answer yield is **1/50 = 2.0%**; overall correct answer-or-abstain decisions are **22/50 = 44%**. All 21 unanswerable cases were abstained on, while 27/29 answerable cases were missed. The case-level scorer uses the hidden oracle's intended answer, not merely the pipeline's `verified` status; numeric answers are compared at the frozen 0.001 tolerance. There were 102 actual model stages, 35,069 input tokens and 6,432 output tokens. Summed trace latency was 567.8 seconds. No request was replayed or mocked in this run.
+Coverage is **2/50 = 4.0%**. Answered accuracy is **1/2 = 50%**, which is not informative at this coverage. Correct-answer yield is **1/50 = 2.0%**; overall correct answer-or-abstain decisions are **22/50 = 44%**. All 21 unanswerable cases were abstained on. Of the 27/29 answerable cases missed, 24 ended without an execution error and three had a planning-stage error. The case-level scorer uses the hidden oracle's intended answer, not merely the pipeline's `verified` status; numeric answers are compared at the frozen 0.001 tolerance. There were 102 actual model stages, 35,069 input tokens and 6,432 output tokens. Summed trace latency was 567.8 seconds. No request was replayed or mocked in this run.
 
 The verifier status counts were 39 `unsupported`, 6 `wrong_operation`, 3 `execution_error` and 2 `verified`. The three execution errors are structured-output errors at the planning stage for `G001_path`, `G003_path` and `G005_path`; the full run still saved all 50 cases. The CLI returned exit code 1 because of failed case statuses, while its console confirms 50 saved traces. The exact cases and counts are in `artifacts/final-delivery/analysis/track-a-case-results.json` and `metrics.json`.
 

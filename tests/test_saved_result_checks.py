@@ -1,6 +1,7 @@
 """Regression checks for malformed records previously hidden by chained comparisons."""
 
 import copy
+import gzip
 import json
 import tarfile
 from pathlib import Path
@@ -129,6 +130,45 @@ def test_saved_panel_reproduces_and_accounting_reconciles(panel):
     s1 = next(s for s in result["metrics"] if (s["package"], s["condition"]) == ("E4", "S1"))
     assert s1["categories"]["model_abstention"] == 11  # twelfth non-answer was a binding error
     assert s1["coverage"] - e4["coverage"] == pytest.approx(0.08025)
+
+
+def test_published_metrics_separate_failures_from_abstentions(panel):
+    root = Path(__file__).resolve().parents[1] / "artifacts/final-delivery"
+    a = json.loads((root / "analysis/metrics.json").read_text())["track_a"]["counts"]
+    assert a == {
+        "correct_answer": 1,
+        "correct_abstention": 21,
+        "wrong_answer": 1,
+        "false_abstention": 24,
+        "execution_error": 3,
+    }
+    traces = [
+        json.loads(line)
+        for line in gzip.open(root / "track-a-live/traces.jsonl.gz", "rt").read().splitlines()
+    ]
+    case_rows = json.loads((root / "analysis/track-a-case-results.json").read_text())
+    failures = {t["runtime_case"]["case_id"] for t in traces if t["failure_stage"] is not None}
+    assert failures == {r["case_id"] for r in case_rows if r["execution_error"]}
+    assert all(
+        sum(r[k] for k in a) == 1 and not (r["execution_error"] and r["false_abstention"])
+        for r in case_rows
+    )
+
+    rows, truth, mapping, scores = panel
+    accounting = account_panel(rows, truth, mapping, scores)
+    published = json.loads(
+        (root / "postmerge-track-b/integrated-38-analysis/metrics.json").read_text()
+    )
+    for metric in published["metrics"]:
+        key = metric["package"], metric["condition"]
+        expected = next(s for s in accounting["metrics"] if (s["package"], s["condition"]) == key)
+        assert metric["no_release_count"] == expected["no_released_direction_count"]
+        assert metric["nonrelease_categories"] == {
+            category: count
+            for category, count in expected["categories"].items()
+            if category not in {"correct_answer", "wrong_answer"}
+        }
+        assert "abstain_count" not in metric
 
 
 def test_equal_undersized_metadata_rejected(panel):

@@ -82,7 +82,7 @@ const aRows = [
   ['Correct answer', a.counts.correct_answer, C.teal],
   ['Wrong answer', a.counts.wrong_answer, C.red],
   ['Correct abstention', a.counts.correct_abstention, C.gray],
-  ['Missed answerable', a.counts.false_abstention, 'D6AA5D'],
+  ['Missed answerable', a.counts.false_abstention + a.counts.execution_error, 'D6AA5D'],
 ];
 aRows.forEach(([label, value, color], i) => {
   const y = 1.62 + i * 1.0;
@@ -136,11 +136,11 @@ if (integrated) {
   txt(s, '38 pairs in 12 source groups · exploratory, opened ANM labels', 0.75, 1.47, 11.8, 0.52, 21, C.navy, true);
   rect(s, 0.78, 2.20, 5.8, 2.68, C.pale, 0.12);
   txt(s, 'E3 / S0', 1.10, 2.49, 5.0, 0.4, 24, C.navy, true);
-  txt(s, `${e3.correct_count} correct · ${e3.wrong_count} wrong · ${e3.abstain_count} abstain`, 1.10, 3.11, 5.0, 0.55, 19);
+  txt(s, `${e3.correct_count} correct · ${e3.wrong_count} wrong · ${e3.no_release_count} no release`, 1.10, 3.11, 5.0, 0.55, 19);
   txt(s, `Coverage ${format(e3.coverage)}  ·  Answered accuracy ${answered(e3.selective_accuracy)}`, 1.10, 3.95, 5.0, 0.67, 17);
   rect(s, 6.83, 2.20, 5.8, 2.68, 'F8EBE8', 0.12);
   txt(s, 'E4 / S0', 7.15, 2.49, 5.0, 0.4, 24, C.navy, true);
-  txt(s, `${e4.correct_count} correct · ${e4.wrong_count} wrong · ${e4.abstain_count} no release`, 7.15, 3.11, 5.0, 0.55, 19);
+  txt(s, `${e4.correct_count} correct · ${e4.wrong_count} wrong · ${e4.no_release_count} no release`, 7.15, 3.11, 5.0, 0.55, 19);
   txt(s, `Coverage ${format(e4.coverage)}  ·  Answered accuracy ${answered(e4.selective_accuracy)}`, 7.15, 3.95, 5.0, 0.67, 17);
   txt(s, `E4/S0 matched ANM on ${integrated.e4_s0_agrees_with_anm_count}/38 cases.`,
     0.75, 5.23, 11.9, 0.42, 18, C.navy, true);

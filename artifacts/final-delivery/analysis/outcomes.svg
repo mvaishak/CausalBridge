@@ -26,5 +26,5 @@
 <rect x="210" y="323" width="14" height="14" fill="#bb5145"/>
 <text x="231" y="335" class="small">Wrong answer</text>
 <rect x="390" y="323" width="14" height="14" fill="#a2a8ad"/>
-<text x="411" y="335" class="small">Abstain</text>
+<text x="411" y="335" class="small">No release</text>
 </svg>

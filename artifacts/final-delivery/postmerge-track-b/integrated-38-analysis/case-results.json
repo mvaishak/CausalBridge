@@ -15,6 +15,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -38,6 +40,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -61,6 +65,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -84,6 +90,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -105,6 +113,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -128,6 +138,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -151,6 +163,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -174,6 +188,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -195,6 +211,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -218,6 +236,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -241,6 +261,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -264,6 +286,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -285,6 +309,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -308,6 +334,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -331,6 +359,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -354,6 +384,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -375,6 +407,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -396,6 +430,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -419,6 +455,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -442,6 +480,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -465,6 +505,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -486,6 +528,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -509,6 +553,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -532,6 +578,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -555,6 +603,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -576,6 +626,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "higher_values_of_B_correlate_with_higher_values_of_A"
     ],
@@ -599,6 +651,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -622,6 +676,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -645,6 +701,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -666,6 +724,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -689,6 +749,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -712,6 +774,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -735,6 +799,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -756,6 +822,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -777,6 +845,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -800,6 +870,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -823,6 +895,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -846,6 +920,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -867,6 +943,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -890,6 +968,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -913,6 +993,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -936,6 +1018,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -957,6 +1041,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -980,6 +1066,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1003,6 +1091,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -1026,6 +1116,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -1047,6 +1139,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -1070,6 +1164,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -1093,6 +1189,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -1116,6 +1214,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -1137,6 +1237,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -1160,6 +1262,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "causal_direction"
     ],
@@ -1183,6 +1287,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "ANM_preferred"
     ],
@@ -1206,6 +1312,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -1231,6 +1339,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -1252,6 +1362,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1275,6 +1387,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1298,6 +1412,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -1321,6 +1437,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -1342,6 +1460,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "higher_values_correspond_to_higher_A"
     ],
@@ -1365,6 +1485,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "observed_pattern"
     ],
@@ -1388,6 +1510,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -1411,6 +1535,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -1432,6 +1558,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -1455,6 +1583,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -1478,6 +1608,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -1501,6 +1633,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -1522,6 +1656,8 @@
     "weighted_correct": 0.143,
     "weighted_one": 0.143,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -1543,6 +1679,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -1566,6 +1704,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1589,6 +1729,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -1612,6 +1754,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -1633,6 +1777,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1656,6 +1802,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1679,6 +1827,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -1702,6 +1852,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -1723,6 +1875,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1746,6 +1900,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -1769,6 +1925,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -1792,6 +1950,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -1813,6 +1973,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -1836,6 +1998,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -1859,6 +2023,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -1882,6 +2048,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -1903,6 +2071,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -1926,6 +2096,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -1949,6 +2121,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "ANM_preferred"
     ],
@@ -1972,6 +2146,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -1997,6 +2173,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -2018,6 +2196,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2041,6 +2221,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2064,6 +2246,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -2087,6 +2271,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -2108,6 +2294,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2131,6 +2319,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "observed_pattern"
     ],
@@ -2154,6 +2344,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "row_value_mismatch"
     ],
@@ -2177,6 +2369,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -2198,6 +2392,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -2221,6 +2417,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_result"
     ],
@@ -2244,6 +2442,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -2267,6 +2467,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -2288,6 +2490,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.143,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -2309,6 +2513,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2332,6 +2538,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2355,6 +2563,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -2378,6 +2588,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -2399,6 +2611,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2422,6 +2636,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2445,6 +2661,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -2468,6 +2686,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -2489,6 +2709,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "higher_values_of_A_correlate_with_higher_values_of_B"
     ],
@@ -2512,6 +2734,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "higher_ab_values_correlate_with_higher_b_values"
     ],
@@ -2535,6 +2759,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -2558,6 +2784,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -2579,6 +2807,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -2602,6 +2832,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -2625,6 +2857,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -2648,6 +2882,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -2669,6 +2905,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.142,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -2692,6 +2930,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -2715,6 +2955,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "Causal relationship inferred from variable labels and domain knowledge"
     ],
@@ -2738,6 +2980,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -2763,6 +3007,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -2784,6 +3030,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2807,6 +3055,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2830,6 +3080,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -2853,6 +3105,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -2874,6 +3128,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2897,6 +3153,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -2920,6 +3178,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -2943,6 +3203,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -2964,6 +3226,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -2987,6 +3251,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -3010,6 +3276,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -3033,6 +3301,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -3054,6 +3324,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -3075,6 +3347,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Blast furnace slag is a material used in the production of concrete, which suggests a causal relationship from A to B."
     ],
@@ -3098,6 +3372,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3121,6 +3397,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3144,6 +3422,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3165,6 +3445,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3188,6 +3470,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3211,6 +3495,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3234,6 +3520,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3255,6 +3543,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3278,6 +3568,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3301,6 +3593,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3324,6 +3618,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3345,6 +3641,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -3368,6 +3666,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -3391,6 +3691,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3414,6 +3716,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3435,6 +3739,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -3458,6 +3764,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3481,6 +3789,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3504,6 +3814,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3527,6 +3839,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3548,6 +3862,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3571,6 +3887,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3594,6 +3912,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3617,6 +3937,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3638,6 +3960,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -3661,6 +3985,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3684,6 +4010,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3707,6 +4035,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3728,6 +4058,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -3751,6 +4083,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -3774,6 +4108,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3797,6 +4133,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3818,6 +4156,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -3841,6 +4181,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence"
     ],
@@ -3864,6 +4206,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3887,6 +4231,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -3910,6 +4256,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -3931,6 +4279,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3954,6 +4304,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -3977,6 +4329,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4000,6 +4354,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4021,6 +4377,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4044,6 +4402,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4067,6 +4427,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4090,6 +4452,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4111,6 +4475,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -4134,6 +4500,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -4157,6 +4525,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -4180,6 +4550,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -4201,6 +4573,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -4222,6 +4596,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -4245,6 +4621,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Observed patterns suggest that Superplasticizer influences Concrete compressive strength."
     ],
@@ -4268,6 +4646,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -4293,6 +4673,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -4314,6 +4696,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4337,6 +4721,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4360,6 +4746,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4383,6 +4771,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4404,6 +4794,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4427,6 +4819,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4450,6 +4844,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4473,6 +4869,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4494,6 +4892,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -4517,6 +4917,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -4540,6 +4942,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4563,6 +4967,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4584,6 +4990,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -4607,6 +5015,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -4630,6 +5040,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -4653,6 +5065,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4676,6 +5090,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4697,6 +5113,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4720,6 +5138,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4743,6 +5163,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4766,6 +5188,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4787,6 +5211,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4810,6 +5236,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -4833,6 +5261,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -4856,6 +5286,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -4877,6 +5309,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -4900,6 +5334,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -4923,6 +5359,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -4946,6 +5384,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -4967,6 +5407,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -4988,6 +5430,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -5011,6 +5455,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5034,6 +5480,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -5057,6 +5505,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -5078,6 +5528,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5101,6 +5553,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5124,6 +5578,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -5147,6 +5603,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -5168,6 +5626,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5191,6 +5651,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5214,6 +5676,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -5237,6 +5701,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -5258,6 +5724,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -5281,6 +5749,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -5304,6 +5774,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -5327,6 +5799,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -5348,6 +5822,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -5371,6 +5847,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -5394,6 +5872,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Concrete age is typically a cause of compressive strength in concrete."
     ],
@@ -5417,6 +5897,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -5442,6 +5924,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -5463,6 +5947,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5486,6 +5972,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5509,6 +5997,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -5532,6 +6022,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -5553,6 +6045,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "higher_values_of_A_correlate_with_higher_values_of_B"
     ],
@@ -5576,6 +6070,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5599,6 +6095,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -5622,6 +6120,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -5643,6 +6143,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -5666,6 +6168,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -5689,6 +6193,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -5712,6 +6218,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -5733,6 +6241,8 @@
     "weighted_correct": 0.125,
     "weighted_one": 0.125,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -5754,6 +6264,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "B_to_A"
     ],
@@ -5777,6 +6289,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "ANM_preferred"
     ],
@@ -5800,6 +6314,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -5825,6 +6341,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -5846,6 +6364,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5869,6 +6389,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5892,6 +6414,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -5915,6 +6439,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -5936,6 +6462,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -5959,6 +6487,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -5982,6 +6512,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6005,6 +6537,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6026,6 +6560,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -6049,6 +6585,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -6072,6 +6610,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "summary_value_mismatch"
     ],
@@ -6095,6 +6635,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -6116,6 +6658,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -6137,6 +6681,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -6160,6 +6706,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6183,6 +6731,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6206,6 +6756,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6227,6 +6779,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "summary"
     ],
@@ -6250,6 +6804,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6273,6 +6829,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6296,6 +6854,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6317,6 +6877,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6340,6 +6902,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6363,6 +6927,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6386,6 +6952,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6407,6 +6975,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -6430,6 +7000,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -6453,6 +7025,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -6476,6 +7050,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -6497,6 +7073,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -6518,6 +7096,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "B_to_A"
     ],
@@ -6541,6 +7121,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6564,6 +7146,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6587,6 +7171,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6608,6 +7194,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "higher_values_of_A_correlate_with_lower_values_of_B"
     ],
@@ -6631,6 +7219,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6654,6 +7244,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6677,6 +7269,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6698,6 +7292,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "summary"
     ],
@@ -6721,6 +7317,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6744,6 +7342,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6767,6 +7367,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6788,6 +7390,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -6811,6 +7415,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -6834,6 +7440,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -6857,6 +7465,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -6878,6 +7488,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -6899,6 +7511,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6922,6 +7536,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -6945,6 +7561,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -6968,6 +7586,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -6989,6 +7609,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7012,6 +7634,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7035,6 +7659,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7058,6 +7684,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7079,6 +7707,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "higher_values_of_B_correlate_with_higher_values_of_A"
     ],
@@ -7102,6 +7732,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7125,6 +7757,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7148,6 +7782,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7169,6 +7805,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -7192,6 +7830,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -7215,6 +7855,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -7238,6 +7880,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -7259,6 +7903,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -7280,6 +7926,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7303,6 +7951,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7326,6 +7976,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7349,6 +8001,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7370,6 +8024,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7393,6 +8049,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7416,6 +8074,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7439,6 +8099,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7460,6 +8122,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "higher_values_correlate_with_higher_values"
     ],
@@ -7483,6 +8147,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7506,6 +8172,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7529,6 +8197,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7550,6 +8220,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -7573,6 +8245,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -7596,6 +8270,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -7619,6 +8295,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -7640,6 +8318,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -7661,6 +8341,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -7684,6 +8366,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -7707,6 +8391,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7730,6 +8416,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7751,6 +8439,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7774,6 +8464,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7797,6 +8489,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7820,6 +8514,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7841,6 +8537,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7864,6 +8562,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -7887,6 +8587,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -7910,6 +8612,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -7931,6 +8635,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -7954,6 +8660,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -7977,6 +8685,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8000,6 +8710,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8021,6 +8733,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -8044,6 +8758,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -8067,6 +8783,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -8090,6 +8808,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8113,6 +8833,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8134,6 +8856,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8157,6 +8881,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8180,6 +8906,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8203,6 +8931,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8224,6 +8954,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8247,6 +8979,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8270,6 +9004,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8293,6 +9029,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8314,6 +9052,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -8337,6 +9077,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -8360,6 +9102,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8383,6 +9127,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8404,6 +9150,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -8427,6 +9175,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Age is typically a cause of changes in diastolic blood pressure over time."
     ],
@@ -8450,6 +9200,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8473,6 +9225,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8496,6 +9250,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8517,6 +9273,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8540,6 +9298,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8563,6 +9323,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8586,6 +9348,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8607,6 +9371,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Age is likely a cause of diastolic blood pressure, as age typically influences blood pressure levels."
     ],
@@ -8630,6 +9396,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8653,6 +9421,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8676,6 +9446,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8697,6 +9469,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -8720,6 +9494,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -8743,6 +9519,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -8766,6 +9544,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -8787,6 +9567,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -8808,6 +9590,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Age is typically a cause of Two-hour plasma glucose levels in medical contexts."
     ],
@@ -8831,6 +9615,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Age is typically a cause of Two-hour plasma glucose levels in medical contexts."
     ],
@@ -8854,6 +9640,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -8879,6 +9667,8 @@
     "weighted_correct": 0.25,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -8900,6 +9690,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8923,6 +9715,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -8946,6 +9740,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -8969,6 +9765,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -8990,6 +9788,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -9013,6 +9813,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9036,6 +9838,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -9059,6 +9863,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -9080,6 +9886,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "prediction_failure",
+    "failure_stage": "binding",
+    "outcome_category": "execution_or_binding_failure",
     "reason_codes": [],
     "prediction_scorable": false,
     "supplied_claim_count": 3,
@@ -9101,6 +9909,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "prediction_failure",
+    "failure_stage": "binding",
+    "outcome_category": "execution_or_binding_failure",
     "reason_codes": [],
     "prediction_scorable": false,
     "supplied_claim_count": 3,
@@ -9122,6 +9932,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "parent_prediction_failed",
+    "failure_stage": "binding",
+    "outcome_category": "execution_or_binding_failure",
     "reason_codes": [],
     "prediction_scorable": false,
     "supplied_claim_count": 3,
@@ -9143,6 +9955,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "parent_failure",
+    "failure_stage": "binding",
+    "outcome_category": "execution_or_binding_failure",
     "reason_codes": [],
     "prediction_scorable": false,
     "supplied_claim_count": 3,
@@ -9164,6 +9978,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -9187,6 +10003,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "photosynthetic_photon_flux_density_drives_net_ecosystem_productivity"
     ],
@@ -9210,6 +10028,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "Observed patterns suggest that photosynthetic photon flux density (B) is a driver of net ecosystem productivity (A)."
     ],
@@ -9233,6 +10053,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -9258,6 +10080,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -9279,6 +10103,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9302,6 +10128,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9325,6 +10153,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -9348,6 +10178,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -9369,6 +10201,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9392,6 +10226,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9415,6 +10251,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -9438,6 +10276,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -9459,6 +10299,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -9482,6 +10324,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -9505,6 +10349,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -9528,6 +10374,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -9549,6 +10397,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -9570,6 +10420,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "Net ecosystem productivity is likely influenced by diffuse photosynthetic photon flux density as it represents the input of light energy that drives photosynthesis."
     ],
@@ -9593,6 +10445,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9616,6 +10470,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -9639,6 +10495,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -9660,6 +10518,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9683,6 +10543,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9706,6 +10568,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -9729,6 +10593,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -9750,6 +10616,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9773,6 +10641,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -9796,6 +10666,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -9819,6 +10691,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -9840,6 +10714,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -9863,6 +10739,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -9886,6 +10764,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3333,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "row_value_mismatch"
     ],
@@ -9909,6 +10789,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -9930,6 +10812,8 @@
     "weighted_correct": 0.3333,
     "weighted_one": 0.3333,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -9951,6 +10835,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "Net ecosystem productivity is likely influenced by direct photosynthetic photon flux density as the latter drives the former."
     ],
@@ -9974,6 +10860,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "Net ecosystem productivity is likely influenced by direct photosynthetic photon flux density as the latter provides the energy for photosynthesis."
     ],
@@ -9997,6 +10885,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -10022,6 +10912,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -10043,6 +10935,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10066,6 +10960,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10089,6 +10985,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10112,6 +11010,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10133,6 +11033,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10156,6 +11058,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10179,6 +11083,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10202,6 +11108,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10223,6 +11131,8 @@
     "weighted_correct": 0.3334,
     "weighted_one": 0.3334,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -10246,6 +11156,8 @@
     "weighted_correct": 0.3334,
     "weighted_one": 0.3334,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -10269,6 +11181,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.3334,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "summary_value_mismatch"
     ],
@@ -10292,6 +11206,8 @@
     "weighted_correct": 0.3334,
     "weighted_one": 0.3334,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -10313,6 +11229,8 @@
     "weighted_correct": 0.3334,
     "weighted_one": 0.3334,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -10334,6 +11252,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10357,6 +11277,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10380,6 +11302,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10403,6 +11327,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10424,6 +11350,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10447,6 +11375,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10470,6 +11400,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10493,6 +11425,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10514,6 +11448,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10537,6 +11473,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10560,6 +11498,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10583,6 +11523,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10604,6 +11546,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -10627,6 +11571,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -10650,6 +11596,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10673,6 +11621,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10694,6 +11644,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -10717,6 +11669,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10740,6 +11694,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10763,6 +11719,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10786,6 +11744,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10807,6 +11767,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10830,6 +11792,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10853,6 +11817,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10876,6 +11842,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10897,6 +11865,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "summary"
     ],
@@ -10920,6 +11890,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -10943,6 +11915,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -10966,6 +11940,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -10987,6 +11963,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -11010,6 +11988,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -11033,6 +12013,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -11056,6 +12038,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -11077,6 +12061,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -11098,6 +12084,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11121,6 +12109,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11144,6 +12134,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -11167,6 +12159,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -11188,6 +12182,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11211,6 +12207,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11234,6 +12232,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -11257,6 +12257,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -11278,6 +12280,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11301,6 +12305,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11324,6 +12330,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -11347,6 +12355,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -11368,6 +12378,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -11391,6 +12403,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -11414,6 +12428,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -11437,6 +12453,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -11458,6 +12476,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.25,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -11479,6 +12499,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "Initial ball speed likely influences later ball speed, suggesting B_to_A."
     ],
@@ -11502,6 +12524,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -11525,6 +12549,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -11548,6 +12574,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -11569,6 +12597,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11592,6 +12622,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11615,6 +12647,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -11638,6 +12672,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -11659,6 +12695,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -11682,6 +12720,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -11705,6 +12745,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -11728,6 +12770,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -11749,6 +12793,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -11772,6 +12818,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_result"
     ],
@@ -11795,6 +12843,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -11818,6 +12868,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -11839,6 +12891,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -11860,6 +12914,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -11883,6 +12939,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11906,6 +12964,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -11929,6 +12989,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -11950,6 +13012,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11973,6 +13037,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -11996,6 +13062,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -12019,6 +13087,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -12040,6 +13110,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "summary"
     ],
@@ -12063,6 +13135,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "higher_mean_A"
     ],
@@ -12086,6 +13160,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -12109,6 +13185,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -12130,6 +13208,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -12153,6 +13233,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -12176,6 +13258,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -12199,6 +13283,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -12220,6 +13306,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -12241,6 +13329,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -12264,6 +13354,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "A_to_B"
     ],
@@ -12287,6 +13379,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "fail",
+    "failure_stage": null,
+    "outcome_category": "checker_rejection",
     "reason_codes": [
       "method_unavailable",
       "summary_unavailable",
@@ -12312,6 +13406,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -12333,6 +13429,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -12356,6 +13454,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -12379,6 +13479,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -12402,6 +13504,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -12423,6 +13527,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -12446,6 +13552,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "observed_pattern"
     ],
@@ -12469,6 +13577,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -12492,6 +13602,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.5,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -12513,6 +13625,8 @@
     "weighted_correct": 0.5,
     "weighted_one": 0.5,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -12536,6 +13650,8 @@
     "weighted_correct": 0.5,
     "weighted_one": 0.5,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -12559,6 +13675,8 @@
     "weighted_correct": 0.5,
     "weighted_one": 0.5,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -12582,6 +13700,8 @@
     "weighted_correct": 0.5,
     "weighted_one": 0.5,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -12603,6 +13723,8 @@
     "weighted_correct": 0.5,
     "weighted_one": 0.5,
     "outcome": "B_to_A",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -12624,6 +13746,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -12647,6 +13771,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -12670,6 +13796,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -12693,6 +13821,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -12714,6 +13844,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -12737,6 +13869,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -12760,6 +13894,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -12783,6 +13919,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -12804,6 +13942,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "summary"
     ],
@@ -12827,6 +13967,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "summary"
     ],
@@ -12850,6 +13992,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -12873,6 +14017,8 @@
     "weighted_correct": 0.2,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -12894,6 +14040,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -12917,6 +14065,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -12940,6 +14090,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -12963,6 +14115,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -12984,6 +14138,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -13005,6 +14161,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13028,6 +14186,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13051,6 +14211,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13074,6 +14236,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13095,6 +14259,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13118,6 +14284,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13141,6 +14309,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13164,6 +14334,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13185,6 +14357,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13208,6 +14382,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13231,6 +14407,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13254,6 +14432,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13275,6 +14455,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -13298,6 +14480,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -13321,6 +14505,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13344,6 +14530,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13365,6 +14553,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "ambiguous_margin",
+    "failure_stage": null,
+    "outcome_category": "method_abstention",
     "reason_codes": [
       "ambiguous_margin"
     ],
@@ -13388,6 +14578,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -13411,6 +14603,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13434,6 +14628,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13457,6 +14653,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13478,6 +14676,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13501,6 +14701,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13524,6 +14726,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13547,6 +14751,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13568,6 +14774,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -13591,6 +14799,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13614,6 +14824,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13637,6 +14849,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13658,6 +14872,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -13681,6 +14897,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -13704,6 +14922,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -13727,6 +14947,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -13748,6 +14970,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 0.2,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -13769,6 +14993,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -13792,6 +15018,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction between locomotive lap time and electric voltage."
     ],
@@ -13815,6 +15043,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13838,6 +15068,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13859,6 +15091,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13882,6 +15116,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13905,6 +15141,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -13928,6 +15166,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -13949,6 +15189,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13972,6 +15214,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -13995,6 +15239,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -14018,6 +15264,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -14039,6 +15287,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -14062,6 +15312,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -14085,6 +15337,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -14108,6 +15362,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -14129,6 +15385,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
@@ -14150,6 +15408,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "Insufficient evidence to determine causal direction"
     ],
@@ -14173,6 +15433,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -14196,6 +15458,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -14219,6 +15483,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -14240,6 +15506,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -14263,6 +15531,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -14286,6 +15556,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -14309,6 +15581,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -14330,6 +15604,8 @@
     "weighted_correct": 1.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "correct_answer",
     "reason_codes": [
       "summary"
     ],
@@ -14353,6 +15629,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "model_abstention",
+    "failure_stage": null,
+    "outcome_category": "model_abstention",
     "reason_codes": [
       "insufficient_evidence"
     ],
@@ -14376,6 +15654,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [
       "prediction_abstained"
     ],
@@ -14399,6 +15679,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "upstream_model_abstention",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 0,
@@ -14420,6 +15702,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -14443,6 +15727,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "answer",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "method_direction"
     ],
@@ -14466,6 +15752,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [
       "evidence_consistent"
     ],
@@ -14489,6 +15777,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "gate_pass",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": 3,
@@ -14510,6 +15800,8 @@
     "weighted_correct": 0.0,
     "weighted_one": 1.0,
     "outcome": "A_to_B",
+    "failure_stage": null,
+    "outcome_category": "wrong_answer",
     "reason_codes": [],
     "prediction_scorable": true,
     "supplied_claim_count": null,
