@@ -82,17 +82,18 @@ const aRows = [
   ['Correct answer', a.counts.correct_answer, C.teal],
   ['Wrong answer', a.counts.wrong_answer, C.red],
   ['Correct abstention', a.counts.correct_abstention, C.gray],
-  ['Missed answerable', a.counts.false_abstention + a.counts.execution_error, 'D6AA5D'],
+  ['Missed answerable', a.counts.false_abstention, 'D6AA5D'],
+  ['Planning error', a.counts.execution_error, '8B657A'],
 ];
 aRows.forEach(([label, value, color], i) => {
-  const y = 1.62 + i * 1.0;
+  const y = 1.48 + i * 0.86;
   txt(s, label, 0.75, y, 3.2, 0.38, 19);
   rect(s, 4.0, y, 7.4 * value / 50, 0.48, color);
   txt(s, `${value} / 50`, 11.52, y, 1.0, 0.48, 18, C.ink, true);
 });
-txt(s, `${a.actual_model_calls} live model stages across 50 cases; one frozen configuration`,
+txt(s, `Only 9/50 query types matched the intended question; ${a.actual_model_calls} live model stages.`,
   0.75, 6.2, 11.5, 0.4, 18, C.navy, true);
-note(s, 'Source: archived live traces and artifacts/final-delivery/analysis/track-a-case-results.json. Each graph group contributes five dependent cases. The 27 missed answerable cases include 24 abstentions and three planning-stage execution errors.');
+note(s, 'Source: archived live traces and artifacts/final-delivery/analysis/track-a-case-results.json. Each graph group contributes five dependent cases. The 24 missed answerable cases had no execution error. Three separate cases failed planning because the candidate query did not match the parsed query. These are saved historical outcomes, not ongoing execution counts.');
 
 s = base('Track B: the E4 diagnostic dominated', 6);
 rect(s, 0.78, 1.56, 5.8, 3.7, C.pale, 0.12);
@@ -142,7 +143,7 @@ if (integrated) {
   txt(s, 'E4 / S0', 7.15, 2.49, 5.0, 0.4, 24, C.navy, true);
   txt(s, `${e4.correct_count} correct · ${e4.wrong_count} wrong · ${e4.no_release_count} no release`, 7.15, 3.11, 5.0, 0.55, 19);
   txt(s, `Coverage ${format(e4.coverage)}  ·  Answered accuracy ${answered(e4.selective_accuracy)}`, 7.15, 3.95, 5.0, 0.67, 17);
-  txt(s, `E4/S0 matched ANM on ${integrated.e4_s0_agrees_with_anm_count}/38 cases.`,
+  txt(s, `E4/S0: 11 model abstentions + 1 binding failure; ${integrated.e4_s0_agrees_with_anm_count}/38 decisions matched ANM.`,
     0.75, 5.23, 11.9, 0.42, 18, C.navy, true);
   txt(s, `Across all packages, S2 rejected ${integrated.checker.suppressed_correct} correct and ${integrated.checker.suppressed_wrong} wrong S1 proposals.`,
     0.75, 5.70, 11.9, 0.42, 18, C.navy, true);
@@ -151,13 +152,13 @@ if (integrated) {
   note(s, 'Source: artifacts/final-delivery/postmerge-track-b/integrated-38-analysis/metrics.json. The 12 E4 nonreleases are 11 model abstentions and one package-binding failure. Labels had been opened for numerical ANM validation. 51 saved live responses were reused with exact request binding; the rest were new live calls. Yield changes are weighted percentage-point differences on matched cases.');
 }
 
-s = base('Conclusion and failure boundary', integrated ? 10 : 9, true);
+s = base('Conclusion and next valid test', integrated ? 10 : 9, true);
 txt(s, 'Typed evidence can be audited.\nWrong diagnostic arrows still propagate.',
   0.75, 1.78, 11.7, 1.55, 32, C.white, true);
-txt(s, 'Our evidence supports process checking on this cohort. It does not support a general improvement in causal direction accuracy.',
-  0.75, 3.75, 11.55, 1.06, 22, 'D9E9E6');
-txt(s, 'Next valid test: a new source-separated holdout after any method revision.',
-  0.75, 5.47, 11.6, 0.7, 20, 'BFD7D1');
-note(s, 'Limits: one model, grouped real-data cohorts, no fresh post-validation holdout, fallible benchmark arrows, checker free-text blind spot.');
+txt(s, 'Repair targets: bind the original question and package ID in code; define citation precision.',
+  0.75, 3.75, 11.55, 1.06, 21, 'D9E9E6');
+txt(s, 'Freeze revisions, then test new graph groups and a new source-separated real holdout.',
+  0.75, 5.47, 11.6, 0.7, 19, 'BFD7D1');
+note(s, 'These are proposed repairs, not evaluated improvements. The saved Track A run had 3 planning errors; the integrated E4 run had 1 package-digest binding failure. E4 also copied 13 benchmark-wrong ANM arrows, while the checker rejected 3 benchmark-correct E4 answers for citation mismatches. Limits: one model, grouped cohorts, opened 38-pair labels and fallible benchmark arrows.');
 
 pptx.writeFile({ fileName: output });
