@@ -115,8 +115,8 @@ class FrozenInputAndProvenanceTests(unittest.TestCase):
     """Offline audit fixtures; none of these constitute a live-model result."""
 
     def test_bundled_preparation_bytes_are_locked(self):
-        import tempfile
         import shutil
+        import tempfile
 
         fixture = Path(__file__).resolve().parents[1] / "sample_prepared"
         public, private = probe.read_frozen_preparation(fixture, read_oracle=True)
