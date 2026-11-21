@@ -233,9 +233,7 @@ def read_frozen_preparation(prepared, *, read_oracle=False):
         import zipfile
 
         with zipfile.ZipFile(prepared) as archive:
-            contents = {
-                name: archive.read("sample_prepared/" + name) for name in names
-            }
+            contents = {name: archive.read("sample_prepared/" + name) for name in names}
     else:
         raise ValueError("Frozen prepared input must be a directory or bundled ZIP")
 
