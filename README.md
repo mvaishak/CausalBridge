@@ -127,3 +127,12 @@ interfaces. Runtime prompts and tools must never receive gold labels or withheld
 See the [project knowledge bank](docs/knowledge/README.md) for evidence-linked
 progress, ownership, decisions and planned versus completed work. Pilot-ready
 software and offline validation are distinct from live-model research findings.
+
+## Exploratory diagnostic-following investigation
+
+The [controlled-cue protocol](docs/experiments/diagnostic-investigation-v1.md) and
+[runner/analysis handoff](docs/team-handoff/diagnostic-investigation-v1.md) prepare
+an isolated experiment on opened pilot pairs. Saved-result diagnosis and a full
+scripted smoke run are offline; live inference requires an explicit endpoint and
+passing live preflight. These proposed experiments do not change frozen results
+or establish an accuracy improvement.

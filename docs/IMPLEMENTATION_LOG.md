@@ -219,3 +219,25 @@ Plan: `docs/superpowers/plans/2026-10-27-vaishak-implementation.md`.
   remain unchanged; no numerical study or LLM evaluation was rerun.
 - Full `scripts/check.sh`: 997 tests passed, no skips; lint/format, Track A demos,
   synthetic ANM handshake and source/wheel builds passed.
+
+## 2026-11-21 — Controlled diagnostic-following investigation preparation
+
+On `codex/anm-evidence-investigation-20261121`, based on the latest Qwen3 thinking
+ablation commit `ecd1b30`, added isolated protocol, durable runner and offline
+analysis modules under evaluation. The saved-result diagnosis joins all 408
+original/ablation observations and 102 E3/E4 transitions. The new protocol freezes
+five experimental directional-cue conditions on 17 opened pairs, both thinking
+settings, plus a separate 20-call synthetic preflight. These are not fabricated
+ANM results, new benchmark evidence or changes to production verifier behavior.
+
+Validation: 26 new regression cases, full suite 1,053 passed/two existing optional
+snapshot skips, Ruff checks, scripted demos, synthetic ANM handshake and package
+builds. An offline end-to-end smoke exercised all 190 planned cells. HTTP mock
+transport tests additionally exercised model checks, live-preflight gating and
+raw-response handling; no real model inference was performed. Failed observations
+are retained, and explicit resume recovers saved raw data without retrying failures.
+
+See `docs/experiments/diagnostic-investigation-v1.md`, the shared runner handoff,
+and `artifacts/diagnostic-investigation-v1/`. Live execution and the final scientific
+interpretation remain for the compute owner. Publication requires separate user
+authorization; no commits, pushes or merges were made during preparation.

@@ -1,0 +1,221 @@
+{
+  "observations": 408,
+  "transition_rows": 102,
+  "propagation": [
+    {
+      "experiment": "original_4096_512",
+      "style": "S0",
+      "think": false,
+      "wrong_copy": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "resistance": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "protective_abstention": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "wrong_anm_execution_failure": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "harmful_switch": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0
+      },
+      "correct_tool_acceptance": {
+        "numerator": 6,
+        "denominator": 6,
+        "rate": 1.0
+      }
+    },
+    {
+      "experiment": "original_4096_512",
+      "style": "S1",
+      "think": false,
+      "wrong_copy": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "resistance": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "protective_abstention": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "wrong_anm_execution_failure": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "harmful_switch": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "correct_tool_acceptance": {
+        "numerator": 6,
+        "denominator": 6,
+        "rate": 1.0
+      }
+    },
+    {
+      "experiment": "matched_8192_4096",
+      "style": "S0",
+      "think": true,
+      "wrong_copy": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "resistance": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "protective_abstention": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "wrong_anm_execution_failure": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "harmful_switch": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "correct_tool_acceptance": {
+        "numerator": 6,
+        "denominator": 6,
+        "rate": 1.0
+      }
+    },
+    {
+      "experiment": "matched_8192_4096",
+      "style": "S1",
+      "think": false,
+      "wrong_copy": {
+        "numerator": 7,
+        "denominator": 8,
+        "rate": 0.875
+      },
+      "resistance": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "protective_abstention": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "wrong_anm_execution_failure": {
+        "numerator": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "harmful_switch": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "correct_tool_acceptance": {
+        "numerator": 6,
+        "denominator": 6,
+        "rate": 1.0
+      }
+    },
+    {
+      "experiment": "matched_8192_4096",
+      "style": "S0",
+      "think": false,
+      "wrong_copy": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "resistance": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "protective_abstention": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "wrong_anm_execution_failure": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "harmful_switch": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "correct_tool_acceptance": {
+        "numerator": 6,
+        "denominator": 6,
+        "rate": 1.0
+      }
+    },
+    {
+      "experiment": "matched_8192_4096",
+      "style": "S1",
+      "think": true,
+      "wrong_copy": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "resistance": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "protective_abstention": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "wrong_anm_execution_failure": {
+        "numerator": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "harmful_switch": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "correct_tool_acceptance": {
+        "numerator": 6,
+        "denominator": 6,
+        "rate": 1.0
+      }
+    }
+  ],
+  "source_sha256": {
+    "artifacts/final-delivery/track-b-pilot/original-real-pilot-01.zip": "b73b24c45268ac1bc61ae250a2a81aa97ecb6190b923aeafd92d033c340b3f8a",
+    "artifacts/qwen3-thinking-ablation-8192-4096-01/run-records.tar.gz": "b5248b5c9d42358ed1e72d9d7a28459d6c98d2b94fdfaae43950d2b19b919327"
+  },
+  "scope": "Observed output transitions; not proof of internal reasoning or a causal effect of historical budget differences."
+}
