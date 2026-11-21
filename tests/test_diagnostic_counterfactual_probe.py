@@ -24,8 +24,7 @@ class DiagnosticProbeTests(unittest.TestCase):
             rows = [x for x in self.public if x["case_id"] == gold["case_id"]]
             self.assertEqual(len(rows), 4)
             assert all(
-                x["evidence"]["display_rows"] == rows[0]["evidence"]["display_rows"]
-                for x in rows
+                x["evidence"]["display_rows"] == rows[0]["evidence"]["display_rows"] for x in rows
             )
             assert all(x["evidence"]["summary"] == rows[0]["evidence"]["summary"] for x in rows)
 
@@ -57,20 +56,31 @@ class DiagnosticProbeTests(unittest.TestCase):
         truth = {x["case_id"]: x["reference_direction"] for x in self.private}
         rows = []
         for item in self.public:
-            direction = (truth[item["case_id"]] if item["arm"] == "aligned" else
-                         ("B_to_A" if truth[item["case_id"]] == "A_to_B" else "A_to_B")
-                         if item["arm"] == "reversed" else None)
-            rows.append({
-                "case_id": item["case_id"], "arm": item["arm"],
-                "mode": "live_ollama",  # fake solely to exercise classifier shape
-                "trace": {"evidence": item["evidence"],
-                          "package_digest": probe.digest(item["evidence"]),
-                          "failure_stage": None,
-                          "prediction": {"case_id": item["case_id"],
-                                         "package_digest": probe.digest(item["evidence"]),
-                                         "predicted_direction": direction,
-                                         "abstained": direction is None}},
-            })
+            direction = (
+                truth[item["case_id"]]
+                if item["arm"] == "aligned"
+                else ("B_to_A" if truth[item["case_id"]] == "A_to_B" else "A_to_B")
+                if item["arm"] == "reversed"
+                else None
+            )
+            rows.append(
+                {
+                    "case_id": item["case_id"],
+                    "arm": item["arm"],
+                    "mode": "live_ollama",  # fake solely to exercise classifier shape
+                    "trace": {
+                        "evidence": item["evidence"],
+                        "package_digest": probe.digest(item["evidence"]),
+                        "failure_stage": None,
+                        "prediction": {
+                            "case_id": item["case_id"],
+                            "package_digest": probe.digest(item["evidence"]),
+                            "predicted_direction": direction,
+                            "abstained": direction is None,
+                        },
+                    },
+                }
+            )
         return rows
 
     def test_scorer_separates_effects(self):
