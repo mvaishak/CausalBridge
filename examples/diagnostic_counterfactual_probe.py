@@ -262,8 +262,7 @@ def verify_ollama_model(client, config, *, expected_digest=EXPECTED_MODEL_DIGEST
     if not isinstance(models, list):
         raise ValueError("Ollama server provided no model registry")
     matches = [
-        m for m in models
-        if isinstance(m, dict) and m.get("name", m.get("model")) == config.model
+        m for m in models if isinstance(m, dict) and m.get("name", m.get("model")) == config.model
     ]
     if len(matches) != 1:
         raise ValueError("Configured model is missing or ambiguous in Ollama /api/tags")
@@ -317,9 +316,10 @@ def run_live(public, *, model_config, output):
         )
         model = OllamaModel(config, client=client)
         # Independently write the intended prompts *before* the model is called.
-        with (output / "requests.jsonl").open("x", encoding="utf8") as req_file, (
-            output / "responses.jsonl"
-        ).open("x", encoding="utf8") as response_file:
+        with (
+            (output / "requests.jsonl").open("x", encoding="utf8") as req_file,
+            (output / "responses.jsonl").open("x", encoding="utf8") as response_file,
+        ):
             for item in public:
                 ev = DirectionEvidence.model_validate(item["evidence"])
                 messages = direction_messages(ev, condition)
@@ -458,12 +458,15 @@ def audit_saved_live(public, requests, responses, identity, complete):
                 parsed = trace.get("prediction")
                 defaults = {"reason_code": None, "claims": []}
                 fields = (
-                    "case_id", "package_digest", "predicted_direction",
-                    "abstained", "reason_code", "claims",
+                    "case_id",
+                    "package_digest",
+                    "predicted_direction",
+                    "abstained",
+                    "reason_code",
+                    "claims",
                 )
                 if parsed is None or not all(
-                    native_reply.get(k, defaults.get(k)) == parsed.get(k)
-                    for k in fields
+                    native_reply.get(k, defaults.get(k)) == parsed.get(k) for k in fields
                 ):
                     raise ValueError("Saved prediction differs from original raw output")
         elif failure is None:
@@ -477,8 +480,7 @@ def audit_saved_live(public, requests, responses, identity, complete):
         "failure_count": failed,
         "model_digest": EXPECTED_MODEL_DIGEST,
         "warning": (
-            "Saved HTTP receipts are independently cross-checked, "
-            "not cryptographically attested"
+            "Saved HTTP receipts are independently cross-checked, not cryptographically attested"
         ),
     }
 
@@ -652,10 +654,9 @@ def main(argv=None):
         run = args.run
         identity = json.loads((run / "run-identity.json").read_text())
         complete = json.loads((run / "run-complete.json").read_text())
-        if (
-            complete.get("requests_sha256") != file_sha256(run / "requests.jsonl")
-            or complete.get("responses_sha256") != file_sha256(run / "responses.jsonl")
-        ):
+        if complete.get("requests_sha256") != file_sha256(run / "requests.jsonl") or complete.get(
+            "responses_sha256"
+        ) != file_sha256(run / "responses.jsonl"):
             raise ValueError("Committed run completion receipt differs from saved files")
         requests = load_jsonl(run / "requests.jsonl")
         responses = load_jsonl(run / "responses.jsonl")
