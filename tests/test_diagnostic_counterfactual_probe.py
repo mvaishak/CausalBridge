@@ -166,9 +166,14 @@ class FrozenInputAndProvenanceTests(unittest.TestCase):
         )
         requests, responses = [], []
         config = {
-            "model": "qwen3:8b", "base_url": "http://127.0.0.1:11435",
-            "timeout_seconds": 300.0, "temperature": 0.0, "seed": 261,
-            "max_tokens": 512, "context_tokens": 4096, "think": False,
+            "model": "qwen3:8b",
+            "base_url": "http://127.0.0.1:11435",
+            "timeout_seconds": 300.0,
+            "temperature": 0.0,
+            "seed": 261,
+            "max_tokens": 512,
+            "context_tokens": 4096,
+            "think": False,
         }
         for item in public:
             cid, arm, evidence = item["case_id"], item["arm"], item["evidence"]
@@ -185,30 +190,46 @@ class FrozenInputAndProvenanceTests(unittest.TestCase):
             ]
             schema = {"title": "DirectionPrediction"}
             req = {
-                "case_id": cid, "arm": arm, "package_digest": probe.digest(evidence),
-                "prompt_digest": probe.digest(messages), "messages": messages,
-                "output_schema": schema, "condition": {"condition_id": "S0"},
+                "case_id": cid,
+                "arm": arm,
+                "package_digest": probe.digest(evidence),
+                "prompt_digest": probe.digest(messages),
+                "messages": messages,
+                "output_schema": schema,
+                "condition": {"condition_id": "S0"},
             }
             prediction = {
-                "case_id": cid, "package_digest": probe.digest(evidence),
-                "predicted_direction": None, "abstained": True, "reason_code": "fixture",
+                "case_id": cid,
+                "package_digest": probe.digest(evidence),
+                "predicted_direction": None,
+                "abstained": True,
+                "reason_code": "fixture",
                 "claims": [],
             }
             raw = {
-                "model": "qwen3:8b", "done": True, "done_reason": "stop",
+                "model": "qwen3:8b",
+                "done": True,
+                "done_reason": "stop",
                 "message": {"content": json.dumps(prediction)},
-                "prompt_eval_count": 11, "eval_count": 13,
+                "prompt_eval_count": 11,
+                "eval_count": 13,
             }
             trace = {
-                "evidence": evidence, "package_digest": probe.digest(evidence),
-                "request_messages": messages, "output_schema": schema,
+                "evidence": evidence,
+                "package_digest": probe.digest(evidence),
+                "request_messages": messages,
+                "output_schema": schema,
                 "prompt_digest": probe.digest(messages),
                 "prompt_condition": req["condition"],
-                "generation_config": config, "failure_stage": None,
+                "generation_config": config,
+                "failure_stage": None,
                 "generation": {
-                    "text": raw["message"]["content"], "raw_response": json.dumps(raw),
-                    "model": "qwen3:8b", "status": "complete",
-                    "input_tokens": 11, "output_tokens": 13,
+                    "text": raw["message"]["content"],
+                    "raw_response": json.dumps(raw),
+                    "model": "qwen3:8b",
+                    "status": "complete",
+                    "input_tokens": 11,
+                    "output_tokens": 13,
                 },
                 "prediction": prediction,
             }
@@ -224,7 +245,8 @@ class FrozenInputAndProvenanceTests(unittest.TestCase):
         complete = {
             "observed_model_after": {"name": "qwen3:8b", "digest": probe.EXPECTED_MODEL_DIGEST},
             "status": "complete_pending_independent_audit",
-            "request_count": 96, "response_count": 96,
+            "request_count": 96,
+            "response_count": 96,
         }
         return public, requests, responses, identity, complete
 
