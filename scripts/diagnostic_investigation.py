@@ -45,10 +45,10 @@ def main():
         p = sub.add_parser(command)
         p.add_argument("--output", type=Path, required=True)
         if command == "smoke":
-            p.add_argument("--protocol", choices=["v1", "v2"], default="v1")
+            p.add_argument("--protocol", choices=["v1", "v2", "v3"], default="v1")
     p = sub.add_parser("prepare")
-    p.add_argument("--phase", choices=["preflight", "full"], required=True)
-    p.add_argument("--protocol", choices=["v1", "v2"], default="v1")
+    p.add_argument("--phase", choices=["diagnostic", "preflight", "full"], required=True)
+    p.add_argument("--protocol", choices=["v1", "v2", "v3"], default="v1")
     p.add_argument("--output", type=Path, required=True)
     p = sub.add_parser("run")
     p.add_argument("--plan", type=Path, required=True)
@@ -65,7 +65,12 @@ def main():
     if args.command == "diagnose":
         result = diagnose(args.output)
     elif args.command == "prepare":
-        result = prepare(args.output, preflight=args.phase == "preflight", protocol=args.protocol)
+        result = prepare(
+            args.output,
+            preflight=args.phase == "preflight",
+            diagnostic=args.phase == "diagnostic",
+            protocol=args.protocol,
+        )
     elif args.command == "run":
         result = run(
             args.plan,
@@ -83,11 +88,11 @@ def main():
         print(json.dumps(result, indent=2))
     elif args.command == "run":
         print(json.dumps(result, indent=2))
-        if (
-            read(args.plan / "manifest.json")["phase"] == "preflight"
-            and not result["preflight_passed"]
-        ):
+        phase = read(args.plan / "manifest.json")["phase"]
+        if phase == "preflight" and not result["preflight_passed"]:
             parser.exit(1, "Preflight failed; preserve artifacts and do not start full run.\n")
+        if phase == "diagnostic" and not result["diagnostic_passed"]:
+            parser.exit(1, "Diagnostic failed; preserve artifacts and do not start preflight.\n")
     else:
         print(json.dumps({"command": args.command, "output": str(args.output), "completed": True}))
 

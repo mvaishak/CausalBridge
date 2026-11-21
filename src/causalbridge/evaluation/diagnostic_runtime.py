@@ -1,6 +1,7 @@
 """Durable live or explicitly scripted execution of the frozen cue experiment."""
 
 import json
+import random
 import time
 from pathlib import Path
 
@@ -9,8 +10,11 @@ import httpx
 from causalbridge.discovery.schemas import canonical_digest
 from causalbridge.evaluation.diagnostic_protocol import (
     CueDecisionV2,
+    CueDecisionV3,
     CuePrediction,
     read,
+    request_payload,
+    synthetic_cases,
     validate_plan,
     write,
 )
@@ -31,7 +35,10 @@ def decode(raw, payload, model):
         raise ValueError("thinking_not_activated")
     if not payload["think"] and message.get("thinking"):
         raise ValueError("unexpected_thinking")
-    if payload["format"] == CueDecisionV2.model_json_schema():
+    if payload["format"] == CueDecisionV3.model_json_schema():
+        fields = json.loads(message["content"], object_pairs_hook=reject_duplicate_keys)
+        prediction = CueDecisionV3.model_validate(fields).normalized()
+    elif payload["format"] == CueDecisionV2.model_json_schema():
         fields = json.loads(message["content"], object_pairs_hook=reject_duplicate_keys)
         prediction = CueDecisionV2.model_validate(fields).normalized()
     elif payload["format"] == CuePrediction.model_json_schema():
@@ -70,7 +77,15 @@ def fake_response(payload):
         "evidence_basis": ["diagnostic"] if cue else [],
         "explanation": "SCRIPTED SOFTWARE FIXTURE: copies cue or abstains.",
     }
-    if payload["format"] == CueDecisionV2.model_json_schema():
+    if payload["format"] == CueDecisionV3.model_json_schema():
+        prediction.pop("predicted_direction")
+        prediction.pop("abstained")
+        prediction["decision"] = direction if direction is not None else "abstain"
+        prediction["evidence_basis"] = {
+            name: name in prediction["evidence_basis"]
+            for name in ("measurements", "variable_names", "diagnostic", "background_knowledge")
+        }
+    elif payload["format"] == CueDecisionV2.model_json_schema():
         prediction.pop("predicted_direction")
         prediction.pop("abstained")
         prediction["decision"] = direction if direction is not None else "abstain"
@@ -118,6 +133,28 @@ def run(plan, output, *, base_url=None, scripted=False, gate=None, resume=False)
             or len(gate_requests) != 20
         ):
             raise ValueError("Preflight request binding mismatch")
+        if cfg_is_v3(manifest["protocol"]):
+            expected = []
+            rng = random.Random(manifest["protocol"]["order_seed"])
+            for case in synthetic_cases():
+                cells = [
+                    (arm, think)
+                    for arm in manifest["protocol"]["conditions"]
+                    for think in manifest["protocol"]["thinking_settings"]
+                ]
+                rng.shuffle(cells)
+                for arm, think in cells:
+                    payload = request_payload(case, arm, think, manifest["protocol"])
+                    expected.append(
+                        {
+                            "trial_id": canonical_digest(
+                                {"case_id": case["case_id"], "payload": payload}
+                            ),
+                            "payload": payload,
+                        }
+                    )
+            if gate_requests != expected:
+                raise ValueError("Preflight request order differs from frozen protocol")
         for req in gate_requests:
             record = read(gate / "records" / (req["trial_id"].split(":")[-1] + ".json"))
             raw = read(gate / "raw" / (req["trial_id"].split(":")[-1] + ".json"))
@@ -147,7 +184,9 @@ def run(plan, output, *, base_url=None, scripted=False, gate=None, resume=False)
         write(output / "requests.json", requests)
     failures = 0
     rejections = 0
-    fail_fast = manifest["phase"] == "preflight" and cfg.get("preflight_fail_fast", False)
+    fail_fast = manifest["phase"] in ("preflight", "diagnostic") and cfg.get(
+        "preflight_fail_fast", False
+    )
     with httpx.Client(timeout=cfg["timeout_seconds"], trust_env=False) as client:
 
         def snapshot(name):
@@ -251,9 +290,18 @@ def run(plan, output, *, base_url=None, scripted=False, gate=None, resume=False)
         and completed == len(requests)
         and failures == 0
         and rejections == 0,
+        **(
+            {"diagnostic_passed": completed == len(requests) and failures == 0 and rejections == 0}
+            if manifest["phase"] == "diagnostic"
+            else {}
+        ),
         "verification_rejections": rejections,
         "mode": run_info["mode"],
         "research_result": not scripted and manifest["phase"] == "full",
     }
     write(output / "summary.json", result)
     return result
+
+
+def cfg_is_v3(cfg):
+    return cfg["protocol_version"] == "diagnostic-investigation-v3"

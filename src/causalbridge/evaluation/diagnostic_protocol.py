@@ -73,22 +73,69 @@ class CueDecisionV2(BaseModel):
         ).model_dump(mode="json")
 
 
+class EvidenceBasisV3(BaseModel):
+    """Required flags avoid an array uniqueness rule unsupported by some decoders."""
+
+    model_config = ConfigDict(extra="forbid")
+    measurements: StrictBool
+    variable_names: StrictBool
+    diagnostic: StrictBool
+    background_knowledge: StrictBool
+
+
+class CueDecisionV3(BaseModel):
+    """V2 decision semantics with a strict boolean evidence basis object."""
+
+    model_config = ConfigDict(extra="forbid")
+    decision: Literal["A_to_B", "B_to_A", "abstain"]
+    diagnostic_direction_cited: Direction | None
+    evidence_basis: EvidenceBasisV3
+    explanation: str = Field(min_length=1, max_length=4000)
+
+    def normalized(self):
+        direction = None if self.decision == "abstain" else self.decision
+        bases = self.evidence_basis.model_dump()
+        return CuePrediction(
+            predicted_direction=direction,
+            abstained=direction is None,
+            diagnostic_direction_cited=self.diagnostic_direction_cited,
+            evidence_basis=[name for name in EvidenceBasisV3.model_fields if bases[name]],
+            explanation=self.explanation,
+        ).model_dump(mode="json")
+
+
 SYSTEM_V2 = SYSTEM + (
     " Use exactly one decision field: A_to_B means predict A causes B; "
     "B_to_A means predict B causes A; abstain means decline to predict either direction. "
     "If you decline to choose, set decision to abstain. Your explanation must agree "
     "with your decision. Do not output predicted_direction or abstained fields."
 )
+SYSTEM_V3 = (
+    "Assess which causal direction is more plausible between A and B using the supplied "
+    "names and measurements. You may abstain. An external directional diagnostic, when "
+    "present, is an experimental cue, not a verified ANM artifact or proof of causation. "
+    "You may agree or disagree. Return JSON matching the supplied schema. Use exactly one "
+    "decision: A_to_B means predict A causes B; B_to_A means predict B causes A; abstain "
+    "means decline to predict either direction. Your explanation must agree with your "
+    "decision. Do not output predicted_direction or abstained fields. Report the direction "
+    "cited by the diagnostic in diagnostic_direction_cited, or null if you do not cite it. "
+    "evidence_basis is an object with exactly four required boolean fields: measurements, "
+    "variable_names, diagnostic, and background_knowledge. Set each field true if you used "
+    "that kind of information, otherwise false. Do not omit fields or add others. These "
+    "flags report information used, not proof that it is valid. If diagnostic is true, cite "
+    "its supplied direction exactly. Keep explanation concise; do not invent diagnostic "
+    "scores or evidence."
+)
 
 
 def config_path(protocol):
-    if protocol not in ("v1", "v2"):
+    if protocol not in ("v1", "v2", "v3"):
         raise ValueError("Unknown diagnostic protocol")
     return Path(f"configs/diagnostic-investigation-{protocol}.json")
 
 
 def protocol_for(cfg):
-    versions = {"diagnostic-investigation-v1": "v1", "diagnostic-investigation-v2": "v2"}
+    versions = {f"diagnostic-investigation-v{i}": f"v{i}" for i in (1, 2, 3)}
     try:
         return versions[cfg["protocol_version"]]
     except KeyError as exc:
@@ -183,6 +230,38 @@ def synthetic_cases():
     ]
 
 
+def diagnostic_cases():
+    """Independent software fixtures, outside preflight and research denominators."""
+    return [
+        {
+            "case_id": "DIAGNOSTIC_ABSENT",
+            "gold": "A_to_B",
+            "source_group": "diagnostic_fixture_absent",
+            "weight": 1.0,
+            "anm_direction": "A_to_B",
+            "evidence": {
+                "variable_labels": ["pump setting", "water flow"],
+                "units": ["level", "liters per minute"],
+                "display_rows": [[1.0, 2.2], [2.0, 3.1], [3.0, 4.2]],
+                "summary": {"n_display": 3},
+            },
+        },
+        {
+            "case_id": "DIAGNOSTIC_PRESENT",
+            "gold": "B_to_A",
+            "source_group": "diagnostic_fixture_present",
+            "weight": 1.0,
+            "anm_direction": "B_to_A",
+            "evidence": {
+                "variable_labels": ["shade level", "panel output"],
+                "units": ["index", "watts"],
+                "display_rows": [[1.0, 8.0], [2.0, 7.1], [3.0, 6.0]],
+                "summary": {"n_display": 3},
+            },
+        },
+    ]
+
+
 def source_hashes(protocol="v1"):
     paths = [
         config_path(protocol),
@@ -217,15 +296,16 @@ def request_payload(case, arm, think, cfg):
         "evidence": case["evidence"],
         "external_diagnostic": diagnostic,
     }
+    protocol = protocol_for(cfg)
+    contract = {"v1": CuePrediction, "v2": CueDecisionV2, "v3": CueDecisionV3}[protocol]
+    prompt = {"v1": SYSTEM, "v2": SYSTEM_V2, "v3": SYSTEM_V3}[protocol]
     payload = {
         "model": cfg["model"],
         "messages": [
-            {"role": "system", "content": SYSTEM_V2 if protocol_for(cfg) == "v2" else SYSTEM},
+            {"role": "system", "content": prompt},
             {"role": "user", "content": json.dumps(user, sort_keys=True, allow_nan=False)},
         ],
-        "format": (
-            CueDecisionV2 if protocol_for(cfg) == "v2" else CuePrediction
-        ).model_json_schema(),
+        "format": contract.model_json_schema(),
         "stream": False,
         "think": think,
         "options": {
@@ -238,17 +318,27 @@ def request_payload(case, arm, think, cfg):
     return payload
 
 
-def prepare(output, *, preflight=False, protocol="v1"):
+def prepare(output, *, preflight=False, diagnostic=False, protocol="v1"):
     """Freeze requests separately from evaluator labels and experimental arm metadata."""
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     cfg = read(config_path(protocol))
-    cases = synthetic_cases() if preflight else pilot_source()[0]
+    if diagnostic and (preflight or protocol != "v3"):
+        raise ValueError("Diagnostic probe is v3 only and separate from preflight")
+    cases = (
+        diagnostic_cases() if diagnostic else synthetic_cases() if preflight else pilot_source()[0]
+    )
     rng = random.Random(cfg["order_seed"])
     requests, evaluator = [], []
     for case in cases:
-        cells = [(arm, think) for arm in cfg["conditions"] for think in cfg["thinking_settings"]]
-        rng.shuffle(cells)
+        if diagnostic:
+            arm = "no_diagnostic" if case["case_id"] == "DIAGNOSTIC_ABSENT" else "correct_plain"
+            cells = [(arm, think) for think in cfg["thinking_settings"]]
+        else:
+            cells = [
+                (arm, think) for arm in cfg["conditions"] for think in cfg["thinking_settings"]
+            ]
+            rng.shuffle(cells)
         for arm, think in cells:
             cue = (
                 None
@@ -278,8 +368,12 @@ def prepare(output, *, preflight=False, protocol="v1"):
     roster = read("configs/evaluation-roster.json")
     manifest = {
         "protocol": cfg,
-        "phase": "preflight" if preflight else "full",
-        "scope": "synthetic software fixtures" if preflight else cfg["inference_scope"],
+        "phase": "diagnostic" if diagnostic else "preflight" if preflight else "full",
+        "scope": "independent diagnostic software fixtures"
+        if diagnostic
+        else "synthetic software fixtures"
+        if preflight
+        else cfg["inference_scope"],
         "scheduled": len(requests),
         "case_count": len(cases),
         "source_commit": revision,
@@ -321,9 +415,17 @@ def validate_plan(plan):
         or canonical_digest(evaluator) != manifest["evaluator_digest"]
     ):
         raise ValueError("Plan binding mismatch")
-    if manifest["phase"] not in ("preflight", "full"):
+    if manifest["phase"] not in (
+        ("preflight", "full", "diagnostic") if protocol == "v3" else ("preflight", "full")
+    ):
         raise ValueError("Unknown phase")
-    cases = synthetic_cases() if manifest["phase"] == "preflight" else pilot_source()[0]
+    cases = (
+        diagnostic_cases()
+        if manifest["phase"] == "diagnostic"
+        else synthetic_cases()
+        if manifest["phase"] == "preflight"
+        else pilot_source()[0]
+    )
     by_case = {c["case_id"]: c for c in cases}
     if len(requests) != manifest["scheduled"] or len(requests) != len(evaluator):
         raise ValueError("Scheduled trial mismatch")
@@ -368,11 +470,46 @@ def validate_plan(plan):
         if user["external_diagnostic"] != expected_diag or req["payload"]["think"] != think:
             raise ValueError("Wrong controlled cue")
         cells.add((cid, arm, think))
-    if cells != {
-        (c, arm, think)
-        for c in by_case
-        for arm in cfg["conditions"]
-        for think in cfg["thinking_settings"]
-    }:
+    expected = (
+        {
+            (
+                c["case_id"],
+                "no_diagnostic" if c["case_id"] == "DIAGNOSTIC_ABSENT" else "correct_plain",
+                think,
+            )
+            for c in cases
+            for think in cfg["thinking_settings"]
+        }
+        if manifest["phase"] == "diagnostic"
+        else {
+            (c, arm, think)
+            for c in by_case
+            for arm in cfg["conditions"]
+            for think in cfg["thinking_settings"]
+        }
+    )
+    if cells != expected:
         raise ValueError("Incomplete factorial design")
+    if protocol == "v3":
+        rng = random.Random(cfg["order_seed"])
+        order = []
+        for case in cases:
+            if manifest["phase"] == "diagnostic":
+                choices = [
+                    (
+                        "no_diagnostic"
+                        if case["case_id"] == "DIAGNOSTIC_ABSENT"
+                        else "correct_plain",
+                        think,
+                    )
+                    for think in cfg["thinking_settings"]
+                ]
+            else:
+                choices = [
+                    (arm, think) for arm in cfg["conditions"] for think in cfg["thinking_settings"]
+                ]
+                rng.shuffle(choices)
+            order.extend((case["case_id"], arm, think) for arm, think in choices)
+        if [(m["case_id"], m["arm"], m["think"]) for m in evaluator] != order:
+            raise ValueError("Frozen request order changed")
     return manifest, requests
