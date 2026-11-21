@@ -1,0 +1,35 @@
+{
+  "experiment": "qwen3-thinking-ablation-8192-4096-01",
+  "starting_commit": "fb81b96a92c8cc78360276e54bd3d9be0a974e56",
+  "cohort": "original 17 opened pilot pairs",
+  "calls": 272,
+  "matched_inputs": 136,
+  "model": "qwen3:8b",
+  "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "thinking": [
+    false,
+    true
+  ],
+  "styles": [
+    "S0",
+    "S1"
+  ],
+  "packages": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+  ],
+  "temperature": 0,
+  "seed": 261,
+  "num_ctx": 8192,
+  "num_predict": 4096,
+  "prompts": "exact archived original native_started messages and output_schema",
+  "preflight": "8 matched inputs, 16 separate calls; E1/E4, S0/S1, first two opaque cases",
+  "labels": "evaluator only; no prompt modification",
+  "infrastructure": "existing SSH forward; no authenticated direct compute endpoint available; loaded-model.json confirms 8192 context allocation",
+  "disk_free_gib_at_start": 23,
+  "primary_endpoint": "http://127.0.0.1:11435",
+  "full_launch": "only after successful preflight gate",
+  "analysis_scope": "exploratory; no new holdout"
+}
