@@ -136,3 +136,12 @@ an isolated experiment on opened pilot pairs. Saved-result diagnosis and a full
 scripted smoke run are offline; live inference requires an explicit endpoint and
 passing live preflight. These proposed experiments do not change frozen results
 or establish an accuracy improvement.
+
+## Controlled diagnostic-cue investigation: v2 contract
+
+The [v2 protocol](docs/experiments/diagnostic-investigation-v2.md) corrects the
+model-facing direction/abstention mismatch documented in the
+[preflight failure audit](docs/reviews/diagnostic-preflight-failure-audit.md).
+Use the [v2 runner handoff](docs/team-handoff/diagnostic-investigation-v2.md)
+and explicitly prepare plans with `--protocol v2`. The previous v1 artifacts
+remain frozen; v2 still requires a fresh passing live preflight.

@@ -7,7 +7,14 @@ from pathlib import Path
 import httpx
 
 from causalbridge.discovery.schemas import canonical_digest
-from causalbridge.evaluation.diagnostic_protocol import CuePrediction, read, validate_plan, write
+from causalbridge.evaluation.diagnostic_protocol import (
+    CueDecisionV2,
+    CuePrediction,
+    read,
+    validate_plan,
+    write,
+)
+from causalbridge.llm.parser import reject_duplicate_keys
 
 
 def decode(raw, payload, model):
@@ -24,7 +31,13 @@ def decode(raw, payload, model):
         raise ValueError("thinking_not_activated")
     if not payload["think"] and message.get("thinking"):
         raise ValueError("unexpected_thinking")
-    prediction = CuePrediction.model_validate_json(message["content"]).model_dump(mode="json")
+    if payload["format"] == CueDecisionV2.model_json_schema():
+        fields = json.loads(message["content"], object_pairs_hook=reject_duplicate_keys)
+        prediction = CueDecisionV2.model_validate(fields).normalized()
+    elif payload["format"] == CuePrediction.model_json_schema():
+        prediction = CuePrediction.model_validate_json(message["content"]).model_dump(mode="json")
+    else:
+        raise ValueError("unknown_output_contract")
     user = json.loads(payload["messages"][1]["content"])
     diagnostic = user["external_diagnostic"]
     cited = prediction["diagnostic_direction_cited"]
@@ -57,6 +70,10 @@ def fake_response(payload):
         "evidence_basis": ["diagnostic"] if cue else [],
         "explanation": "SCRIPTED SOFTWARE FIXTURE: copies cue or abstains.",
     }
+    if payload["format"] == CueDecisionV2.model_json_schema():
+        prediction.pop("predicted_direction")
+        prediction.pop("abstained")
+        prediction["decision"] = direction if direction is not None else "abstain"
     body = {
         "model": payload["model"],
         "done": True,
@@ -130,6 +147,7 @@ def run(plan, output, *, base_url=None, scripted=False, gate=None, resume=False)
         write(output / "requests.json", requests)
     failures = 0
     rejections = 0
+    fail_fast = manifest["phase"] == "preflight" and cfg.get("preflight_fail_fast", False)
     with httpx.Client(timeout=cfg["timeout_seconds"], trust_env=False) as client:
 
         def snapshot(name):
@@ -192,6 +210,8 @@ def run(plan, output, *, base_url=None, scripted=False, gate=None, resume=False)
                     raise ValueError("Missing durable raw response")
                 failures += bool(saved["failure"])
                 rejections += bool(saved["checker"] and not saved["checker"]["passed"])
+                if fail_fast and (failures or rejections):
+                    break
                 continue
             started = time.perf_counter()
             try:
@@ -216,12 +236,21 @@ def run(plan, output, *, base_url=None, scripted=False, gate=None, resume=False)
                 record["latency_seconds"] = raw.get("client_latency_seconds")
             write(record_path, record)
             print(f"completed {identity[:12]} failure={bool(record['failure'])}", flush=True)
+            if fail_fast and (failures or rejections):
+                break
         if not scripted:
             snapshot("model-after.json")
+    completed = sum(
+        (output / "records" / (r["trial_id"].split(":")[-1] + ".json")).exists() for r in requests
+    )
     result = {
-        "completed": len(requests),
+        "completed": completed,
+        "scheduled": len(requests),
         "failures": failures,
-        "preflight_passed": manifest["phase"] == "preflight" and failures == 0 and rejections == 0,
+        "preflight_passed": manifest["phase"] == "preflight"
+        and completed == len(requests)
+        and failures == 0
+        and rejections == 0,
         "verification_rejections": rejections,
         "mode": run_info["mode"],
         "research_result": not scripted and manifest["phase"] == "full",

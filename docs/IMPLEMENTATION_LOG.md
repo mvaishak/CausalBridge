@@ -241,3 +241,27 @@ See `docs/experiments/diagnostic-investigation-v1.md`, the shared runner handoff
 and `artifacts/diagnostic-investigation-v1/`. Live execution and the final scientific
 interpretation remain for the compute owner. Publication requires separate user
 authorization; no commits, pushes or merges were made during preparation.
+
+## 2026-11-21 — Diagnostic-cue v2 output-contract correction
+
+Audited both supplied v1 live-failure archives and verified their included checksum
+inventories, request/raw bindings and exact decoder errors. Both complete replies
+on the first no-cue synthetic cell passed the supplied JSON Schema but failed the
+application's hidden direction/abstention relationship. Earlier transport failures
+were separated from these schema failures. No v1 reply was reclassified or repaired.
+
+Added opt-in v2 plans with one generated decision enum and deterministic internal
+direction/abstention mapping. V2 rejects legacy extra fields and duplicate JSON keys;
+evidence-basis uniqueness is represented in its schema. The model, seeds, budgets,
+cohort, five cue arms and thinking settings remain fixed. Preflight now stops before
+the next trial after the first saved failure/rejection, with actual completed versus
+scheduled counts. Resume retains failures; full-run per-cell handling is unchanged.
+Existing v1 plans remain bound to their original source commit; no frozen plan was
+silently updated. The v1 config, protocol and artifacts remain unchanged.
+
+Validation: full suite 1,082 passed with two existing optional-snapshot skips;
+29 new v2 regression cases plus the existing 26 cue-study tests. V2 scripted smoke
+completed 20 preflight and 170 full cells; mock HTTP success/failure/resume tests
+passed. Ruff, demos, synthetic ANM handshake and source/wheel builds passed.
+These are software checks, not live v2 model findings. Fresh live preflight and
+170-cell inference remain pending. Changes are not committed or published.

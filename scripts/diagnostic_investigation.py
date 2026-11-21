@@ -9,12 +9,12 @@ from causalbridge.evaluation.diagnostic_protocol import prepare, read
 from causalbridge.evaluation.diagnostic_runtime import run
 
 
-def smoke(output):
+def smoke(output, *, protocol="v1"):
     """All 170 planned cells, no endpoint/model/network; never research evidence."""
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
-    prepare(output / "preflight-plan", preflight=True)
-    prepare(output / "full-plan")
+    prepare(output / "preflight-plan", preflight=True, protocol=protocol)
+    prepare(output / "full-plan", protocol=protocol)
     run(output / "preflight-plan", output / "preflight-run", scripted=True)
     run(output / "full-plan", output / "full-run", scripted=True)
     result = analyze(output / "full-plan", output / "full-run", output / "analysis")
@@ -44,8 +44,11 @@ def main():
     for command in ("diagnose", "smoke"):
         p = sub.add_parser(command)
         p.add_argument("--output", type=Path, required=True)
+        if command == "smoke":
+            p.add_argument("--protocol", choices=["v1", "v2"], default="v1")
     p = sub.add_parser("prepare")
     p.add_argument("--phase", choices=["preflight", "full"], required=True)
+    p.add_argument("--protocol", choices=["v1", "v2"], default="v1")
     p.add_argument("--output", type=Path, required=True)
     p = sub.add_parser("run")
     p.add_argument("--plan", type=Path, required=True)
@@ -62,7 +65,7 @@ def main():
     if args.command == "diagnose":
         result = diagnose(args.output)
     elif args.command == "prepare":
-        result = prepare(args.output, preflight=args.phase == "preflight")
+        result = prepare(args.output, preflight=args.phase == "preflight", protocol=args.protocol)
     elif args.command == "run":
         result = run(
             args.plan,
@@ -75,7 +78,7 @@ def main():
     elif args.command == "analyze":
         result = analyze(args.plan, args.run, args.output)
     else:
-        result = smoke(args.output)
+        result = smoke(args.output, protocol=args.protocol)
     if args.command == "smoke":
         print(json.dumps(result, indent=2))
     elif args.command == "run":

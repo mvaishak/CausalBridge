@@ -1,0 +1,105 @@
+{
+  "scope": "Versioned v2 contract correction and preceding archived-failure audit; no frozen v1 data changed",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6372,
+      "sha256": "47dd597e8349f090d2f1f49aba47fe233d31d5b39f1349bb7c75c6a88cf29e0e"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/README.md",
+      "bytes": 1901,
+      "sha256": "43a01e37dc2822eae585a470a72353cd2d90cf9c56bc470c480a9d43543a9afb"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/lint-format.log",
+      "bytes": 47,
+      "sha256": "6ad3070bcd4cde8f6867d11e259bff022c2a8fe0a79f8e9aef1f35b662c28b26"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/other-checks.log",
+      "bytes": 1609,
+      "sha256": "d6ece83e5fa09f05675bf2d85a3548606698d7bbda9454fdcd91c89e0230ec18"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/schema-parity-fixtures.json",
+      "bytes": 2064,
+      "sha256": "8f4e2edb671f376e99c87c30ca73d80991ae8aa07d911a3a998e63541b23f87f"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/scripted-smoke.log",
+      "bytes": 7226,
+      "sha256": "84a48168f84007040438a8f5b6e2296b6294002941922b48f10e79da1861effe"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/scripted-smoke.tar.gz",
+      "bytes": 122669,
+      "sha256": "789213331b1597fd0b71bbac89e267a011164cc8c60704db285a702c9632d871"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/smoke-manifest.json",
+      "bytes": 85660,
+      "sha256": "3d4a8d9807f1d38b7171e61e3bf685620a763afda90aea780e23f07f27194239"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/software-validation.log",
+      "bytes": 1590,
+      "sha256": "77334be17771699a04590c6db2b7ce3da23c03533809e6020a55e9f131774ecc"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v2/validation.json",
+      "bytes": 1137,
+      "sha256": "344d95da470ad1e53c0e6df6ad5562b9081647d9ff0a54fd8eccbbe04d988fab"
+    },
+    {
+      "path": "artifacts/diagnostic-preflight-failure-audit/validation.json",
+      "bytes": 5597,
+      "sha256": "f7bbab2653210c310b7f5def42d2853805469cb20165daabee8d5e6f68870f0b"
+    },
+    {
+      "path": "configs/diagnostic-investigation-v2.json",
+      "bytes": 1289,
+      "sha256": "f6758575e2e74f5e67a1a36f6498a83a3df06369e21f66e01571a56a825a289f"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_LOG.md",
+      "bytes": 18430,
+      "sha256": "39156b5596b0c064dd47d9678bc5fbfc847ea53828314b7ee0818e300fcc29ad"
+    },
+    {
+      "path": "docs/experiments/diagnostic-investigation-v2.md",
+      "bytes": 5234,
+      "sha256": "6a3d7ec12fb8d10d14e47347887bc3558e9a0f05196e942057b53d71c3eb2181"
+    },
+    {
+      "path": "docs/reviews/diagnostic-preflight-failure-audit.md",
+      "bytes": 6704,
+      "sha256": "122e3de8619c9725a294f70ce2c20c0f12505296459e13ce89abd877f380864d"
+    },
+    {
+      "path": "docs/team-handoff/diagnostic-investigation-v2.md",
+      "bytes": 5362,
+      "sha256": "aa51a49cc367be10c9cbd7c75e7154523520c3944c0db565e9cf188a10a135ea"
+    },
+    {
+      "path": "scripts/diagnostic_investigation.py",
+      "bytes": 3988,
+      "sha256": "06d4e09e15f89e6ce63fe74d9d04dec251ea553dd169e8a9965c4da4eef88167"
+    },
+    {
+      "path": "src/causalbridge/evaluation/diagnostic_protocol.py",
+      "bytes": 15001,
+      "sha256": "e48cf1070897a0b6ffad9f66f3a7400aecc17e95771876acd709df7a417e07f5"
+    },
+    {
+      "path": "src/causalbridge/evaluation/diagnostic_runtime.py",
+      "bytes": 11608,
+      "sha256": "3357ecd1eefb33a674cb86857c5ebf24bace1effd869a1d64f923bee72f9ef45"
+    },
+    {
+      "path": "tests/test_diagnostic_investigation_v2.py",
+      "bytes": 9373,
+      "sha256": "8ee3b8697bcc389e447c125872c2ae06314d1ce0038f0c40bd6dd43b728c2fb2"
+    }
+  ]
+}

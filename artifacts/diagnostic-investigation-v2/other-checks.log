@@ -1,0 +1,25 @@
+toy_complete: verified / answer / positive
+toy_graph_only: unsupported / abstain / None
+path_sign_mismatch: wrong_operation / abstain / None
+no_path_zero: verified / answer / zero
+decreasing_treatment: verified / answer / negative
+valid_backdoor: verified / answer / 0.6
+xy_only_confounded: unsupported / abstain / None
+incorrect_probability: unsupported / abstain / None
+Scripted fixtures only; these are not LLM evaluation results.
+Saved 8 traces to runs/cue-v2-demo.jsonl; statuses: {'verified': 4, 'unsupported': 3, 'wrong_operation': 1}
+toy_complete: verified / answer / positive
+toy_graph_only: unsupported / abstain / None
+path_sign_mismatch: wrong_operation / abstain / None
+no_path_zero: verified / answer / zero
+decreasing_treatment: verified / answer / negative
+valid_backdoor: verified / answer / 0.6
+xy_only_confounded: unsupported / abstain / None
+incorrect_probability: unsupported / abstain / None
+Scripted fixtures only; these are not LLM evaluation results.
+Saved 8 traces to runs/cue-v2-engine-demo.jsonl; statuses: {'verified': 4, 'unsupported': 3, 'wrong_operation': 1}
+{"anm_status": "ok", "checker_status": "pass", "margin": 0.011733515806456783, "original_request": "runs/cue-v2-anm-handshake/anm/request.json", "release": true, "s1_run_id": "99bc22bfbd2c48db97a0f3ebd2e45c3e", "score_ab": 0.0014467534460217738, "score_ba": 0.013180269252478557, "scripted_model_only": true, "synthetic_only": true}
+Building source distribution...
+Building wheel from source distribution...
+Successfully built dist/causalbridge-0.1.0.tar.gz
+Successfully built dist/causalbridge-0.1.0-py3-none-any.whl

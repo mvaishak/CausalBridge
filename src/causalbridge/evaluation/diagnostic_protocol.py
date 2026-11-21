@@ -48,6 +48,53 @@ class CuePrediction(BaseModel):
         return self
 
 
+class CueDecisionV2(BaseModel):
+    """One generated decision; internal direction/abstention are derived, never repaired."""
+
+    model_config = ConfigDict(extra="forbid")
+    decision: Literal["A_to_B", "B_to_A", "abstain"]
+    diagnostic_direction_cited: Direction | None
+    evidence_basis: list[
+        Literal["measurements", "variable_names", "diagnostic", "background_knowledge"]
+    ] = Field(max_length=4, json_schema_extra={"uniqueItems": True})
+    explanation: str = Field(min_length=1, max_length=4000)
+
+    @model_validator(mode="after")
+    def unique_bases(self):
+        if len(self.evidence_basis) != len(set(self.evidence_basis)):
+            raise ValueError("duplicate evidence bases")
+        return self
+
+    def normalized(self):
+        fields = self.model_dump(mode="json", exclude={"decision"})
+        direction = None if self.decision == "abstain" else self.decision
+        return CuePrediction(
+            predicted_direction=direction, abstained=direction is None, **fields
+        ).model_dump(mode="json")
+
+
+SYSTEM_V2 = SYSTEM + (
+    " Use exactly one decision field: A_to_B means predict A causes B; "
+    "B_to_A means predict B causes A; abstain means decline to predict either direction. "
+    "If you decline to choose, set decision to abstain. Your explanation must agree "
+    "with your decision. Do not output predicted_direction or abstained fields."
+)
+
+
+def config_path(protocol):
+    if protocol not in ("v1", "v2"):
+        raise ValueError("Unknown diagnostic protocol")
+    return Path(f"configs/diagnostic-investigation-{protocol}.json")
+
+
+def protocol_for(cfg):
+    versions = {"diagnostic-investigation-v1": "v1", "diagnostic-investigation-v2": "v2"}
+    try:
+        return versions[cfg["protocol_version"]]
+    except KeyError as exc:
+        raise ValueError("Unknown diagnostic protocol") from exc
+
+
 def read(path):
     return json.loads(Path(path).read_text())
 
@@ -136,9 +183,9 @@ def synthetic_cases():
     ]
 
 
-def source_hashes():
+def source_hashes(protocol="v1"):
     paths = [
-        CONFIG,
+        config_path(protocol),
         PILOT,
         ABLATION,
         Path("configs/evaluation-roster.json"),
@@ -173,10 +220,12 @@ def request_payload(case, arm, think, cfg):
     payload = {
         "model": cfg["model"],
         "messages": [
-            {"role": "system", "content": SYSTEM},
+            {"role": "system", "content": SYSTEM_V2 if protocol_for(cfg) == "v2" else SYSTEM},
             {"role": "user", "content": json.dumps(user, sort_keys=True, allow_nan=False)},
         ],
-        "format": CuePrediction.model_json_schema(),
+        "format": (
+            CueDecisionV2 if protocol_for(cfg) == "v2" else CuePrediction
+        ).model_json_schema(),
         "stream": False,
         "think": think,
         "options": {
@@ -189,11 +238,11 @@ def request_payload(case, arm, think, cfg):
     return payload
 
 
-def prepare(output, *, preflight=False):
+def prepare(output, *, preflight=False, protocol="v1"):
     """Freeze requests separately from evaluator labels and experimental arm metadata."""
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
-    cfg = read(CONFIG)
+    cfg = read(config_path(protocol))
     cases = synthetic_cases() if preflight else pilot_source()[0]
     rng = random.Random(cfg["order_seed"])
     requests, evaluator = [], []
@@ -221,7 +270,7 @@ def prepare(output, *, preflight=False):
                     "cue_direction": cue,
                 }
             )
-    hashes = source_hashes()
+    hashes = source_hashes(protocol)
     try:
         revision = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
     except (OSError, subprocess.CalledProcessError):
@@ -263,7 +312,8 @@ def validate_plan(plan):
     plan = Path(plan)
     manifest = read(plan / "manifest.json")
     cfg = manifest["protocol"]
-    if cfg != read(CONFIG) or manifest["source_sha256"] != source_hashes():
+    protocol = protocol_for(cfg)
+    if cfg != read(config_path(protocol)) or manifest["source_sha256"] != source_hashes(protocol):
         raise ValueError("Protocol/source bytes changed; create a new protocol/plan")
     requests, evaluator = read(plan / "requests.json"), read(plan / "evaluator.json")
     if (

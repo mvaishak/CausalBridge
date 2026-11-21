@@ -1,0 +1,138 @@
+{
+  "baseline_commit": "b8b5b44367ae18f3d666b4cb9d33ec6c7ba0ba77",
+  "mode": "offline failure archive inspection; no new model inference",
+  "archives": [
+    {
+      "file": "cue-investigation-preflight-schema-failed-04.tar.gz",
+      "sha256": "7652551b26b2728c522b9b27aed1556823907e2a5f2288c450f9a2473d5b637c",
+      "regular_files_excluding_apple_metadata": 473,
+      "verified_manifests": [
+        {
+          "manifest": "runs/cue-delivery-offline-blocked-01/SHA256SUMS",
+          "verified_entries": 407
+        },
+        {
+          "manifest": "runs/cue-delivery-preflight-failed-01/SHA256SUMS",
+          "verified_entries": 432
+        },
+        {
+          "manifest": "runs/cue-delivery-preflight-resumed-01/SHA256SUMS",
+          "verified_entries": 437
+        },
+        {
+          "manifest": "runs/cue-delivery-preflight-failed-02/SHA256SUMS",
+          "verified_entries": 462
+        },
+        {
+          "manifest": "runs/cue-delivery-preflight-schema-failed-04/SHA256SUMS",
+          "verified_entries": 472
+        }
+      ],
+      "live_records": {
+        "runs/cue-preflight-live-01": {
+          "saved_records": 20,
+          "saved_raw_responses": 0,
+          "failures": {
+            "ReadError": 19,
+            "RemoteProtocolError": 1
+          }
+        },
+        "runs/cue-preflight-live-02": {
+          "saved_records": 20,
+          "saved_raw_responses": 0,
+          "failures": {
+            "ReadError": 19,
+            "RemoteProtocolError": 1
+          }
+        },
+        "runs/cue-preflight-live-04": {
+          "saved_records": 1,
+          "saved_raw_responses": 1,
+          "failures": {
+            "ValidationError": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "cue-investigation-repeat-schema-failed-05.tar.gz",
+      "sha256": "1462f1ef5560479164239ca693096153a9c7c7905c838a869719375bcf6f1565",
+      "regular_files_excluding_apple_metadata": 416,
+      "verified_manifests": [
+        {
+          "manifest": "runs/cue-delivery-repeat-schema-failed-05/SHA256SUMS",
+          "verified_entries": 415
+        }
+      ],
+      "live_records": {
+        "runs/cue-preflight-live-05": {
+          "saved_records": 1,
+          "saved_raw_responses": 1,
+          "failures": {
+            "ValidationError": 1
+          }
+        }
+      }
+    }
+  ],
+  "live_responses": [
+    {
+      "archive": "cue-investigation-preflight-schema-failed-04.tar.gz",
+      "raw_path": "runs/cue-preflight-live-04/raw/3ee69948c853b44f18800586e2061dbfedf4c9c3a5d06e3f0e44f0641dbd26dc.json",
+      "raw_digest": "sha256:0b53c72ced195607b5d343506121023c5a6d0f3db3dbeea6b67cb6fd2ccbb8d6",
+      "request_digest": "sha256:b26b6e779ffafb2ed352523f063771e8cd493351d312b81b7b2b12fd46fa6f1e",
+      "http_status": 200,
+      "model": "qwen3:8b",
+      "done": true,
+      "done_reason": "stop",
+      "eval_count": 400,
+      "think_requested": true,
+      "thinking_nonempty": true,
+      "external_diagnostic": null,
+      "prediction": {
+        "predicted_direction": "B_to_A",
+        "abstained": true,
+        "diagnostic_direction_cited": null,
+        "evidence_basis": [
+          "variable_names",
+          "measurements"
+        ],
+        "explanation": "No external diagnostic provided. While measurements show B increases with A, correlation does not imply causation. Abstaining due to lack of experimental cues or causal mechanisms."
+      },
+      "replayed_failure": "ValidationError: 1 validation error for CuePrediction\n  Value error, abstained must match null direction [type=value_error, input_value={'predicted_direction': '... or causal mechanisms.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+      "output_schema_equals_baseline": true,
+      "actual_supplied_json_schema_accepts_response": true
+    },
+    {
+      "archive": "cue-investigation-repeat-schema-failed-05.tar.gz",
+      "raw_path": "runs/cue-preflight-live-05/raw/3ee69948c853b44f18800586e2061dbfedf4c9c3a5d06e3f0e44f0641dbd26dc.json",
+      "raw_digest": "sha256:e986871a9f1d7f1891838ca2c66a9240420d53987b88d90ea819be1af5c44ce8",
+      "request_digest": "sha256:b26b6e779ffafb2ed352523f063771e8cd493351d312b81b7b2b12fd46fa6f1e",
+      "http_status": 200,
+      "model": "qwen3:8b",
+      "done": true,
+      "done_reason": "stop",
+      "eval_count": 400,
+      "think_requested": true,
+      "thinking_nonempty": true,
+      "external_diagnostic": null,
+      "prediction": {
+        "predicted_direction": "B_to_A",
+        "abstained": true,
+        "diagnostic_direction_cited": null,
+        "evidence_basis": [
+          "variable_names",
+          "measurements"
+        ],
+        "explanation": "No external diagnostic provided. While measurements show B increases with A, correlation does not imply causation. Abstaining due to lack of experimental cues or causal mechanisms."
+      },
+      "replayed_failure": "ValidationError: 1 validation error for CuePrediction\n  Value error, abstained must match null direction [type=value_error, input_value={'predicted_direction': '... or causal mechanisms.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+      "output_schema_equals_baseline": true,
+      "actual_supplied_json_schema_accepts_response": true
+    }
+  ],
+  "identical_request_payloads": true,
+  "identical_final_content": true,
+  "identical_reported_thinking": true,
+  "interpretation_limit": "Same fixed-seed cell replayed twice, not independent evidence across conditions. No 170-call live experiment is present."
+}
