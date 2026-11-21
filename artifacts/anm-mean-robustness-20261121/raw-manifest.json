@@ -1,0 +1,691 @@
+{
+  "archive": "run-records.tar.gz",
+  "archive_sha256": "b3a0d556cb82542ed7c81e21c2749f57ddd1345f67a93ace96db8a65f2e5560b",
+  "files": [
+    {
+      "path": "manifest.json",
+      "bytes": 19684,
+      "sha256": "fec63ea142b2b423ed2029119e84589f37782abee43796b737cff0b2c5a239f0"
+    },
+    {
+      "path": "started.json",
+      "bytes": 99,
+      "sha256": "069725a6104f5cc265020c0f87c9a34759b8ccfb0e7b0511c465c48180b2dcb6"
+    },
+    {
+      "path": "completion.json",
+      "bytes": 160,
+      "sha256": "91069d6943a8018b760d724a718167bb1f58154782c2126ba77131d92ddcfa8e"
+    },
+    {
+      "path": "records.json",
+      "bytes": 2275277,
+      "sha256": "f906f5b78b1dee112336f8b262108bd413d0d8ff16db71416bfdff1de87260da"
+    },
+    {
+      "path": "tables.md",
+      "bytes": 4276,
+      "sha256": "1d374297042db05f9943a0f496d7e9ce201f0b42055a2dc0af900939cc57ab78"
+    },
+    {
+      "path": "originals/pilot17-D1008-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1008-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "209f10326bf52edde4240a2d3120828151d27f73b08357523b5a16c4893462ea"
+    },
+    {
+      "path": "originals/pilot17-D1008-261/inputs.json",
+      "bytes": 396,
+      "sha256": "1ce268d7464a0af0860ada27ed9ba87a95c0d52dc3cb0be60e5cabce2ab03cc9"
+    },
+    {
+      "path": "originals/pilot17-D1008-261/reproducibility.json",
+      "bytes": 2158,
+      "sha256": "2487c52a9927e579792f901ec033d1aea17ddbac0b41c3374ae59b7f72c02c03"
+    },
+    {
+      "path": "originals/pilot17-D1008-261/request.json",
+      "bytes": 508,
+      "sha256": "a4b7f69d845cb08212cbfb01dd3de511a48958e0c50e8f47061ecb9759f3ea2a"
+    },
+    {
+      "path": "originals/pilot17-D1008-261/result.json",
+      "bytes": 1327,
+      "sha256": "960c8ac64171332d63d6f90462e91473915d6c018714c1cd1d344a6f7ed2838c"
+    },
+    {
+      "path": "originals/pilot17-D1008-261/sample.json",
+      "bytes": 1875,
+      "sha256": "cafd4d9aa6b2846e09e5a6564fa0533bda3485806a6088ce8ded29aca267ea3f"
+    },
+    {
+      "path": "originals/pilot17-D1009-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1009-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "a130c1189b11e843756a9e38f9365eff8f8749b1f64bbe6caa97a27bbfb1e8ff"
+    },
+    {
+      "path": "originals/pilot17-D1009-261/inputs.json",
+      "bytes": 396,
+      "sha256": "3fb21b20d610e62480acd5bcbfcb99d7886d7dda1a8e5ed15b8eccf03b8a6027"
+    },
+    {
+      "path": "originals/pilot17-D1009-261/reproducibility.json",
+      "bytes": 2162,
+      "sha256": "bb57c497894019c314357d7a3f89b6d7a665af2fcce2fca4a021e78fb3f155ff"
+    },
+    {
+      "path": "originals/pilot17-D1009-261/request.json",
+      "bytes": 508,
+      "sha256": "ed9e7f0ce15a9e855d72ebd0cd50c6676ff8029b3a0db0f6e1c8aed2e0eba981"
+    },
+    {
+      "path": "originals/pilot17-D1009-261/result.json",
+      "bytes": 1325,
+      "sha256": "38dc7711159954ae1328462065523f0de8534a5b4e6a2326b9759edb185be386"
+    },
+    {
+      "path": "originals/pilot17-D1009-261/sample.json",
+      "bytes": 1547,
+      "sha256": "bb5f5c9faa24518a9730aeb0bd2cc3e245593fa9c0baa7034e4a2a8929fc08ec"
+    },
+    {
+      "path": "originals/pilot17-D1010-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1010-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "667b07f0c20a511324fe56138eca88d4d6cfefe9118f3f2d7244db338eb1577f"
+    },
+    {
+      "path": "originals/pilot17-D1010-261/inputs.json",
+      "bytes": 396,
+      "sha256": "2882cac7ddd1bc2bb74ffb0514103bf83b1219d21eba5cdcb7b244af5ca5addb"
+    },
+    {
+      "path": "originals/pilot17-D1010-261/reproducibility.json",
+      "bytes": 2147,
+      "sha256": "ad902374f7417be0578910a40f89ebe22faa2284242c1f2587728bf3f521041d"
+    },
+    {
+      "path": "originals/pilot17-D1010-261/request.json",
+      "bytes": 508,
+      "sha256": "6f84d91a639dccda889e9fb8e152d78ce47cec4ccf6b978c49aa3d7ce0f916f6"
+    },
+    {
+      "path": "originals/pilot17-D1010-261/result.json",
+      "bytes": 1328,
+      "sha256": "f353d86440c173a5abac3ef38ccec776a6b697d0cf465478289a13a016031bfb"
+    },
+    {
+      "path": "originals/pilot17-D1010-261/sample.json",
+      "bytes": 1750,
+      "sha256": "9962f8539ae342ea6fcd17a39b4003a590887523381a863d1ecb6b539515a4f6"
+    },
+    {
+      "path": "originals/pilot17-D1014-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1014-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "67d5b03a371104c0b5743a792caecf1148991508103c67e412494eeaf3c65e3f"
+    },
+    {
+      "path": "originals/pilot17-D1014-261/inputs.json",
+      "bytes": 396,
+      "sha256": "1d650557d578e43363d15dd23d129908291099a30d6edb7ca5f0d7c2a395f135"
+    },
+    {
+      "path": "originals/pilot17-D1014-261/reproducibility.json",
+      "bytes": 2158,
+      "sha256": "81fb2baed77c806f2d7d22203ec4b821d74b421ac43e67e35d9424874e923c97"
+    },
+    {
+      "path": "originals/pilot17-D1014-261/request.json",
+      "bytes": 508,
+      "sha256": "a1f31ce092f3db9c953da7a180a9f7e5f0c5e809dd41b4601e1bc28941125f77"
+    },
+    {
+      "path": "originals/pilot17-D1014-261/result.json",
+      "bytes": 1326,
+      "sha256": "4ce0d123bbeae6465c04a0eca0da2f92838478d1b41862b0210f54936673edfd"
+    },
+    {
+      "path": "originals/pilot17-D1014-261/sample.json",
+      "bytes": 1744,
+      "sha256": "1e8358d0e70153d244deaeb9428346cfc3744adbd834fa319f5e5a965dba9ecd"
+    },
+    {
+      "path": "originals/pilot17-D1026-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1026-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "e2837d3a331da05358087b0ed2c7f003839d4dc77623632a514943c4a5fa3963"
+    },
+    {
+      "path": "originals/pilot17-D1026-261/inputs.json",
+      "bytes": 396,
+      "sha256": "ed242e6b1c2c46a9e5c10d21d87a8df5122546b36b6d66eb38e93c458aa9c08d"
+    },
+    {
+      "path": "originals/pilot17-D1026-261/reproducibility.json",
+      "bytes": 2153,
+      "sha256": "1701a307c324dfad2149b9abee8b57db2bf42b31be5dd975e9d8c730369158e3"
+    },
+    {
+      "path": "originals/pilot17-D1026-261/request.json",
+      "bytes": 508,
+      "sha256": "38586fabecdd94eb237b8d2c15b131710c5cdf96fd03b6438e57f8a07d9b1199"
+    },
+    {
+      "path": "originals/pilot17-D1026-261/result.json",
+      "bytes": 1324,
+      "sha256": "296add0dc0baef5e1f9fa3b287ea17d10486991b1379927a99684768bd85a7d5"
+    },
+    {
+      "path": "originals/pilot17-D1026-261/sample.json",
+      "bytes": 1698,
+      "sha256": "96dce09163026881829eba67e0c9d0694ef13adda95dfd593bab7fca8731a0fb"
+    },
+    {
+      "path": "originals/pilot17-D1083-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1083-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "35899315e26759dfa18bddcdea3dbf19aa52efe0809dc7a37b48a83d45a4ba7a"
+    },
+    {
+      "path": "originals/pilot17-D1083-261/inputs.json",
+      "bytes": 396,
+      "sha256": "567db11b4b34b034992695b46fc037753a1c2595fe4b2fdb9782743a8b9a65f5"
+    },
+    {
+      "path": "originals/pilot17-D1083-261/reproducibility.json",
+      "bytes": 2142,
+      "sha256": "19f8914d3868791166dd5ebc41bb8b79730fda581d59fa133bdb2a59ad4fc0dd"
+    },
+    {
+      "path": "originals/pilot17-D1083-261/request.json",
+      "bytes": 508,
+      "sha256": "1e68143485ed2287c769fa9cbf0b7d92c42729e32985dd158c07fe0d199277e7"
+    },
+    {
+      "path": "originals/pilot17-D1083-261/result.json",
+      "bytes": 1326,
+      "sha256": "71602ca634a2c22c89ce9413302bb579bf1edf28244d22dbb5b078cec64a67bf"
+    },
+    {
+      "path": "originals/pilot17-D1083-261/sample.json",
+      "bytes": 1638,
+      "sha256": "fe1a084fcff8052c2268625be6e88785548b4ea0dafe519b80ee8b196360cce4"
+    },
+    {
+      "path": "originals/pilot17-D1089-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1089-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "c162d0139fe0ecedc17915128a4007308829ea1190c59d3faadd44b6be44b639"
+    },
+    {
+      "path": "originals/pilot17-D1089-261/inputs.json",
+      "bytes": 396,
+      "sha256": "3e58a2c89fd16fab168ae0d7444b617fa37c88598fabc77f565757d1cc7d85ce"
+    },
+    {
+      "path": "originals/pilot17-D1089-261/reproducibility.json",
+      "bytes": 2157,
+      "sha256": "08d13406bc84e89c57143ebaa364ebc01acbd9b7da0caaab3a78c0007207ffbc"
+    },
+    {
+      "path": "originals/pilot17-D1089-261/request.json",
+      "bytes": 508,
+      "sha256": "57303ee3af9a9f049911c2b9ae0b9684b64da523ff9c7f11f120d78560312f7d"
+    },
+    {
+      "path": "originals/pilot17-D1089-261/result.json",
+      "bytes": 1326,
+      "sha256": "461a012c313bf8c91196ae4665761116110f44e420ff59d66b14a9f9bb9b11bd"
+    },
+    {
+      "path": "originals/pilot17-D1089-261/sample.json",
+      "bytes": 1729,
+      "sha256": "80fdfa6a677a47b60a60fd0ebe2d613db1bf0d70bf29c24fd1d986ccc1a58f22"
+    },
+    {
+      "path": "originals/pilot17-D1107-261/config.json",
+      "bytes": 655,
+      "sha256": "bf928022047ff1050cc82aaefdd866fe230e25b0e24e0ac9c56946be903c20d3"
+    },
+    {
+      "path": "originals/pilot17-D1107-261/execution_started.json",
+      "bytes": 93,
+      "sha256": "9ec6ff49d5318c880296f46682501ac3dde828c0d1cd16b8487d29682ce025bb"
+    },
+    {
+      "path": "originals/pilot17-D1107-261/inputs.json",
+      "bytes": 396,
+      "sha256": "1531cfa5754a1771011775aeaeef7cce450f243b21faeee293f75477f34aee7d"
+    },
+    {
+      "path": "originals/pilot17-D1107-261/reproducibility.json",
+      "bytes": 2173,
+      "sha256": "3c6651f6eed8090ca737a7379226722a219c24c14b574f37294e04caead95276"
+    },
+    {
+      "path": "originals/pilot17-D1107-261/request.json",
+      "bytes": 508,
+      "sha256": "eb79996ff94a933156dd19ead0d1c7f8b90fa418ad8feac9ad36f055c03a9bc6"
+    },
+    {
+      "path": "originals/pilot17-D1107-261/result.json",
+      "bytes": 1326,
+      "sha256": "60ff63a5f185d6a35bed36d848aeb07da329ee65c0fb631cabd2b22cd617d407"
+    },
+    {
+      "path": "originals/pilot17-D1107-261/sample.json",
+      "bytes": 2463,
+      "sha256": "4c5f7983ab53ccf76916cadcfffb4b0fc391f782d6ee15732b02678769a7c8cd"
+    },
+    {
+      "path": "frozen-source/.python-version",
+      "bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "path": "frozen-source/.ruff_cache/.gitignore",
+      "bytes": 35,
+      "sha256": "9e3a60f1e6ec4ae60215c11d54b171392745ec25e9dded433d5bd921363af316"
+    },
+    {
+      "path": "frozen-source/.ruff_cache/0.17.3/1093225342647946481",
+      "bytes": 3892,
+      "sha256": "02b9fcbfbd72249e593e1e35ad3ff668a5e08e22fc114cc4a65039dac5ae1785"
+    },
+    {
+      "path": "frozen-source/.ruff_cache/0.17.3/8186017119213520579",
+      "bytes": 276,
+      "sha256": "b0e3fa571b4b50915550cb792e60f05905763beb67c88f270ef1ff980d9a87af"
+    },
+    {
+      "path": "frozen-source/.ruff_cache/0.17.3/8597678984493130657",
+      "bytes": 252,
+      "sha256": "fea859b8d874a9ef3004808ab20ab5f37b36ef85dc20f870eeca9021fa25a4e8"
+    },
+    {
+      "path": "frozen-source/.ruff_cache/CACHEDIR.TAG",
+      "bytes": 43,
+      "sha256": "5953156d7e0c564a427251316eaf26f8870e6483ae2197f916b630e4f93e31ae"
+    },
+    {
+      "path": "frozen-source/README.md",
+      "bytes": 6394,
+      "sha256": "5eb643308520e18f07e525ec527aec449e8635a11eca5cccc2cda3261c025b70"
+    },
+    {
+      "path": "frozen-source/configs/anm-mean-robustness-v1.json",
+      "bytes": 1305,
+      "sha256": "4010c0505b3a17e4ccd7fd3222851cad56b8ab18bc262546d467f1e63bd6e53a"
+    },
+    {
+      "path": "frozen-source/configs/anm-real-noise-v1.json",
+      "bytes": 841,
+      "sha256": "2d77c17fa0b8cab08ef45377154b5fce4c421493f4561c2cc86b18325d49897e"
+    },
+    {
+      "path": "frozen-source/pyproject.toml",
+      "bytes": 758,
+      "sha256": "449746228d9ad4dc4e3bbd551cd2fdfceae38b64d0150e1f27c6b1bbc3a348c3"
+    },
+    {
+      "path": "frozen-source/scripts/anm_mean_robustness.py",
+      "bytes": 806,
+      "sha256": "c193e70116e4b89cc976e759945223326833ab316ccecc51a4560a0ba2052d82"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/__init__.py",
+      "bytes": 104,
+      "sha256": "db287d399cd63dcf66d74de73a05f36ae9c3477ac6cfb835b280671efc383779"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/__main__.py",
+      "bytes": 60,
+      "sha256": "21a0f6e7bdb3e15d4e426411d2d5c149b12650d24d9448d423ecad9a1b2f35b3"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/benchmark/__init__.py",
+      "bytes": 322,
+      "sha256": "4a11f6cf8ef77e8c64cdbe58dcd9bfb28aaed3ff276ac6afcb0076e279ea6721"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/benchmark/generator.py",
+      "bytes": 3132,
+      "sha256": "f65832baa08073ca9c5b7075e0f62429cf80e2fe6b96d05369a2dcba8ba1bc7d"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/benchmark/pilot.py",
+      "bytes": 18863,
+      "sha256": "ea27f2915380b46741d344b9932a4b19090d32568e06954ce6ecc3f1900aec8f"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/benchmark/witness.py",
+      "bytes": 5382,
+      "sha256": "98e43c7891b5b95c9c4c53c38a326d870f37070049aa88a103f1450f3e38ec17"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/cli.py",
+      "bytes": 7040,
+      "sha256": "19c5b124938e176b23b9b7d1eb584866f750fdc2334947c4be4e61c2873e8336"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/demo.py",
+      "bytes": 5064,
+      "sha256": "f4889ec8c408a8fa8fae4b12b21cfc5373432683f2ec1c820c978614cc90bea8"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/__init__.py",
+      "bytes": 72,
+      "sha256": "9de55cd7c6ddcf4b9fbea4364d2a5dc604b0b2ab083ec88b59f09faf96fadf35"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/anm.py",
+      "bytes": 11681,
+      "sha256": "c755bdc8617b9486a9cfadb856390687dbeef5040afab48b73b9617bc500899b"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/anm_requests.py",
+      "bytes": 7682,
+      "sha256": "a4a37fc1df84996b2c6fd2850479a7d9b58f15750a3aef7df6737bd6e676a5d3"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/contracts.py",
+      "bytes": 9038,
+      "sha256": "aab04d9cc7b5d29896df07585c55565e5206db6f1a84b70a4cd1f7a232c3ff70"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/data_audit.py",
+      "bytes": 7015,
+      "sha256": "1cea46a4a5ab7dd064e0207585de6b008827e192aefa231ebcf0e9bc202e96e3"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/demo.py",
+      "bytes": 6840,
+      "sha256": "2ad3e9b1d3b292b6f747424d1987e2a8405c8b3da8e94063fce212b55f66afd0"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/evidence.py",
+      "bytes": 5093,
+      "sha256": "2a35d8a1ed1cde9dff2a38136653e39a6be0bc2d1551e994f547443a40a5eaaa"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/example.py",
+      "bytes": 4291,
+      "sha256": "8580f4fd1382f87376144c9d50fe37b8b5f3a16e64dff0e273e9524eb20ca2be"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/loader.py",
+      "bytes": 9110,
+      "sha256": "fa3a77fc0ffb6239a570051d4c2f4d67a2b326cfce57ec38f2f68909bc0c92f1"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/prompts.py",
+      "bytes": 1857,
+      "sha256": "e5fe49109dfe7824c7ffe13560be838655a52d6fb69d424044ae4eda2fdf29fe"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/replay.py",
+      "bytes": 8412,
+      "sha256": "5c9685ef1d503edbcaee176d18e0ae9379089a729d96e6c1e9a8a26f5065f037"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/schemas.py",
+      "bytes": 10067,
+      "sha256": "9f4a0f191f3f7fdd9c3903849f34111d9cf665ef40241f85a337d3266dacb6db"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/statistics.py",
+      "bytes": 1480,
+      "sha256": "c676b859bda81a8fc6914ee9fd69f6785c24d261ad834d08e2f8a91b41e0d3fd"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/discovery/study.py",
+      "bytes": 23147,
+      "sha256": "d550998e53a9a9b75efcb198fa49ade79f780f02a7168c78990f1347a1b85166"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/__init__.py",
+      "bytes": 84,
+      "sha256": "5de47d628b931e915eb732370cc50cc345193395da4108f03e83354d4e87fd89"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/acceptance_demo.py",
+      "bytes": 7962,
+      "sha256": "9df1b55e30987e1e1f4c402f9beb41ff27cee4eb375f67d92c101d8efcc848cf"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/anm_failure_audit.py",
+      "bytes": 27446,
+      "sha256": "26507de514d87069ef644caeffeaf5929829c7a7f6c3f44fc4bc4f3a13f294e4"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/anm_failure_report.py",
+      "bytes": 14792,
+      "sha256": "1cdbeb38b40dd219e081887ac488c5ff3947ce0a494f0333329081f7c26b1b3e"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/anm_mean_robustness.py",
+      "bytes": 12260,
+      "sha256": "b9a84bfbb59541c56b9fc9a84a7b7b6df309cae80cc84b781b30110c4f2bd8e4"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/anm_mechanism_analysis.py",
+      "bytes": 14030,
+      "sha256": "bbdecf6f074e43552358eaf23f6f6e82856a53cbcc6cdcb251a8f7f3f4b1700c"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/anm_mechanism_study.py",
+      "bytes": 17840,
+      "sha256": "ca01f29dbacfab976adf506c3732337cd12e053d076708de94c8043568df03f7"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/anm_real_noise.py",
+      "bytes": 24875,
+      "sha256": "e1641754b1b5fbae4aeb06dd5ef298e6047f90086d946972b8898ad728c8102a"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/audit.py",
+      "bytes": 25429,
+      "sha256": "b1dc6e17115ad661d0f1b86cfbf654b6516d2ceb561b6bc71cbad3bdd34b2070"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/audit_native.py",
+      "bytes": 20982,
+      "sha256": "ced2435c0a2f48c512e7ea3920fbb070cda9776f901ccef3fe4298c0a466fbbd"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/audit_policy.py",
+      "bytes": 1267,
+      "sha256": "8253272f10b314bd1c83baf150a4f36c08e3339c8d9a7411cf2a6f6c219a4333"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/demo.py",
+      "bytes": 3581,
+      "sha256": "7add55f78dcd48d7a22971f23e4356e4b80013bd2e562b2ff900d5b4c34bfc9b"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/diagnosis.py",
+      "bytes": 20578,
+      "sha256": "80c57d2763845e0aeb3154b499aedbe4b1bc61a84627dfad7eb835980435fc60"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/export.py",
+      "bytes": 7383,
+      "sha256": "30438c16bf22d9b9abd470418dc5d30e752338b65211c51bb45ee27c58a521b9"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/handoff.py",
+      "bytes": 6810,
+      "sha256": "a0b829f81e2075104afb867d57130906e3b114e7841c18074945ff7e8fbc7567"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/integration.py",
+      "bytes": 23773,
+      "sha256": "cb93897c1a68e2dfbe5bf5ad48238f3dd96af2aa1c22d44354945bfe5cac94eb"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/integration_demo.py",
+      "bytes": 3883,
+      "sha256": "6e6dc6a59f3ecf5c5e8ae3c5b0ffa20150592b6bcc69ceb27c9594812d6dd7e4"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/joins.py",
+      "bytes": 5148,
+      "sha256": "f5c4509a420d902ce3a0681bd55867d539f9ca6d5f7a43346cffead42fe0c01d"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/outcome_accounting.py",
+      "bytes": 4246,
+      "sha256": "fe08ef076589d85061fcbcaede55f250533f94ec204ed9e64929a1dfc4dc6ff6"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/record_costs.py",
+      "bytes": 4688,
+      "sha256": "70219ae71275b62c75493cba0da4bd6f7b80a0466907920218ef86e42dd56a90"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/roster.py",
+      "bytes": 5388,
+      "sha256": "24a585a9fb09f6a2b266c6bcb98519858158dc4f52f65bc7fed50c9233e9dcb0"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/runner.py",
+      "bytes": 14264,
+      "sha256": "80c92797e464b33eb5945ceeb4f83f5df5a8a1907c6dfd274cb8cb923ae05478"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/saved_checks.py",
+      "bytes": 3018,
+      "sha256": "f10453628aa289e98d5b32d028c651f389e6e4eb7beb396c444802d2b0157ef3"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/scoring.py",
+      "bytes": 8827,
+      "sha256": "116af6317d4bedb68111fdd23062f4c2f9e573b02f75739f5153df64b046a815"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/evaluation/store.py",
+      "bytes": 3917,
+      "sha256": "40244e620fd147374d325a692e0e8933a5418e497581285db6b548504ca2a1f1"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/llm/__init__.py",
+      "bytes": 66,
+      "sha256": "8719ca0aba81fbd7bcf4c088a4177296b4c734ea60058139aab3071dca85369b"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/llm/client.py",
+      "bytes": 3547,
+      "sha256": "ca2515ff194e329c8ab312e297824ff2f972bebe94c151126033aa127fdcad74"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/llm/parser.py",
+      "bytes": 4177,
+      "sha256": "be6541cc8e584f071d6aff096fe04ffb718b675122e254ebcd4cb8863e1a6bc5"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/llm/predictor.py",
+      "bytes": 4847,
+      "sha256": "f6895fac92f7f23bd49b59a3c878c1d90f561340ba425ceaff41f3f2a815b097"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/llm/tool_planner.py",
+      "bytes": 757,
+      "sha256": "4267b1baa1f1299b8626669d9bdc886b3274f18c7ead2c466cabb1b55bcd6a16"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/pipeline.py",
+      "bytes": 7991,
+      "sha256": "03782b7fe6fd13153009988f66a662bfa154d4fd809fc7a91d809de5f6a86476"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/schemas.py",
+      "bytes": 7234,
+      "sha256": "775ce312d209ba520ed3ef313a9a4a7276f82263daa1921f36c068b593f03825"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/tools/__init__.py",
+      "bytes": 86,
+      "sha256": "b598dda444a663204381193be86e4d983fd747bbdf685aa00685a51078cd6551"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/tools/engine.py",
+      "bytes": 1746,
+      "sha256": "615390731b19c03e83f95f2672d6af6e248f6fcccd35c158786d86c5c8c23078"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/tools/graph.py",
+      "bytes": 2095,
+      "sha256": "2188e765823d22f0aa99a1344578f1a109ad019f00c1018bf546a3be9ea13d78"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/tools/inference.py",
+      "bytes": 4012,
+      "sha256": "10cac297fac913d293d74e259284dde04b0bde936f33fd6fd2fda2e703993fcc"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/tools/protocol.py",
+      "bytes": 446,
+      "sha256": "d1cd214944f6c05a12fac91061e15182b8e7b04be5cfeb967c41cfada3df6a94"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/tools/reference.py",
+      "bytes": 3852,
+      "sha256": "83b9055767da29d2489dced18e7cbfdc3fa51d3578224140eb472ff305d004ff"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/verifier/__init__.py",
+      "bytes": 63,
+      "sha256": "f8c0ea0e1364b1f5d85f1813e620c4f4e8cf1756f60a5e2f5ca8ce51b013f726"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/verifier/bindings.py",
+      "bytes": 2019,
+      "sha256": "50409ce421f37c6b1b569c69b363286e0c02524d537e7bb1f2280ca58c1ad184"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/verifier/checks.py",
+      "bytes": 11402,
+      "sha256": "19d932f4d7be58364a1f2bbc9ab02b7252e732917ac060a2cf80b9b5014bbf37"
+    },
+    {
+      "path": "frozen-source/src/causalbridge/verifier/contracts.py",
+      "bytes": 8100,
+      "sha256": "e1cf1c6dce5a792e2cb607f3ef89a3d412f3384b68c6537bf95ec519bb1839ed"
+    },
+    {
+      "path": "frozen-source/uv.lock",
+      "bytes": 78585,
+      "sha256": "3a1dd327fad53c57d634683211c8e2ac689a35f83b0fce03d419d92e5fe16499"
+    }
+  ]
+}

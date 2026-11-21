@@ -127,3 +127,25 @@ interfaces. Runtime prompts and tools must never receive gold labels or withheld
 See the [project knowledge bank](docs/knowledge/README.md) for evidence-linked
 progress, ownership, decisions and planned versus completed work. Pilot-ready
 software and offline validation are distinct from live-model research findings.
+
+## ANM failure diagnosis
+
+The [offline failure-audit guide](docs/experiments/anm-failure-diagnosis.md) reproduces
+sample-size, split-stability, margin and data-quality diagnostics from frozen ANM
+records. It performs no new fits or LLM calls and does not tune on opened outcomes.
+This upstream audit is separate from the controlled LLM diagnostic-cue investigation.
+
+The subsequent [controlled ANM mechanism study](docs/experiments/anm-mechanism-study-v1.md)
+varies training size, evaluation size and one noise-assumption violation separately.
+Its [findings](docs/reviews/anm-mechanism-study-v1.md) explain a synthetic failure
+mechanism without claiming a root cause for the real benchmark pairs.
+
+The [real-pair residual-spread follow-up](docs/experiments/anm-real-noise-v1.md)
+checks this hypothesis on preserved pilot and later-panel inputs, with mean-error
+and row-order sensitivities. Its [findings](docs/reviews/anm-real-noise-v1.md) identify
+candidate cases without asserting a universal real-data root cause.
+
+The [fixed mean-estimator robustness check](docs/experiments/anm-mean-robustness-v1.md)
+examines candidate pairs 56/88 alongside all six correctly answered pilot cases.
+Its [findings](docs/reviews/anm-mean-robustness-v1.md) report every configuration
+without selecting a new production estimator or claiming improved causal accuracy.

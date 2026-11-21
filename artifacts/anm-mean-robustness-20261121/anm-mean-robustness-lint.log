@@ -1,0 +1,27 @@
+All checks passed!
+unformatted: File would be reformatted
+  --> artifacts/anm-mean-robustness-20261121/README.md:30:17
+   |
+29 |
+   - artifact = Path('artifacts/anm-mean-robustness-20261121')
+   - files = verified_archive(artifact / 'run-records.tar.gz', artifact / 'raw-manifest.json')
+   - materialize(files, Path('/tmp/mean-robustness-restored'))
+30 + artifact = Path("artifacts/anm-mean-robustness-20261121")
+31 + files = verified_archive(artifact / "run-records.tar.gz", artifact / "raw-manifest.json")
+32 + materialize(files, Path("/tmp/mean-robustness-restored"))
+33 | ```
+--------------------------------------------------------------------------------
+40 |
+   - root = Path('/tmp/mean-robustness-restored')
+   - run = root / 'new-run'
+41 + root = Path("/tmp/mean-robustness-restored")
+42 + run = root / "new-run"
+43 | run.mkdir()
+   - shutil.copy2(root / 'manifest.json', run / 'manifest.json')
+   - shutil.copytree(root / 'originals', run / 'originals')
+44 + shutil.copy2(root / "manifest.json", run / "manifest.json")
+45 + shutil.copytree(root / "originals", run / "originals")
+46 | ```
+   |
+
+1 file would be reformatted, 232 files already formatted

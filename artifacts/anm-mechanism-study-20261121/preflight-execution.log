@@ -1,0 +1,24 @@
+scaled_cubic-00-independent_additive-t64-e64 ok
+scaled_cubic-00-independent_additive-t64-e256 ok
+scaled_cubic-00-independent_additive-t256-e64 ok
+scaled_cubic-00-independent_additive-t256-e256 ok
+scaled_cubic-00-heteroscedastic-t64-e64 ok
+scaled_cubic-00-heteroscedastic-t64-e256 ok
+scaled_cubic-00-heteroscedastic-t256-e64 ok
+scaled_cubic-00-heteroscedastic-t256-e256 ok
+sine-00-independent_additive-t64-e64 ok
+sine-00-independent_additive-t64-e256 ok
+sine-00-independent_additive-t256-e64 ok
+sine-00-independent_additive-t256-e256 ok
+sine-00-heteroscedastic-t64-e64 ok
+sine-00-heteroscedastic-t64-e256 ok
+sine-00-heteroscedastic-t256-e64 ok
+sine-00-heteroscedastic-t256-e256 ok
+{
+  "passed": true,
+  "scheduled": 16,
+  "failures": 0,
+  "elapsed_seconds": 0.4668792910015327,
+  "manifest_digest": "sha256:a3fffebcdf9c203f231ce1d96266d7edc829e41d628bd78f6416f8e0e9194006",
+  "diagnostics_digest": "sha256:cdea3f1e3af1d81ce36b4751bf855eccfae198d09ef75926f2b14f06d58083d9"
+}

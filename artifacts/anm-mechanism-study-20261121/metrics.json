@@ -1,0 +1,1892 @@
+{
+  "family_cells": [
+    {
+      "family": "scaled_cubic",
+      "regime": "independent_additive",
+      "n_train": 64,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 11,
+        "wrong": 0,
+        "abstention": 1,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "answered_accuracy": {
+        "numerator": 11,
+        "denominator": 11,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 11,
+          "denominator": 12,
+          "rate": 0.9166666666666666
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "scaled_cubic",
+      "regime": "independent_additive",
+      "n_train": 64,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 11,
+        "wrong": 0,
+        "abstention": 1,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "answered_accuracy": {
+        "numerator": 11,
+        "denominator": 11,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 11,
+          "denominator": 12,
+          "rate": 0.9166666666666666
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "scaled_cubic",
+      "regime": "independent_additive",
+      "n_train": 256,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 10,
+        "wrong": 0,
+        "abstention": 2,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "answered_accuracy": {
+        "numerator": 10,
+        "denominator": 10,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 10,
+          "denominator": 12,
+          "rate": 0.8333333333333334
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 2,
+          "denominator": 12,
+          "rate": 0.16666666666666666
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "scaled_cubic",
+      "regime": "independent_additive",
+      "n_train": 256,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 12,
+        "wrong": 0,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "scaled_cubic",
+      "regime": "heteroscedastic",
+      "n_train": 64,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 1,
+        "wrong": 11,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 1,
+        "denominator": 12,
+        "rate": 0.08333333333333333
+      },
+      "correct_yield": {
+        "numerator": 1,
+        "denominator": 12,
+        "rate": 0.08333333333333333
+      },
+      "wrong_yield": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "wrong": {
+          "numerator": 11,
+          "denominator": 12,
+          "rate": 0.9166666666666666
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "scaled_cubic",
+      "regime": "heteroscedastic",
+      "n_train": 64,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 0,
+        "wrong": 12,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "correct_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "wrong_yield": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "wrong": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "scaled_cubic",
+      "regime": "heteroscedastic",
+      "n_train": 256,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 2,
+        "wrong": 8,
+        "abstention": 2,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "answered_accuracy": {
+        "numerator": 2,
+        "denominator": 10,
+        "rate": 0.2
+      },
+      "correct_yield": {
+        "numerator": 2,
+        "denominator": 12,
+        "rate": 0.16666666666666666
+      },
+      "wrong_yield": {
+        "numerator": 8,
+        "denominator": 12,
+        "rate": 0.6666666666666666
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 2,
+          "denominator": 12,
+          "rate": 0.16666666666666666
+        },
+        "wrong": {
+          "numerator": 8,
+          "denominator": 12,
+          "rate": 0.6666666666666666
+        },
+        "abstention": {
+          "numerator": 2,
+          "denominator": 12,
+          "rate": 0.16666666666666666
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "scaled_cubic",
+      "regime": "heteroscedastic",
+      "n_train": 256,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 0,
+        "wrong": 10,
+        "abstention": 2,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "answered_accuracy": {
+        "numerator": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "correct_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "wrong_yield": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "wrong": {
+          "numerator": 10,
+          "denominator": 12,
+          "rate": 0.8333333333333334
+        },
+        "abstention": {
+          "numerator": 2,
+          "denominator": 12,
+          "rate": 0.16666666666666666
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "independent_additive",
+      "n_train": 64,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 10,
+        "wrong": 1,
+        "abstention": 1,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "answered_accuracy": {
+        "numerator": 10,
+        "denominator": 11,
+        "rate": 0.9090909090909091
+      },
+      "correct_yield": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "wrong_yield": {
+        "numerator": 1,
+        "denominator": 12,
+        "rate": 0.08333333333333333
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 10,
+          "denominator": 12,
+          "rate": 0.8333333333333334
+        },
+        "wrong": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "abstention": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "independent_additive",
+      "n_train": 64,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 12,
+        "wrong": 0,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "independent_additive",
+      "n_train": 256,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 12,
+        "wrong": 0,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "independent_additive",
+      "n_train": 256,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 12,
+        "wrong": 0,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 12,
+          "denominator": 12,
+          "rate": 1.0
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "heteroscedastic",
+      "n_train": 64,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 5,
+        "wrong": 6,
+        "abstention": 1,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "answered_accuracy": {
+        "numerator": 5,
+        "denominator": 11,
+        "rate": 0.45454545454545453
+      },
+      "correct_yield": {
+        "numerator": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "wrong_yield": {
+        "numerator": 6,
+        "denominator": 12,
+        "rate": 0.5
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 5,
+          "denominator": 12,
+          "rate": 0.4166666666666667
+        },
+        "wrong": {
+          "numerator": 6,
+          "denominator": 12,
+          "rate": 0.5
+        },
+        "abstention": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "heteroscedastic",
+      "n_train": 64,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 1,
+        "wrong": 11,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 12,
+        "denominator": 12,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 1,
+        "denominator": 12,
+        "rate": 0.08333333333333333
+      },
+      "correct_yield": {
+        "numerator": 1,
+        "denominator": 12,
+        "rate": 0.08333333333333333
+      },
+      "wrong_yield": {
+        "numerator": 11,
+        "denominator": 12,
+        "rate": 0.9166666666666666
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 1,
+          "denominator": 12,
+          "rate": 0.08333333333333333
+        },
+        "wrong": {
+          "numerator": 11,
+          "denominator": 12,
+          "rate": 0.9166666666666666
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "heteroscedastic",
+      "n_train": 256,
+      "n_eval": 64,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 5,
+        "wrong": 5,
+        "abstention": 2,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 10,
+        "denominator": 12,
+        "rate": 0.8333333333333334
+      },
+      "answered_accuracy": {
+        "numerator": 5,
+        "denominator": 10,
+        "rate": 0.5
+      },
+      "correct_yield": {
+        "numerator": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "wrong_yield": {
+        "numerator": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 5,
+          "denominator": 12,
+          "rate": 0.4166666666666667
+        },
+        "wrong": {
+          "numerator": 5,
+          "denominator": 12,
+          "rate": 0.4166666666666667
+        },
+        "abstention": {
+          "numerator": 2,
+          "denominator": 12,
+          "rate": 0.16666666666666666
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    },
+    {
+      "family": "sine",
+      "regime": "heteroscedastic",
+      "n_train": 256,
+      "n_eval": 256,
+      "n": 12,
+      "source_groups": null,
+      "counts": {
+        "correct": 2,
+        "wrong": 7,
+        "abstention": 3,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 9,
+        "denominator": 12,
+        "rate": 0.75
+      },
+      "answered_accuracy": {
+        "numerator": 2,
+        "denominator": 9,
+        "rate": 0.2222222222222222
+      },
+      "correct_yield": {
+        "numerator": 2,
+        "denominator": 12,
+        "rate": 0.16666666666666666
+      },
+      "wrong_yield": {
+        "numerator": 7,
+        "denominator": 12,
+        "rate": 0.5833333333333334
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 2,
+          "denominator": 12,
+          "rate": 0.16666666666666666
+        },
+        "wrong": {
+          "numerator": 7,
+          "denominator": 12,
+          "rate": 0.5833333333333334
+        },
+        "abstention": {
+          "numerator": 3,
+          "denominator": 12,
+          "rate": 0.25
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 12,
+          "rate": 0.0
+        }
+      }
+    }
+  ],
+  "version": "anm-mechanism-study-v1",
+  "phase": "full",
+  "scope": "Controlled synthetic mechanism pilot; no real-data tuning or proof of a real-pair root cause.",
+  "scheduled_cells": 192,
+  "base_worlds": 24,
+  "failures": 0,
+  "permutations_replayed_without_refitting": true,
+  "cells": [
+    {
+      "regime": "independent_additive",
+      "n_train": 64,
+      "n_eval": 64,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 21,
+        "wrong": 1,
+        "abstention": 2,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 22,
+        "denominator": 24,
+        "rate": 0.9166666666666666
+      },
+      "answered_accuracy": {
+        "numerator": 21,
+        "denominator": 22,
+        "rate": 0.9545454545454546
+      },
+      "correct_yield": {
+        "numerator": 21,
+        "denominator": 24,
+        "rate": 0.875
+      },
+      "wrong_yield": {
+        "numerator": 1,
+        "denominator": 24,
+        "rate": 0.041666666666666664
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 21,
+          "denominator": 24,
+          "rate": 0.875
+        },
+        "wrong": {
+          "numerator": 1,
+          "denominator": 24,
+          "rate": 0.041666666666666664
+        },
+        "abstention": {
+          "numerator": 2,
+          "denominator": 24,
+          "rate": 0.08333333333333333
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 1,
+      "oracle_forward_rejections": 0,
+      "both_learned_directions_rejected": 1,
+      "median_conditional_mean_estimation_mse": 0.01873280320982558,
+      "oracle_assisted_counts": {
+        "correct": 24
+      }
+    },
+    {
+      "regime": "independent_additive",
+      "n_train": 64,
+      "n_eval": 256,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 23,
+        "wrong": 0,
+        "abstention": 1,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 23,
+        "denominator": 24,
+        "rate": 0.9583333333333334
+      },
+      "answered_accuracy": {
+        "numerator": 23,
+        "denominator": 23,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 23,
+        "denominator": 24,
+        "rate": 0.9583333333333334
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 24,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 23,
+          "denominator": 24,
+          "rate": 0.9583333333333334
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 1,
+          "denominator": 24,
+          "rate": 0.041666666666666664
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 9,
+      "oracle_forward_rejections": 1,
+      "both_learned_directions_rejected": 9,
+      "median_conditional_mean_estimation_mse": 0.01862853823598246,
+      "oracle_assisted_counts": {
+        "correct": 24
+      }
+    },
+    {
+      "regime": "independent_additive",
+      "n_train": 256,
+      "n_eval": 64,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 22,
+        "wrong": 0,
+        "abstention": 2,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 22,
+        "denominator": 24,
+        "rate": 0.9166666666666666
+      },
+      "answered_accuracy": {
+        "numerator": 22,
+        "denominator": 22,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 22,
+        "denominator": 24,
+        "rate": 0.9166666666666666
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 24,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 22,
+          "denominator": 24,
+          "rate": 0.9166666666666666
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 2,
+          "denominator": 24,
+          "rate": 0.08333333333333333
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 1,
+      "oracle_forward_rejections": 0,
+      "both_learned_directions_rejected": 1,
+      "median_conditional_mean_estimation_mse": 0.00688116667307743,
+      "oracle_assisted_counts": {
+        "correct": 23,
+        "abstention": 1
+      }
+    },
+    {
+      "regime": "independent_additive",
+      "n_train": 256,
+      "n_eval": 256,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 24,
+        "wrong": 0,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 24,
+        "denominator": 24,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 24,
+        "denominator": 24,
+        "rate": 1.0
+      },
+      "correct_yield": {
+        "numerator": 24,
+        "denominator": 24,
+        "rate": 1.0
+      },
+      "wrong_yield": {
+        "numerator": 0,
+        "denominator": 24,
+        "rate": 0.0
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 24,
+          "denominator": 24,
+          "rate": 1.0
+        },
+        "wrong": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 6,
+      "oracle_forward_rejections": 1,
+      "both_learned_directions_rejected": 6,
+      "median_conditional_mean_estimation_mse": 0.006606624179260782,
+      "oracle_assisted_counts": {
+        "correct": 24
+      }
+    },
+    {
+      "regime": "heteroscedastic",
+      "n_train": 64,
+      "n_eval": 64,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 6,
+        "wrong": 17,
+        "abstention": 1,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 23,
+        "denominator": 24,
+        "rate": 0.9583333333333334
+      },
+      "answered_accuracy": {
+        "numerator": 6,
+        "denominator": 23,
+        "rate": 0.2608695652173913
+      },
+      "correct_yield": {
+        "numerator": 6,
+        "denominator": 24,
+        "rate": 0.25
+      },
+      "wrong_yield": {
+        "numerator": 17,
+        "denominator": 24,
+        "rate": 0.7083333333333334
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 6,
+          "denominator": 24,
+          "rate": 0.25
+        },
+        "wrong": {
+          "numerator": 17,
+          "denominator": 24,
+          "rate": 0.7083333333333334
+        },
+        "abstention": {
+          "numerator": 1,
+          "denominator": 24,
+          "rate": 0.041666666666666664
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 20,
+      "oracle_forward_rejections": 20,
+      "both_learned_directions_rejected": 13,
+      "median_conditional_mean_estimation_mse": 0.021025475460603675,
+      "oracle_assisted_counts": {
+        "wrong": 15,
+        "correct": 7,
+        "abstention": 2
+      }
+    },
+    {
+      "regime": "heteroscedastic",
+      "n_train": 64,
+      "n_eval": 256,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 1,
+        "wrong": 23,
+        "abstention": 0,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 24,
+        "denominator": 24,
+        "rate": 1.0
+      },
+      "answered_accuracy": {
+        "numerator": 1,
+        "denominator": 24,
+        "rate": 0.041666666666666664
+      },
+      "correct_yield": {
+        "numerator": 1,
+        "denominator": 24,
+        "rate": 0.041666666666666664
+      },
+      "wrong_yield": {
+        "numerator": 23,
+        "denominator": 24,
+        "rate": 0.9583333333333334
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 1,
+          "denominator": 24,
+          "rate": 0.041666666666666664
+        },
+        "wrong": {
+          "numerator": 23,
+          "denominator": 24,
+          "rate": 0.9583333333333334
+        },
+        "abstention": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 24,
+      "oracle_forward_rejections": 24,
+      "both_learned_directions_rejected": 24,
+      "median_conditional_mean_estimation_mse": 0.01766032513278247,
+      "oracle_assisted_counts": {
+        "wrong": 20,
+        "abstention": 3,
+        "correct": 1
+      }
+    },
+    {
+      "regime": "heteroscedastic",
+      "n_train": 256,
+      "n_eval": 64,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 7,
+        "wrong": 13,
+        "abstention": 4,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 20,
+        "denominator": 24,
+        "rate": 0.8333333333333334
+      },
+      "answered_accuracy": {
+        "numerator": 7,
+        "denominator": 20,
+        "rate": 0.35
+      },
+      "correct_yield": {
+        "numerator": 7,
+        "denominator": 24,
+        "rate": 0.2916666666666667
+      },
+      "wrong_yield": {
+        "numerator": 13,
+        "denominator": 24,
+        "rate": 0.5416666666666666
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 7,
+          "denominator": 24,
+          "rate": 0.2916666666666667
+        },
+        "wrong": {
+          "numerator": 13,
+          "denominator": 24,
+          "rate": 0.5416666666666666
+        },
+        "abstention": {
+          "numerator": 4,
+          "denominator": 24,
+          "rate": 0.16666666666666666
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 19,
+      "oracle_forward_rejections": 20,
+      "both_learned_directions_rejected": 13,
+      "median_conditional_mean_estimation_mse": 0.006575278241248601,
+      "oracle_assisted_counts": {
+        "wrong": 15,
+        "abstention": 2,
+        "correct": 7
+      }
+    },
+    {
+      "regime": "heteroscedastic",
+      "n_train": 256,
+      "n_eval": 256,
+      "n": 24,
+      "source_groups": null,
+      "counts": {
+        "correct": 2,
+        "wrong": 17,
+        "abstention": 5,
+        "execution_failure": 0
+      },
+      "coverage": {
+        "numerator": 19,
+        "denominator": 24,
+        "rate": 0.7916666666666666
+      },
+      "answered_accuracy": {
+        "numerator": 2,
+        "denominator": 19,
+        "rate": 0.10526315789473684
+      },
+      "correct_yield": {
+        "numerator": 2,
+        "denominator": 24,
+        "rate": 0.08333333333333333
+      },
+      "wrong_yield": {
+        "numerator": 17,
+        "denominator": 24,
+        "rate": 0.7083333333333334
+      },
+      "weighted_yields": {
+        "correct": {
+          "numerator": 2,
+          "denominator": 24,
+          "rate": 0.08333333333333333
+        },
+        "wrong": {
+          "numerator": 17,
+          "denominator": 24,
+          "rate": 0.7083333333333334
+        },
+        "abstention": {
+          "numerator": 5,
+          "denominator": 24,
+          "rate": 0.20833333333333334
+        },
+        "execution_failure": {
+          "numerator": 0,
+          "denominator": 24,
+          "rate": 0.0
+        }
+      },
+      "learned_forward_rejections": 24,
+      "oracle_forward_rejections": 24,
+      "both_learned_directions_rejected": 24,
+      "median_conditional_mean_estimation_mse": 0.006635761047587584,
+      "oracle_assisted_counts": {
+        "wrong": 16,
+        "abstention": 6,
+        "correct": 2
+      }
+    }
+  ],
+  "paired_effects": [
+    {
+      "field": "n_train",
+      "left": 64,
+      "right": 256,
+      "regime": "independent_additive",
+      "n_train": null,
+      "n_eval": 64,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": 0.041666666666666664,
+        "wrong": -0.041666666666666664,
+        "abstention": 0.0,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          -0.125,
+          0.20833333333333334
+        ],
+        "wrong": [
+          -0.125,
+          0.0
+        ],
+        "abstention": [
+          -0.16666666666666666,
+          0.16666666666666666
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "n_train",
+      "left": 64,
+      "right": 256,
+      "regime": "independent_additive",
+      "n_train": null,
+      "n_eval": 256,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": 0.041666666666666664,
+        "wrong": 0.0,
+        "abstention": -0.041666666666666664,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          0.0,
+          0.125
+        ],
+        "wrong": [
+          0.0,
+          0.0
+        ],
+        "abstention": [
+          -0.125,
+          0.0
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "n_eval",
+      "left": 64,
+      "right": 256,
+      "regime": "independent_additive",
+      "n_train": 64,
+      "n_eval": null,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": 0.08333333333333333,
+        "wrong": -0.041666666666666664,
+        "abstention": -0.041666666666666664,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          0.0,
+          0.20833333333333334
+        ],
+        "wrong": [
+          -0.125,
+          0.0
+        ],
+        "abstention": [
+          -0.125,
+          0.0
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "n_eval",
+      "left": 64,
+      "right": 256,
+      "regime": "independent_additive",
+      "n_train": 256,
+      "n_eval": null,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": 0.08333333333333333,
+        "wrong": 0.0,
+        "abstention": -0.08333333333333333,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          0.0,
+          0.20833333333333334
+        ],
+        "wrong": [
+          0.0,
+          0.0
+        ],
+        "abstention": [
+          -0.20833333333333334,
+          0.0
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "n_train",
+      "left": 64,
+      "right": 256,
+      "regime": "heteroscedastic",
+      "n_train": null,
+      "n_eval": 64,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": 0.041666666666666664,
+        "wrong": -0.16666666666666666,
+        "abstention": 0.125,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          0.0,
+          0.125
+        ],
+        "wrong": [
+          -0.375,
+          0.0
+        ],
+        "abstention": [
+          -0.041666666666666664,
+          0.2916666666666667
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "n_train",
+      "left": 64,
+      "right": 256,
+      "regime": "heteroscedastic",
+      "n_train": null,
+      "n_eval": 256,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": 0.041666666666666664,
+        "wrong": -0.25,
+        "abstention": 0.20833333333333334,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          0.0,
+          0.125
+        ],
+        "wrong": [
+          -0.4166666666666667,
+          -0.08333333333333333
+        ],
+        "abstention": [
+          0.041666666666666664,
+          0.375
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "n_eval",
+      "left": 64,
+      "right": 256,
+      "regime": "heteroscedastic",
+      "n_train": 64,
+      "n_eval": null,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": -0.20833333333333334,
+        "wrong": 0.25,
+        "abstention": -0.041666666666666664,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          -0.375,
+          -0.08333333333333333
+        ],
+        "wrong": [
+          0.08333333333333333,
+          0.4166666666666667
+        ],
+        "abstention": [
+          -0.125,
+          0.0
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "n_eval",
+      "left": 64,
+      "right": 256,
+      "regime": "heteroscedastic",
+      "n_train": 256,
+      "n_eval": null,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": -0.20833333333333334,
+        "wrong": 0.16666666666666666,
+        "abstention": 0.041666666666666664,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          -0.4166666666666667,
+          0.0
+        ],
+        "wrong": [
+          0.0,
+          0.375
+        ],
+        "abstention": [
+          -0.20833333333333334,
+          0.2916666666666667
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "regime",
+      "left": "independent_additive",
+      "right": "heteroscedastic",
+      "regime": null,
+      "n_train": 64,
+      "n_eval": 64,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": -0.625,
+        "wrong": 0.6666666666666666,
+        "abstention": -0.041666666666666664,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          -0.7916666666666666,
+          -0.4583333333333333
+        ],
+        "wrong": [
+          0.5,
+          0.8333333333333334
+        ],
+        "abstention": [
+          -0.16666666666666666,
+          0.08333333333333333
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "regime",
+      "left": "independent_additive",
+      "right": "heteroscedastic",
+      "regime": null,
+      "n_train": 64,
+      "n_eval": 256,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": -0.9166666666666666,
+        "wrong": 0.9583333333333334,
+        "abstention": -0.041666666666666664,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          -1.0,
+          -0.7916666666666666
+        ],
+        "wrong": [
+          0.875,
+          1.0
+        ],
+        "abstention": [
+          -0.125,
+          0.0
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "regime",
+      "left": "independent_additive",
+      "right": "heteroscedastic",
+      "regime": null,
+      "n_train": 256,
+      "n_eval": 64,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": -0.625,
+        "wrong": 0.5416666666666666,
+        "abstention": 0.08333333333333333,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          -0.8333333333333334,
+          -0.375
+        ],
+        "wrong": [
+          0.3333333333333333,
+          0.75
+        ],
+        "abstention": [
+          -0.125,
+          0.2916666666666667
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "field": "regime",
+      "left": "independent_additive",
+      "right": "heteroscedastic",
+      "regime": null,
+      "n_train": 256,
+      "n_eval": 256,
+      "base_worlds": 24,
+      "difference_right_minus_left": {
+        "correct": -0.9166666666666666,
+        "wrong": 0.7083333333333334,
+        "abstention": 0.20833333333333334,
+        "execution_failure": 0.0
+      },
+      "exploratory_paired_intervals": {
+        "correct": [
+          -1.0,
+          -0.7916666666666666
+        ],
+        "wrong": [
+          0.5416666666666666,
+          0.875
+        ],
+        "abstention": [
+          0.041666666666666664,
+          0.375
+        ],
+        "execution_failure": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "runtime": {
+    "python": "3.12.16",
+    "numpy": "2.5.4"
+  },
+  "source_sha256": {
+    "configs/anm-mechanism-study-v1.json": "8e991a1ea0041ef80fdb637ff690f8451d94c1ecdd82abcb71eb6b2b2ba244a0",
+    "uv.lock": "3a1dd327fad53c57d634683211c8e2ac689a35f83b0fce03d419d92e5fe16499",
+    "scripts/anm_mechanism_study.py": "c633056c86af9fca3f761f8c452a5d51f61c1bc05351138b94536cf5da9d6e60",
+    "src/causalbridge/__init__.py": "db287d399cd63dcf66d74de73a05f36ae9c3477ac6cfb835b280671efc383779",
+    "src/causalbridge/__main__.py": "21a0f6e7bdb3e15d4e426411d2d5c149b12650d24d9448d423ecad9a1b2f35b3",
+    "src/causalbridge/benchmark/__init__.py": "4a11f6cf8ef77e8c64cdbe58dcd9bfb28aaed3ff276ac6afcb0076e279ea6721",
+    "src/causalbridge/benchmark/generator.py": "f65832baa08073ca9c5b7075e0f62429cf80e2fe6b96d05369a2dcba8ba1bc7d",
+    "src/causalbridge/benchmark/pilot.py": "ea27f2915380b46741d344b9932a4b19090d32568e06954ce6ecc3f1900aec8f",
+    "src/causalbridge/benchmark/witness.py": "98e43c7891b5b95c9c4c53c38a326d870f37070049aa88a103f1450f3e38ec17",
+    "src/causalbridge/cli.py": "19c5b124938e176b23b9b7d1eb584866f750fdc2334947c4be4e61c2873e8336",
+    "src/causalbridge/demo.py": "f4889ec8c408a8fa8fae4b12b21cfc5373432683f2ec1c820c978614cc90bea8",
+    "src/causalbridge/discovery/__init__.py": "9de55cd7c6ddcf4b9fbea4364d2a5dc604b0b2ab083ec88b59f09faf96fadf35",
+    "src/causalbridge/discovery/anm.py": "c755bdc8617b9486a9cfadb856390687dbeef5040afab48b73b9617bc500899b",
+    "src/causalbridge/discovery/anm_requests.py": "a4a37fc1df84996b2c6fd2850479a7d9b58f15750a3aef7df6737bd6e676a5d3",
+    "src/causalbridge/discovery/contracts.py": "aab04d9cc7b5d29896df07585c55565e5206db6f1a84b70a4cd1f7a232c3ff70",
+    "src/causalbridge/discovery/data_audit.py": "1cea46a4a5ab7dd064e0207585de6b008827e192aefa231ebcf0e9bc202e96e3",
+    "src/causalbridge/discovery/demo.py": "2ad3e9b1d3b292b6f747424d1987e2a8405c8b3da8e94063fce212b55f66afd0",
+    "src/causalbridge/discovery/evidence.py": "2a35d8a1ed1cde9dff2a38136653e39a6be0bc2d1551e994f547443a40a5eaaa",
+    "src/causalbridge/discovery/example.py": "8580f4fd1382f87376144c9d50fe37b8b5f3a16e64dff0e273e9524eb20ca2be",
+    "src/causalbridge/discovery/loader.py": "fa3a77fc0ffb6239a570051d4c2f4d67a2b326cfce57ec38f2f68909bc0c92f1",
+    "src/causalbridge/discovery/prompts.py": "e5fe49109dfe7824c7ffe13560be838655a52d6fb69d424044ae4eda2fdf29fe",
+    "src/causalbridge/discovery/replay.py": "5c9685ef1d503edbcaee176d18e0ae9379089a729d96e6c1e9a8a26f5065f037",
+    "src/causalbridge/discovery/schemas.py": "9f4a0f191f3f7fdd9c3903849f34111d9cf665ef40241f85a337d3266dacb6db",
+    "src/causalbridge/discovery/statistics.py": "c676b859bda81a8fc6914ee9fd69f6785c24d261ad834d08e2f8a91b41e0d3fd",
+    "src/causalbridge/discovery/study.py": "d550998e53a9a9b75efcb198fa49ade79f780f02a7168c78990f1347a1b85166",
+    "src/causalbridge/evaluation/__init__.py": "5de47d628b931e915eb732370cc50cc345193395da4108f03e83354d4e87fd89",
+    "src/causalbridge/evaluation/acceptance_demo.py": "9df1b55e30987e1e1f4c402f9beb41ff27cee4eb375f67d92c101d8efcc848cf",
+    "src/causalbridge/evaluation/anm_failure_audit.py": "26507de514d87069ef644caeffeaf5929829c7a7f6c3f44fc4bc4f3a13f294e4",
+    "src/causalbridge/evaluation/anm_failure_report.py": "1cdbeb38b40dd219e081887ac488c5ff3947ce0a494f0333329081f7c26b1b3e",
+    "src/causalbridge/evaluation/anm_mechanism_analysis.py": "bbdecf6f074e43552358eaf23f6f6e82856a53cbcc6cdcb251a8f7f3f4b1700c",
+    "src/causalbridge/evaluation/anm_mechanism_study.py": "ca01f29dbacfab976adf506c3732337cd12e053d076708de94c8043568df03f7",
+    "src/causalbridge/evaluation/audit.py": "b1dc6e17115ad661d0f1b86cfbf654b6516d2ceb561b6bc71cbad3bdd34b2070",
+    "src/causalbridge/evaluation/audit_native.py": "ced2435c0a2f48c512e7ea3920fbb070cda9776f901ccef3fe4298c0a466fbbd",
+    "src/causalbridge/evaluation/audit_policy.py": "8253272f10b314bd1c83baf150a4f36c08e3339c8d9a7411cf2a6f6c219a4333",
+    "src/causalbridge/evaluation/demo.py": "7add55f78dcd48d7a22971f23e4356e4b80013bd2e562b2ff900d5b4c34bfc9b",
+    "src/causalbridge/evaluation/diagnosis.py": "80c57d2763845e0aeb3154b499aedbe4b1bc61a84627dfad7eb835980435fc60",
+    "src/causalbridge/evaluation/export.py": "30438c16bf22d9b9abd470418dc5d30e752338b65211c51bb45ee27c58a521b9",
+    "src/causalbridge/evaluation/handoff.py": "a0b829f81e2075104afb867d57130906e3b114e7841c18074945ff7e8fbc7567",
+    "src/causalbridge/evaluation/integration.py": "cb93897c1a68e2dfbe5bf5ad48238f3dd96af2aa1c22d44354945bfe5cac94eb",
+    "src/causalbridge/evaluation/integration_demo.py": "6e6dc6a59f3ecf5c5e8ae3c5b0ffa20150592b6bcc69ceb27c9594812d6dd7e4",
+    "src/causalbridge/evaluation/joins.py": "f5c4509a420d902ce3a0681bd55867d539f9ca6d5f7a43346cffead42fe0c01d",
+    "src/causalbridge/evaluation/outcome_accounting.py": "fe08ef076589d85061fcbcaede55f250533f94ec204ed9e64929a1dfc4dc6ff6",
+    "src/causalbridge/evaluation/record_costs.py": "70219ae71275b62c75493cba0da4bd6f7b80a0466907920218ef86e42dd56a90",
+    "src/causalbridge/evaluation/roster.py": "24a585a9fb09f6a2b266c6bcb98519858158dc4f52f65bc7fed50c9233e9dcb0",
+    "src/causalbridge/evaluation/runner.py": "80c92797e464b33eb5945ceeb4f83f5df5a8a1907c6dfd274cb8cb923ae05478",
+    "src/causalbridge/evaluation/saved_checks.py": "f10453628aa289e98d5b32d028c651f389e6e4eb7beb396c444802d2b0157ef3",
+    "src/causalbridge/evaluation/scoring.py": "116af6317d4bedb68111fdd23062f4c2f9e573b02f75739f5153df64b046a815",
+    "src/causalbridge/evaluation/store.py": "40244e620fd147374d325a692e0e8933a5418e497581285db6b548504ca2a1f1",
+    "src/causalbridge/llm/__init__.py": "8719ca0aba81fbd7bcf4c088a4177296b4c734ea60058139aab3071dca85369b",
+    "src/causalbridge/llm/client.py": "ca2515ff194e329c8ab312e297824ff2f972bebe94c151126033aa127fdcad74",
+    "src/causalbridge/llm/parser.py": "be6541cc8e584f071d6aff096fe04ffb718b675122e254ebcd4cb8863e1a6bc5",
+    "src/causalbridge/llm/predictor.py": "f6895fac92f7f23bd49b59a3c878c1d90f561340ba425ceaff41f3f2a815b097",
+    "src/causalbridge/llm/tool_planner.py": "4267b1baa1f1299b8626669d9bdc886b3274f18c7ead2c466cabb1b55bcd6a16",
+    "src/causalbridge/pipeline.py": "03782b7fe6fd13153009988f66a662bfa154d4fd809fc7a91d809de5f6a86476",
+    "src/causalbridge/schemas.py": "775ce312d209ba520ed3ef313a9a4a7276f82263daa1921f36c068b593f03825",
+    "src/causalbridge/tools/__init__.py": "b598dda444a663204381193be86e4d983fd747bbdf685aa00685a51078cd6551",
+    "src/causalbridge/tools/engine.py": "615390731b19c03e83f95f2672d6af6e248f6fcccd35c158786d86c5c8c23078",
+    "src/causalbridge/tools/graph.py": "2188e765823d22f0aa99a1344578f1a109ad019f00c1018bf546a3be9ea13d78",
+    "src/causalbridge/tools/inference.py": "10cac297fac913d293d74e259284dde04b0bde936f33fd6fd2fda2e703993fcc",
+    "src/causalbridge/tools/protocol.py": "d1cd214944f6c05a12fac91061e15182b8e7b04be5cfeb967c41cfada3df6a94",
+    "src/causalbridge/tools/reference.py": "83b9055767da29d2489dced18e7cbfdc3fa51d3578224140eb472ff305d004ff",
+    "src/causalbridge/verifier/__init__.py": "f8c0ea0e1364b1f5d85f1813e620c4f4e8cf1756f60a5e2f5ca8ce51b013f726",
+    "src/causalbridge/verifier/bindings.py": "50409ce421f37c6b1b569c69b363286e0c02524d537e7bb1f2280ca58c1ad184",
+    "src/causalbridge/verifier/checks.py": "19d932f4d7be58364a1f2bbc9ab02b7252e732917ac060a2cf80b9b5014bbf37",
+    "src/causalbridge/verifier/contracts.py": "e1cf1c6dce5a792e2cb607f3ef89a3d412f3384b68c6537bf95ec519bb1839ed"
+  },
+  "manifest_digest": "sha256:3e9cff521916c8118744b7d7f79782e1131130d8b20ec713d83d56b61b481e5b",
+  "completion": {
+    "passed": true,
+    "scheduled": 192,
+    "failures": 0,
+    "elapsed_seconds": 5.751182042004075,
+    "manifest_digest": "sha256:3e9cff521916c8118744b7d7f79782e1131130d8b20ec713d83d56b61b481e5b",
+    "diagnostics_digest": "sha256:f6b67c4797d622ab82d1ed1549dae9b540a213196b8b846926253c36c07074dc"
+  }
+}

@@ -1,0 +1,161 @@
+Checked 22 packages in 11ms
+All checks passed!
+205 files already formatted
+============================= test session starts ==============================
+platform darwin -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/anishpatnaik/Documents/DSC261/CausalBridge-ANM-Failure-Diagnosis
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0, anyio-4.15.1
+collected 1048 items
+
+tests/test_anm.py .........................                              [  2%]
+tests/test_anm_adequacy.py .........                                     [  3%]
+tests/test_anm_failure_audit.py .....................                    [  5%]
+tests/test_anm_replay.py ................                                [  6%]
+tests/test_anm_requests.py ......................                        [  8%]
+tests/test_anm_study.py ...............                                  [ 10%]
+tests/test_anm_synthetic_panel.py .....                                  [ 10%]
+tests/test_anm_validation_test.py .....                                  [ 11%]
+tests/test_anm_verifier_integration.py .............                     [ 12%]
+tests/test_artifact_audit.py ...............................             [ 15%]
+tests/test_benchmark_generator.py .................................      [ 18%]
+tests/test_benchmark_pilot.py ........                                   [ 19%]
+tests/test_client.py ..........                                          [ 20%]
+tests/test_contracts.py ....................                             [ 22%]
+tests/test_data_audit.py ..s.....                                        [ 22%]
+tests/test_direction.py ................................................ [ 27%]
+..............                                                           [ 28%]
+tests/test_discovery_phase1.py .......................                   [ 31%]
+tests/test_engine.py ................................................... [ 35%]
+...                                                                      [ 36%]
+tests/test_evaluation_roster.py .s......                                 [ 37%]
+tests/test_evaluator_joins.py ..............................             [ 39%]
+tests/test_experiment_runner.py .............                            [ 41%]
+tests/test_graph.py ...........................                          [ 43%]
+tests/test_input_errors.py ......                                        [ 44%]
+tests/test_native_integration_runner.py .....................            [ 46%]
+tests/test_native_release_corruption.py ....                             [ 46%]
+tests/test_numeric_claim_tolerance.py .................................. [ 49%]
+....................                                                     [ 51%]
+tests/test_offline_acceptance.py .......................                 [ 54%]
+tests/test_pilot_data.py ..........                                      [ 54%]
+tests/test_pilot_diagnosis.py .......................                    [ 57%]
+tests/test_pilot_handoff_acceptance.py ..........                        [ 58%]
+tests/test_pilot_lineage.py .........................                    [ 60%]
+tests/test_pilot_numerical_confirmation.py ...                           [ 60%]
+tests/test_pilot_scoring.py ....................                         [ 62%]
+tests/test_pipeline.py ...................                               [ 64%]
+tests/test_pr8_review.py ..................                              [ 66%]
+tests/test_prediction_checks.py ........................................ [ 70%]
+..............                                                           [ 71%]
+tests/test_prediction_process_injections.py ............................ [ 74%]
+                                                                         [ 74%]
+tests/test_record_costs.py ...........                                   [ 75%]
+tests/test_reference.py .........                                        [ 75%]
+tests/test_saved_result_checks.py ...................                    [ 77%]
+tests/test_schemas.py ...............                                    [ 79%]
+tests/test_scoring_acceptance_fixtures.py .............................. [ 82%]
+..........                                                               [ 83%]
+tests/test_smoke_v2.py .............                                     [ 84%]
+tests/test_track_b_handoff.py .......................................... [ 88%]
+........................................................................ [ 95%]
+....................................                                     [ 98%]
+tests/test_track_b_integration.py ...............                        [100%]
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.12.16-final-0 _______________
+
+Name                                                Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------------
+src/causalbridge/__init__.py                            1      0   100%
+src/causalbridge/__main__.py                            2      2     0%   1-3
+src/causalbridge/benchmark/__init__.py                  3      0   100%
+src/causalbridge/benchmark/generator.py                53      4    92%   36, 56, 64, 67
+src/causalbridge/benchmark/pilot.py                   133      4    97%   250, 436, 520, 563
+src/causalbridge/benchmark/witness.py                  67     11    84%   26, 28, 31, 63, 65, 71, 73, 77, 80, 92, 109
+src/causalbridge/cli.py                                91     20    78%   48-59, 68-70, 78-84, 86, 91-99, 115, 148
+src/causalbridge/demo.py                               31      1    97%   24
+src/causalbridge/discovery/__init__.py                  0      0   100%
+src/causalbridge/discovery/anm.py                     133     18    86%   40-41, 58, 61, 68, 90, 114, 118-119, 128-131, 152-153, 242, 265, 267
+src/causalbridge/discovery/anm_requests.py            101      0   100%
+src/causalbridge/discovery/contracts.py               173      9    95%   37, 144, 146, 151, 156, 186, 210, 212, 232
+src/causalbridge/discovery/data_audit.py              124     74    40%   67-68, 71-73, 111-163, 168-175, 180-181, 185-202, 206
+src/causalbridge/discovery/demo.py                     44      2    95%   194-195
+src/causalbridge/discovery/evidence.py                 54      1    98%   105
+src/causalbridge/discovery/example.py                  25      6    76%   116-120, 124
+src/causalbridge/discovery/loader.py                  138     31    78%   23, 25, 29, 42, 45, 52, 93, 95, 97, 113, 138, 142, 145, 169, 189-206, 210
+src/causalbridge/discovery/prompts.py                  15      0   100%
+src/causalbridge/discovery/replay.py                   94      9    90%   88, 132, 137-138, 148-149, 195-196, 202
+src/causalbridge/discovery/schemas.py                 156      4    97%   100, 109, 132, 245
+src/causalbridge/discovery/statistics.py               16      0   100%
+src/causalbridge/discovery/study.py                   287     40    86%   59, 61, 64, 67, 105, 130, 353, 356, 422, 435, 439, 446, 448, 451, 455, 458, 481, 506, 513, 529-551, 555
+src/causalbridge/evaluation/__init__.py                 0      0   100%
+src/causalbridge/evaluation/acceptance_demo.py         85     10    88%   139, 144, 146, 165, 205-209, 213
+src/causalbridge/evaluation/anm_failure_audit.py      310     32    90%   102, 109, 135, 154, 194, 200, 205, 209, 213, 215, 217, 263, 266, 269, 277, 280, 328, 336, 432, 437, 439, 441, 443, 445, 448, 453, 542, 562, 575, 581, 584, 586
+src/causalbridge/evaluation/anm_failure_report.py      51      0   100%
+src/causalbridge/evaluation/audit.py                  290      8    97%   29, 36, 44, 79, 197-202, 267, 623
+src/causalbridge/evaluation/audit_native.py           181     14    92%   194-195, 454-464, 468
+src/causalbridge/evaluation/audit_policy.py             4      0   100%
+src/causalbridge/evaluation/demo.py                    39     18    54%   57-83, 99
+src/causalbridge/evaluation/diagnosis.py              261     34    87%   78, 96, 107, 239, 245-246, 282-284, 307, 378, 423, 426, 439, 469, 474-505, 522
+src/causalbridge/evaluation/export.py                  44      1    98%   172
+src/causalbridge/evaluation/handoff.py                 97      1    99%   129
+src/causalbridge/evaluation/integration.py            242     21    91%   84, 97, 99, 104, 111, 113, 115, 119, 135, 150, 178, 215, 217, 260, 262, 264, 268, 294, 376, 451, 497
+src/causalbridge/evaluation/integration_demo.py        47     25    47%   32-33, 48-89, 105
+src/causalbridge/evaluation/joins.py                   64      1    98%   52
+src/causalbridge/evaluation/outcome_accounting.py      53      3    94%   11, 17, 23
+src/causalbridge/evaluation/record_costs.py            55      2    96%   65, 71
+src/causalbridge/evaluation/roster.py                  73     17    77%   31, 35, 94, 122-136, 140
+src/causalbridge/evaluation/runner.py                 145      2    99%   72, 261
+src/causalbridge/evaluation/saved_checks.py            46      1    98%   41
+src/causalbridge/evaluation/scoring.py                124     24    81%   19, 22, 26, 29, 46, 49, 75, 104, 118, 159-178, 182
+src/causalbridge/evaluation/store.py                   82      1    99%   60
+src/causalbridge/llm/__init__.py                        0      0   100%
+src/causalbridge/llm/client.py                         57      2    96%   70-71
+src/causalbridge/llm/parser.py                         27      1    96%   23
+src/causalbridge/llm/predictor.py                      58      1    98%   95
+src/causalbridge/llm/tool_planner.py                    7      0   100%
+src/causalbridge/pipeline.py                          104      3    97%   75, 115, 146
+src/causalbridge/schemas.py                           144      9    94%   60, 73, 75, 77, 104, 109, 135, 164, 166
+src/causalbridge/tools/__init__.py                      0      0   100%
+src/causalbridge/tools/engine.py                       27      2    93%   34-35
+src/causalbridge/tools/graph.py                        34      0   100%
+src/causalbridge/tools/inference.py                    54      1    98%   87
+src/causalbridge/tools/protocol.py                      3      0   100%
+src/causalbridge/tools/reference.py                    66      5    92%   16, 38, 55, 87-88
+src/causalbridge/verifier/__init__.py                   0      0   100%
+src/causalbridge/verifier/bindings.py                  30      1    97%   33
+src/causalbridge/verifier/checks.py                   143      4    97%   42, 181, 227, 229
+src/causalbridge/verifier/contracts.py                 87     10    89%   92, 95-96, 103, 122, 138, 148, 158, 183-184
+---------------------------------------------------------------------------------
+TOTAL                                                4875    490    90%
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_data_audit.py:67: Tübingen snapshot is not in this checkout
+SKIPPED [1] tests/test_evaluation_roster.py:68: Tübingen snapshot or evaluation roster is not in this checkout
+======================= 1046 passed, 2 skipped in 29.13s =======================
+toy_complete: verified / answer / positive
+toy_graph_only: unsupported / abstain / None
+path_sign_mismatch: wrong_operation / abstain / None
+no_path_zero: verified / answer / zero
+decreasing_treatment: verified / answer / negative
+valid_backdoor: verified / answer / 0.6
+xy_only_confounded: unsupported / abstain / None
+incorrect_probability: unsupported / abstain / None
+Scripted fixtures only; these are not LLM evaluation results.
+Saved 8 traces to runs/check-demo.jsonl; statuses: {'verified': 4, 'unsupported': 3, 'wrong_operation': 1}
+toy_complete: verified / answer / positive
+toy_graph_only: unsupported / abstain / None
+path_sign_mismatch: wrong_operation / abstain / None
+no_path_zero: verified / answer / zero
+decreasing_treatment: verified / answer / negative
+valid_backdoor: verified / answer / 0.6
+xy_only_confounded: unsupported / abstain / None
+incorrect_probability: unsupported / abstain / None
+Scripted fixtures only; these are not LLM evaluation results.
+Saved 8 traces to runs/check-engine-demo.jsonl; statuses: {'verified': 4, 'unsupported': 3, 'wrong_operation': 1}
+{"anm_status": "ok", "checker_status": "pass", "margin": 0.011733515806456783, "original_request": "/var/folders/6f/hmtkm77949l8nv9r0km725xh0000gn/T/causalbridge-anm-check.M2m5tT/handshake/anm/request.json", "release": true, "s1_run_id": "4358bff0a6f84df2a8bd70b13c49a37d", "score_ab": 0.0014467534460217738, "score_ba": 0.013180269252478557, "scripted_model_only": true, "synthetic_only": true}
+Building source distribution...
+Building wheel from source distribution...
+Successfully built dist/causalbridge-0.1.0.tar.gz
+Successfully built dist/causalbridge-0.1.0-py3-none-any.whl

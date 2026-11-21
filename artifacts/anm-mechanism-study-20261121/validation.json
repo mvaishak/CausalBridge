@@ -1,0 +1,69 @@
+{
+  "status": "CONTROLLED_SYNTHETIC_PASS_REAL_ROOT_CAUSE_UNRESOLVED",
+  "branch": "codex/anm-failure-diagnosis-20261121",
+  "baseline_commit": "fb81b96a92c8cc78360276e54bd3d9be0a974e56",
+  "phase": "main",
+  "scheduled_main_cells": 192,
+  "main_base_worlds": 24,
+  "main_regime_datasets": 48,
+  "preflight_cells": 16,
+  "preflight_base_worlds": 2,
+  "execution_failures": 0,
+  "experiment_production_directional_fits": 416,
+  "experiment_diagnostic_directional_refits": 416,
+  "experiment_permutation_statistics": 61776,
+  "main_permutation_statistics_replayed_per_analysis": 57024,
+  "additional_unit_fixture_fits_not_scientific_observations": true,
+  "live_llm_calls": 0,
+  "new_real_data_fits": 0,
+  "parameters_selected_from_outcomes": false,
+  "freeze": {
+    "main_manifest_digest": "sha256:3e9cff521916c8118744b7d7f79782e1131130d8b20ec713d83d56b61b481e5b",
+    "preflight_source_matches_main": true,
+    "source_and_inputs_saved_before_execution": true,
+    "external_preregistration_claimed": false
+  },
+  "software": {
+    "passed": 1053,
+    "skipped": 2,
+    "new_mechanism_regressions_passed": 7,
+    "earlier_audit_regressions": 21,
+    "lint": "PASS",
+    "format": "PASS",
+    "demos_handshake_builds": "PASS",
+    "skip_reason": "Existing optional upstream-snapshot tests."
+  },
+  "clean_frozen_source_environment_replay": {
+    "passed": true,
+    "files_matched_byte_for_byte": [
+      "metrics.json",
+      "case-results.json",
+      "report.md"
+    ],
+    "new_regression_fits": 0,
+    "all_main_saved_permutation_calculations_recomputed": true
+  },
+  "archive": {
+    "files": 1793,
+    "sha256": "cb77326b646b225cbc8bbdfd425a1c901110287510a97e398b0277c7e7f6815e"
+  },
+  "figure_rendering": {
+    "matplotlib": "3.10.6",
+    "executed": true,
+    "png_visually_inspected": true,
+    "documented_uv_command_executed": true
+  },
+  "prior_results_preserved": true,
+  "phase_one_only_shared_document_digests_refreshed": [
+    "README.md",
+    "docs/IMPLEMENTATION_LOG.md",
+    "docs/experiments/anm-failure-diagnosis.md"
+  ],
+  "limitations": [
+    "Two fixed mechanisms, one noise amplitude and one violation strength.",
+    "Repeated regime/size cells share base worlds; 192 cells are not 192 independent datasets.",
+    "Exploratory, family-stratified paired intervals are unadjusted and do not generalize over mechanisms.",
+    "Oracle replaces only the true forward regression; it is not deployable or an upper bound.",
+    "No case-specific cause is established for Tuebingen errors."
+  ]
+}

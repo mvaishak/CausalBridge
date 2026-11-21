@@ -219,3 +219,94 @@ Plan: `docs/superpowers/plans/2026-10-27-vaishak-implementation.md`.
   remain unchanged; no numerical study or LLM evaluation was rerun.
 - Full `scripts/check.sh`: 997 tests passed, no skips; lint/format, Track A demos,
   synthetic ANM handshake and source/wheel builds passed.
+
+## 2026-11-21 — Offline ANM failure diagnosis
+
+Separate local branch `codex/anm-failure-diagnosis-20261121`, based on main `fb81b96`.
+Added a read-only audit and generated report/plots for saved ANM records, separate
+from the LLM cue experiment. All 7,125 archive members are hash-verified; 210 real
+and 352 synthetic attempts are checked against independently saved requests,
+configuration, split/mapping identities, result receipts and preprocessing/MSE
+arithmetic. The numeric study's primary 13C/13W/12A is reproduced.
+
+Nine of 13 wrong primary cases change raw-margin sign across splits; three remain
+wrong on every split (pairs 91, 92 and 108, in two source families). Shorter samples
+have more errors but source families confound that comparison. Cached matched
+synthetic sample-size transitions, repeated values, margins, fit quality and the
+existing four-pair adequacy outcomes are reported without selecting a new method.
+Manual paraphrases for the three persistent cases were checked against pinned
+source-description hashes; possible causes remain hypotheses.
+
+Validation: full suite 1,046 passed, two existing optional-snapshot skips; 21 new
+regression cases; Ruff lint/format, demos, synthetic handshake and package builds.
+A second offline replay reproduced all five numeric/report files byte-for-byte.
+Optional Matplotlib 3.10.6 rendering was executed and figures visually inspected.
+The diagnosis performed no new fits, permutations or model calls. Original results,
+production ANM code, final report and presentation are unchanged. New controlled
+numerical studies are proposed in the guide, not silently executed. No commit,
+push or merge was authorized for this separate branch.
+
+## 2026-11-21 — Controlled ANM component follow-up
+
+On the same local ANM failure-diagnosis branch, implemented and froze a separate
+synthetic study before fitting: two functions, 24 base worlds, paired independent
+additive/heteroscedastic noise, training sizes 64/256 and evaluation sizes 64/256.
+The 16-cell disjoint-seed preflight and 192-cell main study completed without
+execution failures. Production ANM settings and source remained unchanged.
+Original requests, all generated data and executable-source hashes precede results.
+
+At 256/256, additive noise yielded 24C/0W/0A; the paired heteroscedastic condition
+2C/17W/5A. Replacing only the true regression with the known mean still gave
+2C/16W/6A under heteroscedastic noise. This isolates a forward-assumption mismatch
+failure in the tested simulations, not the cause of specific real wrong arrows.
+Training/evaluation-size effects, oracle dependence checks, family tables and
+exploratory paired intervals are preserved rather than selecting a winning setting.
+
+Frozen bundle: `artifacts/anm-mechanism-study-20261121/`, 1,793 verified files,
+including exact numerical source and build context. The isolated frozen-source
+analysis replay reproduced all three output files byte-for-byte and recomputed
+all main permutation statistics without refitting. Full repository checks passed
+1,053 tests with two existing optional-snapshot skips; seven new study regressions
+passed in addition to the earlier audit's 21. Matplotlib figures were rendered
+and inspected. No real-data fits, LLM calls, code commits, pushes or merges.
+
+## 2026-11-21 — Real-pair residual-spread follow-up
+
+Froze `anm-real-noise-v1` before new diagnostics. Included all 17 original pilot
+pairs and 38 later pairs with their three saved splits; reconstructed 262 original
+directional fits with matching HSIC scores. Original inputs, outcomes and settings
+are unchanged. Median-centered spread checks use training-quantile bins, optional
+cross-fitted quadratic residual-mean correction, and IID/saved-order-block nominal
+randomizations. Holm families retain all planned slots, including unavailable tests.
+Block randomization remains an unvalidated heuristic for unknown observation order.
+
+After mean correction, four of eight wrong pilot reference directions flag under
+nominal IID/Holm analysis; two (pairs 56/88) persist under block sensitivity. The
+later panel also flags correct and abstaining cases. None of the three persistently
+wrong cases has a robust primary adjusted flag across all schemes. Results are
+compatible with a candidate mismatch in a subset, not proof of structural noise or
+a cause of all errors. Fixed controls expose mean-error false attribution (22/24
+raw flags, zero after correction), with heteroscedastic controls 24/24 in both forms.
+
+Preserved the 1,405-member raw/source bundle and 334 vector records. Fresh frozen-
+source environment replay, with original ANM fitting blocked, matched all three
+analysis JSON files exactly; auxiliary detrending and permutation statistics were
+recalculated. Full checks passed 1,063 tests/two existing optional-snapshot skips,
+with ten new residual-study regressions. Figures were rendered and inspected.
+No LLM calls, model tuning, new original ANM decisions, commits, pushes or merges.
+
+## 2026-11-21 — Fixed mean-estimator robustness check
+
+Four frozen estimators evaluated pairs 56/88 and all six correctly answered pilot
+pairs on unchanged saved splits. All 32 real and 64 synthetic configurations are
+preserved. Both candidate spread patterns survive all estimator/form/scheme checks;
+none of the six comparison cases meets that same all-configuration criterion.
+This supports estimator robustness of a case-specific pattern, not structural
+noise identification or an accuracy improvement. See the experiment guide and
+review for nominal p-value, selection, dependence and mean-estimation limitations.
+
+Validation: 1,069 tests passed, two existing optional-snapshot skips; lint and
+format checks passed. Fresh-environment numerical rerun reproduced all three
+outputs byte-for-byte. The new raw bundle has 137 verified members. No LLM calls
+or production changes. The user subsequently authorized committing the accumulated
+ANM investigation work to this feature branch; publishing or merging is separate.

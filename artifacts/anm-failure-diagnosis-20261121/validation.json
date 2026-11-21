@@ -1,0 +1,55 @@
+{
+  "status": "OFFLINE_AUDIT_PASS_CAUSAL_ROOT_CAUSE_UNRESOLVED",
+  "branch": "codex/anm-failure-diagnosis-20261121",
+  "baseline_commit": "fb81b96a92c8cc78360276e54bd3d9be0a974e56",
+  "full_suite": {
+    "passed": 1046,
+    "skipped": 2,
+    "skip_reason": "Existing tests require optional full upstream snapshot in the normal repository location."
+  },
+  "new_regressions_passed": 21,
+  "lint": "PASS",
+  "format": "PASS",
+  "demos_handshake_and_package_builds": "PASS",
+  "archive_files_verified": 7125,
+  "saved_real_attempts_verified": 210,
+  "saved_synthetic_attempts_verified": 352,
+  "byte_identical_replay_files": [
+    "metrics.json",
+    "case-results.json",
+    "case-results.csv",
+    "real-attempts.json",
+    "report.md"
+  ],
+  "new_anm_fits": 0,
+  "new_permutation_tests": 0,
+  "live_llm_calls": 0,
+  "plotting": {
+    "version": "3.10.6",
+    "executed": true,
+    "png_visual_inspection": "PASS",
+    "optional_pinned_uv_command": "PASS"
+  },
+  "manual_source_context_review": {
+    "pairs": [
+      91,
+      92,
+      108
+    ],
+    "description_hashes_checked_against_pinned_manifest": true,
+    "source_semantics_not_automatically_verified": true
+  },
+  "preserved_inputs_sha256": {
+    "artifacts/anm-experiments-2026-11-18/run-records.tar.gz": "98808df804e302da385b796dc7c576b8d3a3dec24e8c69e600123751119ff3ba",
+    "artifacts/anm-experiments-2026-11-18/manifest.json": "caa1e97b16c3634f50739c095abce8823575bed199270892ac17c90c31421fd0",
+    "configs/anm-failure-audit.json": "c492a164ebdc0d767770a4a589badbef17f9c18670244f292ebbbb27278b7935",
+    "configs/evaluation-roster.json": "c62da8bc37c99420ef5073e207652178d84e4144c04237681fa0fb3ef4bffa0d"
+  },
+  "limitations": [
+    "Saved integrity/preprocessing checks are not fresh independent numerical KRR/HSIC validation.",
+    "Full upstream source-row selection was not reconstructed in this audit.",
+    "Opened reference labels, source-family dependence, repeated splits and post-outcome strata limit inference.",
+    "No unique root cause, new selected method or accuracy improvement established.",
+    "New known-truth controlled numerical experiments remain proposed."
+  ]
+}
