@@ -17,7 +17,10 @@ PROTOCOL = "counterfactual-diagnostic-cue-v1"
 SEED = 20261121
 ARMS = ("no_card", "aligned", "reversed", "uncertain")
 TAU = 0.001
-FORBIDDEN = {"reference_direction", "true_direction", "gold_direction", "arm", "source_group", "weight"}
+FORBIDDEN = {
+    "reference_direction", "true_direction", "gold_direction",
+    "arm", "source_group", "weight",
+}
 
 
 def digest(obj):
@@ -175,10 +178,11 @@ def make_condition():
 
 
 def run_live(public, *, model_config, output):
+    import httpx
+
     from causalbridge.discovery.schemas import DirectionEvidence
     from causalbridge.llm.client import ModelConfig, OllamaModel
     from causalbridge.llm.predictor import predict_direction
-    import httpx
 
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
@@ -214,7 +218,11 @@ def rate(rows, flag):
 def analyze(public, private, outputs):
     gold = {x["case_id"]: x["reference_direction"] for x in private}
     expected = {(x["case_id"], x["arm"]) for x in public}
-    if len(expected) != len(public) or len(gold) * 4 != len(public) or {x[0] for x in expected} != set(gold):
+    if (
+        len(expected) != len(public)
+        or len(gold) * 4 != len(public)
+        or {x[0] for x in expected} != set(gold)
+    ):
         raise ValueError("Duplicate or incomplete prepared design")
     observed = {}
     for item in outputs:
@@ -226,7 +234,10 @@ def analyze(public, private, outputs):
         trace = item["trace"]
         prediction = trace.get("prediction")
         failed = trace.get("failure_stage") is not None or prediction is None
-        matched = next(x for x in public if x["case_id"] == item["case_id"] and x["arm"] == item["arm"])
+        matched = next(
+            x for x in public
+            if x["case_id"] == item["case_id"] and x["arm"] == item["arm"]
+        )
         if trace.get("evidence") != matched["evidence"]:
             raise ValueError("Saved trace evidence differs from frozen prepared case")
         if trace.get("package_digest") != digest(matched["evidence"]):
@@ -268,8 +279,12 @@ def analyze(public, private, outputs):
         values = []
         for case in gold:
             b, treatment = observed[(case, "no_card")], observed[(case, arm)]
-            wrong = lambda o: o["direction"] is not None and o["direction"] != gold[case]
-            values.append(int(wrong(treatment)) - int(wrong(b)))
+            baseline_wrong = b["direction"] is not None and b["direction"] != gold[case]
+            treatment_wrong = (
+                treatment["direction"] is not None
+                and treatment["direction"] != gold[case]
+            )
+            values.append(int(treatment_wrong) - int(baseline_wrong))
         # Paired bootstrap resamples independent synthetic DGP cases, not arms.
         r = random.Random(SEED + 982)
         draws = [sum(r.choice(values) for _ in values) / len(values) for _ in range(2000)]
@@ -283,7 +298,8 @@ def analyze(public, private, outputs):
     )
     return {"scope": "counterfactual_synthetic_diagnostic_cue_study",
             "protocol": PROTOCOL, "case_count": len(gold),
-            "status": "scores_from_supplied_traces; independent_authenticity_review_required", "conditions": stats,
+            "status": "scores_from_supplied_traces; independent_authenticity_review_required",
+            "conditions": stats,
             "paired_vs_no_card": paired,
             "reversed_card_wrong_direction_count": reversed_copy,
             "limitations": ["Cards were constructed, not fitted ANM outputs",
@@ -321,7 +337,7 @@ def main(argv=None):
             "preparation_script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             "predeclared_primary": "delta_wrong_yield(reversed_card - no_card)",
             "warnings": ["Public records have counterfactual arms; pass ONLY item.evidence to LLM",
-                         "Private oracle must never enter model prompt or scorer until after predictions",
+                         "Private oracle must not enter model prompts before predictions",
                          "No card is a genuine fitted ANM result"],
         })
         print(f"Prepared {len(private)} independent DGP cases and {len(public)} matched prompts")
@@ -330,7 +346,10 @@ def main(argv=None):
         identity = json.loads((args.prepared / "protocol.json").read_text())
         if digest(public) != identity["public_digest"]:
             raise ValueError("Frozen public manifest mismatch")
-        if hashlib.sha256(Path(__file__).read_bytes()).hexdigest() != identity["preparation_script_sha256"]:
+        if (
+            hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+            != identity["preparation_script_sha256"]
+        ):
             raise ValueError("Preparation script changed after protocol freeze")
         run_live(public, model_config=args.model_config, output=args.output)
     else:
@@ -338,7 +357,10 @@ def main(argv=None):
         frozen = json.loads((args.prepared / "protocol.json").read_text())
         if digest(public) != frozen["public_digest"]:
             raise ValueError("Frozen public manifest mismatch")
-        if hashlib.sha256(Path(__file__).read_bytes()).hexdigest() != frozen["preparation_script_sha256"]:
+        if (
+            hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+            != frozen["preparation_script_sha256"]
+        ):
             raise ValueError("Preparation script changed after protocol freeze")
         private = json.loads((args.prepared / "private-oracle.json").read_text())
         responses = load_jsonl(args.responses)
