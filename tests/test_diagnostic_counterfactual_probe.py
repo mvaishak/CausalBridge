@@ -23,7 +23,10 @@ class DiagnosticProbeTests(unittest.TestCase):
         for gold in self.private:
             rows = [x for x in self.public if x["case_id"] == gold["case_id"]]
             self.assertEqual(len(rows), 4)
-            assert all(x["evidence"]["display_rows"] == rows[0]["evidence"]["display_rows"] for x in rows)
+            assert all(
+                x["evidence"]["display_rows"] == rows[0]["evidence"]["display_rows"]
+                for x in rows
+            )
             assert all(x["evidence"]["summary"] == rows[0]["evidence"]["summary"] for x in rows)
 
     def test_no_gold_in_model_evidence_and_valid_cards(self):
