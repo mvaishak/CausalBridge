@@ -222,13 +222,30 @@ def file_sha256(path):
 
 
 def read_frozen_preparation(prepared, *, read_oracle=False):
-    """Reject platform-dependent regenerated samples; never silently refreeze."""
+    """Read the original hashed bytes from a folder or the committed ZIP."""
     prepared = Path(prepared)
-    if file_sha256(prepared / "public.jsonl") != FROZEN_PUBLIC_SHA256:
-        raise ValueError("Prepared public bytes differ from frozen fixture; do not regenerate")
-    if file_sha256(prepared / "protocol.json") != FROZEN_PROTOCOL_SHA256:
-        raise ValueError("Prepared protocol bytes differ from frozen fixture")
-    protocol = json.loads((prepared / "protocol.json").read_text())
+    names = ["public.jsonl", "protocol.json"]
+    if read_oracle:
+        names.append("private-oracle.json")
+    if prepared.is_dir():
+        contents = {name: (prepared / name).read_bytes() for name in names}
+    elif prepared.is_file() and prepared.suffix == ".zip":
+        import zipfile
+
+        with zipfile.ZipFile(prepared) as archive:
+            contents = {
+                name: archive.read("sample_prepared/" + name) for name in names
+            }
+    else:
+        raise ValueError("Frozen prepared input must be a directory or bundled ZIP")
+
+    def check_bytes(name, expected):
+        if hashlib.sha256(contents[name]).hexdigest() != expected:
+            raise ValueError(f"Prepared {name} bytes differ from frozen fixture")
+
+    check_bytes("public.jsonl", FROZEN_PUBLIC_SHA256)
+    check_bytes("protocol.json", FROZEN_PROTOCOL_SHA256)
+    protocol = json.loads(contents["protocol.json"].decode("utf8"))
     if (
         protocol.get("preparation_script_sha256") != FROZEN_GENERATOR_SHA256
         or protocol.get("public_digest") != FROZEN_PUBLIC_DIGEST
@@ -238,14 +255,17 @@ def read_frozen_preparation(prepared, *, read_oracle=False):
         or protocol.get("display") != 16
     ):
         raise ValueError("Frozen protocol identity mismatch")
-    public = load_jsonl(prepared / "public.jsonl")
+    public = [
+        json.loads(line)
+        for line in contents["public.jsonl"].decode("utf8").splitlines()
+        if line.strip()
+    ]
     if digest(public) != FROZEN_PUBLIC_DIGEST or len(public) != 96:
         raise ValueError("Frozen public records failed independent canonical check")
     if not read_oracle:
         return public, None
-    if file_sha256(prepared / "private-oracle.json") != FROZEN_PRIVATE_SHA256:
-        raise ValueError("Frozen private oracle bytes differ from locked fixture")
-    oracle = json.loads((prepared / "private-oracle.json").read_text())
+    check_bytes("private-oracle.json", FROZEN_PRIVATE_SHA256)
+    oracle = json.loads(contents["private-oracle.json"].decode("utf8"))
     if len(oracle) != 24:
         raise ValueError("Frozen oracle case count mismatch")
     return public, oracle
