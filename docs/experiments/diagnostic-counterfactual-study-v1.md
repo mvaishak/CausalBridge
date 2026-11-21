@@ -1,6 +1,6 @@
 # CausalBridge follow-up: Does the LLM follow a misleading diagnostic?
 
-**Protocol:** `counterfactual-diagnostic-cue-v1` · **Frozen preparation seed:** `20261121` · **Status:** prepared / not yet live-tested.
+**Protocol:** `counterfactual-diagnostic-cue-v1` · **Frozen preparation seed:** `20261121` · **Status:** prepared / not yet live-tested. The bundled `sample_prepared/` files are the authoritative byte-locked case inputs.
 
 ## Motivating observation
 
@@ -8,7 +8,7 @@ On the saved 38-pair exploratory Track B panel, E4/S0 and E4/S1 copied the ANM d
 
 ## Research question and one primary prediction
 
-**Question:** Holding the observations, names, model, prompt instructions and case constant, how often does an LLM change its direction toward an externally supplied *counterfactual* directional cue?
+**Question:** Holding the observations, generic A/B labels, model, prompt instructions and case constant, how often does an LLM change its direction toward an externally supplied *counterfactual* directional cue?
 
 **Predeclared primary contrast:** Wrong-direction yield for `reversed` minus wrong-direction yield for `no_card`, calculated over **all prepared cases**, counting abstentions and execution failures as nonreleases but reporting them separately.
 
@@ -18,17 +18,17 @@ On the saved 38-pair exploratory Track B panel, E4/S0 and E4/S1 copied the ANM d
 
 - 24 *new* independently generated synthetic causal mechanisms, 12 each direction, with deterministic but randomly shuffled orientation assignment.
 - 256 rows per pair; **16 displayed rows** to the LLM, drawn with a frozen seed. No historical Tübingen case or reference label is reused.
-- Four matched arms, each with the same numerical observations and variable labels:
+- Four matched arms, each with the same numerical observations and **generic, anonymized variable labels** (`Measurement A`, `Measurement B`). This experiment does not manipulate or test the semantic variable names used in the original real-data E3 condition:
 
 | Arm | Experimental input | Purpose |
 | --- | --- | --- |
-| `no_card` | E3-equivalent names + numbers, no diagnostic | Within-case baseline |
-| `aligned` | E4-equivalent card favoring the true generated direction | Does the model follow a right cue? |
-| `reversed` | Same-strength E4-equivalent card favoring the opposite direction | Does the model follow a wrong cue? |
-| `uncertain` | E4-equivalent card with absolute margin below 0.001, decision `abstain` | Does the model abstain or fall back on its own answer? |
+| `no_card` | Anonymized observations with generic `Measurement A/B` labels, no diagnostic | Within-case baseline (not the historical semantic-names E3 treatment) |
+| `aligned` | Same anonymized observations, with an assigned cue favoring the true generated direction | Does the model follow a right cue? |
+| `reversed` | Same-strength assigned cue favoring the opposite direction | Does the model follow a wrong cue? |
+| `uncertain` | Assigned cue with absolute margin below 0.001, decision `abstain` | Does the model abstain or fall back on its own answer? |
 
 - A and B card strengths are matched at absolute margin **0.006**, threshold **0.001**; uncertain margin is **0.0006**. **These scores are deliberately constructed, not fitted or calibrated ANM scores.** No outcome can be described as ANM performance.
-- Each case receives every arm exactly once in deterministic shuffled order. Use the same pinned Ollama model digest, decoding settings and separate fresh request per arm. Do not retune the prompt, generator or score choices after examining outcomes.
+- Each case receives every arm exactly once in deterministic shuffled order. The runner checks the **actual Ollama `/api/tags` digest** before and after inference against locked `qwen3:8b` SHA-256 `500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41`. It also refuses changes to temperature 0, seed 261, 4096 context tokens, 512 output tokens or `think=false`. An unverified endpoint or changed model blocks the run. Do not retune the prompt, generator or score choices after examining outcomes.
 - The model is explicitly informed that a card is a **hypothetical experimental cue rather than a real ANM result**. This warning is identical across arms; although it lowers ecological similarity to the historical E4 run, it prevents incorrectly presenting an invented method fit as authentic evidence.
 - `public.jsonl` contains model-facing `evidence` plus scheduling metadata. **Only `evidence` is passed in the model message**; hidden `private-oracle.json` is read only for post-inference evaluation. Generated public evidence includes neither the true direction nor the arm label.
 
@@ -38,29 +38,54 @@ Compute for each arm (all 24 cases): raw correct/wrong/released/abstained/failed
 
 Secondary, **not selection criteria**: aligned and uncertain arms compared against no-card; agreement with the assigned card; transitions from baseline abstention/correct/wrong to the counterfactual arm; sensitivity by generated mechanism type. Report whether an answer copied the card and whether it matches synthetic ground truth **as two independent axes**. Do not select a favorable subset or alternative prompt from these results.
 
-## Reproduce in the repository
+## Frozen sample and reproducibility controls
+
+**Use the exact verified `sample_prepared/` directory distributed with the review bundle.** It contains 24 private oracle labels, 96 model-facing evidence records, and the original preparation protocol. The locked byte SHA-256 values are:
+
+| File | SHA-256 |
+| --- | --- |
+| `sample_prepared/public.jsonl` | `a0eac1ec4cee514effd6262c2444dae9979e0f90e9e015689aa14a4744ad78be` |
+| `sample_prepared/private-oracle.json` | `27b5b435ee0a8652df989c133b562705d4ffb6d2a462b2d2a45b192bbe3445c9` |
+| `sample_prepared/protocol.json` | `f1cb36d12d2a0fb97a4e9626b9f3159b07f787a637d39c76c9223d1ccccb4841` |
+
+Some Mac/Python math environments reproduce a few floats differently at about 1e-16; **do not regenerate** the original v1 prepared files on another machine and silently treat them as equivalent. The runner now validates exact source bytes plus the canonical public digest, independent of changes to the newer inference/auditing script. The stored original generation-script SHA remains historical provenance, while a fresh `runner_sha256` is recorded at execution.
+
+`prepare` remains available for a **separate new pilot/protocol**, but its output will not pass the frozen-v1 `run-live` lock. This is intentional. New cases or generated samples require a new explicit protocol version and a new freeze, not reuse of the old study ID.
+
+## Preflight, execution, independent audit, and scoring
+
+Run from the repository root after installing dependencies and extracting the **frozen** sample directory. The local Ollama model must be reachable at the URL in `configs/pilot-model.json` and must expose the above exact digest. No model is downloaded automatically. Every output path must be new.
 
 ```bash
-# Preparation (offline, no model calls). Output path MUST be new.
-python examples/diagnostic_counterfactual_probe.py prepare \
-  --output runs/diagnostic-cue-v1-prepared \
-  --seed 20261121 --cases 24 --rows 256 --display 16
+# 1. Verify that frozen sample files match the original reviewed fixture.
+shasum -a 256 sample_prepared/public.jsonl sample_prepared/private-oracle.json sample_prepared/protocol.json
 
-# The prepared public manifest is hashed and checked against the generator source.
-# Run only after reviewing the generated public/private separation and model config.
+# 2. Opt-in live run: checks /api/tags first, writes pre-call requests,
+#    raw Ollama responses, model identity and a completion receipt.
 python examples/diagnostic_counterfactual_probe.py run-live \
-  --prepared runs/diagnostic-cue-v1-prepared \
+  --prepared sample_prepared \
   --model-config configs/pilot-model.json \
   --output runs/diagnostic-cue-v1-live
 
-# Scores after the raw live run completes; no new inference.
+# 3. Separate, read-only audit: checks full 96-trial schedule, frozen
+#    evidence, independently saved request messages, raw HTTP response
+#    bodies, returned predictions, digests and model identity.
+python examples/diagnostic_counterfactual_probe.py audit-live \
+  --prepared sample_prepared \
+  --run runs/diagnostic-cue-v1-live \
+  --output runs/diagnostic-cue-v1-live/independent-audit.json
+
+# 4. Only the successful audited run may be scored with private labels.
 python examples/diagnostic_counterfactual_probe.py analyze \
-  --prepared runs/diagnostic-cue-v1-prepared \
+  --prepared sample_prepared \
   --responses runs/diagnostic-cue-v1-live/responses.jsonl \
+  --audit runs/diagnostic-cue-v1-live/independent-audit.json \
   --output runs/diagnostic-cue-v1-live/analysis.json
 ```
 
-The `run-live` script preserves each native `PredictionExecution`, including the **actual output text, request messages, usage and generated package digest**. It does not use the native E4 `NativePackage` or S2 verification because the experimental cards do **not** have independently executed ANM requests/receipts. Feeding them to those production contracts would misrepresent their provenance. This experiment measures **model behavior under conflicting cues**, not the process checker's trust of genuine cached method evidence.
+A `live_ollama` value in a JSON record is only a claim. It is **not** evidence of a genuine server call. Scores cannot be produced by the command-line workflow until the raw-response audit has passed, its output hash matches `responses.jsonl`, and the 96 planned cases have all been accounted for. The audit cross-checks raw server receipts against the *separately written pre-call request journal*, but does not cryptographically attest the remote model or replace independent human inspection of provenance. Any failed/incomplete run must be kept separate and never silently repaired by inventing responses.
+
+The same native `DirectionPrediction` schema and `predict_direction` function are reused without modifying the production 17/38-pair inference. No S2 verification is run on the hypothetical cards: they do not have genuine saved ANM requests/receipts, and passing them to production `NativePackage` would misrepresent their origins. This study measures cue susceptibility only.
 
 ## Interpretation and scientific boundary
 

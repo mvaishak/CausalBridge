@@ -109,3 +109,141 @@ class DiagnosticProbeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FrozenInputAndProvenanceTests(unittest.TestCase):
+    """Offline audit fixtures; none of these constitute a live-model result."""
+
+    def test_bundled_preparation_bytes_are_locked(self):
+        import tempfile
+        import shutil
+
+        fixture = Path(__file__).resolve().parents[1] / "sample_prepared"
+        public, private = probe.read_frozen_preparation(fixture, read_oracle=True)
+        self.assertEqual(len(public), 96)
+        self.assertEqual(len(private), 24)
+        with tempfile.TemporaryDirectory() as d:
+            dest = Path(d)
+            for name in ("public.jsonl", "private-oracle.json", "protocol.json"):
+                shutil.copyfile(fixture / name, dest / name)
+            raw = (dest / "public.jsonl").read_text()
+            (dest / "public.jsonl").write_text(raw.replace("0.1", "0.10000000000000001", 1))
+            with self.assertRaisesRegex(ValueError, "frozen fixture"):
+                probe.read_frozen_preparation(dest)
+
+    def test_model_digest_preflight_rejects_mismatch(self):
+        from types import SimpleNamespace
+
+        class Response:
+            def __init__(self, digest):
+                self.value = {"models": [{"name": "qwen3:8b", "digest": digest}]}
+
+            def raise_for_status(self):
+                pass
+
+            def json(self):
+                return self.value
+
+        class Client:
+            def __init__(self, digest):
+                self.response = Response(digest)
+
+            def get(self, url):
+                self.url = url
+                return self.response
+
+        cfg = SimpleNamespace(model="qwen3:8b", base_url="http://127.0.0.1:11435")
+        client = Client(probe.EXPECTED_MODEL_DIGEST)
+        proof = probe.verify_ollama_model(client, cfg)
+        self.assertEqual(proof["digest"], probe.EXPECTED_MODEL_DIGEST)
+        self.assertTrue(client.url.endswith("/api/tags"))
+        with self.assertRaisesRegex(ValueError, "digest mismatch"):
+            probe.verify_ollama_model(Client("0" * 64), cfg)
+
+    def raw_fixtures(self):
+        public, _ = probe.read_frozen_preparation(
+            Path(__file__).resolve().parents[1] / "sample_prepared"
+        )
+        requests, responses = [], []
+        config = {
+            "model": "qwen3:8b", "base_url": "http://127.0.0.1:11435",
+            "timeout_seconds": 300.0, "temperature": 0.0, "seed": 261,
+            "max_tokens": 512, "context_tokens": 4096, "think": False,
+        }
+        for item in public:
+            cid, arm, evidence = item["case_id"], item["arm"], item["evidence"]
+            payload = {
+                "question": "Which direction is more plausible, A → B or B → A? You may abstain.",
+                "evidence": evidence,
+                "case_id": cid,
+                "package_digest": probe.digest(evidence),
+                "display_sample_digest": "fixture-token",
+            }
+            messages = [
+                {"role": "system", "content": "offline test fixture"},
+                {"role": "user", "content": json.dumps(payload, sort_keys=True)},
+            ]
+            schema = {"title": "DirectionPrediction"}
+            req = {
+                "case_id": cid, "arm": arm, "package_digest": probe.digest(evidence),
+                "prompt_digest": probe.digest(messages), "messages": messages,
+                "output_schema": schema, "condition": {"condition_id": "S0"},
+            }
+            prediction = {
+                "case_id": cid, "package_digest": probe.digest(evidence),
+                "predicted_direction": None, "abstained": True, "reason_code": "fixture",
+                "claims": [],
+            }
+            raw = {
+                "model": "qwen3:8b", "done": True, "done_reason": "stop",
+                "message": {"content": json.dumps(prediction)},
+                "prompt_eval_count": 11, "eval_count": 13,
+            }
+            trace = {
+                "evidence": evidence, "package_digest": probe.digest(evidence),
+                "request_messages": messages, "output_schema": schema,
+                "prompt_digest": probe.digest(messages),
+                "prompt_condition": req["condition"],
+                "generation_config": config, "failure_stage": None,
+                "generation": {
+                    "text": raw["message"]["content"], "raw_response": json.dumps(raw),
+                    "model": "qwen3:8b", "status": "complete",
+                    "input_tokens": 11, "output_tokens": 13,
+                },
+                "prediction": prediction,
+            }
+            requests.append(req)
+            responses.append({"case_id": cid, "arm": arm, "mode": "live_ollama", "trace": trace})
+        identity = {
+            "public_digest": probe.FROZEN_PUBLIC_DIGEST,
+            "public_sha256": probe.FROZEN_PUBLIC_SHA256,
+            "expected_model_digest": probe.EXPECTED_MODEL_DIGEST,
+            "observed_model_before": {"name": "qwen3:8b", "digest": probe.EXPECTED_MODEL_DIGEST},
+            "config": config,
+        }
+        complete = {
+            "observed_model_after": {"name": "qwen3:8b", "digest": probe.EXPECTED_MODEL_DIGEST},
+            "status": "complete_pending_independent_audit",
+            "request_count": 96, "response_count": 96,
+        }
+        return public, requests, responses, identity, complete
+
+    def test_raw_response_audit_recomputes_from_independent_pre_call_requests(self):
+        public, req, resp, ident, complete = self.raw_fixtures()
+        report = probe.audit_saved_live(public, req, resp, ident, complete)
+        self.assertEqual(report["trial_count"], 96)
+        self.assertEqual(report["audit"], "passed_independent_file_replay")
+        # The label alone is not adequate: a fabricated model answer fails replay.
+        resp[0]["trace"]["generation"]["text"] = '{"predicted_direction":"A_to_B"}'
+        with self.assertRaisesRegex(ValueError, "Raw server response disagrees"):
+            probe.audit_saved_live(public, req, resp, ident, complete)
+
+    def test_trace_tampering_is_detected_even_if_mode_claims_live(self):
+        public, req, resp, ident, complete = self.raw_fixtures()
+        resp[0]["trace"]["request_messages"][1]["content"] = "{}"
+        with self.assertRaisesRegex(ValueError, "prompt digest mismatch"):
+            probe.audit_saved_live(public, req, resp, ident, complete)
+        public, req, resp, ident, complete = self.raw_fixtures()
+        resp[0]["trace"]["generation"]["raw_response"] = None
+        with self.assertRaisesRegex(ValueError, "Missing or invalid raw"):
+            probe.audit_saved_live(public, req, resp, ident, complete)
