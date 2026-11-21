@@ -40,7 +40,7 @@ Secondary, **not selection criteria**: aligned and uncertain arms compared again
 
 ## Frozen sample and reproducibility controls
 
-**Use the exact verified `sample_prepared/` directory distributed with the review bundle.** It contains 24 private oracle labels, 96 model-facing evidence records, and the original preparation protocol. The locked byte SHA-256 values are:
+**Use the tracked, hash-checked ZIP at `artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip` (or its extracted `sample_prepared/` directory).** It contains 24 private oracle labels, 96 model-facing evidence records, and the original preparation protocol. The locked byte SHA-256 values are:
 
 | File | SHA-256 |
 | --- | --- |
@@ -54,16 +54,16 @@ Some Mac/Python math environments reproduce a few floats differently at about 1e
 
 ## Preflight, execution, independent audit, and scoring
 
-Run from the repository root after installing dependencies and extracting the **frozen** sample directory. The local Ollama model must be reachable at the URL in `configs/pilot-model.json` and must expose the above exact digest. No model is downloaded automatically. Every output path must be new.
+Run from the repository root after installing dependencies. The runner can read the tracked frozen ZIP directly without unpacking it. The local Ollama model must be reachable at the URL in `configs/pilot-model.json` and must expose the above exact digest. No model is downloaded automatically. Every output path must be new.
 
 ```bash
 # 1. Verify that frozen sample files match the original reviewed fixture.
-shasum -a 256 sample_prepared/public.jsonl sample_prepared/private-oracle.json sample_prepared/protocol.json
+shasum -a 256 artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip
 
 # 2. Opt-in live run: checks /api/tags first, writes pre-call requests,
 #    raw Ollama responses, model identity and a completion receipt.
 python examples/diagnostic_counterfactual_probe.py run-live \
-  --prepared sample_prepared \
+  --prepared artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip \
   --model-config configs/pilot-model.json \
   --output runs/diagnostic-cue-v1-live
 
@@ -71,13 +71,13 @@ python examples/diagnostic_counterfactual_probe.py run-live \
 #    evidence, independently saved request messages, raw HTTP response
 #    bodies, returned predictions, digests and model identity.
 python examples/diagnostic_counterfactual_probe.py audit-live \
-  --prepared sample_prepared \
+  --prepared artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip \
   --run runs/diagnostic-cue-v1-live \
   --output runs/diagnostic-cue-v1-live/independent-audit.json
 
 # 4. Only the successful audited run may be scored with private labels.
 python examples/diagnostic_counterfactual_probe.py analyze \
-  --prepared sample_prepared \
+  --prepared artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip \
   --responses runs/diagnostic-cue-v1-live/responses.jsonl \
   --audit runs/diagnostic-cue-v1-live/independent-audit.json \
   --output runs/diagnostic-cue-v1-live/analysis.json
