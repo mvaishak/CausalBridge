@@ -115,17 +115,19 @@ class FrozenInputAndProvenanceTests(unittest.TestCase):
     """Offline audit fixtures; none of these constitute a live-model result."""
 
     def test_bundled_preparation_bytes_are_locked(self):
-        import shutil
         import tempfile
+        import zipfile
 
-        fixture = Path(__file__).resolve().parents[1] / "sample_prepared"
+        root = Path(__file__).resolve().parents[1]
+        fixture = root / "artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip"
         public, private = probe.read_frozen_preparation(fixture, read_oracle=True)
         self.assertEqual(len(public), 96)
         self.assertEqual(len(private), 24)
         with tempfile.TemporaryDirectory() as d:
             dest = Path(d)
-            for name in ("public.jsonl", "private-oracle.json", "protocol.json"):
-                shutil.copyfile(fixture / name, dest / name)
+            with zipfile.ZipFile(fixture) as archive:
+                for name in ("public.jsonl", "private-oracle.json", "protocol.json"):
+                    (dest / name).write_bytes(archive.read("sample_prepared/" + name))
             raw = (dest / "public.jsonl").read_text()
             (dest / "public.jsonl").write_text(raw.replace("0.1", "0.10000000000000001", 1))
             with self.assertRaisesRegex(ValueError, "frozen fixture"):
@@ -161,9 +163,11 @@ class FrozenInputAndProvenanceTests(unittest.TestCase):
             probe.verify_ollama_model(Client("0" * 64), cfg)
 
     def raw_fixtures(self):
-        public, _ = probe.read_frozen_preparation(
-            Path(__file__).resolve().parents[1] / "sample_prepared"
+        fixture = (
+            Path(__file__).resolve().parents[1]
+            / "artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip"
         )
+        public, _ = probe.read_frozen_preparation(fixture)
         requests, responses = [], []
         config = {
             "model": "qwen3:8b",
