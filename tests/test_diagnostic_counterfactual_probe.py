@@ -120,8 +120,7 @@ class FrozenInputAndProvenanceTests(unittest.TestCase):
 
         root = Path(__file__).resolve().parents[1]
         fixture = (
-            root
-            / "artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip"
+            root / "artifacts/diagnostic-cue-v1/CausalBridge_PR21_preflight_patch_frozen_inputs.zip"
         )
         public, private = probe.read_frozen_preparation(fixture, read_oracle=True)
         self.assertEqual(len(public), 96)
