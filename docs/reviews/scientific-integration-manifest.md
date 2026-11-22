@@ -213,3 +213,11 @@ Base: `fb81b96a92c8cc78360276e54bd3d9be0a974e56` (`origin/main`, fetched 2026-11
 ## External archive
 
 `cue-investigation-v3-7d4a408-complete-01.tar.gz` is frozen raw output from `7d4a408`. Planned destination: `artifacts/diagnostic-v3/` after independent hash, manifest, safety, and source checks. No contents will be rewritten.
+
+## Archive and conflict resolution after integration
+
+- The original v3 archive was copied byte-for-byte to `artifacts/diagnostic-v3/`; its 818-file internal inventory, 67 committed source hashes and replayed results were checked. The original local copy remains in place.
+- Two failed-preflight archives without personal-data scan hits were copied byte-for-byte to `artifacts/diagnostic-failed-preflights/`. Four other failed-preflight archives contain a personal login address in an archived command log and remain unchanged at the original worktree. They are excluded from the pushed branch. A secure restricted archive store is needed if those exact failed-attempt records are required outside the local machine.
+- Three offline-only plan tarballs were not copied: `cue-investigation-offline-blocked-01.tar.gz`, `cue-investigation-v2-offline-plans-01.tar.gz`, and `cue-investigation-v2-4f600b4-offline-plans-01.tar.gz`. Tracked versioned configs, source manifests, and archived protocol records remain the canonical planning evidence; those packages do not represent completed live experiments.
+- `README.md` and `docs/IMPLEMENTATION_LOG.md` differ on the newer branches. Their historical base contents were retained, with the consolidated interpretation placed in `docs/research/` to avoid retroactively editing submission-era claims.
+- All selected added files from the v3, ANM, and synthetic-cue source tips were compared byte-for-byte with those commits after integration: zero mismatches. No frozen file was reserialized.
