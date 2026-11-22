@@ -1,0 +1,20 @@
+{
+  "version": "anm-real-noise-v1",
+  "pilot_archive_sha256": "b73b24c45268ac1bc61ae250a2a81aa97ecb6190b923aeafd92d033c340b3f8a",
+  "primary_split": 261,
+  "validation_splits": [261, 1261, 2261],
+  "training_quantiles": [0.3333333333333333, 0.6666666666666666],
+  "minimum_bin_count": 8,
+  "permutations": 1999,
+  "permutation_batch": 128,
+  "permutation_seed": 2026112301,
+  "tie_tolerance": 1e-12,
+  "alpha": 0.05,
+  "block_length": 8,
+  "detrending_folds": 5,
+  "detrending_degree": 2,
+  "detrending_seed": 2026112302,
+  "quadratic_control_amplitude": 0.5,
+  "multiplicity": "Holm across all planned directions separately within panel/split/mode/permutation scheme; unavailable p-values occupy their planned slot",
+  "scope": "Exploratory residual-spread diagnostics, not a proof of structural heteroscedasticity or causal root cause."
+}

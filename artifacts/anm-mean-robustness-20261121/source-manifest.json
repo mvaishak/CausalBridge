@@ -1,0 +1,95 @@
+{
+  "scope": "New mean-robustness phase only; prior phase outputs unchanged",
+  "files": [
+    {
+      "path": "configs/anm-mean-robustness-v1.json",
+      "bytes": 1305,
+      "sha256": "4010c0505b3a17e4ccd7fd3222851cad56b8ab18bc262546d467f1e63bd6e53a"
+    },
+    {
+      "path": "src/causalbridge/evaluation/anm_mean_robustness.py",
+      "bytes": 12260,
+      "sha256": "b9a84bfbb59541c56b9fc9a84a7b7b6df309cae80cc84b781b30110c4f2bd8e4"
+    },
+    {
+      "path": "scripts/anm_mean_robustness.py",
+      "bytes": 806,
+      "sha256": "c193e70116e4b89cc976e759945223326833ab316ccecc51a4560a0ba2052d82"
+    },
+    {
+      "path": "tests/test_anm_mean_robustness.py",
+      "bytes": 2718,
+      "sha256": "4c438e711f973954951c62301518ee5b75750c182c7e4e7777c826421ffcb548"
+    },
+    {
+      "path": "docs/experiments/anm-mean-robustness-v1.md",
+      "bytes": 4921,
+      "sha256": "7c0ad8fda3287e6ba2e36397c69246c9310233f519dc765554710d68a88729c6"
+    },
+    {
+      "path": "docs/reviews/anm-mean-robustness-v1.md",
+      "bytes": 5923,
+      "sha256": "849a53fb7ad428763f773df148db36896e870ee54d97d0014375222d3d01f647"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/README.md",
+      "bytes": 3768,
+      "sha256": "ae0c3f0f28de12e13608ac19a66e2ef52c945a8e84d11e7e6276b4c06b86c1fa"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/anm-mean-robustness-full-tests.log",
+      "bytes": 1510,
+      "sha256": "c28762f3b2d292938fb0ba3e77a33a801d4ccde193469a634b0b13f67ca336d8"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/anm-mean-robustness-lint.log",
+      "bytes": 1161,
+      "sha256": "010bb9038a4bb2111f4ed79345380c79677646b9b464d39eab8a3b495f05331d"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/clean-environment-replay.log",
+      "bytes": 1017,
+      "sha256": "65119edc5b847aa016206b157f9c8a770764fd882cab637191baedf4b3af748c"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/completion.json",
+      "bytes": 160,
+      "sha256": "91069d6943a8018b760d724a718167bb1f58154782c2126ba77131d92ddcfa8e"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/manifest.json",
+      "bytes": 19684,
+      "sha256": "fec63ea142b2b423ed2029119e84589f37782abee43796b737cff0b2c5a239f0"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/raw-manifest.json",
+      "bytes": 24763,
+      "sha256": "ac5cfe4bdb0d1a5b7558bae8b842ed9ec3bbccd277d37c6dcc391af756273f17"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/records.json",
+      "bytes": 2275277,
+      "sha256": "f906f5b78b1dee112336f8b262108bd413d0d8ff16db71416bfdff1de87260da"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/run-records.tar.gz",
+      "bytes": 578223,
+      "sha256": "b3a0d556cb82542ed7c81e21c2749f57ddd1345f67a93ace96db8a65f2e5560b"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/started.json",
+      "bytes": 99,
+      "sha256": "069725a6104f5cc265020c0f87c9a34759b8ccfb0e7b0511c465c48180b2dcb6"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/tables.md",
+      "bytes": 4276,
+      "sha256": "1d374297042db05f9943a0f496d7e9ce201f0b42055a2dc0af900939cc57ab78"
+    },
+    {
+      "path": "artifacts/anm-mean-robustness-20261121/validation.json",
+      "bytes": 844,
+      "sha256": "b019c9f4d5fa80489199847a8ffaf5efeb28a40eb9e5771e646d1c9edd2dd146"
+    }
+  ]
+}

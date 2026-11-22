@@ -1,0 +1,77 @@
+{
+  "status": "EXPLORATORY_SPREAD_CANDIDATES_NOT_CAUSAL_ROOT_CAUSE_PROOF",
+  "branch": "codex/anm-failure-diagnosis-20261121",
+  "baseline_commit": "fb81b96a92c8cc78360276e54bd3d9be0a974e56",
+  "frozen_plan_digest": "sha256:89fa3ccce161c547cbcd52637d9a2c546d447cd116c21fe02cee886bea695b1a",
+  "real_pairs_primary": {
+    "pilot17": 17,
+    "validation38": 38
+  },
+  "original_attempts": 131,
+  "directional_fits_reconstructed": 262,
+  "new_anm_direction_decisions": 0,
+  "original_predictions_settings_and_labels_changed": false,
+  "live_llm_calls": 0,
+  "calibration_vectors": 72,
+  "calibration_base_worlds": 24,
+  "planned_diagnostic_form_scheme_tests": 1336,
+  "available_tests": 1264,
+  "unavailable_tests": 72,
+  "permutation_statistics_per_replay": 2526736,
+  "full_suite": {
+    "passed": 1063,
+    "skipped": 2,
+    "new_residual_study_regressions": 10,
+    "skip_reason": "Existing optional upstream-snapshot tests."
+  },
+  "lint": "PASS",
+  "format": "PASS",
+  "demos_handshake_package_builds": "PASS",
+  "clean_environment_frozen_source_replay": {
+    "passed": true,
+    "original_anm_fit_blocked": true,
+    "auxiliary_crossfit_detrending_recomputed": true,
+    "spread_randomizations_recomputed": true,
+    "byte_identical_files": [
+      "metrics.json",
+      "real-records.json",
+      "calibration-records.json"
+    ]
+  },
+  "archive_members_verified": 1405,
+  "archive_sha256": "356e01f84f0eaf9bf0b35cc8b7bf94720b05bb9b91b8e34309c9881f1f4fcf30",
+  "figures": {
+    "rendered": true,
+    "matplotlib": "3.10.6",
+    "visually_inspected": true,
+    "documented_uv_command_tested": true
+  },
+  "post_outcome_source_description_context": {
+    "pairs": [
+      56,
+      88
+    ],
+    "description_bytes_checked_against_pinned_hashes": true,
+    "facts_are_manual_paraphrases": true
+  },
+  "prior_shared_document_digests_refreshed": {
+    "artifacts/anm-failure-diagnosis-20261121/source-manifest.json": [
+      "README.md",
+      "docs/IMPLEMENTATION_LOG.md"
+    ],
+    "artifacts/anm-mechanism-study-20261121/source-manifest.json": [
+      "README.md",
+      "artifacts/anm-failure-diagnosis-20261121/source-manifest.json",
+      "docs/IMPLEMENTATION_LOG.md"
+    ]
+  },
+  "limitations": [
+    "Exploratory opened panels and fallible reference directions.",
+    "Median-centering/randomization gives nominal approximate spread evidence, not an exact structural variance test.",
+    "Holm adjustment does not repair within-dataset exchangeability or unresolved mean error.",
+    "Saved-order block permutations are a heuristic, not a validated spatial/time correction.",
+    "Some diagnostics are unavailable; they are not negative tests.",
+    "Synthetic calibration matches specific mechanisms, including quadratic mean error; it does not validate all real noise models.",
+    "Neither every error nor a case-specific causal root cause is established."
+  ]
+}

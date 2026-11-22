@@ -1,0 +1,49 @@
+{
+  "version": "anm-failure-case-metadata-v1",
+  "source_archive_url": "https://webdav.tuebingen.mpg.de/cause-effect/pairs.zip",
+  "cases": [
+    {
+      "pair_id": 91,
+      "source_member": "pair0091_des.txt",
+      "description_sha256": "f6660f5f83636f787be9a53dcfea2d6e1769865162cc2c4ec1c40eca0b984ec8",
+      "review_type": "Manual source-description paraphrase; source bytes checked against pinned manifest on 2026-11-21",
+      "observations": [
+        "Clay content and soil moisture at 10 cm were measured in forest plots.",
+        "The source describes 150 plots and exclusion of missing-data plots.",
+        "Clay is described as one determinant of water retention."
+      ],
+      "unresolved": [
+        "Omitted determinants, spatial dependence and missing-data selection could matter; none is established as the cause of this wrong arrow."
+      ]
+    },
+    {
+      "pair_id": 92,
+      "source_member": "pair0092_des.txt",
+      "description_sha256": "7a01d78009275af0c1540a25371f78d5414d7d5f7ba80963f7682ab35a8c3ba3",
+      "review_type": "Manual source-description paraphrase; source bytes checked against pinned manifest on 2026-11-21",
+      "observations": [
+        "Organic carbon content and clay content were measured in forest plots.",
+        "The source describes 150 plots and exclusion of missing-data plots.",
+        "The source identifies clay as a determinant of carbon accumulation."
+      ],
+      "unresolved": [
+        "This shares the soil source family with pair 91; it is not an independent source replication.",
+        "Missingness, shared causes and spatial dependence are hypotheses, not demonstrated causes."
+      ]
+    },
+    {
+      "pair_id": 108,
+      "source_member": "pair0108_des.txt",
+      "description_sha256": "187f8044cc0996310a1f6e88faa3eb96f7d4e3967d48a6482bbe207fbc9dcb25",
+      "review_type": "Manual source-description paraphrase; source bytes checked against pinned manifest on 2026-11-21",
+      "observations": [
+        "The variables are duration of one sixth of an engine rotation and heat-bath temperature.",
+        "The rotation-duration measurement represents inverse velocity.",
+        "The source describes a hot-water-driven engine and temperature-sensor measurements recorded in 2017."
+      ],
+      "unresolved": [
+        "Sequential dependence and nonlinear measurement effects are plausible questions; no observation-time IDs or direct assumption test establish the decisive cause."
+      ]
+    }
+  ]
+}

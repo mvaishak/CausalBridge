@@ -1,0 +1,11 @@
+{
+  "metrics_sha256": "376b806be78f9f5623bdedf5bca5f8e3b5dc7b8452d0656d3f33e25e36b50928",
+  "matplotlib": "3.10.6",
+  "new_fits": 0,
+  "files": {
+    "overview.png": "11368c9a49b585d815a0a0d91f22966fa3d3e437530d64af539c8a1524cec432",
+    "overview.svg": "67947b54171388eb69bbcbc309379e8c093666d7b82ffce602dd9edb24ec7785",
+    "source-families.png": "2c4ff309aa9033fbb5aecadf8a2c445e330137935e8ae95d5925b423f17eba81",
+    "source-families.svg": "fb88940228e3fb90860b68cd5583e2e813599aa489c7430ef57e83bb0b25db7e"
+  }
+}

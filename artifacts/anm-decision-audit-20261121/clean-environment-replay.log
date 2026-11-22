@@ -1,0 +1,85 @@
+Using CPython 3.12.16
+Creating virtual environment at: .venv
+   Building causalbridge @ file:///private/var/folders/6f/hmtkm77949l8nv9r0km725xh0000gn/T/causalbridge-decision-audit-jwlg6w7j/plan/frozen-source
+      Built causalbridge @ file:///private/var/folders/6f/hmtkm77949l8nv9r0km725xh0000gn/T/causalbridge-decision-audit-jwlg6w7j/plan/frozen-source
+Prepared 1 package in 323ms
+Installed 22 packages in 45ms
+ + annotated-types==0.8.0
+ + anyio==4.15.1
+ + causalbridge==0.1.0 (from file:///private/var/folders/6f/hmtkm77949l8nv9r0km725xh0000gn/T/causalbridge-decision-audit-jwlg6w7j/plan/frozen-source)
+ + certifi==2026.10.23
+ + coverage==7.17.0
+ + h11==0.16.0
+ + httpcore==1.0.9
+ + httpx==0.28.1
+ + idna==3.20
+ + iniconfig==2.3.1
+ + networkx==3.7
+ + numpy==2.5.4
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pydantic==2.14.1
+ + pydantic-core==2.50.1
+ + pygments==2.21.0
+ + pytest==9.2.0
+ + pytest-cov==7.1.0
+ + ruff==0.17.3
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+validation38 5 numerically matched
+validation38 6 numerically matched
+validation38 7 numerically matched
+validation38 8 numerically matched
+validation38 9 numerically matched
+validation38 10 numerically matched
+validation38 11 numerically matched
+validation38 25 numerically matched
+validation38 26 numerically matched
+validation38 27 numerically matched
+validation38 28 numerically matched
+validation38 29 numerically matched
+validation38 30 numerically matched
+validation38 31 numerically matched
+validation38 32 numerically matched
+validation38 33 numerically matched
+validation38 34 numerically matched
+validation38 35 numerically matched
+validation38 36 numerically matched
+validation38 37 numerically matched
+validation38 38 numerically matched
+validation38 39 numerically matched
+validation38 40 numerically matched
+validation38 41 numerically matched
+validation38 78 numerically matched
+validation38 79 numerically matched
+validation38 80 numerically matched
+validation38 84 numerically matched
+validation38 91 numerically matched
+validation38 92 numerically matched
+validation38 97 numerically matched
+validation38 100 numerically matched
+validation38 101 numerically matched
+validation38 102 numerically matched
+validation38 103 numerically matched
+validation38 104 numerically matched
+validation38 106 numerically matched
+validation38 108 numerically matched
+pilot17 1 numerically matched
+pilot17 2 numerically matched
+pilot17 3 numerically matched
+pilot17 4 numerically matched
+pilot17 13 numerically matched
+pilot17 14 numerically matched
+pilot17 15 numerically matched
+pilot17 16 numerically matched
+pilot17 18 numerically matched
+pilot17 20 numerically matched
+pilot17 21 numerically matched
+pilot17 22 numerically matched
+pilot17 23 numerically matched
+pilot17 24 numerically matched
+pilot17 56 numerically matched
+pilot17 86 numerically matched
+pilot17 88 numerically matched
+{"records": 55}
+{"matched_directions": 110, "maximum_absolute_score_difference": 2.1162052354231978e-06}

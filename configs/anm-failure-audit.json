@@ -1,0 +1,12 @@
+{
+  "version": "anm-failure-audit-v1",
+  "scope": "Post-outcome descriptive audit, not a causal explanation or new method selection",
+  "archive_sha256": "98808df804e302da385b796dc7c576b8d3a3dec24e8c69e600123751119ff3ba",
+  "primary_split": 261,
+  "real_splits": [261, 1261, 2261],
+  "large_sample_size": 512,
+  "descriptive_tie_fraction_cutoff": 0.1,
+  "numeric_relative_tolerance": 1e-9,
+  "numeric_absolute_tolerance": 1e-12,
+  "policy": "No fits, permutations, threshold search, exclusions or inference calls; preserve all scheduled cases."
+}

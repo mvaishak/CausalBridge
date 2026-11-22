@@ -1,0 +1,11 @@
+{
+  "metrics_sha256": "d913b4731acf57583c471bce4b454e189a6989c42baa22981e04911f58ce1a55",
+  "matplotlib": "3.10.6",
+  "new_fits": 0,
+  "files": {
+    "calibration.png": "d463142cea74536bce56b2e000a660830050b73af9859c10a466ea1a07158636",
+    "calibration.svg": "5123655be0267d166b0558d9b7d0ab047b30e1d2d385194e4f03263848d850ec",
+    "case-residuals.png": "2c880b61774a0ebb250165977a92d59a02c450190d38b88cda42e65f8004afaf",
+    "case-residuals.svg": "4738e37ac7575c367241ed15c798af70abb2c8e867fd4077a163a77c116c9203"
+  }
+}
