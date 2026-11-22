@@ -1,0 +1,29 @@
+Using CPython 3.12.16
+Creating virtual environment at: .venv
+   Building causalbridge @ file:///private/var/folders/6f/hmtkm77949l8nv9r0km725xh0000gn/T/causalbridge-adequacy-policy-uyf42lzv/frozen-source
+      Built causalbridge @ file:///private/var/folders/6f/hmtkm77949l8nv9r0km725xh0000gn/T/causalbridge-adequacy-policy-uyf42lzv/frozen-source
+Prepared 1 package in 260ms
+Installed 22 packages in 39ms
+ + annotated-types==0.8.0
+ + anyio==4.15.1
+ + causalbridge==0.1.0 (from file:///private/var/folders/6f/hmtkm77949l8nv9r0km725xh0000gn/T/causalbridge-adequacy-policy-uyf42lzv/frozen-source)
+ + certifi==2026.10.23
+ + coverage==7.17.0
+ + h11==0.16.0
+ + httpcore==1.0.9
+ + httpx==0.28.1
+ + idna==3.20
+ + iniconfig==2.3.1
+ + networkx==3.7
+ + numpy==2.5.4
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pydantic==2.14.1
+ + pydantic-core==2.50.1
+ + pygments==2.21.0
+ + pytest==9.2.0
+ + pytest-cov==7.1.0
+ + ruff==0.17.3
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+{"tables": 20, "scope": "ANM diagnostic decisions before any LLM or verification checker; verification rejection not applicable."}

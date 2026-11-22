@@ -1,0 +1,95 @@
+{
+  "scope": "Uncommitted decision-audit follow-up; prior committed investigations unchanged",
+  "files": [
+    {
+      "path": "configs/anm-decision-audit-v1.json",
+      "bytes": 940,
+      "sha256": "7bd06ef230c4c729afb9f57049284f022a915668efe317a5c454627a0a892faa"
+    },
+    {
+      "path": "src/causalbridge/evaluation/anm_decision_audit.py",
+      "bytes": 13397,
+      "sha256": "7c6aba27b82928c3f4d52ff602236d2bc9a4c9de8594fce0e665c68c0b595597"
+    },
+    {
+      "path": "scripts/anm_decision_audit.py",
+      "bytes": 698,
+      "sha256": "abb1807244b669b29c3011b8938946f54bcf975a9b22c708ec02526e7bc0cce6"
+    },
+    {
+      "path": "tests/test_anm_decision_audit.py",
+      "bytes": 3259,
+      "sha256": "f8453bfea24375c936125165088c294f3f1207b40b223dd1a23057f2ef460dc9"
+    },
+    {
+      "path": "docs/reviews/anm-decision-audit-v1.md",
+      "bytes": 10466,
+      "sha256": "4dc56f90306190f382db44e65c1889426484b55cf603554daa095a9687e9526f"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/README.md",
+      "bytes": 4549,
+      "sha256": "7b37ee7b6e51eb91453c46b8dd992fab2cb7bf88cb5f8616e97b95330444a6f2"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/clean-environment-replay.log",
+      "bytes": 2977,
+      "sha256": "ffdf9cf762d22c53426c086da53bd54a0bbd48c2c5e95879d28d63929b368e4c"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/completion.json",
+      "bytes": 147,
+      "sha256": "0fe2745a2161af90134530e1a382788bbf4ff47e3b76c125c9e86c41e36cdfaa"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/execution.log",
+      "bytes": 1909,
+      "sha256": "d3ec160eebc9ae74c1b39f255e21244e82186486a8251fe44fc65e27499e44df"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/lint-format.log",
+      "bytes": 47,
+      "sha256": "97019d472748ef3ca2eb427934d1d2fc6cf68b1db296e4baa32b880cda93e111"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/manifest.json",
+      "bytes": 78600,
+      "sha256": "dfc910a82c38ae76debc395a66574bbb6de832c690a0ddfaa7786437cab7def6"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/raw-manifest.json",
+      "bytes": 86377,
+      "sha256": "522da33a0c7702abfddad96bc25c787d1aa7f9baae3e849032ab4a7c0d1e2b60"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/records.json",
+      "bytes": 109005,
+      "sha256": "6ca132d5eab99391e220b7972144bc75e86d65d5ee325ebb52050fc45ac9d8a7"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/run-records.tar.gz",
+      "bytes": 903616,
+      "sha256": "6f24177be66a6aef4928da97ec8488e1a24def41189fa13956f37a5f2046aa30"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/software-validation.log",
+      "bytes": 1510,
+      "sha256": "7dc8b149ab435f176b5054bf83045e2cfbace03cb73f07ac1cc2edc144de6764"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/started.json",
+      "bytes": 99,
+      "sha256": "c4ab3c9af3ec0c7d597a396c4426fc174ceb04185e90be0576dd38f9b1536a74"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/tables.md",
+      "bytes": 4890,
+      "sha256": "745ec71af8c1c26c5768fe5b355c88929cf7f1a7bc6cc71202abdf51d4b45aa8"
+    },
+    {
+      "path": "artifacts/anm-decision-audit-20261121/validation.json",
+      "bytes": 819,
+      "sha256": "69b975f04c4e161a824426c9a41629045110d60c67f7e4627bf02bacb3a339aa"
+    }
+  ]
+}

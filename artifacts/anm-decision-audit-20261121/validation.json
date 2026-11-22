@@ -1,0 +1,26 @@
+{
+  "tests": {
+    "passed": 1074,
+    "skipped": 2,
+    "new_tests": 5,
+    "skips": "Existing optional Tuebingen snapshot tests"
+  },
+  "lint": "PASS",
+  "format": "PASS",
+  "archive_members_verified": 466,
+  "clean_environment_full_numerical_replay": "PASS",
+  "byte_identical": [
+    "records.json",
+    "completion.json",
+    "tables.md"
+  ],
+  "original_residual_hsic_checks_passed": 110,
+  "independent_eigen_score_mismatches": 16,
+  "maximum_absolute_eigen_score_difference": 2.1162052354231978e-06,
+  "maximum_relative_normal_equation_error": 5.176799454626658e-13,
+  "changed_reference_decisions": 0,
+  "live_llm_calls": 0,
+  "python": "3.12.16",
+  "numpy": "2.5.4",
+  "scope": "Exploratory opened-data adequacy diagnosis; no deployed gate or accuracy improvement. Production and frozen results unchanged."
+}

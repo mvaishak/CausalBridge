@@ -1,0 +1,14 @@
+# Results summary
+
+| Study | Independent units and repeated observations | Supported result |
+| --- | --- | --- |
+| Track A | 10 graph groups, 50 questions, 102 model stages | 1 correct and 1 wrong release; 21 correct unanswerable abstentions; 24 missed answerable cases without execution error and 3 planning errors. Coverage 2/50. [Source](../reviews/final-track-a-evaluation.md). |
+| Original Track B | 17 pairs, seven source groups, 136 LLM generations; 128-row ANM | E4/S0 and S1 each had 6 correct, 8 wrong, 3 abstentions and copied all 14 released ANM directions. Checker changed no E4 release. [Source](../reviews/final-track-b-evaluation.md). |
+| Integrated Track B | 38 opened pairs, 304 scheduled model responses across conditions; ANM uses up to 512 rows | E4/S0 and S1 each had 13 correct, 13 wrong, 11 model abstentions and 1 binding failure; ANM-only had 12 method abstentions. E4 checker suppressed 3 correct outputs. No blind holdout claim. [Source](../reviews/final-track-b-integrated-38.md). |
+| Thinking ablation | 17 opened pairs, 136 matched inputs, 272 calls | Thinking-on increased correct yield in the tested matched inputs, but did not repair the wrong E4 ANM arrows. One execution failure. [Source](../reviews/qwen3-thinking-ablation-8192-4096-01.md). |
+| Diagnostic v3 | 17 opened pairs from seven groups, five arms × two thinking settings = 170 calls | 82 correct, 47 wrong, 40 abstentions, 1 execution failure before verification. Three checker rejections overlap abstentions. Wrong plain cues produced 17/17 wrong directions with thinking off and 11/17 with thinking on. This demonstrates cue sensitivity under the tested prompt, not causal truth or resistance guarantees. [Frozen archive](../../artifacts/diagnostic-v3/cue-investigation-v3-7d4a408-complete-01.tar.gz); [reconciliation](../reviews/branch-lineage-provenance-reconciliation.md). |
+| ANM mechanism | 24 independent synthetic base worlds, 192 repeated factorial cells | At 256/256, independent additive noise gave 24/24 correct; paired cause-dependent spread gave 2 correct, 17 wrong, 5 abstentions. This demonstrates a mechanism under generating assumptions, not a real-world root cause. [Source](../reviews/anm-mechanism-study-v1.md). |
+| ANM adequacy rules | Saved 17 and 38 real pairs, multiple replayed policies | Some rules remove wrong releases but also withhold correct ones; no validated production gate. [Source](../reviews/anm-adequacy-policy-comparison-v1.md). |
+| Synthetic counterfactual cue | 24 prepared synthetic mechanisms, 96 planned calls | No verified live outcome. [Protocol](../experiments/diagnostic-counterfactual-study-v1.md). |
+
+The studies use different sample preparation, model budgets, prompt/output contracts and scoring definitions. No pooled accuracy estimate is supported.

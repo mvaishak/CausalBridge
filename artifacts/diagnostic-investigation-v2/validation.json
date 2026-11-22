@@ -1,0 +1,34 @@
+{
+  "protocol": "diagnostic-investigation-v2",
+  "source_head_at_validation": "b8b5b44367ae18f3d666b4cb9d33ec6c7ba0ba77",
+  "source_state": "Uncommitted v2 working-tree changes; source hashes captured in smoke plans",
+  "full_tests": {
+    "passed": 1082,
+    "skipped": 2,
+    "reason": "Two existing optional Tuebingen-snapshot tests"
+  },
+  "new_v2_tests": 29,
+  "original_v1_study_tests": 26,
+  "ruff_lint": "PASS",
+  "ruff_format": "PASS",
+  "demos": "PASS",
+  "synthetic_anm_handshake": "PASS",
+  "sdist_wheel_build": "PASS",
+  "scripted_smoke": {
+    "preflight_cells": 20,
+    "full_cells": 170,
+    "live_model_calls": 0,
+    "research_result": false,
+    "archive_members_verified": 395
+  },
+  "mock_http": "V2 preflight + full run + saved raw replay passed; failure/rejection fail-fast and resume without retry passed",
+  "independent_json_schema_application_parity": {
+    "fixtures": 8,
+    "result": "PASS"
+  },
+  "live_v2_preflight": "NOT RUN; requires model endpoint",
+  "live_v2_experiment": "NOT RUN; requires fresh passing v2 preflight",
+  "frozen_v1_artifacts": "UNCHANGED",
+  "committed": false,
+  "pushed": false
+}

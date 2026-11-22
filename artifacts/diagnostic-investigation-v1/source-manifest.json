@@ -1,0 +1,82 @@
+{
+  "baseline": "ecd1b3054bb290830f9a9dfa0b1b6763fe2030d1",
+  "excludes": "This manifest itself; hashes are consistency checks, not signatures.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "6c1a6bcdb4a8aebc727b0641013cf71af5a274da297445239a6d87ff43ec1b80"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/README.md",
+      "sha256": "73d23f87ec7de4647d6b72973154dbca7e4a866c85188808acf7b845e41c3fcb"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/saved-diagnosis/manual-review.csv",
+      "sha256": "05276e906436d062f952f2af02d4f3a48eb319010ca2db93d74d706480d4fef4"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/saved-diagnosis/metrics.json",
+      "sha256": "2ad79a0232da44578f37077f90871aeff24536515ac0e6a3557f11ab98d94d13"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/saved-diagnosis/observations.json",
+      "sha256": "f156b66151a00f5c607f00f122c8cf76660ca66cb5863ca39d3c1a66116b57aa"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/saved-diagnosis/report.md",
+      "sha256": "9bd6559baaf9609c30f09875d9d99d5e502a488bb6fb353bae6bf1ada9289b77"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/saved-diagnosis/transitions.json",
+      "sha256": "9aa4365ff3bcb1d333f76aa51b151e692db531b6a2d2999b98a5475df20baf2e"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/smoke-validation.log",
+      "sha256": "12214f1acf10cd5748d76cd4c7145f3462e0676fa9adf67b47e18f11cfb62271"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/software-validation.log",
+      "sha256": "0311f03429098ddbc4f196d22fbb46683da7678596bdc742c39ed7db294d8130"
+    },
+    {
+      "path": "artifacts/diagnostic-investigation-v1/validation.json",
+      "sha256": "bc0b57110e4019a722ec8b5034e2db426cb174d4300c48e423db839a3f2d8e9e"
+    },
+    {
+      "path": "configs/diagnostic-investigation-v1.json",
+      "sha256": "54851f6ebabcafcc614afd117a9892b92b107c26532019b014eedf5968275735"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_LOG.md",
+      "sha256": "4170ca4387c5fd312d1fb500707193e7505a1a8b6216ae6c65f76753eccf518c"
+    },
+    {
+      "path": "docs/experiments/diagnostic-investigation-v1.md",
+      "sha256": "2e594480d0756123bd4824023ab95dc2cfc2e38c5de815b1db317b0db6ce0de1"
+    },
+    {
+      "path": "docs/team-handoff/diagnostic-investigation-v1.md",
+      "sha256": "b590b935000881182affba20d1c0c8abaac34bfbe0fca38ad40dd3f597abca4e"
+    },
+    {
+      "path": "scripts/diagnostic_investigation.py",
+      "sha256": "71a617108ba8a7844a95a50391b7775ddb6022a9264e0785c038f23172e53ac8"
+    },
+    {
+      "path": "src/causalbridge/evaluation/diagnostic_analysis.py",
+      "sha256": "cf4f1bcfed69ee7899b283be286ebf2b47c942a83683106eabe30292bd73685c"
+    },
+    {
+      "path": "src/causalbridge/evaluation/diagnostic_protocol.py",
+      "sha256": "263162ea4e05f987efe7b55ffdec1cab145fdb3a471f815d9c67c609b4f9ad8a"
+    },
+    {
+      "path": "src/causalbridge/evaluation/diagnostic_runtime.py",
+      "sha256": "d8eeecd74d96d932680e1a9d3d3ee356fa646d430627f84ae407fe84ec7e7f78"
+    },
+    {
+      "path": "tests/test_diagnostic_investigation.py",
+      "sha256": "c93d3a5f135f935706bdcf5dd45c83caf110853fc62c5a9802a722ae212997ac"
+    }
+  ]
+}

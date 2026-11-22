@@ -1,0 +1,19 @@
+{
+  "source_archive_url": "https://webdav.tuebingen.mpg.de/cause-effect/pairs.zip",
+  "cases": [
+    {
+      "pair_id": 56,
+      "source_member": "pair0056_des.txt",
+      "source_sha256": "ca4b7ac4eea8cf1cf5d10644a90bf6e664269eeeac25bffce5383511847b5e8e",
+      "manual_paraphrase": "Country-level female life expectancy for 2000\u20132005 and latitude of capital cities.",
+      "review_scope": "Post-outcome source context; not a causal explanation."
+    },
+    {
+      "pair_id": 88,
+      "source_member": "pair0088_des.txt",
+      "source_sha256": "a32660873592b0833c889c73927627c3cbea3bb854d5ebe879b74234f0aac7a6",
+      "manual_paraphrase": "Age and relative change in spinal bone mineral density; source preprocessing retains the first measurement per child.",
+      "review_scope": "Post-outcome source context; not a causal explanation."
+    }
+  ]
+}

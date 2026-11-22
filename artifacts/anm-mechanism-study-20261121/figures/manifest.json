@@ -1,0 +1,9 @@
+{
+  "metrics_sha256": "cb3248a56477b050d21067f8a7a330d44352032647974520dede795aad80c2df",
+  "matplotlib": "3.10.6",
+  "new_fits": 0,
+  "files": {
+    "mechanism-overview.png": "01da5076556c0f3c9e1abb973bc47325e83731f9ae7bfdfe8733047094fcaa66",
+    "mechanism-overview.svg": "da7b4b14833314e8714d68bdbca4eee9fb823e5d2ed73939ce64cca38fecb6e4"
+  }
+}

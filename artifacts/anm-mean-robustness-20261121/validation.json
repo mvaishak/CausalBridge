@@ -1,0 +1,28 @@
+{
+  "full_tests": {
+    "passed": 1069,
+    "skipped": 2,
+    "reason": "Two existing optional Tuebingen-snapshot tests"
+  },
+  "new_tests": 6,
+  "lint": "PASS",
+  "format": "PASS",
+  "archive_verified_members": 137,
+  "fresh_environment_full_numerical_rerun": "PASS",
+  "byte_identical_outputs": [
+    "records.json",
+    "completion.json",
+    "tables.md"
+  ],
+  "saved_table_replay_without_fits": "PASS",
+  "python": "3.12.16",
+  "numpy": "2.5.4",
+  "initial_test_invocation_issue": "Five CLI subprocess tests initially failed because .venv/bin was absent from PATH; full suite passed with the installed CLI on PATH.",
+  "production_anm_changed": false,
+  "frozen_original_results_changed": false,
+  "live_llm_calls": 0,
+  "committed": false,
+  "real_configurations": 32,
+  "synthetic_configurations": 64,
+  "unavailable_spread_checks": 0
+}

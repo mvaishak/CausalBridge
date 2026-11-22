@@ -1,0 +1,17 @@
+{
+  "version": "anm-decision-audit-v2",
+  "panels": [
+    "pilot17",
+    "validation38"
+  ],
+  "split_seed": 261,
+  "permutations": 1999,
+  "seed": 2026112401,
+  "block_length": 8,
+  "alpha_nominal": 0.05,
+  "alpha_pair_bonferroni": 0.025,
+  "numeric_relative_tolerance": 1e-08,
+  "numeric_absolute_tolerance": 1e-11,
+  "scope": "All 55 opened real pairs, both directions; numerical implementation audit and exploratory adequacy diagnosis, not a new release policy, tuning, or independent causal validation. IID and row-order block tests are nominal and no cross-pair multiplicity guarantee is claimed. Nonrejection is not proof of independence.",
+  "reference_discrepancy_policy": "Retain eigensolver score discrepancies and decision changes; independently reproduce saved-residual HSIC for adequacy. A preliminary implementation exposed tie-sensitive scores under evaluation-row reordering; this amendment precedes the complete audit."
+}

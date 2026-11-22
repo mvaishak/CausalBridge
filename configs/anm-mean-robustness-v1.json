@@ -1,0 +1,19 @@
+{
+  "version": "anm-mean-robustness-v1",
+  "target_pairs": [56, 88],
+  "comparison_pairs": [2, 3, 13, 16, 23, 86],
+  "selection": "Two previously identified candidates and ALL six originally correct pilot pairs; opened-data exploratory diagnostic, not independent validation",
+  "estimators": [
+    {"name": "original_krr", "kind": "krr", "gamma": 1.0, "ridge": 0.1},
+    {"name": "smooth_krr", "kind": "krr", "gamma": 0.25, "ridge": 0.1},
+    {"name": "flexible_krr", "kind": "krr", "gamma": 4.0, "ridge": 0.1},
+    {"name": "local_linear", "kind": "local_linear", "bandwidth": 0.5}
+  ],
+  "synthetic_seeds": [26101, 26102, 26103, 26104],
+  "synthetic_training": 128,
+  "synthetic_evaluation": 128,
+  "synthetic_families": ["cubic", "sine"],
+  "synthetic_regimes": ["independent_additive", "heteroscedastic"],
+  "multiplicity": "Holm across all eight real cases separately per estimator, residual mode, and permutation scheme; synthetic p-values descriptive and unadjusted",
+  "decision_rule": "No estimator selection, ANM score/threshold change, new causal direction, or accuracy claim. Compare all configurations. Robust candidate means both raw and detrended spread checks retain nominal Holm p<=0.05 under IID and heuristic blocks across all estimators; this is descriptive, not structural proof."
+}

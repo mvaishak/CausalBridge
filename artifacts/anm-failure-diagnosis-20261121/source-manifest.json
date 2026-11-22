@@ -1,0 +1,106 @@
+{
+  "baseline": "fb81b96a92c8cc78360276e54bd3d9be0a974e56",
+  "excludes": "This manifest itself; hashes are consistency checks, not signatures.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "682d0c592f487ca5cd416eb3c68755cc50ce13990b177da7efa596df14928026"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/README.md",
+      "sha256": "d03a949fff49721d5f1b538eead820e263652e4874c1487510fb90d0fb7d120e"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/case-results.csv",
+      "sha256": "b3ddcd98da520819d1319017e938fd72bdbfd7612641ffe7eb5b5ba31d0a6af0"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/case-results.json",
+      "sha256": "f1835edffd4be2188a1a52746afa924ef7d5ef9d9c5ce7433d0d7af4d8352300"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/figures/manifest.json",
+      "sha256": "41baad3db3b750e104518e2bb79b832fa0a9b78795db8a8adaa44f7fd814878b"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/figures/overview.png",
+      "sha256": "11368c9a49b585d815a0a0d91f22966fa3d3e437530d64af539c8a1524cec432"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/figures/overview.svg",
+      "sha256": "67947b54171388eb69bbcbc309379e8c093666d7b82ffce602dd9edb24ec7785"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/figures/source-families.png",
+      "sha256": "2c4ff309aa9033fbb5aecadf8a2c445e330137935e8ae95d5925b423f17eba81"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/figures/source-families.svg",
+      "sha256": "fb88940228e3fb90860b68cd5583e2e813599aa489c7430ef57e83bb0b25db7e"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/metrics.json",
+      "sha256": "376b806be78f9f5623bdedf5bca5f8e3b5dc7b8452d0656d3f33e25e36b50928"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/real-attempts.json",
+      "sha256": "b8ca52e91ecff41cf2731c18387ee48a2c2d558033817df5360fe0efda3f391d"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/replay.log",
+      "sha256": "bdb1681b52d444b0f26582e528576f4e0dcd0d1cb93e68f725622d9911f6a010"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/report.md",
+      "sha256": "e234e8710648807b4c41582f2825641e31f6e0be8939a02b00b75b765aa59ae4"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/software-validation.log",
+      "sha256": "2d0186d331a990d4b7087ff63061a6c21df0652aa6b32c3e89234543ed9726cf"
+    },
+    {
+      "path": "artifacts/anm-failure-diagnosis-20261121/validation.json",
+      "sha256": "beb537d57656eb60dd8acc30daa55b70fd9fe240b065cb0ed384f91ef544a1b1"
+    },
+    {
+      "path": "configs/anm-failure-audit.json",
+      "sha256": "c492a164ebdc0d767770a4a589badbef17f9c18670244f292ebbbb27278b7935"
+    },
+    {
+      "path": "configs/anm-failure-case-metadata.json",
+      "sha256": "c9b973a475c84cb42d7dbc27468a6923a24fb71edf4cfb4ddea45fedc5d993a8"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_LOG.md",
+      "sha256": "e4fa35f9a157f4bde1e7ff44c9d5b37b12c6be70190439b13bb404271e4ff79b"
+    },
+    {
+      "path": "docs/experiments/anm-failure-diagnosis.md",
+      "sha256": "9caf89a12a0c3d52605fffb738a06543cf7c4c7bab8f1d71d7954d22819751a7"
+    },
+    {
+      "path": "docs/reviews/anm-failure-diagnosis.md",
+      "sha256": "e234e8710648807b4c41582f2825641e31f6e0be8939a02b00b75b765aa59ae4"
+    },
+    {
+      "path": "scripts/diagnose_anm_failures.py",
+      "sha256": "4ec8c6eba599ee99e6d8b1c143505d7a0357ed676e6864f4887b568f3f743971"
+    },
+    {
+      "path": "scripts/plot_anm_failures.py",
+      "sha256": "2f33e9b2c7de588f4aabeb5d37bbe65f0cfc0f72960daf4e31b21fea0c7185be"
+    },
+    {
+      "path": "src/causalbridge/evaluation/anm_failure_audit.py",
+      "sha256": "26507de514d87069ef644caeffeaf5929829c7a7f6c3f44fc4bc4f3a13f294e4"
+    },
+    {
+      "path": "src/causalbridge/evaluation/anm_failure_report.py",
+      "sha256": "1cdbeb38b40dd219e081887ac488c5ff3947ce0a494f0333329081f7c26b1b3e"
+    },
+    {
+      "path": "tests/test_anm_failure_audit.py",
+      "sha256": "dd5d9f302521c79281fbb16c88608d8e5695fb1e5cd5a1f4dd61dd129c1d984b"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "archive": "run-records.tar.gz",
+  "sha256": "b5248b5c9d42358ed1e72d9d7a28459d6c98d2b94fdfaae43950d2b19b919327",
+  "file_count": 1210,
+  "observations": 272,
+  "valid_predictions": 271,
+  "matched_inputs": 136,
+  "two_valid_prediction_matches": 135,
+  "contains_separate_activation_and_preflight": true
+}
