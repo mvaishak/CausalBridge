@@ -1,0 +1,18 @@
+{
+  "version": "anm-adequacy-policy-comparison-v1",
+  "scope": "Exploratory saved-record replay on opened data; not a new ANM fit, calibrated independence test, deployment policy or held-out improvement claim.",
+  "panels": {"pilot17": 17, "validation38": 38},
+  "schemes": ["iid", "saved_order_blocks"],
+  "alpha": 0.025,
+  "alpha_basis": "Retain the prior audit's nominal within-pair Bonferroni cutoff; no threshold search. Block permutations are a row-order heuristic.",
+  "policies": ["original", "warning_only", "withhold_if_both_rejected", "withhold_if_selected_rejected", "require_unique_nonrejected"],
+  "rule_definitions": {
+    "original": "Retain every original directional answer, abstention and execution failure.",
+    "warning_only": "Retain the original answer with separate both/one/neither rejected or unavailable annotations; never describe nonrejection as established adequacy.",
+    "withhold_if_both_rejected": "Retain the original direction unless both directional residual tests reject.",
+    "withhold_if_selected_rejected": "Retain the original direction unless its residual test rejects.",
+    "require_unique_nonrejected": "Retain the original direction only if it is not rejected and the opposite direction is rejected. Never substitute the opposite answer."
+  },
+  "missing_diagnostics": "Warning-only preserves the original output. All three withholding rules conservatively withhold an original direction if either p-value is unavailable; retain a distinct reason. No missing observation is imputed.",
+  "evaluation_rules": "Freeze these descriptive rules after prior diagnostics were inspected, before computing this replay. Report every policy for both schemes and panels, including errors removed, correct answers lost, original versus added abstentions, accuracy, yields, coverage, execution failures and source-group breakdowns. Do not select a winner or change the producer."
+}

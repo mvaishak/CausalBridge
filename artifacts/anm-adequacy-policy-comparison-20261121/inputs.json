@@ -1,0 +1,3192 @@
+[
+  {
+    "panel": "validation38",
+    "pair_id": 5,
+    "directory": "originals/validation38-D1041-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:4f63781575035ac20c0d09b0ba8a1439957d784d94e74d1c49ffedc60ebcad51",
+    "request_digest": "sha256:09458c46cc45d95b89a7ffe32de6969f8ff0a7d46fc4da97b0f5139ec96d2487",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0015368995660827722,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.004002468957127222,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0040039370737874405,
+        "original_hsic": 0.0040039370737874405,
+        "absolute_difference": 1.4681166602189405e-06,
+        "relative_normal_equation_error": 1.3157370138019554e-13,
+        "iid": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0035,
+          "exceedances": 6,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0024655693910444493,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0024655693910444814,
+        "original_hsic": 0.002465569391044484,
+        "absolute_difference": 3.469446951953614e-17,
+        "relative_normal_equation_error": 2.909429903780413e-13,
+        "iid": {
+          "pvalue_nominal": 0.004,
+          "exceedances": 7,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.02,
+          "exceedances": 39,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.143,
+    "source_group": "abalone"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 6,
+    "directory": "originals/validation38-D1061-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:c389a7ec180617489a9dbaf9f7ad208e0f20b7977834a1a922b5aafeaa887a15",
+    "request_digest": "sha256:2d8c1f57265bc9b3d8049b0a6858289400f5067f9c73b3cd38ebae52eea672f4",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.003966355977094388,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0033049580673545024,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.003304958067355945,
+        "original_hsic": 0.003304958067355946,
+        "absolute_difference": 1.4437236128816977e-15,
+        "relative_normal_equation_error": 1.8256051587966874e-13,
+        "iid": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0015,
+          "exceedances": 2,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.00727131404444889,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.007271314044447174,
+        "original_hsic": 0.007271314044447178,
+        "absolute_difference": 1.7121720707891086e-15,
+        "relative_normal_equation_error": 2.2335887586066467e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.143,
+    "source_group": "abalone"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 7,
+    "directory": "originals/validation38-D1091-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:c0302480c1d69b7488f77d2de546dbdc9d90ff5cfbbc9b7076073b45344c9a8f",
+    "request_digest": "sha256:21c419f78bb8b14c809734d74f1b3c498a3fb334cf9c44ecd4148a5a68c7ba96",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 8.136389740170382e-05,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0024665782743533327,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002466578274354617,
+        "original_hsic": 0.0024665782743546207,
+        "absolute_difference": 1.2880321809127793e-15,
+        "relative_normal_equation_error": 9.305377021327214e-14,
+        "iid": {
+          "pvalue_nominal": 0.003,
+          "exceedances": 5,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.006,
+          "exceedances": 11,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0025479421717550365,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.002547709599031173,
+        "original_hsic": 0.0025477095990311754,
+        "absolute_difference": 2.325727238611415e-07,
+        "relative_normal_equation_error": 1.2956522990263935e-13,
+        "iid": {
+          "pvalue_nominal": 0.0055,
+          "exceedances": 10,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.01,
+          "exceedances": 19,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.143,
+    "source_group": "abalone"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 8,
+    "directory": "originals/validation38-D1038-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:b312d80de5711f54026833bb217d63b814ffd642a98f38599d3ca0ca070b6e4b",
+    "request_digest": "sha256:e23e6c9a5212d99a0d97c8c533813e5ca25b248d7e96a1e9d088430cdd975477",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.004400596357549694,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.00595408181053028,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0059519656052948585,
+        "original_hsic": 0.005951965605294857,
+        "absolute_difference": 2.1162052354231978e-06,
+        "relative_normal_equation_error": 8.160315891949789e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0015534854529805854,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0015534854529805637,
+        "original_hsic": 0.0015534854529805626,
+        "absolute_difference": 2.2768245622195593e-17,
+        "relative_normal_equation_error": 1.5601754436877118e-13,
+        "iid": {
+          "pvalue_nominal": 0.031,
+          "exceedances": 61,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0505,
+          "exceedances": 100,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.143,
+    "source_group": "abalone"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 9,
+    "directory": "originals/validation38-D1034-261",
+    "reference": "B_to_A",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:c372c9b10ce4cfc2adfe41bcc9f7f9ee9e3b9d4bc5e059614fce1f3bf0aaa206",
+    "request_digest": "sha256:dd5a9768ba54c14c9bb2ccbcbfbe0d147e21f8ad163d79347b447604274b1c1a",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0003888770414553146,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.004033733534065777,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004033733534064703,
+        "original_hsic": 0.004033733534064704,
+        "absolute_difference": 1.0729264698916552e-15,
+        "relative_normal_equation_error": 9.948831479265634e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0036448564926104625,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.003644856492609907,
+        "original_hsic": 0.0036448564926099096,
+        "absolute_difference": 5.529431079676073e-16,
+        "relative_normal_equation_error": 1.1834151631242048e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.002,
+          "exceedances": 3,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.143,
+    "source_group": "abalone"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 10,
+    "directory": "originals/validation38-D1001-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:423f1c5cf544b7b4ec7a119fdcef7f041b8483ebd1332732a5c066ff795dfa49",
+    "request_digest": "sha256:4d4c70784240db9fd1efae4db29853fcf62d3d3f08bf7d18a5a1a3f346995c8c",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.002600576142762989,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.002055579961930447,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002055579961930633,
+        "original_hsic": 0.002055579961930634,
+        "absolute_difference": 1.8735013540549517e-16,
+        "relative_normal_equation_error": 1.1778303822418463e-13,
+        "iid": {
+          "pvalue_nominal": 0.0165,
+          "exceedances": 32,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.039,
+          "exceedances": 77,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.004656156104693436,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.004656158285071159,
+        "original_hsic": 0.004656158285071165,
+        "absolute_difference": 2.1803777290607673e-09,
+        "relative_normal_equation_error": 9.793214275835989e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.143,
+    "source_group": "abalone"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 11,
+    "directory": "originals/validation38-D1027-261",
+    "reference": "B_to_A",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:55c8858755ec60e51d32282fd545fd0bef8cf2566857e2e988745e5995d4c561",
+    "request_digest": "sha256:96c0328a0e3041bb7f2828a624af1740546cf65d0901b4a694e0697ed26d6fae",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0008162493194133974,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.00416626962165728,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004166269621657276,
+        "original_hsic": 0.004166269621657278,
+        "absolute_difference": 1.734723475976807e-18,
+        "relative_normal_equation_error": 7.860932653866832e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.004982518941070677,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0049825189410709625,
+        "original_hsic": 0.004982518941070965,
+        "absolute_difference": 2.8796409701215e-16,
+        "relative_normal_equation_error": 1.1029718847500716e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.142,
+    "source_group": "abalone"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 25,
+    "directory": "originals/validation38-D1102-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:fdf842c0590ef67d59fdd619ce7632a5ed2f3a33dbabc438af638e5c4e94fcf8",
+    "request_digest": "sha256:e185d90d11248a7208252495870adfd6033fecfeebc5eb57a3f57911f22e9642",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0017793338233248455,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0011837841067507838,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0011837841067511806,
+        "original_hsic": 0.0011837841067511797,
+        "absolute_difference": 3.959506333917062e-16,
+        "relative_normal_equation_error": 1.9370120533872148e-13,
+        "iid": {
+          "pvalue_nominal": 0.1395,
+          "exceedances": 278,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.393,
+          "exceedances": 785,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0029631179300756293,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002963117930075807,
+        "original_hsic": 0.002963117930075806,
+        "absolute_difference": 1.7650811368064012e-16,
+        "relative_normal_equation_error": 1.4685922517902616e-13,
+        "iid": {
+          "pvalue_nominal": 0.0035,
+          "exceedances": 6,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.062,
+          "exceedances": 123,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 26,
+    "directory": "originals/validation38-D1090-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:2a46484ebe4241b9e0ac21c25e2ee008b45e7fd9f20750f073132f5ea9766b95",
+    "request_digest": "sha256:9e4eff0799358cdbda15de80352d306b4427f697f7db069434125d2480940fc1",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0007779472492882404,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0004476563501881765,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0004477410347920668,
+        "original_hsic": 0.0004477410347920685,
+        "absolute_difference": 8.46846038919896e-08,
+        "relative_normal_equation_error": 1.76753998339998e-13,
+        "iid": {
+          "pvalue_nominal": 0.477,
+          "exceedances": 953,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.661,
+          "exceedances": 1321,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0012256035994764169,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0012262354801444563,
+        "original_hsic": 0.0012262354801444552,
+        "absolute_difference": 6.318806680383465e-07,
+        "relative_normal_equation_error": 1.9872749840759268e-13,
+        "iid": {
+          "pvalue_nominal": 0.1345,
+          "exceedances": 268,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.3465,
+          "exceedances": 692,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 27,
+    "directory": "originals/validation38-D1081-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:96c8c97a8a81aeeb7504986435bf216891847fb55d446a1a04a6e85af6c95986",
+    "request_digest": "sha256:409087686b7044c37365c0ca1807176fae5b10d38b9fc51e8a311e5dca1076eb",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0007574355936757734,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.001733116572971846,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0017331165729714804,
+        "original_hsic": 0.0017331165729714821,
+        "absolute_difference": 3.638582490861353e-16,
+        "relative_normal_equation_error": 1.604906907301572e-13,
+        "iid": {
+          "pvalue_nominal": 0.019,
+          "exceedances": 37,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.172,
+          "exceedances": 343,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0024905521666476194,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002490552166647346,
+        "original_hsic": 0.002490552166647348,
+        "absolute_difference": 2.714842239903703e-16,
+        "relative_normal_equation_error": 1.1873249029755516e-13,
+        "iid": {
+          "pvalue_nominal": 0.016,
+          "exceedances": 31,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.178,
+          "exceedances": 355,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 28,
+    "directory": "originals/validation38-D1049-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:c9f236832ecf06b6d0c8fc39a0d21a06749dd79dc0e2514dc5e2921d7d7f32af",
+    "request_digest": "sha256:4c2bc86656c393705162f7bc1361caf275440e09817c9e5839f1b0ea682c9fbc",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0027922096542261398,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0038230997059611996,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0038230997059610543,
+        "original_hsic": 0.0038230997059610543,
+        "absolute_difference": 1.452830911130576e-16,
+        "relative_normal_equation_error": 1.5217059323446376e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.005,
+          "exceedances": 9,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0010308900517350598,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0010308900517351314,
+        "original_hsic": 0.0010308900517351327,
+        "absolute_difference": 7.28583859910259e-17,
+        "relative_normal_equation_error": 9.31959576657293e-14,
+        "iid": {
+          "pvalue_nominal": 0.193,
+          "exceedances": 385,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.3175,
+          "exceedances": 634,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 29,
+    "directory": "originals/validation38-D1000-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:c9821709a855dfcbdad1237e402877164c85ddf57f0f7763d244679c4dae76d2",
+    "request_digest": "sha256:95f352199d2ac62367c47bc4a217f0ca6463f688f1e54b1432e3da750df8c4eb",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0007786444154947299,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0006353528599544013,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0006353528599539329,
+        "original_hsic": 0.000635352859953933,
+        "absolute_difference": 4.682669182964894e-16,
+        "relative_normal_equation_error": 1.7826645164676176e-13,
+        "iid": {
+          "pvalue_nominal": 0.3935,
+          "exceedances": 786,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.7345,
+          "exceedances": 1468,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0014139972754491311,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0014139277602932974,
+        "original_hsic": 0.0014139277602932977,
+        "absolute_difference": 6.951515583346682e-08,
+        "relative_normal_equation_error": 8.460147987337934e-14,
+        "iid": {
+          "pvalue_nominal": 0.0815,
+          "exceedances": 162,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.4175,
+          "exceedances": 834,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 30,
+    "directory": "originals/validation38-D1093-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:aa20cd8ab51e590383b1d8b1e97479b736169afdad9390b0086d52a2314c4c6c",
+    "request_digest": "sha256:81d1bcaac7cc9bb75959e9e1dad9299d9bb1cb8715c94e0eb88ea4b82fafdabd",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0039028179160707915,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.00618034532507968,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.006180345325079611,
+        "original_hsic": 0.006180345325079614,
+        "absolute_difference": 6.591949208711867e-17,
+        "relative_normal_equation_error": 1.1462261945023092e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.002277527409008888,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002277527409008638,
+        "original_hsic": 0.0022775274090086365,
+        "absolute_difference": 2.5153490401663703e-16,
+        "relative_normal_equation_error": 9.331786927859688e-14,
+        "iid": {
+          "pvalue_nominal": 0.0055,
+          "exceedances": 10,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0495,
+          "exceedances": 98,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 31,
+    "directory": "originals/validation38-D1076-261",
+    "reference": "B_to_A",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:03cf28f627d1af8d2e9135c419ae2a83de16f52ea420b5bb90a363c928570105",
+    "request_digest": "sha256:b4e5dc40ce9c6da55bd003ee89e449db7b17eee27f81a00a04b4d79c4a4ddf83",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0003742592003203157,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0015219712180190449,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.001521971218018988,
+        "original_hsic": 0.0015219712180189887,
+        "absolute_difference": 5.616167253474913e-17,
+        "relative_normal_equation_error": 1.2741992965387283e-13,
+        "iid": {
+          "pvalue_nominal": 0.054,
+          "exceedances": 107,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1495,
+          "exceedances": 298,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0018962304183393606,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0018962304183392162,
+        "original_hsic": 0.0018962304183392177,
+        "absolute_difference": 1.4289784633358948e-16,
+        "relative_normal_equation_error": 1.0958624158029955e-13,
+        "iid": {
+          "pvalue_nominal": 0.018,
+          "exceedances": 35,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.061,
+          "exceedances": 121,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 32,
+    "directory": "originals/validation38-D1012-261",
+    "reference": "A_to_B",
+    "original_outcome": "correct",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:c9022277dcc0fd025a23c6166867f76290b12c71ec28010edfbbe4b7d0c8d887",
+    "request_digest": "sha256:1d376bfa58da7c5f408458a57e578c89012d1d0391946ab73dad87e60ffebee4",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.015958153558228362,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0008231061284264135,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0008231061284249613,
+        "original_hsic": 0.0008231061284249631,
+        "absolute_difference": 1.4503372461338593e-15,
+        "relative_normal_equation_error": 5.176799454626658e-13,
+        "iid": {
+          "pvalue_nominal": 0.2965,
+          "exceedances": 592,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.5365,
+          "exceedances": 1072,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.016781259686654774,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.016781259686654868,
+        "original_hsic": 0.016781259686654868,
+        "absolute_difference": 9.367506770274758e-17,
+        "relative_normal_equation_error": 9.82210381124938e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.125,
+    "source_group": "concrete"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 33,
+    "directory": "originals/validation38-D1018-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:3962d538b514de054843fbccca9ad5dacc3019f5ba8fc4bfae65b92c1f7ee1a8",
+    "request_digest": "sha256:fbe96912f3280145f64307ebf54e8af91d65430fb7e9112a7bec01924cbdef6c",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0017325436459008116,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.005182819523691045,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.005182819523690743,
+        "original_hsic": 0.005182819523690745,
+        "absolute_difference": 3.0010716134398763e-16,
+        "relative_normal_equation_error": 1.4471018985040996e-13,
+        "iid": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0034502758777902338,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0034502758777891665,
+        "original_hsic": 0.003450275877789174,
+        "absolute_difference": 1.0599160438218291e-15,
+        "relative_normal_equation_error": 1.4096174285631855e-13,
+        "iid": {
+          "pvalue_nominal": 0.0035,
+          "exceedances": 6,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0155,
+          "exceedances": 30,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "liver_disorders"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 34,
+    "directory": "originals/validation38-D1092-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:3c92b44356327901b0f7e15b4c85948f8c4e8f3447e605ac3ffd80f42439ae03",
+    "request_digest": "sha256:a5e2af406be967fb810d1c70a4ddae5f0ad1a9f2efb6d3bea0e85885016300bd",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.002484741536197527,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0034998445398337534,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.003499643484275577,
+        "original_hsic": 0.0034996434842755773,
+        "absolute_difference": 2.0105555817613585e-07,
+        "relative_normal_equation_error": 1.3566373662342206e-13,
+        "iid": {
+          "pvalue_nominal": 0.006,
+          "exceedances": 11,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0535,
+          "exceedances": 106,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0010151030036362268,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0010150103511962503,
+        "original_hsic": 0.0010150103511962505,
+        "absolute_difference": 9.265243997632483e-08,
+        "relative_normal_equation_error": 7.510631072955748e-14,
+        "iid": {
+          "pvalue_nominal": 0.3455,
+          "exceedances": 690,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.588,
+          "exceedances": 1175,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "liver_disorders"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 35,
+    "directory": "originals/validation38-D1042-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:1e28bca12f7520f1e766fc8ec7738935c15f6de723923468757d05733558d29f",
+    "request_digest": "sha256:092ec17fea1d55893838ab10fed49fde6eabbd0a1d4e42ac78614d08ecd09475",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.00870933595902043,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0042935399804699195,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004293539980470356,
+        "original_hsic": 0.0042935399804703575,
+        "absolute_difference": 4.380176776841438e-16,
+        "relative_normal_equation_error": 1.198699541239557e-13,
+        "iid": {
+          "pvalue_nominal": 0.0015,
+          "exceedances": 2,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.013002875939490349,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.013002875939490755,
+        "original_hsic": 0.013002875939490767,
+        "absolute_difference": 4.180683577104105e-16,
+        "relative_normal_equation_error": 1.1298430896879664e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "liver_disorders"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 36,
+    "directory": "originals/validation38-D1056-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:2f3120af575133f15455b1dd65ae3d02a9ed672f8098a4e29e8b3750b09f6110",
+    "request_digest": "sha256:d4c80892ae62bf3635ebab8285b43ebc85f1c908e02910c568db78c00bd496b9",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.005582245234013528,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.005356907475986336,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.005357190878154533,
+        "original_hsic": 0.005357190878154535,
+        "absolute_difference": 2.8340216819914416e-07,
+        "relative_normal_equation_error": 1.8005248101556568e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.010939152709999863,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.010938748517814767,
+        "original_hsic": 0.01093874851781478,
+        "absolute_difference": 4.0419218508280785e-07,
+        "relative_normal_equation_error": 1.4336707715781009e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "liver_disorders"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 37,
+    "directory": "originals/validation38-D1097-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:90bf1d2e67669d00265900466f39661eabbcf83974b35fec82120a55716d4b77",
+    "request_digest": "sha256:fe4498cf49ab4a776403ab74ee63be91ec2c0ed2cd9fabc831765fd138553690",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.003660293561039033,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.008662655806251965,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.00866270538033061,
+        "original_hsic": 0.008662705380330621,
+        "absolute_difference": 4.957407865636976e-08,
+        "relative_normal_equation_error": 8.465864196044156e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.005002362245212931,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.005002939026030035,
+        "original_hsic": 0.00500293902603004,
+        "absolute_difference": 5.767808171084146e-07,
+        "relative_normal_equation_error": 3.008590646563859e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "liver_disorders"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 38,
+    "directory": "originals/validation38-D1048-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:0a080c0c510118fc186c98cc93fc8c4c0ae8885d8312d3f1466bd9837199d986",
+    "request_digest": "sha256:7d220c8a5dea1e8fc42ca4371365fec98707b5df2b41bd6bf1564c1602f86c4c",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0005834819757196734,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0006130454481022247,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0006130454481024088,
+        "original_hsic": 0.0006130454481024089,
+        "absolute_difference": 1.842059491052872e-16,
+        "relative_normal_equation_error": 1.738879675824113e-13,
+        "iid": {
+          "pvalue_nominal": 0.5435,
+          "exceedances": 1086,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.5435,
+          "exceedances": 1086,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0011965274238218981,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0011965274238216557,
+        "original_hsic": 0.0011965274238216546,
+        "absolute_difference": 2.435118079402443e-16,
+        "relative_normal_equation_error": 1.0017970557978156e-13,
+        "iid": {
+          "pvalue_nominal": 0.121,
+          "exceedances": 241,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.153,
+          "exceedances": 305,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "pima_diabetes"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 39,
+    "directory": "originals/validation38-D1024-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:527f8c4951d09fc053a323f5ffb4f61ccc3588f6ed9c8ab2b94a0e42bcb31509",
+    "request_digest": "sha256:23845043c35e875dec9ce67cb6625e3f0edd0e1f6537b1a9a2a0305cd8d136ad",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0007701331179877126,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0036905935210114786,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0036899731257054804,
+        "original_hsic": 0.0036899731257054804,
+        "absolute_difference": 6.20395305998226e-07,
+        "relative_normal_equation_error": 1.413774198566322e-13,
+        "iid": {
+          "pvalue_nominal": 0.0025,
+          "exceedances": 4,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0025,
+          "exceedances": 4,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.004460726638999191,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.004461002206084672,
+        "original_hsic": 0.004461002206084672,
+        "absolute_difference": 2.755670854811057e-07,
+        "relative_normal_equation_error": 1.5169439126608615e-13,
+        "iid": {
+          "pvalue_nominal": 0.002,
+          "exceedances": 3,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "pima_diabetes"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 40,
+    "directory": "originals/validation38-D1043-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:ff1e76186dbc1c8cce6d5a35983230bb5d50e1a8472e6b8f318597781407fd3b",
+    "request_digest": "sha256:ab77468e7f9c59b2261c9c802d4f96786ab5b07114acbfafe1ea4f1c48f29775",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.003598739288354636,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.004629837818422251,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004629837818422682,
+        "original_hsic": 0.0046298378184226816,
+        "absolute_difference": 4.3021142204224816e-16,
+        "relative_normal_equation_error": 1.3870782329961093e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0010310985300676155,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.001031098530068106,
+        "original_hsic": 0.0010310985300681058,
+        "absolute_difference": 4.902762223979451e-16,
+        "relative_normal_equation_error": 2.1020143196622496e-13,
+        "iid": {
+          "pvalue_nominal": 0.225,
+          "exceedances": 449,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.212,
+          "exceedances": 423,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "pima_diabetes"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 41,
+    "directory": "originals/validation38-D1016-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:d41331157b6304363e6e8daf7d5307c79da9b80cfba65a8848b3f41cc3397226",
+    "request_digest": "sha256:72463a75b0ad5dc1f59400b7e7d5d99016311594c9522616a3e3e11154c066d6",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 2.1283767017957374e-05,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0025365983170299363,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002536598317030875,
+        "original_hsic": 0.0025365983170308757,
+        "absolute_difference": 9.39352762241441e-16,
+        "relative_normal_equation_error": 2.6036640153615984e-13,
+        "iid": {
+          "pvalue_nominal": 0.003,
+          "exceedances": 5,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0055,
+          "exceedances": 10,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0025578820840478937,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0025578820840478416,
+        "original_hsic": 0.002557882084047843,
+        "absolute_difference": 5.074066167232161e-17,
+        "relative_normal_equation_error": 9.098259356467164e-14,
+        "iid": {
+          "pvalue_nominal": 0.004,
+          "exceedances": 7,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.006,
+          "exceedances": 11,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "pima_diabetes"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 78,
+    "directory": "originals/validation38-D1070-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:5eb2902895cd7c29c05024392dbbd72b8b99dce58764f96b226a907a63714a0a",
+    "request_digest": "sha256:605f8a619f98d978e1e6b282cbaa832321614f43d8303a6627a83028f8fb1d46",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.007193905698400716,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.017888821489343842,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.017888821489341303,
+        "original_hsic": 0.017888821489341303,
+        "absolute_difference": 2.5396351688300456e-15,
+        "relative_normal_equation_error": 1.0759776380679994e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.010694915790943126,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.010694915790943171,
+        "original_hsic": 0.010694915790943173,
+        "absolute_difference": 4.683753385137379e-17,
+        "relative_normal_equation_error": 6.955601832291442e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.3333,
+    "source_group": "moffat_ecosystem"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 79,
+    "directory": "originals/validation38-D1063-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:7b97ce658036a3aec1c6139a2695359810fa7737c70393833c5377a7b5250abe",
+    "request_digest": "sha256:a8d86fda74c0706920b0c1f77a779ccc31c831c5586b30ea15f78498dba0f78c",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.010158880913253298,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.013074366856827193,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.013074366856826787,
+        "original_hsic": 0.013074366856826787,
+        "absolute_difference": 4.0592529337857286e-16,
+        "relative_normal_equation_error": 8.802026527182493e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0029154859435738946,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0029154859435739627,
+        "original_hsic": 0.002915485943573967,
+        "absolute_difference": 7.24247051220317e-17,
+        "relative_normal_equation_error": 5.3990944290003955e-14,
+        "iid": {
+          "pvalue_nominal": 0.002,
+          "exceedances": 3,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.069,
+          "exceedances": 137,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.3333,
+    "source_group": "moffat_ecosystem"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 80,
+    "directory": "originals/validation38-D1019-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:78d6c8f6b1b42fc457b51b09fa647841be17d3df6f86c357dff11b68a52400ac",
+    "request_digest": "sha256:6f7c91b2a7bc6af659af93dbbce2afd7d4e89d4d90e75eb1ea84bd922bc24a2b",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.015887587537729276,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0187158571971958,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.018715857197196067,
+        "original_hsic": 0.01871585719719607,
+        "absolute_difference": 2.706168622523819e-16,
+        "relative_normal_equation_error": 1.0214782774201858e-13,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0028282696594665235,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0028282696594671385,
+        "original_hsic": 0.0028282696594671354,
+        "absolute_difference": 6.119237061508187e-16,
+        "relative_normal_equation_error": 1.0840838936388922e-13,
+        "iid": {
+          "pvalue_nominal": 0.0055,
+          "exceedances": 10,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.08,
+          "exceedances": 159,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.3334,
+    "source_group": "moffat_ecosystem"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 84,
+    "directory": "originals/validation38-D1029-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:460f36155d712546d502860186b397a39da0c6c999ff0f6803025f5acc96adf8",
+    "request_digest": "sha256:b18c6209a29968a125b3f484f2325ba789a23faa07fe5b666e2383d80ec24350",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0008164144249819842,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0025750487897661907,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002575048789766234,
+        "original_hsic": 0.0025750487897662337,
+        "absolute_difference": 4.2934406030425976e-17,
+        "relative_normal_equation_error": 1.537102514582458e-14,
+        "iid": {
+          "pvalue_nominal": 0.002,
+          "exceedances": 3,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0015,
+          "exceedances": 2,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.003391463214748175,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0033914632147468695,
+        "original_hsic": 0.0033914632147468682,
+        "absolute_difference": 1.30668045827953e-15,
+        "relative_normal_equation_error": 1.778515193194822e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 1.0,
+    "source_group": "spatial_econometrics"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 91,
+    "directory": "originals/validation38-D1099-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:45ce2baf2aea8797ab3e8f882e71a6ee479d4f7b50137694fd81c9635c812f02",
+    "request_digest": "sha256:01a80eb7cd42f63027696d16602f7326d603578fbb06b35f498d64412d257be1",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.00254477364694059,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.008077193167526166,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.008077193167526094,
+        "original_hsic": 0.008077193167526095,
+        "absolute_difference": 7.112366251504909e-17,
+        "relative_normal_equation_error": 2.5253463219246323e-14,
+        "iid": {
+          "pvalue_nominal": 0.0165,
+          "exceedances": 32,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0785,
+          "exceedances": 156,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.005532419520585577,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.005532419520585883,
+        "original_hsic": 0.005532419520585883,
+        "absolute_difference": 3.0617869350990645e-16,
+        "relative_normal_equation_error": 4.804162004518043e-14,
+        "iid": {
+          "pvalue_nominal": 0.0515,
+          "exceedances": 102,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.17,
+          "exceedances": 339,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "solly_soil"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 92,
+    "directory": "originals/validation38-D1031-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:588e8da8a7e2fff607224c12d878e5827614f23468d38983a6a4d5e03b30300f",
+    "request_digest": "sha256:9e5a970c65614e047caaa0e28dda28e50543c2069d21ebff78d026cfc6c1cafa",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0016679425644607563,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.006076511684591391,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0060765116845912836,
+        "original_hsic": 0.006076511684591279,
+        "absolute_difference": 1.1188966420050406e-16,
+        "relative_normal_equation_error": 5.633451141528435e-14,
+        "iid": {
+          "pvalue_nominal": 0.043,
+          "exceedances": 85,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.07,
+          "exceedances": 139,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.004408569120130635,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004408569120130367,
+        "original_hsic": 0.004408569120130364,
+        "absolute_difference": 2.706168622523819e-16,
+        "relative_normal_equation_error": 3.091640598010024e-14,
+        "iid": {
+          "pvalue_nominal": 0.1035,
+          "exceedances": 206,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.413,
+          "exceedances": 825,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "solly_soil"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 97,
+    "directory": "originals/validation38-D1100-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:720e06bc0f86486402c22b12e1655f9241221002d5c7d180104b257586805e95",
+    "request_digest": "sha256:f8e37ef7be36780f047866ebf017e995cb2969058d17258982ea78a48b8f1901",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0025935553207043056,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.002909397362136796,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002909397362136864,
+        "original_hsic": 0.0029093973621368637,
+        "absolute_difference": 6.765421556309548e-17,
+        "relative_normal_equation_error": 7.020130510325201e-14,
+        "iid": {
+          "pvalue_nominal": 0.1495,
+          "exceedances": 298,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.2955,
+          "exceedances": 590,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0055029526828411016,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.005502952682840774,
+        "original_hsic": 0.005502952682840775,
+        "absolute_difference": 3.2612801348363973e-16,
+        "relative_normal_equation_error": 6.0868519971489e-14,
+        "iid": {
+          "pvalue_nominal": 0.011,
+          "exceedances": 21,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.08,
+          "exceedances": 159,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "janzing_mechanics"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 100,
+    "directory": "originals/validation38-D1023-261",
+    "reference": "A_to_B",
+    "original_outcome": "correct",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:63176e13b912ba3a6e5886a7a6d3a8f55afb5239051b5c9845ee78e0beead79c",
+    "request_digest": "sha256:baff8c1caba727b75a75ecc6bc8516bc360f8a43aaae3e7f7e63d8ce1e2a8fd4",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.010793674701012133,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.004409931330215905,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004409931330216364,
+        "original_hsic": 0.004409931330216362,
+        "absolute_difference": 4.570996359198887e-16,
+        "relative_normal_equation_error": 7.982726464817352e-14,
+        "iid": {
+          "pvalue_nominal": 0.0235,
+          "exceedances": 46,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1365,
+          "exceedances": 272,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.015203606031228039,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.015203606031227931,
+        "original_hsic": 0.015203606031227923,
+        "absolute_difference": 1.1622647289044608e-16,
+        "relative_normal_equation_error": 4.232477493191073e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 1.0,
+    "source_group": "cpus"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 101,
+    "directory": "originals/validation38-D1033-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:662e5c3073295a357d0f309ab4806140e37e20dcc2336ddbb8722f6606570c8a",
+    "request_digest": "sha256:4038e2c11d09945f10f1316d66d3fff9b6b6fc9c98ffba3b67ecb6de189c68ca",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.02925747271613911,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.03189216697054164,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.03189216697054197,
+        "original_hsic": 0.03189216697054198,
+        "absolute_difference": 3.400058012914542e-16,
+        "relative_normal_equation_error": 1.058812404669447e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0026346942544025307,
+        "reference_score_matches": false,
+        "saved_residual_reference_hsic": 0.0026346081221497427,
+        "original_hsic": 0.002634608122149745,
+        "absolute_difference": 8.613225278581577e-08,
+        "relative_normal_equation_error": 1.7843457800979347e-14,
+        "iid": {
+          "pvalue_nominal": 0.1145,
+          "exceedances": 228,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.14,
+          "exceedances": 279,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.5,
+    "source_group": "janzing_brightness"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 102,
+    "directory": "originals/validation38-D1075-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:cf265d0075a0b8a36b49995ca38c178bd3386b52762556c3ab5ea79ecda18ce4",
+    "request_digest": "sha256:d3caba1f84b7222d4156c36c30a92c740f397f4abe789d6e148767fecec5017b",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0021441716046302238,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0025312756582788727,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002531275658278759,
+        "original_hsic": 0.002531275658278759,
+        "absolute_difference": 1.1362438767648086e-16,
+        "relative_normal_equation_error": 4.0708172050014e-14,
+        "iid": {
+          "pvalue_nominal": 0.567,
+          "exceedances": 1133,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.7315,
+          "exceedances": 1462,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0046754472629090965,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.00467544726290906,
+        "original_hsic": 0.004675447262909062,
+        "absolute_difference": 3.469446951953614e-17,
+        "relative_normal_equation_error": 2.6999838647243292e-14,
+        "iid": {
+          "pvalue_nominal": 0.1925,
+          "exceedances": 384,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.3865,
+          "exceedances": 772,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "janzing_mechanics"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 103,
+    "directory": "originals/validation38-D1088-261",
+    "reference": "B_to_A",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:494f80451ec79f8d8eb4eb3bec4c950e98369d341f27261dbf187acad46b5f4a",
+    "request_digest": "sha256:cd64912fe0c0126512ac73a7e83729c241c6af60cf053867d7e908ca57992fb3",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0005911109954151962,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.003074875982024511,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0030748759820244656,
+        "original_hsic": 0.0030748759820244643,
+        "absolute_difference": 4.683753385137379e-17,
+        "relative_normal_equation_error": 3.933156265526207e-14,
+        "iid": {
+          "pvalue_nominal": 0.5255,
+          "exceedances": 1050,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.537,
+          "exceedances": 1073,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0036659869774397073,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.003665986977439854,
+        "original_hsic": 0.003665986977439854,
+        "absolute_difference": 1.465841337200402e-16,
+        "relative_normal_equation_error": 2.8032373095895996e-14,
+        "iid": {
+          "pvalue_nominal": 0.3805,
+          "exceedances": 760,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.423,
+          "exceedances": 845,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "janzing_mechanics"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 104,
+    "directory": "originals/validation38-D1069-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:868b51ad9b7474fb4d1070f5ba51d0d4fdfea25891cefee25f86e7d19f128e0f",
+    "request_digest": "sha256:9daf05f60c248a7b72611c7ef09947247618602e30eb4f6e0b5753ed776d805d",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0018033401792182466,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.004351092172072661,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0043510921720728134,
+        "original_hsic": 0.004351092172072816,
+        "absolute_difference": 1.5525775109992423e-16,
+        "relative_normal_equation_error": 3.523368715597179e-14,
+        "iid": {
+          "pvalue_nominal": 0.28,
+          "exceedances": 559,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.302,
+          "exceedances": 603,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.006154432351290907,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.006154432351290625,
+        "original_hsic": 0.0061544323512906255,
+        "absolute_difference": 2.8189256484623115e-16,
+        "relative_normal_equation_error": 2.887564682891897e-14,
+        "iid": {
+          "pvalue_nominal": 0.099,
+          "exceedances": 197,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1735,
+          "exceedances": 346,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.2,
+    "source_group": "janzing_mechanics"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 106,
+    "directory": "originals/validation38-D1022-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:7231a85624529d53d32854c5f0e27a4c7e9ab675783324b5485f0511aaa3bbb1",
+    "request_digest": "sha256:f49112b8a53e2f63b04c56a2030d976a74c3a5e7e805336180ddc66f2e91ba36",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.001754564849601463,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.004267774821874208,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004267774821874165,
+        "original_hsic": 0.004267774821874168,
+        "absolute_difference": 3.9898639947466563e-17,
+        "relative_normal_equation_error": 2.092614181419144e-14,
+        "iid": {
+          "pvalue_nominal": 0.2445,
+          "exceedances": 488,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.2975,
+          "exceedances": 594,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.006022339671475671,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.006022339671475784,
+        "original_hsic": 0.006022339671475787,
+        "absolute_difference": 1.1622647289044608e-16,
+        "relative_normal_equation_error": 8.734663927441485e-15,
+        "iid": {
+          "pvalue_nominal": 0.0725,
+          "exceedances": 144,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1505,
+          "exceedances": 300,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 1.0,
+    "source_group": "janzing_voltage"
+  },
+  {
+    "panel": "validation38",
+    "pair_id": 108,
+    "directory": "originals/validation38-D1055-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:6d2c594ab427a932f00139be2f60607e09376d30d3833b62ad226714ac12da3f",
+    "request_digest": "sha256:8dab6e0842af9bad5fe6f349e706162fb5965c76f34097065df9fd76e3c73f46",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.01913023855559555,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.004809710964754112,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004809710964753973,
+        "original_hsic": 0.0048097109647539755,
+        "absolute_difference": 1.3617579286417936e-16,
+        "relative_normal_equation_error": 5.317497365085809e-14,
+        "iid": {
+          "pvalue_nominal": 0.1925,
+          "exceedances": 384,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.66,
+          "exceedances": 1319,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.02393994952034966,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.02393994952035006,
+        "original_hsic": 0.02393994952035007,
+        "absolute_difference": 4.0939474033052647e-16,
+        "relative_normal_equation_error": 1.6448629442934584e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.049,
+          "exceedances": 97,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 1.0,
+    "source_group": "janzing_temperature"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 1,
+    "directory": "originals/pilot17-D1084-261",
+    "reference": "B_to_A",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:523e2069516e1005ad2f475fa8a3d169be5633356d76d330773db665de015d48",
+    "request_digest": "sha256:42c6ae9467c453109e37b0c34418473978a9858999032cb8b206f81af8e65879",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0006778370068355405,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.007499017691723781,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.007499017691723734,
+        "original_hsic": 0.007499017691723746,
+        "absolute_difference": 3.469446951953614e-17,
+        "relative_normal_equation_error": 6.349381890477111e-14,
+        "iid": {
+          "pvalue_nominal": 0.0055,
+          "exceedances": 10,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0045,
+          "exceedances": 8,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.00682118068488824,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.006821180684888316,
+        "original_hsic": 0.006821180684888346,
+        "absolute_difference": 1.0581813203458523e-16,
+        "relative_normal_equation_error": 3.6470795633673534e-14,
+        "iid": {
+          "pvalue_nominal": 0.0265,
+          "exceedances": 52,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0505,
+          "exceedances": 100,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.166,
+    "source_group": "dwd_stations"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 2,
+    "directory": "originals/pilot17-D1008-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:e6917c5d32b57e0c48b9ffcc87113a3dd31ba84e62cbf4ddfbb4fac262083b0c",
+    "request_digest": "sha256:f22945b895afe3531ef76ee17a8f4c417eb1a0d405bc4ad91f0935bc4b2eebd1",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0036642117527435156,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.010769069284476379,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.01076906928447642,
+        "original_hsic": 0.010769069284476351,
+        "absolute_difference": 2.7755575615628914e-17,
+        "relative_normal_equation_error": 5.686421754469469e-14,
+        "iid": {
+          "pvalue_nominal": 0.0015,
+          "exceedances": 2,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.009,
+          "exceedances": 17,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0071048575317328635,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.007104857531732855,
+        "original_hsic": 0.007104857531732822,
+        "absolute_difference": 4.163336342344337e-17,
+        "relative_normal_equation_error": 2.3769891633165066e-14,
+        "iid": {
+          "pvalue_nominal": 0.04,
+          "exceedances": 79,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0135,
+          "exceedances": 26,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.166,
+    "source_group": "dwd_stations"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 3,
+    "directory": "originals/pilot17-D1009-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:2dc6e342c1509d35921292517a608854d0d865401d93ed20ef9c46acff6b264e",
+    "request_digest": "sha256:ad551fbbeb31dc9b7e4b14643ca11871b33351f5cd7adafd125a03bd17691957",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.005708966092662816,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.010272018173232252,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.01027201817323177,
+        "original_hsic": 0.010272018173231898,
+        "absolute_difference": 3.5388358909926865e-16,
+        "relative_normal_equation_error": 4.146130332597133e-14,
+        "iid": {
+          "pvalue_nominal": 0.002,
+          "exceedances": 3,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.004,
+          "exceedances": 7,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.004563052080569436,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004563052080569747,
+        "original_hsic": 0.004563052080569658,
+        "absolute_difference": 2.220446049250313e-16,
+        "relative_normal_equation_error": 3.6909275625699184e-14,
+        "iid": {
+          "pvalue_nominal": 0.178,
+          "exceedances": 355,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1325,
+          "exceedances": 264,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.167,
+    "source_group": "dwd_stations"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 4,
+    "directory": "originals/pilot17-D1007-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:a0f2d4a71b949abfe7f62af150ad3729119d233d61368b7f188412d9e9c8bd04",
+    "request_digest": "sha256:54c13755f69b1baba98812510d8d592c4b88a95ba9b2934821c13b880e7906be",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.007018423108782368,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0027046658235286044,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002704665823528493,
+        "original_hsic": 0.002704665823528519,
+        "absolute_difference": 8.543513119185775e-17,
+        "relative_normal_equation_error": 6.003568968280584e-14,
+        "iid": {
+          "pvalue_nominal": 0.465,
+          "exceedances": 929,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.537,
+          "exceedances": 1073,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.009723088932310973,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.009723088932310966,
+        "original_hsic": 0.009723088932311058,
+        "absolute_difference": 8.500145032286355e-17,
+        "relative_normal_equation_error": 2.944424425789483e-14,
+        "iid": {
+          "pvalue_nominal": 0.009,
+          "exceedances": 17,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0155,
+          "exceedances": 30,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.166,
+    "source_group": "dwd_stations"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 13,
+    "directory": "originals/pilot17-D1089-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:0b7446319cc8a5a4644500eeebc4825bfd1e95144b19c1966343edbadeb7b020",
+    "request_digest": "sha256:5b11d7def70f76892364d6020859d492487d93bc57570f79276e84e3097f492b",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.002347571542908912,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.007998446341159246,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.007998446341159305,
+        "original_hsic": 0.00799844634115929,
+        "absolute_difference": 4.336808689942018e-17,
+        "relative_normal_equation_error": 2.07478123129578e-14,
+        "iid": {
+          "pvalue_nominal": 0.0075,
+          "exceedances": 14,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.032,
+          "exceedances": 63,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.005650874798250334,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.005650874798250223,
+        "original_hsic": 0.0056508747982502066,
+        "absolute_difference": 1.2750217548429532e-16,
+        "relative_normal_equation_error": 3.4505815460855676e-14,
+        "iid": {
+          "pvalue_nominal": 0.086,
+          "exceedances": 171,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1625,
+          "exceedances": 324,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "auto_mpg"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 14,
+    "directory": "originals/pilot17-D1028-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:807450d8c1c00f52cf62959229393580bdc74475dba541507efff67451617a8c",
+    "request_digest": "sha256:9f96a0cf0a4d852c7c4e98412ab6874a583746faffd3b67591ed6382f0f9cfbb",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.006590169566900327,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.01144193747820883,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.011441937478208524,
+        "original_hsic": 0.011441937478208663,
+        "absolute_difference": 1.6653345369377348e-16,
+        "relative_normal_equation_error": 4.383690611286139e-14,
+        "iid": {
+          "pvalue_nominal": 0.0015,
+          "exceedances": 2,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0035,
+          "exceedances": 6,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0048517679113085025,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004851767911308991,
+        "original_hsic": 0.0048517679113089735,
+        "absolute_difference": 4.709774237277031e-16,
+        "relative_normal_equation_error": 4.3869547205741317e-14,
+        "iid": {
+          "pvalue_nominal": 0.1125,
+          "exceedances": 224,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1945,
+          "exceedances": 388,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "auto_mpg"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 15,
+    "directory": "originals/pilot17-D1105-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:491ac47fba2bd93f36051a2131cbb005ea2bbcbfda38f01927e4076f942ac8c9",
+    "request_digest": "sha256:a00f1a5bc184d21428fd685f126bef61959addccc301439cecde4a639ddfeb99",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.002385960663833591,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.00922882265564447,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.009228822655644495,
+        "original_hsic": 0.009228822655644484,
+        "absolute_difference": 1.3877787807814457e-17,
+        "relative_normal_equation_error": 1.9416064407185178e-14,
+        "iid": {
+          "pvalue_nominal": 0.0105,
+          "exceedances": 20,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.029,
+          "exceedances": 57,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0068428619918108795,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0068428619918108596,
+        "original_hsic": 0.006842861991810793,
+        "absolute_difference": 8.673617379884035e-17,
+        "relative_normal_equation_error": 2.2508171274073794e-14,
+        "iid": {
+          "pvalue_nominal": 0.0275,
+          "exceedances": 54,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.1505,
+          "exceedances": 300,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "auto_mpg"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 16,
+    "directory": "originals/pilot17-D1026-261",
+    "reference": "A_to_B",
+    "original_outcome": "correct",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:ba016fb3b1bb8f1a11544d628b9f9e8c7423cef631f621233444a9ead7023493",
+    "request_digest": "sha256:659ccaf69ad49c1fae230e3110effea60b3928ee82a7915d06ee6dde0fd39974",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0036420897403730583,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.006126624890661426,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.006126624890661287,
+        "original_hsic": 0.0061266248906614,
+        "absolute_difference": 2.6020852139652106e-17,
+        "relative_normal_equation_error": 7.901548223166488e-14,
+        "iid": {
+          "pvalue_nominal": 0.0645,
+          "exceedances": 128,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.119,
+          "exceedances": 237,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.009768714631034485,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.009768714631034946,
+        "original_hsic": 0.009768714631034863,
+        "absolute_difference": 3.7816971776294395e-16,
+        "relative_normal_equation_error": 2.231726012800984e-14,
+        "iid": {
+          "pvalue_nominal": 0.004,
+          "exceedances": 7,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.011,
+          "exceedances": 21,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.25,
+    "source_group": "auto_mpg"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 18,
+    "directory": "originals/pilot17-D1078-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:67474b94c51122ed77977e8995ac9f9aaff7eb02e0c4fdb9de0a3ba0e76ad411",
+    "request_digest": "sha256:32cb5c4852e712e30c838f66bc9a7956e608ede4d822bcea504b441eb0cc15b2",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0018092512942909401,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.01371732570905673,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.013717325709055796,
+        "original_hsic": 0.013717325709055992,
+        "absolute_difference": 7.389922007661198e-16,
+        "relative_normal_equation_error": 3.4777550123069897e-14,
+        "iid": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.034,
+          "exceedances": 67,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.01190807441476579,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.011908074414765763,
+        "original_hsic": 0.011908074414765619,
+        "absolute_difference": 1.717376241217039e-16,
+        "relative_normal_equation_error": 1.7265905118556584e-14,
+        "iid": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0475,
+          "exceedances": 94,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 1.0,
+    "source_group": "gag_urine"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 20,
+    "directory": "originals/pilot17-D1006-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:3c1582862372386e15f96837a0fa0b1ee3530233a671185acd453a2d7b207a57",
+    "request_digest": "sha256:8edf5c28425d3944d9f92e24ca9360d244b2e749fdd7d131bc2548b202010e65",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0031805352044500155,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.006538349882038615,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.006538349882038282,
+        "original_hsic": 0.00653834988203832,
+        "absolute_difference": 2.949029909160572e-16,
+        "relative_normal_equation_error": 4.756645635718711e-14,
+        "iid": {
+          "pvalue_nominal": 0.0355,
+          "exceedances": 70,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.023,
+          "exceedances": 45,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.003357814677588599,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0033578146775885154,
+        "original_hsic": 0.003357814677588501,
+        "absolute_difference": 9.80118763926896e-17,
+        "relative_normal_equation_error": 3.265261372664655e-14,
+        "iid": {
+          "pvalue_nominal": 0.3305,
+          "exceedances": 660,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.4395,
+          "exceedances": 878,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.166,
+    "source_group": "dwd_stations"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 21,
+    "directory": "originals/pilot17-D1046-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:8b50d44c672b49c8dcd6c9d78f2332ceea07f18c7b07f63b9fa56920f9bcf3c8",
+    "request_digest": "sha256:55ced14488a6d97ae560c615aec341cf2b3fbaffb01a411827068dbedd881254",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": 0.000618502199836622,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.006453614406882521,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0064536144068828745,
+        "original_hsic": 0.00645361440688289,
+        "absolute_difference": 3.694961003830599e-16,
+        "relative_normal_equation_error": 1.154623634549094e-13,
+        "iid": {
+          "pvalue_nominal": 0.0435,
+          "exceedances": 86,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0535,
+          "exceedances": 106,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.007072116606719143,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.007072116606719251,
+        "original_hsic": 0.007072116606719237,
+        "absolute_difference": 9.454242944073599e-17,
+        "relative_normal_equation_error": 9.810597816205439e-14,
+        "iid": {
+          "pvalue_nominal": 0.0215,
+          "exceedances": 42,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.09,
+          "exceedances": 179,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.167,
+    "source_group": "dwd_stations"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 22,
+    "directory": "originals/pilot17-D1045-261",
+    "reference": "A_to_B",
+    "original_outcome": "wrong",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:8035a195181e29f13b36c049fe268c8fdea0ad85d3f47e4c3f5599d7271ce54c",
+    "request_digest": "sha256:6f2b7577f87d6e88194d04d0bf73f680689b00bd4fb914af3dfd62c0dbddfb3f",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.005573980233603478,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.009981215328657589,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.00998121532865726,
+        "original_hsic": 0.009981215328657343,
+        "absolute_difference": 2.463307335887066e-16,
+        "relative_normal_equation_error": 1.0708746975853007e-13,
+        "iid": {
+          "pvalue_nominal": 0.0075,
+          "exceedances": 14,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0055,
+          "exceedances": 10,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.004407235095054111,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0044072350950539714,
+        "original_hsic": 0.00440723509505399,
+        "absolute_difference": 1.214306433183765e-16,
+        "relative_normal_equation_error": 1.0069477398126685e-13,
+        "iid": {
+          "pvalue_nominal": 0.14,
+          "exceedances": 279,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.188,
+          "exceedances": 375,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.333,
+    "source_group": "arrhythmia"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 23,
+    "directory": "originals/pilot17-D1083-261",
+    "reference": "A_to_B",
+    "original_outcome": "correct",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:3f576a7118797e42e7ef0ca2d8c4f228ec16ce3cbfc8802df0ca285e7d371de3",
+    "request_digest": "sha256:6c9f33bba1944ae200f3c0666472f245fb78b792ee6a6817a08736750363b330",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.0025965250110158234,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.002184116325790599,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002184116325790516,
+        "original_hsic": 0.002184116325790517,
+        "absolute_difference": 8.239936510889834e-17,
+        "relative_normal_equation_error": 7.186608136833055e-14,
+        "iid": {
+          "pvalue_nominal": 0.623,
+          "exceedances": 1245,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.6385,
+          "exceedances": 1276,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0047806413368064226,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004780641336806296,
+        "original_hsic": 0.004780641336806314,
+        "absolute_difference": 1.0842021724855044e-16,
+        "relative_normal_equation_error": 4.498975660274238e-14,
+        "iid": {
+          "pvalue_nominal": 0.123,
+          "exceedances": 245,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.174,
+          "exceedances": 347,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.333,
+    "source_group": "arrhythmia"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 24,
+    "directory": "originals/pilot17-D1052-261",
+    "reference": "A_to_B",
+    "original_outcome": "abstention",
+    "original_direction": null,
+    "result_digest": "sha256:1ca6c3f3c888d065b847ef2e69aaae3fe35f2ae5ec833b87afb9f083e356ed6d",
+    "request_digest": "sha256:7561cbb84a2c81a51d0554d11ff2d16c4f3449bfaf634c5497ef559578490a49",
+    "decision": "abstain",
+    "original_decision": "abstain",
+    "reference_decision_matches": true,
+    "reference_margin": -0.0009706465828143189,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.00573463222396415,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0057346322239643244,
+        "original_hsic": 0.005734632223964284,
+        "absolute_difference": 1.3357370765021415e-16,
+        "relative_normal_equation_error": 9.689776458815738e-14,
+        "iid": {
+          "pvalue_nominal": 0.0695,
+          "exceedances": 138,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0445,
+          "exceedances": 88,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.004763985641149831,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.004763985641149635,
+        "original_hsic": 0.0047639856411497185,
+        "absolute_difference": 1.1275702593849246e-16,
+        "relative_normal_equation_error": 1.0391507672257269e-13,
+        "iid": {
+          "pvalue_nominal": 0.1165,
+          "exceedances": 232,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.144,
+          "exceedances": 287,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 0.334,
+    "source_group": "arrhythmia"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 56,
+    "directory": "originals/pilot17-D1014-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:e5ced5a4872dc45e8eaf6d40af2e6cea0e09840f6abe96e5c365a3138d947d45",
+    "request_digest": "sha256:89118f06c14a33c55452376fe159f035b89bcf76e5384caf3fabe2d5c1b9ec0d",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.012951477125207845,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.002938157498937897,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.002938157498937749,
+        "original_hsic": 0.0029381574989377733,
+        "absolute_difference": 1.235990476633475e-16,
+        "relative_normal_equation_error": 5.6365330044173736e-14,
+        "iid": {
+          "pvalue_nominal": 0.4305,
+          "exceedances": 860,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.4145,
+          "exceedances": 828,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.015889634624145742,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.01588963462414491,
+        "original_hsic": 0.015889634624145055,
+        "absolute_difference": 6.869504964868156e-16,
+        "relative_normal_equation_error": 4.072806234848207e-14,
+        "iid": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.0005,
+          "exceedances": 0,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 0.083,
+    "source_group": "undata"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 86,
+    "directory": "originals/pilot17-D1010-261",
+    "reference": "B_to_A",
+    "original_outcome": "correct",
+    "original_direction": "B_to_A",
+    "result_digest": "sha256:713e87329f9a3fb2a235c1485ee17ef63bd5258282ac9d63820b253495c82cd6",
+    "request_digest": "sha256:8bb0607aa7667fd21c3e3c66879e011700865213ce93dd6020f7f5a5d119535d",
+    "decision": "B_to_A",
+    "original_decision": "B_to_A",
+    "reference_decision_matches": true,
+    "reference_margin": -0.001402226493822737,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.0031169706238391775,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0031169706238389806,
+        "original_hsic": 0.003116970623838967,
+        "absolute_difference": 2.1033522146218786e-16,
+        "relative_normal_equation_error": 5.347515747753081e-14,
+        "iid": {
+          "pvalue_nominal": 0.355,
+          "exceedances": 709,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.2935,
+          "exceedances": 586,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.0017147441300164406,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.0017147441300165282,
+        "original_hsic": 0.0017147441300164757,
+        "absolute_difference": 3.5128150388530344e-17,
+        "relative_normal_equation_error": 4.0515103584471455e-14,
+        "iid": {
+          "pvalue_nominal": 0.757,
+          "exceedances": 1513,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.73,
+          "exceedances": 1459,
+          "rejected_nominal": false,
+          "rejected_pair_bonferroni": false
+        }
+      }
+    },
+    "weight": 1.0,
+    "source_group": "kamernet_rent"
+  },
+  {
+    "panel": "pilot17",
+    "pair_id": 88,
+    "directory": "originals/pilot17-D1107-261",
+    "reference": "B_to_A",
+    "original_outcome": "wrong",
+    "original_direction": "A_to_B",
+    "result_digest": "sha256:70e698adfcaf254b0873b261f6fc5cf16fd531f0fdd2e498b6f20f78ec248799",
+    "request_digest": "sha256:cf62faaba451fa8faf6236069dae640ac40f2251374b20608937de4fb168d07c",
+    "decision": "A_to_B",
+    "original_decision": "A_to_B",
+    "reference_decision_matches": true,
+    "reference_margin": 0.004183259369023345,
+    "directions": {
+      "A_to_B": {
+        "reference_hsic": 0.009322178372033765,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.009322178372033854,
+        "original_hsic": 0.009322178372033349,
+        "absolute_difference": 4.163336342344337e-16,
+        "relative_normal_equation_error": 5.017957591801784e-14,
+        "iid": {
+          "pvalue_nominal": 0.0065,
+          "exceedances": 12,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.016,
+          "exceedances": 31,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      },
+      "B_to_A": {
+        "reference_hsic": 0.01350543774105711,
+        "reference_score_matches": true,
+        "saved_residual_reference_hsic": 0.013505437741056925,
+        "original_hsic": 0.013505437741056722,
+        "absolute_difference": 3.885780586188048e-16,
+        "relative_normal_equation_error": 1.179115766973862e-13,
+        "iid": {
+          "pvalue_nominal": 0.0015,
+          "exceedances": 2,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        },
+        "saved_order_blocks": {
+          "pvalue_nominal": 0.001,
+          "exceedances": 1,
+          "rejected_nominal": true,
+          "rejected_pair_bonferroni": true
+        }
+      }
+    },
+    "weight": 1.0,
+    "source_group": "bone_children"
+  }
+]

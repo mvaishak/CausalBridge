@@ -1,0 +1,32 @@
+{
+  "full_tests": {
+    "passed": 1087,
+    "skipped": 2,
+    "reason": "Two existing optional Tuebingen-snapshot tests"
+  },
+  "new_policy_tests": 13,
+  "lint": "PASS",
+  "format": "PASS",
+  "archive_members_verified": 78,
+  "clean_environment_replay": "PASS",
+  "byte_identical": [
+    "case-results.json",
+    "metrics.json",
+    "tables.md"
+  ],
+  "numerical_refits": 0,
+  "new_permutation_statistics": 0,
+  "live_llm_calls": 0,
+  "new_data": 0,
+  "underlying_real_cases": 55,
+  "policy_case_rows": 550,
+  "reported_configurations": 20,
+  "production_anm_changed": false,
+  "original_experimental_results_changed": false,
+  "new_policies_deployed": false,
+  "independent_holdout_claim": false,
+  "consolidation_commit": "1b23266",
+  "policy_changes_committed": false,
+  "python": "3.12.16",
+  "numpy": "2.5.4"
+}

@@ -48,3 +48,7 @@ The next local task is a frozen, exploratory replay comparing annotations and co
 - [Independent numerical/decision audit](anm-decision-audit-v1.md)
 
 Each component links to its raw/source bundles and reproducibility checks. Original production ANM, final report, slides and frozen experimental results are unchanged.
+
+## Completed exploratory policy follow-up
+
+The fixed replay is now completed; see [adequacy-rule comparison](anm-adequacy-policy-comparison-v1.md). It reports every rule and confirms that apparent selective-accuracy gains depend on scheme and coverage. No production change or general improvement was established. New-data validation was not undertaken.

@@ -1,0 +1,100 @@
+{
+  "scope": "Current policy replay phase; earlier audit consolidated in 1b23266",
+  "files": [
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/README.md",
+      "bytes": 3379,
+      "sha256": "6d51db03c2c829c9d0721ad69ffbc614e92e44f6da8fbc7886a6f9c75b9ae224"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/case-results.json",
+      "bytes": 389660,
+      "sha256": "9607ed9a14e6d2a9843d34a25aaeb8f8ddb9e54526d0fe4b4f68334235cbbebb"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/clean-environment-replay.log",
+      "bytes": 1098,
+      "sha256": "15db6a99c6d259860fff063f308cc175def9ef5d0761febba97fea8a0fbd4e7e"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/inputs.json",
+      "bytes": 112066,
+      "sha256": "27e6e0b69c56c868c9dc35acff8c843b42e11891ea98e5b4cea9280587481649"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/lint-format.log",
+      "bytes": 47,
+      "sha256": "70894802eb048daf3e6e232825e99476ede421ab3d0741560f5040c602a5deb1"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/manifest.json",
+      "bytes": 3375,
+      "sha256": "b6fcc9c7b880cd7d9691003884c98697ea4ca2fca2b1fe58a95698ab0152554b"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/metrics.json",
+      "bytes": 391473,
+      "sha256": "3bb719126bab865d085cdaa9465f740d0639d80e8cee25a9f4001f00a01f6bcb"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/raw-manifest.json",
+      "bytes": 14460,
+      "sha256": "ff9ba1184aa5e8dff7045dbb7911102a2668f0421856a50c6274b24903caa7d1"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/run-records.tar.gz",
+      "bytes": 196962,
+      "sha256": "7b30bb54d030e8c6f9e20333e67bfafece7a562a9f8f9c32a6a0df402abcc236"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/software-validation.log",
+      "bytes": 1590,
+      "sha256": "e100545f46a19916f3f92a2b498b3f638c75e7d99ff63479a61456b1d075474d"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/tables.md",
+      "bytes": 3356,
+      "sha256": "24eadcfbde6cfc118494372570fd78679390fda9530fef347a1c16031ca7ad76"
+    },
+    {
+      "path": "artifacts/anm-adequacy-policy-comparison-20261121/validation.json",
+      "bytes": 816,
+      "sha256": "4ffc13d73058d3f1c4e9ce706cc8f62ffda5155a52963790a603e16e79d7dc6f"
+    },
+    {
+      "path": "configs/anm-adequacy-policy-comparison-v1.json",
+      "bytes": 1916,
+      "sha256": "55dc99439775b7efcf7ccaa04bc5cc1771f026d433cd93cfc57844b5d1254826"
+    },
+    {
+      "path": "docs/experiments/anm-adequacy-policy-comparison-v1.md",
+      "bytes": 5217,
+      "sha256": "a6dca915538db914c5e03dbea4d3e4e7c28b00d928381b49b8e34a473524225f"
+    },
+    {
+      "path": "docs/reviews/anm-adequacy-policy-comparison-v1.md",
+      "bytes": 6916,
+      "sha256": "4001ea0063423c5b5e67cf80bb7bf2172991e6018a785a473d7822469fd49237"
+    },
+    {
+      "path": "docs/reviews/anm-diagnosis-summary.md",
+      "bytes": 7209,
+      "sha256": "9ee196894054a247a2b1c42442073f85fd1558b478cc65e48b9fe47a4da7da5f"
+    },
+    {
+      "path": "scripts/anm_adequacy_comparison.py",
+      "bytes": 868,
+      "sha256": "6c7aaeef8d99eb16e50ef28c306da2d4d5d18d34a4de41d73d7a13f091b453c3"
+    },
+    {
+      "path": "src/causalbridge/evaluation/anm_adequacy_comparison.py",
+      "bytes": 13879,
+      "sha256": "c6bda9622686cdba1fddf21818c4b03542ee3b34f6a79cf60de0911bed06b7f2"
+    },
+    {
+      "path": "tests/test_anm_adequacy_comparison.py",
+      "bytes": 6149,
+      "sha256": "401525a9cac4884d3905c6400851490cabdfc8b8e4488fc59c8065463ff4d0eb"
+    }
+  ]
+}
